@@ -41,8 +41,8 @@ sources are marked, so weigh their bias.
 | Performance budgets 101 | web.dev | 2018+ [dated] | Docs | https://web.dev/articles/performance-budgets-101 | Setting budgets |
 | Local-first software | Kleppmann, Wiggins, van Hardenberg, McGranaghan | 2019 [dated] | Peer-reviewed (Onward!) | https://www.inkandswitch.com/essay/local-first/ | Offline or collaboration is core |
 | Local-first: past, present, future | Martin Kleppmann | 2024 [dated] | Talk | https://martin.kleppmann.com/2024/05/30/local-first-conference.html | Local-first maturity |
-| React Query as a State Manager | Dominik Dorfmeister | ~2021 (unverified) [dated] | Blog | https://tkdodo.eu/blog/react-query-as-a-state-manager | Server-state caching |
-| Application State Management with React | Kent C. Dodds | ~2020 (unverified) [dated] | Blog | https://kentcdodds.com/blog/application-state-management-with-react | Colocation |
+| React Query as a State Manager | Dominik Dorfmeister | 2021 [dated] | Blog | https://tkdodo.eu/blog/react-query-as-a-state-manager | Server-state caching |
+| Application State Management with React | Kent C. Dodds | 2020 [dated] | Blog | https://kentcdodds.com/blog/application-state-management-with-react | Colocation |
 | Atomic Design, ch. 2 | Brad Frost | 2016 [dated] | Book | https://atomicdesign.bradfrost.com/chapter-2/ | Component vocabulary |
 | Design Tokens Format Module | W3C DTCG | 2025 | Spec (CG) | https://www.designtokens.org/tr/drafts/format/ | Token pipeline |
 | Modularizing React Applications | Juntao Qiu | 2023 [dated] | Article | https://martinfowler.com/articles/modularizing-react-apps.html | View/domain layering |
@@ -64,7 +64,7 @@ sources are marked, so weigh their bias.
 | File Upload Cheat Sheet | OWASP | ongoing | Guide | https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html | User files |
 | User Privacy Protection Cheat Sheet | OWASP | ongoing | Guide | https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html | Privacy and analytics |
 | Practical Test Pyramid | Ham Vocke | 2018 [dated] | Article | https://martinfowler.com/articles/practical-test-pyramid.html | Test shape |
-| The Testing Trophy | Kent C. Dodds | ~2021 (unverified) [dated] | Blog | https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications | Test shape |
+| The Testing Trophy | Kent C. Dodds | 2021 [dated] | Blog | https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications | Test shape |
 
 ## Reference
 
@@ -73,7 +73,7 @@ sources are marked, so weigh their bias.
 | Server Components reference | React team | ongoing | Docs | https://react.dev/reference/rsc/server-components |
 | Islands (Astro docs) | Astro | ongoing | Docs | https://docs.astro.build/en/concepts/islands/ |
 | Hydration guide | Angular team | ongoing | Docs | https://angular.dev/guide/hydration |
-| Understanding React Server Components | Vercel | ~2023 (unverified) [dated] | Blog (vendor) | https://vercel.com/blog/understanding-react-server-components |
+| Understanding React Server Components | Vercel | 2023 [dated] | Blog (vendor) | https://vercel.com/blog/understanding-react-server-components |
 | Cross-document view transitions | Chrome team | ongoing | Docs | https://developer.chrome.com/docs/web-platform/view-transitions/cross-document |
 | INP / LCP / CLS | web.dev | ongoing | Docs | https://web.dev/articles/inp ; https://web.dev/articles/lcp ; https://web.dev/articles/cls |
 | Optimize long tasks | web.dev | ongoing | Docs | https://web.dev/articles/optimize-long-tasks |

@@ -37,14 +37,16 @@ shared `i-have-adhd` skill. This skill doesn't repeat them.
    (directory, numbering, template). If there is none, use MADR with a Y-statement summary. The agent writes
    status **Proposed**; the decision owner accepts it. Supersede old records rather than editing them.
 
-The brief links to the ADR. Skeletons for both: [references/templates.md](references/templates.md).
+The brief links to the ADR. The research behind it meets `due-diligence-before-deciding`: brevity shapes the
+brief, never the homework. Skeletons for both: [references/templates.md](references/templates.md).
 
 ## Brief structure
 
 **Compact core** (always, in this order; this is what must fit in one to three screens):
 1. **Recommendation and ask.** Title phrased as the answer ("Use the existing database for background
    jobs"), the Y-statement ("In the context of …, facing …, we recommend … to achieve …, accepting …"), then
-   **What I need from you**: lettered decisions, each with the recommended answer and what happens without an
+   **What I need from you**: lettered decisions (only what the owner alone can decide or know; every option
+   offered is already researched and viable), each with the recommended answer and what happens without an
    answer (see "Silence is not approval"). Reversibility on the same line.
 2. **Decisive comparison**: an options table, five rows at most, ✓ / ~ / ✗ cells with a short reason, keep-current
    as a column, then the **deciding factor in words**.
@@ -52,7 +54,8 @@ The brief links to the ADR. Skeletons for both: [references/templates.md](refere
 4. **Cost range** with assumptions and date checked.
 5. **Confidence and unknowns**: low / medium / high for facts, forecasts and the recommendation, per the shared
    rubric in `architecture-research-and-verification`. Keep evidence confidence apart from forecast uncertainty;
-   no bare percentages. Add what would change the decision, and "Could not verify".
+   no bare percentages. Add what would change the decision, and "Could not verify" (only what no available means could settle, what
+   was tried, and why the recommendation holds without it).
 6. **Next action**: who does what next.
 
 **Optional sections**, only when material, linked or after the core: one focal diagram; contested-choice boxes

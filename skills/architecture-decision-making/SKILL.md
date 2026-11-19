@@ -14,7 +14,8 @@ made, turn qualities into testable drivers, compare real alternatives, pick the 
 every requirement, plan its evolution, and record why. Everything in architecture is a trade-off; if an
 option looks free, its cost has not been found yet ([Richards & Ford](references/canon-reading-list.md)).
 
-**Companion skills** (use them, don't repeat them): `architecture-research-and-verification` (evidence,
+**Companion skills** (use them, don't repeat them): `due-diligence-before-deciding` (the always-on floor for
+every choice; this skill is how an architect meets it), `architecture-research-and-verification` (evidence,
 self-checks and the shared confidence rubric), `architecture-proposal-writing` (presenting the result), `use-existing-solutions-first`
 (sourcing order), `work-planning` (plans and approval), `engineering-principles` EP-06 (simplicity at code level).
 Domain defaults live in `frontend-architecture`, `backend-and-data-architecture` and
@@ -26,7 +27,8 @@ Domain defaults live in `frontend-architecture`, `backend-and-data-architecture`
 - Changing a hard-to-reverse decision, reviewing a design, or answering "what should we use for X?".
 
 Skip the full method when constraints or a platform standard force the choice (say so, cite it), or for a
-cheap two-way door: decide, note it, move on.
+cheap two-way door: decide, note it, move on. Even then, name the alternatives you weighed and confirm the
+chosen option works here; the depth shrinks, the floor does not.
 
 ## The values this protects
 
@@ -60,7 +62,7 @@ Pick the rigour tier:
 
 | Tier | Use when | Depth |
 |---|---|---|
-| **Light** | Two-way door, small blast radius | Options in a sentence each, a decision, a one-line note |
+| **Light** | Two-way door, small blast radius | Options in a sentence each, the chosen one checked to work here, a decision, a one-line note |
 | **Standard** | Costly to reverse, or several teams or components affected | Full method, MADR record, lightweight peer review |
 | **Heavy** | One-way door with high consequence (money, safety, privacy, core data) | Full method, explicit scenarios, verification spike, premortem, wider review |
 
@@ -181,7 +183,8 @@ couple of hours of peer evaluation; keep full ATAM-style evaluation for high-sta
 - **Best-practice lookup** ("big companies use X"): their requirements aren't yours.
 - **Résumé- or novelty-driven choices.** If hiring or learning matters, make it a driver.
 - **Deferring a one-way door** in the name of the last responsible moment.
-- **Analysis paralysis on a two-way door.** Time-box, decide, set a revisit trigger.
+- **Analysis paralysis on a two-way door.** Time-box, decide, set a revisit trigger. The time box limits
+  depth, never the floor: alternatives considered and the chosen option checked to work.
 
 ## Done when
 

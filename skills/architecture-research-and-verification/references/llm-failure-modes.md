@@ -29,6 +29,8 @@ there to show *why* each mitigation exists. Re-validate on the current model bef
    the draft's wording.
 4. Restate any requester preference as a neutral question and confirm it was evaluated like the other options.
 5. Record claims, evidence and confidence before seeking review.
-6. Revise. Move anything still unverified into "Could not verify", with the risk if it is wrong.
+6. Revise. A deciding claim that is still unverified goes back to step 3 by another route (other primary source,
+   source code, a spike); only non-deciding claims that no available means can settle move into "Could not
+   verify", with what was tried and the risk if wrong.
 
 Sources: inline above.

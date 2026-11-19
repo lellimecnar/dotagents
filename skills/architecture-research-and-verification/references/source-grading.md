@@ -86,7 +86,7 @@ Use one renderer per artifact.
 | Status | verified / plausible / unverified / contradicted |
 
 Mark unsupported statements as unsourced or move them to a "Could not verify" list rather than presenting them as
-fact. Never invent a link.
+fact, after trying the other routes for that claim class. An unverified statement never carries a recommendation. Never invent a link.
 
 <a id="ledger"></a>
 ## 6. Evidence ledger, search log and unresolved list

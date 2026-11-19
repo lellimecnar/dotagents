@@ -11,7 +11,8 @@ metadata:
 
 How to find the evidence behind an architecture decision, judge its worth, check volatile facts against a
 live source, and question your own reasoning first. Companions: `architecture-decision-making` (method),
-`architecture-proposal-writing` (presentation), `use-existing-solutions-first` (sourcing order).
+`architecture-proposal-writing` (presentation), `use-existing-solutions-first` (sourcing order),
+`due-diligence-before-deciding` (the always-on floor: no recommendation rests on a fact you could have checked).
 
 ## When to use
 
@@ -39,7 +40,9 @@ Write five lines first:
 2. **Decision relevance.** Which answer would change the recommendation? Drop questions that wouldn't.
 3. **Claim class and where its answer lives** (matrix in step 2).
 4. **Search terms, including the opposite case**: "X problems", "migrating off X", "X postmortem", "X vs Y".
-5. **Stopping rule, by claim class and risk**, inside a time box:
+5. **Stopping rule, by claim class and risk.** Stop when the evidence each deciding claim needs is in hand and
+   new searches stop turning up options or evidence that could change the answer. A time box orders the work;
+   it never ends it with a deciding claim still unchecked:
    - existence, syntax, limits: one versioned primary source for the version you'll use;
    - contentious operational claims: primary source plus independent corroboration;
    - effect or causal claims: a suitable review or replication, or say the evidence is thin.
@@ -127,10 +130,17 @@ forecasts and the recommendation separately:
 | **Medium** | Fit-for-claim but single, or applicability partly unverified | Analogous reference class, adjusted with stated assumptions | Holds for the likely case, flips at a named, plausible threshold |
 | **Low** | Indirect, stale, unverified or conflicting | Judgement without a reference class | Flips within the plausible range, or rests on a low-confidence fact |
 
+A Low rating is a finding, not an exit: if a check you can run (docs, source, a spike, a benchmark, asking the
+vendor) would raise a deciding fact, run it before you recommend. Low stays only for what no available means can
+settle (a future load, data you have no access to, a fact only the owner knows), and then the recommendation is
+conditional ("if X, A; if not, B", each branch verified) or the owner is asked for that fact.
+
 Give a numeric probability only when it comes from an explicit reference class or a calibrated forecasting
 record, and name that class. Then:
 - Say what evidence would change your mind, phrased so it can be checked.
-- Include a **"Could not verify"** list: the claim, why (paywall, no access, no data), and the risk if it's wrong.
+- Include a **"Could not verify"** list only for what remains after you tried every available route: the claim,
+  what you tried, why it can't be settled (paywall, no access, no data yet), and the risk if it's wrong. Nothing on
+  it may carry the recommendation; if a deciding fact lands there, keep researching, go conditional, or ask.
 - **Before accepting pushback**, write down your claims, evidence and confidence; then change only what new
   evidence or argument overturns. This prevents both caving and digging in.
 
@@ -165,7 +175,8 @@ citations in the output's or repository's convention (`architecture-proposal-wri
 - **Averaging away the tail.** A mean overrun hides the one-in-six disaster.
 - **Citation laundering.** A blog quoting a vendor is still the vendor. Trace claims to their origin.
 - **Garden of forking paths.** Choosing the benchmark configuration after seeing the results.
-- **Endless research.** Without a stopping rule, research becomes procrastination.
+- **Endless research.** Without a stopping rule, research becomes procrastination. The opposite failure is
+  worse and more common: stopping at the first adequate option, or shipping with a checkable fact unchecked.
 
 ## Done when
 
@@ -173,10 +184,11 @@ citations in the output's or repository's convention (`architecture-proposal-wri
 - [ ] Each material claim has a fit-for-claim, graded source with year; volatile facts have URL plus date checked.
 - [ ] Papers pinned to exact version; corrections, retractions and replications checked.
 - [ ] Evidence ledger, search log and unresolved list delivered; every recommendation sentence maps to rows.
-- [ ] Every package, API, flag, version and limit verified against a live source, or listed as unverified.
+- [ ] Every package, API, flag, version and limit verified against a live source; anything unverifiable is listed
+  with what was tried and does not carry the recommendation.
 - [ ] Assumption register, steelmen and premortem done for Standard and Heavy tiers.
 - [ ] Verification taken to the rung the risk needs; spikes had exit criteria.
-- [ ] Confidence (facts, forecasts, recommendation) per the rubric, flip conditions and "Could not verify" stated.
+- [ ] Confidence (facts, forecasts, recommendation) per the rubric, flip conditions and "Could not verify" (non-deciding items only) stated.
 
 ## References
 

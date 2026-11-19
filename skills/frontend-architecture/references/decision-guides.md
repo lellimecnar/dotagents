@@ -153,7 +153,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Servic
 ## 7. Cross-cutting: i18n
 
 - Use the platform's `Intl` for dates, numbers, plurals, collation, lists and relative time: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Internationalization ; https://www.w3.org/International/articles/intl/index
-- Externalised messages, locale in routing, logical CSS properties for RTL, and no string concatenation. *Standard practice. Not verified against a primary source in the dossier.* W3C i18n specs index: https://www.w3.org/TR/international-specs/ (search-verified only).
+- Externalised messages, locale in routing, logical CSS properties for RTL, and no string concatenation. Sources: messages built from fragments can't be reordered by translators, https://unicode-org.github.io/icu/userguide/format_parse/messages/ ; logical properties, https://www.w3.org/TR/css-logical-1/ ; bidirectional text and language markup, https://www.w3.org/International/techniques/authoring-html ; a separate URL per language version, https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites .
 
 Security, accessibility, performance, testing and observability gates are in
 [budgets-and-quality-gates.md](budgets-and-quality-gates.md).

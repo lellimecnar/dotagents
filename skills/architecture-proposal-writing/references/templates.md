@@ -51,7 +51,8 @@ accepting <main downside>.
 
 ## Confidence and unknowns
 **Would change this decision:** <facts or thresholds>.
-**Could not verify:** <claim> (why; risk if wrong).
+**Could not verify:** <claim> (what was tried; why it can't be settled; risk if wrong; why the recommendation
+holds without it). "None" when nothing.
 
 ## Next action
 <who does what next; estimate as a range with assumptions if it affects the decision, otherwise "estimate needed from <role>">
