@@ -39,6 +39,17 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `web-accessibility-check` | building, reviewing or accepting UI. WCAG 2.2 AA checks and tools |
 | `work-planning` | a plan or spec is requested, or uncertainty must be resolved before work |
 
+### Architecture (6)
+
+| Skill | Use when |
+| --- | --- |
+| `architecture-decision-making` | choosing, changing or reviewing an architecture or technology. Frame, compare, decide, record |
+| `architecture-research-and-verification` | an architecture choice rests on facts or reasoning. Research, grade, verify, self-interrogate |
+| `architecture-proposal-writing` | presenting an architecture recommendation to a decision owner. Answer-first brief plus ADR |
+| `frontend-architecture` | deciding web or client architecture. Rendering, state, design system, delivery, reach, quality gates |
+| `backend-and-data-architecture` | shaping services, APIs, data stores or integration. Domain-first sequence, boring defaults |
+| `cloud-and-infrastructure-architecture` | choosing hosting, infra, DR, security or cloud cost. Fit options to forces; price lock-in |
+
 ### Ops (2)
 
 | Skill | Use when |
