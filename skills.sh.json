@@ -4,9 +4,10 @@
     {
       "title": "Common (every agent)",
       "skills": [
+        "due-diligence-before-deciding",
         "fixing-a-wrong-memory",
-        "use-existing-solutions-first",
-    "subagent-model-choice"
+        "subagent-model-choice",
+        "use-existing-solutions-first"
       ]
     },
     {
