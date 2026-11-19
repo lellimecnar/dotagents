@@ -14,8 +14,8 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 
 | Skill | Use when |
 | --- | --- |
+| `due-diligence-before-deciding` | choosing between two or more options (advising, presenting choices, or deciding mid-task). Do the due diligence first |
 | `fixing-a-wrong-memory` | you are corrected or find a stored memory is wrong. Delete every copy, save once |
-| `research-before-recommending` | giving any recommendation, plan or best-fit pick. Finish the research first |
 | `subagent-model-choice` | delegating a subtask. Pick the cheapest model that can do it well |
 | `use-existing-solutions-first` | before building anything. Find the built-in or existing solution first |
 
