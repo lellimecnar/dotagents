@@ -34,6 +34,10 @@ the single-PR method, queue audits, recording verdicts durably, and editing the 
   verdict is a signal for whoever owns the merge queue (see `merge-queue-stewardship`).
 - **A verdict only in the transcript is not a verdict.** Every PR gets a label (the index) and a
   comment (the record), both naming the head they apply to.
+- **Act only under the bot's identity.** Commit, comment and open PRs as the bot account the
+  profile names, never under the owner's identity or credentials: work done in the owner's name
+  cannot be told apart from the owner's own. If only the owner's credential is available, stop and
+  ask.
 - **Hold means "not yet", Close means "not this".** Never downgrade a Hold to Close because the
   unblock looks like work.
 

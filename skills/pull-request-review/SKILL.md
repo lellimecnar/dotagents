@@ -38,6 +38,9 @@ Not for merging. Reviewers never merge; whoever owns the merge queue does.
 - **A partial implementation of a decision is the most common correctness gap.** Read the
   governing spec/decision in full for the sections the PR cites and list *every* rule in it, not
   only the one the author picked.
+- **Judge against the requester's own words.** Written acceptance criteria summarize what was
+  asked. When the task quotes the owner or requester, check the change against that quote too,
+  and report any gap between the quote and the criteria as a finding.
 - **Report completeness is part of correctness.** "N files fail X" without the file:line list is
   an incomplete finding, and a check listed as "pass" that you did not run in this session is a
   fabricated fact.

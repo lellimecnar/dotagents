@@ -30,6 +30,10 @@ train PR and the CI-gate / queue configuration that decides what may merge.
 - **Let the automation do its job, and prove it did.** Do not duplicate what the queue tool does
   (labels it adds itself, batching, merge commits); duplicating it hides a broken rule. Verify the
   result instead.
+- **Act only under the bot's identity.** Commit, comment and open PRs as the bot account the
+  profile names, never under the owner's identity or credentials: work done in the owner's name
+  cannot be told apart from the owner's own. If only the owner's credential is available, stop and
+  ask.
 - **No eligible work means one line and stop.** Spend no further tokens on an empty run.
 
 ## Admission procedure
