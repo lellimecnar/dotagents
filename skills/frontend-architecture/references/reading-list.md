@@ -109,7 +109,7 @@ sources are marked, so weigh their bias.
 | What do real sites ship, and how fast are they? | https://almanac.httparchive.org/en/2024/javascript (look for the newest edition) ; https://developer.chrome.com/docs/crux/methodology | Current medians; whether your origin is CrUX-eligible |
 | Metric definitions and thresholds | https://web.dev/articles/vitals | Any metric replaced; thresholds unchanged |
 | Current global performance budget | https://infrequently.org/ | Newest "Performance Inequality Gap" edition |
-| Framework usage and satisfaction | https://stateofjs.com/en-US (search-verified only) | Sentiment only. The sample is self-selected, not a measure of quality |
+| Framework usage and satisfaction | https://stateofjs.com/en-US | Sentiment only. The sample is self-selected, not a measure of quality |
 | Industry adopt/hold signals | Thoughtworks Technology Radar | That the item is on the *current* edition |
 | Framework rendering semantics | react.dev ; https://angular.dev/guide/hydration ; https://docs.astro.build/en/concepts/islands/ ; https://qwik.dev/docs/concepts/resumable/ ; changelogs and RFCs | Actual current behaviour of each shortlisted option |
 | Accessibility standard and legal status | https://www.w3.org/TR/WCAG22/ ; https://digital-strategy.ec.europa.eu/en/policies/latest-changes-accessibility-standard | Current WCAG version and what the law references |
