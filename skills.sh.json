@@ -5,7 +5,8 @@
       "title": "Common (every agent)",
       "skills": [
         "fixing-a-wrong-memory",
-        "use-existing-solutions-first"
+        "use-existing-solutions-first",
+    "subagent-model-choice"
       ]
     },
     {
