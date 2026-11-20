@@ -66,8 +66,10 @@ findings, integrate the pieces, and verify the combined outcome.
 
 ## Before you call yourself blocked
 "Blocked" is a conclusion that needs evidence.
-- **Check that the blocker is real.** Re-read the error, search the documentation and issue tracker, try the
-  reasonable supported alternatives, and look for data or existing access you are authorized to use for this task.
+- **Check that the blocker is real.** Re-read the error and look for data or access you are authorized to use.
+  For a technical blocker, follow the upstream search in `due-diligence-before-deciding`: online issues, PRs,
+  releases and published workarounds may reveal a path the docs miss. Verify and use an applicable authorized
+  path before escalating; finding a pending PR is not proof that a fix is available.
 - **Escalate sideways first.** When a relevant authorized route exists, ask the agent that owns the area, a reviewer, a
   coordinator or a specialist. Do not route around privacy or approval boundaries. While you wait, keep doing
   everything that does not depend on the answer.

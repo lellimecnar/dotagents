@@ -59,6 +59,20 @@ below this: real alternatives were considered and the chosen option was checked 
 limit or "keep it brief" shapes how long the answer is, never how much homework stands behind it. Use parallel
 research or delegation for big decisions rather than cutting the search.
 
+## Search upstream before deciding a technical path is blocked
+When a bug, limitation, compatibility question or missing feature could change the course of action, search
+online before deciding to wait, escalate, build around it or give up. Search the product and affected version
+with the exact error or symptom (redact private details), then broader terms if needed. Check current upstream
+issues and pull requests, release notes and maintainer discussions; look for known fixes, supported alternatives
+and temporary workarounds, including credible community reports the official docs may not cover.
+
+Use the findings to decide what to do, not just what to cite. Check whether they match the installed version,
+configuration and symptoms. Distinguish a proposed patch, a merged fix and a fix shipped for this environment.
+Prefer a released fix or supported configuration that fits the task. Verify an authorized workaround before
+relying on it; treat it as temporary and record when it can be removed. If no applicable path turns up, say what
+was checked and what still blocks the work. Depth scales with the decision; this is not a reason to browse for
+routine work that has no relevant external dependency.
+
 ## Caveats are not a substitute for checking
 - A caveat about something the decision depends on ("I haven't confirmed...", "you may want to verify...",
   "assuming it supports...", "untested", "should work") means the work is unfinished. Check it, then decide.
