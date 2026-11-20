@@ -41,15 +41,17 @@ self-hostable options before paid services.
   sync mechanism, scheduler, credential flow or integration always does.
 - "Existing" includes what is already in this system: another agent's skill, a shared document, a service already
   running, a mechanism already configured. Reuse before you add.
-- A workaround around a built-in limitation is custom work too. First confirm the limitation is real and that
-  the tool does not intend another path.
+- Before inventing a workaround around a built-in limitation, confirm the limitation and follow the upstream
+  search in `due-diligence-before-deciding`. An existing, verified configuration workaround may be a supported
+  path; discovering one does not authorize a patch, install or change outside the task.
 - If the built-in way looks wrong for the situation, raise it with the owner rather than quietly building around
   it.
 
 ## What to report
 When you propose or deliver something, name the mechanism you used ("the tool's built-in X", "standard library Y").
-If anything is custom, state in one line what you checked and why it could not be used. If you cannot do the work
-the standard way, stop and ask the owner; do not substitute your own approach.
+If anything is custom, state in one line what you checked and why existing paths do not fit. If no authorized
+path remains after due diligence, finish independent work and report the verified blocker. Ask the owner only
+for a decision or action they alone can supply; do not substitute an unauthorized approach.
 
 ## If you find a violation
 When you notice something already built that reinvents a solved problem (yours or anyone's), do not extend it.

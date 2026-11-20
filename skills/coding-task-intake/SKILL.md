@@ -62,15 +62,18 @@ Every coding task: features, fixes, redesigns, small content changes in a code r
      `git diff --cached | grep -nE 'gh[pousr]_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|BEGIN [A-Z ]*PRIVATE KEY|xox[baprs]-'`.
      Also scan for personal data.
 6. **PR.** Push the branch and open the PR against the right base; draft when it is not ready for
-   review (phased work, open decisions). Body sections: **What and why** (2–4 lines) /
+   review (phased work, open decisions). A draft is a progress update, not a stopping point unless a draft
+   was requested or a verified blocker prevents continuation. Body sections: **What and why** (2–4 lines) /
    **Screenshots** / **Checks** (each command and result) / **Decisions to confirm** (lettered, each
-   with your default) / **Not done** (gaps, follow-ups). If the platform builds preview deployments,
+   with your default) / **Blockers** (genuine blockers only, with evidence: owner-only actions, outside
+   dependencies or hard limits). Finish the work the task owes before calling the PR ready, per
+   `finish-the-whole-request`. If the platform builds preview deployments,
    wait for success and link it; a failed preview build is a failed task — read its log or reproduce
    the build locally. Never merge, never push to the default branch, never close someone else's PR.
 7. **Report.** Line 1 is the complete short answer, because many wake messages show only line 1:
-   `PR #<n> ready for review: <title> - preview <url>` / `Draft PR #<n>: <phase> done, <next> next` /
-   `No change needed: <reason>` / `Blocked: <reason> - need <exact thing>`. Then `Changed:` (one
-   line per area), `Verified:` (checks and pages viewed), `Decisions:` (lettered, or none), `Gaps:`.
+   `PR #<n> ready for review: <title> - preview <url>` / `Requested draft PR #<n>: <title>` /
+   `No change needed: <reason>` / `Incomplete: <verified blocker> - <actual trigger or owner-only action, if any>`. Then `Changed:` (one
+   line per area), `Verified:` (checks and pages viewed), `Decisions:` (lettered, or none), `Blockers:` (or none).
    Attach structured metadata (repo, PR number and URL, branch, preview URL) where the tracker
    supports it.
 8. **Learn.** Save durable engineering facts (commands that work, pitfalls, the owner's design

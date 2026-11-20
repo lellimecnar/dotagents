@@ -5,6 +5,7 @@
       "title": "Common (every agent)",
       "skills": [
         "due-diligence-before-deciding",
+        "finish-the-whole-request",
         "fixing-a-wrong-memory",
         "subagent-model-choice",
         "use-existing-solutions-first"
