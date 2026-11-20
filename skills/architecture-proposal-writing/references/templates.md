@@ -31,13 +31,15 @@ accepting <main downside>.
 **Reversibility:** <two-way door / costly to reverse: why> · **ADR:** <link> (Proposed)
 **Confidence** (shared rubric): facts <low/medium/high> · forecasts <low/medium/high> · recommendation <low/medium/high>
 
-| At a glance | <Recommended> | <Keep current> | <Option C> |
-|---|---|---|---|
-| Meets top scenario: <name> | ✓ <reason> | ✗ <reason> | ✓ <reason> |
-| Running effort (ops hours) | ✓ <reason> | ✓ <reason> | ✗ <reason> |
-| Cost range (checked <date>) | <low–high> | <low–high> | <low–high> |
-| Room to grow (forecast peak) | ~ <reason> | ✗ <reason> | ✓ <reason> |
-| New tech to learn/operate | none | none | <what> |
+| At a glance | <Recommended> | <Keep current> | <Extend existing> | <Option D> |
+|---|---|---|---|---|
+| Meets top scenario: <name> | ✓ <reason> | ✗ <reason> | ~ <reason> | ✓ <reason> |
+| Running effort (ops hours) | ✓ <reason> | ✓ <reason> | ✓ <reason> | ✗ <reason> |
+| Cost range (checked <date>) | <low–high> | <low–high> | <low–high> | <low–high> |
+| Room to grow (forecast peak) | ~ <reason> | ✗ <reason> | ~ <reason> | ✓ <reason> |
+| New tech to learn/operate | none | none | none | <what> |
+
+<!-- One column per further real option found; five rows at most. -->
 
 **Deciding factor:** <one sentence, in words>.
 
@@ -55,7 +57,7 @@ accepting <main downside>.
 holds without it). "None" when nothing.
 
 ## Next action
-<who does what next; estimate as a range with assumptions if it affects the decision, otherwise "estimate needed from <role>">
+<who does what next; if a work estimate affects the decision, a range with its basis (napkin maths, comparable work, spike) and assumptions>
 
 ---
 <!-- Optional sections below: include only when material. -->
@@ -102,8 +104,9 @@ In the context of <…>, facing <…>, we decided for <…> and against <…>, t
 - <constraint>
 
 ## Considered options
-1. <Keep current>
-2. <Option B>
+<!-- One entry per real option found; keep searching until no new serious candidates appear. -->
+1. <Keep current / change nothing>
+2. <Extend what exists>
 3. <Option C>
 
 ## Decision outcome
@@ -177,11 +180,26 @@ volume grows roughly 50×.
 | Retries + visibility | ✓ built in | ✗ silent failures | ✓ | ✓ |
 | Enqueue in same transaction | ✓ | ✗ | ✗ needs outbox | ✗ needs outbox |
 | New things to operate | none | none | broker + backups + monitoring | account, IAM, SDK |
-| Running effort | ~0 extra | low but failures unseen | ~hours/month | low |
-| Room to grow (forecast peak) | ✓ | ✗ | ✓ | ✓ |
+| Running effort | under 1 h/month (existing backups, monitoring) | under 1 h/month, but failures unseen | 2–4 h/month (patching, backups, monitoring) | 1–2 h/month (IAM, SDK upgrades) |
+| Room to grow (forecast peak) | ✓ 50× today's volume in a load test | ✗ | ✓ | ✓ |
 
 **Deciding factor:** it meets the retry and visibility scenario with zero new components, and enqueueing in the
 same transaction removes a whole class of lost-job bugs.
+
+## Top risks
+| Risk | Likelihood | Impact | Mitigation / early signal |
+|---|---|---|---|
+| Table bloat from high job churn | medium | slower pickup | retention job; bloat alert |
+| Long jobs hold row locks | low | stalled queue | job timeout; p95 pickup-delay alert |
+| Volume outgrows the table | low | migration work | fallback below; pickup-delay trigger |
+
+## Cost
+No new bill (runs on the existing database server); under 1 h/month operator time. The broker alternative adds
+2–4 h/month plus hosting at <low–high>/month (prices checked <date> at <pricing link>).
+
+## Next action
+I build the job table and worker behind the queue interface: 2–3 days, based on a comparable past job
+migration, assuming no schema change to existing tables.
 
 > **Choice:** database job table
 > **Why:** meets the drivers; no innovation token spent

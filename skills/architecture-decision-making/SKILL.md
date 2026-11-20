@@ -18,8 +18,9 @@ option looks free, its cost has not been found yet ([Richards & Ford](references
 every choice; this skill is how an architect meets it), `architecture-research-and-verification` (evidence,
 self-checks and the shared confidence rubric), `architecture-proposal-writing` (presenting the result), `use-existing-solutions-first`
 (sourcing order), `work-planning` (plans and approval), `engineering-principles` EP-06 (simplicity at code level).
-Domain defaults live in `frontend-architecture`, `backend-and-data-architecture` and
-`cloud-and-infrastructure-architecture`.
+Domain decision guides live in `frontend-architecture`, `backend-and-data-architecture` and
+`cloud-and-infrastructure-architecture`: starting candidates with when-not cases, to compare and verify against
+the situation, never answers to adopt unchecked.
 
 ## When to use
 
@@ -92,7 +93,8 @@ one's last responsible moment: the point after which waiting removes an importan
 
 Anchoring on the first idea is a well-documented bias in architecture decisions; one small experiment found
 its practitioners more prone than its students ([debiasing study](references/decision-heuristics.md#sources)).
-Write the option list before evaluating any option. Always include:
+Write the option list before evaluating any option. Search by the problem, not only by names you already
+know, and keep going until new searches stop turning up serious candidates. Always include:
 1. **Keep current / do nothing.** What happens if we don't decide now?
 2. **Extend what exists.** A capability of something already run (current database or platform).
 3. **Buy, rent, self-host or build.** Sourcing order per `use-existing-solutions-first`.
@@ -104,6 +106,9 @@ If constraints leave only one viable option, say so and show why. Don't invent s
 
 ### 5. Evaluate trade-offs
 
+- **Verify each finalist here first.** Confirm from primary, current sources (official docs, live config,
+  versions, real prices, compatibility lists, the code) that it works in this system, and run any cheap, safe
+  check (read the config, a dry run, a small spike). "Should work" is a guess until checked.
 - **Score each option against the ranked scenarios** qualitatively (✓ / ~ / ✗ with a reason), each criterion
   independently. No weighted decimal totals ([why](references/decision-heuristics.md#h17)).
 - **Find sensitivity and trade-off points**, e.g. replication factor: availability vs write latency.
@@ -191,13 +196,17 @@ couple of hours of peer evaluation; keep full ATAM-style evaluation for high-sta
 - [ ] Tier chosen; reversibility and decision owner named.
 - [ ] Missing and "ban" decisions listed, each with a last responsible moment.
 - [ ] Top drivers written as measurable scenarios; non-goals listed.
-- [ ] Three real options, including keep-current and simplest, each steelmanned, unless a hard constraint
+- [ ] Options searched until no new serious candidates appeared, including keep-current, extend-existing and
+  the simplest, each steelmanned, unless a hard constraint
   leaves fewer (constraint documented, no straw men).
 - [ ] Complexity budget: every addition or removal names its requirement and migration cost.
 - [ ] Load sized from forecast and peak scenarios, not a fixed multiplier.
 - [ ] Cost includes operating effort; lock-in priced; new technologies counted.
 - [ ] Evolution path written as triggers; confidence (facts, forecasts, recommendation) and flip conditions stated.
 - [ ] Proposed record drafted in the repository's convention; fitness functions or a review date named.
+- [ ] Each finalist, and the chosen option above all, checked to work in this situation against primary,
+  current sources; no deciding fact rests on a caveat a check could settle; the receiver could act without
+  asking for more homework.
 - [ ] Evidence and self-checks done per `architecture-research-and-verification`.
 
 ## References

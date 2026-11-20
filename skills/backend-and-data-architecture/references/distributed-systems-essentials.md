@@ -1,9 +1,7 @@
 # Distributed-systems essentials
 
 The background an architect needs to state consistency requirements precisely, pick isolation
-levels deliberately, and anticipate how distributed systems fail. Durable concepts only. All URLs
-come from the research dossiers (compiled 2026-11-19). † marks canonical URLs that returned 403 to
-a scripted client.
+levels deliberately, and anticipate how distributed systems fail. Durable concepts only. URLs checked 2026-11-19 with a scripted browser request (one retry): all resolve. † marks publisher pages that refuse scripted clients (HTTP 403); each was confirmed live by a recent web-archive capture returning 200.
 
 ## 1. Consistency models: say exactly what you need
 
@@ -92,7 +90,7 @@ hardware offers. Treat published latency tables as orders of magnitude only, and
 - Method: define the problem, the performance goals and the features, reason from first principles,
   then check against reality https://sirupsen.com/napkin/process ; numbers and techniques
   https://github.com/sirupsen/napkin-math.
-- Order-of-magnitude anchors (dated "~2012"; re-verify for current hardware)
+- Order-of-magnitude anchors (gist created 2012; re-verify for current hardware)
   https://gist.github.com/jboner/2841832.
 - Timeout choice from latency percentiles and an acceptable false-timeout rate
   https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/.

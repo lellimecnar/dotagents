@@ -19,7 +19,8 @@ shared `i-have-adhd` skill. This skill doesn't repeat them.
 
 - Any recommendation the owner must approve, or choose between options for.
 - Writing or updating a decision record (ADR).
-- Not for a two-way-door note: one or two lines with the decision, the reason and a revisit trigger is enough.
+- Not for a two-way-door note: one or two lines with the decision, the alternatives it beat and why, how it was
+  checked to work, and a revisit trigger are enough.
 
 ## The values this protects
 
@@ -105,8 +106,9 @@ tomorrow" well (a design suggestion, not a researched standard).
 
 **Cite per claim, in one renderer.** The provenance fields (source, year, version, grade, checked date) come
 from `architecture-research-and-verification`; this skill only renders them. Use the repository's or output's
-citation convention and one renderer per artifact. Put the citation next to the claim it supports. Mark
-anything unsourced or move it to "Could not verify". Never invent a link.
+citation convention and one renderer per artifact. Put the citation next to the claim it supports. Source
+every claim; one that still cannot be sourced after trying goes to "Could not verify" only when no available
+means can settle it, and it must not carry the recommendation. Never invent a link.
 
 **Tiered optional reading.** End with three tiers, each item: link · year · source type · a "why read" of ten
 words or fewer.
@@ -124,7 +126,9 @@ Bold at most one key phrase per paragraph. Define a term the first time it appea
 
 **Time estimates only with a basis.** Give the owner's reading or decision time in concrete units ("5-minute
 read"). For work estimates that affect the decision, give a range plus assumptions ("2–3 days, assuming no
-schema change"). With no basis, say an estimate is needed and from whom, rather than inventing precision.
+schema change"). With no basis yet, build one (napkin maths, comparable past work, a short spike) and give a range
+with that basis rather than inventing precision. Ask someone else only for what only they can know, after
+doing the rest, and say what you tried.
 
 ## When to break the shape
 
@@ -138,6 +142,9 @@ schema change"). With no basis, say an estimate is needed and from whom, rather 
 - [ ] Reading only the first two lines, does the owner know the recommendation and what they must decide?
 - [ ] Compact core present: recommendation and ask, decisive comparison, top three risks, cost range,
   confidence and unknowns, next action.
+- [ ] Every option presented is researched and viable; the recommended option was checked to work here against
+  primary, current sources; no sentence hedges on a checkable fact; the owner can act without asking for more
+  homework.
 - [ ] Every lettered decision has a recommended answer; any timeout default is delegated, reversible and
   bounded; high-consequence decisions ask for affirmative approval.
 - [ ] Options table is qualitative, with the deciding factor in words; keep-current is a column.

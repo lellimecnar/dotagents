@@ -37,7 +37,7 @@ students; the authors suggest attachment to their own systems as a possible caus
   before scoring or favouring any option.
 - **Evidence:** checklist Q5, "insist that people submit at least one or two alternatives" (HBR 2011, above);
   anchoring findings (https://arxiv.org/abs/2502.04011).
-- **Not when:** the choice is forced. Say so instead.
+- **Not when:** the choice is forced by a constraint you have confirmed (cite it). Say so, with that evidence.
 
 ### 2. Assumption register: "what would have to be true?"
 - **Do:** for the leading option, list each assumption it depends on, with columns: assumption · how to test ·
@@ -46,7 +46,7 @@ students; the authors suggest attachment to their own systems as a possible caus
   assumption-documentation framework (https://www.sciencedirect.com/science/article/abs/pii/S0164121215002824,
   abstract paywalled). Making background assumptions explicit before answering cut SE-dilemma bias sensitivity in
   language models by 51% on average (https://arxiv.org/abs/2604.16756).
-- **Not when:** a light-tier decision. One line of key assumptions is enough.
+- **Not when:** a light-tier decision. One line of key assumptions is enough, but each deciding one is still checked.
 
 ### 3. Consider the opposite
 - **Do:** ask "what evidence would show this is wrong?" and go looking for it. Use search terms like
@@ -59,7 +59,8 @@ students; the authors suggest attachment to their own systems as a possible caus
   the right choice. The case goes into the proposal's contested-choice box.
 - **Evidence:** structured dissent (devil's advocacy and dialectical inquiry) has a meta-analytic evidence base
   (Schwenk 1990) https://www.sciencedirect.com/science/article/pii/074959789090051A
-- **Not when:** an option fails a hard constraint. One line saying which constraint is enough.
+- **Not when:** an option fails a hard constraint you have verified applies here. One line naming the constraint
+  and its evidence is enough.
 
 ### 5. Premortem
 - **Do:** "Imagine it's a year from now and this decision has failed badly." Each participant (or, for a single
@@ -101,7 +102,8 @@ students; the authors suggest attachment to their own systems as a possible caus
 ### 11. Know when intuition is fine
 Trust expert intuition in regular environments with fast feedback. Architecture often lacks both (rare
 decisions, delayed feedback), which argues for explicit analysis on one-way doors. Recognition-primed decisions
-remain right for urgent, familiar calls; record them and revisit.
+can supply the first candidate for urgent, familiar calls; still compare it with at least one alternative and
+check it works before committing, then record it and revisit.
 https://psycnet.apa.org/record/2009-13007-001 ; https://journals.sagepub.com/doi/10.1518/001872008X288385
 
 ## The HBR decision-quality checklist (as review prompts)

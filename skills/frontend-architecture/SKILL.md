@@ -32,9 +32,11 @@ options. State confidence with the shared low / medium / high rubric in
 
 1. **Users, devices, network, content-vs-app.** Find out who loads this, on what hardware and
    connection, and how often. Place each route between content (read, share, rank in search) and
-   app (long sessions, dense interaction, behind login). Without audience data, assume
-   the latest global P75 baseline device and network (look it up at task time), not the
-   developer's laptop. At P75 a quarter of users still have slower hardware: a floor, not a
+   app (long sessions, dense interaction, behind login). Gather audience data first: existing
+   analytics or RUM, CrUX for the origin or comparable origins, and the owner's knowledge of the
+   market (ask the owner if none is reachable). Only when no such data exists (e.g. a new
+   product), assume the latest global P75 baseline device and network (look it up at task time),
+   not the developer's laptop. At P75 a quarter of users still have slower hardware: a floor, not a
    worst case. Before launch, budget with a lab proxy (throttled target device, transfer and JS
    limits); once traffic suffices, validate or replace it with segmented field P75 data. Keep lab
    and field gates distinct
@@ -53,7 +55,8 @@ options. State confidence with the shared low / medium / high rubric in
    pagination, selection); keep secrets, tokens, personal data and large payloads out, because
    URLs leak through logs, referrers and history. UI state stays colocated with its component.
    Global client state is whatever is truly cross-cutting, which is usually small. Pick the API
-   shape from the client's point of view: REST, GraphQL, typed RPC, or a backend-for-frontend.
+   shape from the client's point of view: start with what the backend already exposes, and
+   compare it with REST, GraphQL, typed RPC, or a backend-for-frontend.
    Choose local-first sync only when offline work, multi-device use or real-time collaboration is
    a core requirement.
 4. **Components and design system.** Layer it as tokens → core components → optional recipe
@@ -81,7 +84,8 @@ options. State confidence with the shared low / medium / high rubric in
    (local-first); a native client may change step 5's token transport.
 8. **Cross-cutting constraints.** Accessibility, performance, observability and i18n change
    earlier choices, so make each an executable gate (budgets reference): WCAG 2.2 AA as the
-   default floor, real user monitoring that covers client-side route changes, and `Intl` with
+   default floor unless the law, standard or contract where the product ships requires something
+   else (check at task time), real user monitoring that covers client-side route changes, and `Intl` with
    logical CSS from day one.
 
 Option tables for each step, with the forces behind them and when each option is wrong, are in
@@ -89,8 +93,9 @@ Option tables for each step, with the forces behind them and when each option is
 
 ## Simplicity defaults and what earns complexity
 
-Each default protects **simplicity and user outcomes**. Depart when the trigger is present, and
-record it.
+Each default protects **simplicity and user outcomes**. A default is the starting candidate, not
+the pick: compare it with the options in the decision guides on this task's forces, verify the
+winner fits, and record why the others lost.
 
 | Default | Value protected | Signs it is being violated | What earns the more complex option |
 |---|---|---|---|

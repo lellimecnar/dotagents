@@ -54,8 +54,8 @@ plain-language guidance are the evidence base. The owner-specific shaping lives 
 | Claim | Source | Year | Type |
 |---|---|---|---|
 | Decision matrices help clarify criteria but mislead when "treated as machines that automatically produce the right strategic choice"; options "rarely comparable on a single scale" | Sustainable Catalyst https://sustainablecatalyst.com/decision-matrices-and-their-limits/ | — | secondary |
-| Background only: pitfalls in decision-matrix construction | AIAA 2003 https://doi.org/10.2514/6.2003-466 (unverified, not load-bearing) | 2003 | paper |
-| Background only: uses and misuses of MCDA | Risk Analysis 2008 https://onlinelibrary.wiley.com/doi/10.1111/j.1539-6924.2008.01130.x (unverified, not load-bearing) | 2008 | paper |
+| Background only: pitfalls in decision-matrix construction | Mullur, Mattson & Messac, "Pitfalls of the Typical Construction of Decision Matrices for Concept Selection" (AIAA) https://doi.org/10.2514/6.2003-466 (metadata checked; full text behind an access wall; not load-bearing) | 2003 | paper |
+| Background only: uses and misuses of MCDA | Steele, Carmel, Cross & Wilcox, "Uses and Misuses of Multicriteria Decision Analysis (MCDA) in Environmental Decision Making" (Risk Analysis) https://doi.org/10.1111/j.1539-6924.2008.01130.x (abstract read; not load-bearing) | 2008 | paper |
 | For big decisions, evaluate against quality-attribute scenarios, sensitivity points and trade-offs | SEI ATAM collection https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/ | ongoing | official/research |
 | Radar data "would usually be shown as a bar graph" (sufficient on its own for the radar-chart caution) | Stephen Few https://www.perceptualedge.com/articles/dmreview/radar_graphs.pdf | 2005 | practitioner |
 | Cost curves as a trade-off device | No source found; design suggestion | — | — |

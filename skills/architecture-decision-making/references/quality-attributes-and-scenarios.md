@@ -67,8 +67,9 @@ https://learn.microsoft.com/en-us/azure/well-architected/pillars ; https://cloud
 
 - Agree a **landing zone** (an acceptable range the stakeholders sign up to) rather than one fake-precise number. This counters
   the "blind flight" fallacy of having no measurable NFRs. https://ozimmer.ch/practices/2025/09/01/ADMFallacies.html
-- Otherwise record an **assumption** ("we assume < 1,000 daily users for 12 months") plus a **trigger** ("revisit
-  if weekly actives exceed 500").
+- Otherwise first check what data exists (logs, analytics, comparable systems), and record an **assumption**
+  only for what is still unknowable ("we assume growth stays under 2x for 12 months; today: 480 daily users from
+  analytics") plus a **trigger** ("revisit if daily users exceed 800").
 - Estimate on a napkin first; see `architecture-research-and-verification`.
 
 ## 5. Reliability targets

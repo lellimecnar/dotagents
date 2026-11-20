@@ -10,10 +10,11 @@ The options are not rungs. They differ on several axes at once, so no single ord
 
 **Selection rule.**
 1. Write each force below as a requirement, marking which are hard.
-2. Score each candidate against every force: meets, meets with work (say what work), fails.
+2. Score each candidate, including the current setup, against every force: meets, meets with work (say what work), fails.
 3. Drop candidates that fail a hard force.
 4. Of the rest, pick the one that leaves the operator the least to run, patch and debug ("least control that meets the forces"). Break ties on cost at the forecast load, exit path and team familiarity.
-5. Record the force that would flip the choice, and re-score when it changes.
+5. Verify the pick against this situation: current quota, region-availability and pricing pages at forecast load, and a trial deploy of the real workload where cheap; if it fails, return to step 3.
+6. Record the force that would flip the choice, and re-score when it changes.
 
 **Forces.**
 
@@ -58,9 +59,9 @@ Decide per component. Score each candidate on the criteria, then apply the defau
 | Unit economics | Cost per unit of value at forecast load, including operator hours | Pricing calculator; toil estimate |
 | Team skill | Has someone on the team run this in production? | Named person; their backup |
 
-**Small-team default:** self-host a component when it is boring and stable, has an official maintained package, has scripted and tested restores, and has bounded toil; otherwise use a managed service. **Exceptions:** residency, sovereignty or unit economics at steady scale can favour self-hosting a component that misses one of these tests; a single critical stateful component whose HA failure modes you can't rehearse (identity and email deliverability are common cases; practitioner judgement, not sourced) can favour managed even when it passes them. Watch for one person becoming "the backup" for too many parts.
+**Small-team default:** self-host a component when it is boring and stable, has an official maintained package, has scripted and tested restores, and has bounded toil; otherwise use a managed service. **Exceptions:** residency, sovereignty or unit economics at steady scale can favour self-hosting a component that misses one of these tests; a single critical stateful component whose HA failure modes you can't rehearse can favour managed even when it passes them. Watch for one person becoming "the backup" for too many parts.
 
-**Owner-preference lens.** If the owner prefers free, self-hostable or official tools, consider those first and show what the preference costs in operator hours and risk. It is a stated lens, not a rule that overrides the criteria.
+**Owner-preference lens.** If the owner prefers free, self-hostable or official tools, consider those first and show what the preference costs in operator hours and risk. Treat it as a constraint from the framing: where it conflicts with a criterion, show the cost and ask the owner rather than overriding either.
 
 | Option | Forces | When not | Sources |
 |---|---|---|---|
@@ -105,7 +106,7 @@ Two separate choices; verify each on its own.
 
 | Choice | Forces | When not | Sources |
 |---|---|---|---|
-| Multi-zone redundancy (topology) | The SLO can't tolerate a single host or zone failure | Hobby or one-person scale, where cross-zone transfer and extra parts outweigh the benefit; one instance plus tested restore may meet the SLO | [data transfer costs](https://aws.amazon.com/blogs/architecture/overview-of-data-transfer-costs-for-common-architectures/) |
+| Multi-zone redundancy (topology) | The SLO can't tolerate a single host or zone failure | Hobby or one-person scale, where cross-zone transfer and extra parts outweigh the benefit; check whether one instance plus a tested restore meets the SLO (expected failure rate × measured restore time against the error budget) | [data transfer costs](https://aws.amazon.com/blogs/architecture/overview-of-data-transfer-costs-for-common-architectures/) |
 | Static stability (capacity policy) | Recovery must not need new capacity or a working control plane: capacity for the load is already provisioned in the surviving zones | Tiers where waiting for scale-up during a zone event is acceptable | [Static stability](https://aws.amazon.com/builders-library/static-stability-using-availability-zones/), [fault isolation](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/static-stability.html) |
 
 Verify separately: remaining-zone capacity under peak load (a load test with one zone removed), and behaviour with the control plane impaired (can traffic shift and instances keep serving with no API calls?).
@@ -124,7 +125,7 @@ Arithmetic: 99.99% availability allows about 52.6 minutes of downtime a year, an
 
 ### 4d. Scenario map
 
-Fill one row per scenario in scope. A scenario with no drill evidence has an unverified RTO/RPO; say so.
+Fill one row per scenario in scope. Run the drill where it is safe and cheap. Otherwise state that scenario's RTO/RPO as unverified, say what blocked the drill, keep any choice from resting on it, and schedule the drill with an owner.
 
 | Scenario | Detection | Recovery path | Target and achieved RTO/RPO | Drill evidence |
 |---|---|---|---|---|
@@ -159,14 +160,14 @@ Provider landing-zone guidance changes; read the current version rather than cit
 | Trust boundaries | Where identity is re-checked; no implicit trust from network location | — | [NIST SP 800-207](https://csrc.nist.gov/pubs/sp/800/207/final), [BeyondCorp](https://research.google/pubs/beyondcorp-a-new-approach-to-enterprise-security/) |
 | DNS | Who owns the zones and registrar account; TTLs and failover; protecting the registrar login like production | — | (practitioner judgement) |
 | Address plan | Ranges that won't collide with future peering, VPNs or acquisitions | A single host with no private networking | (practitioner judgement) |
-| Inbound exposure | Only what must be public; admin planes behind identity-aware access or a VPN | — | (practice, not sourced) |
+| Inbound exposure | Only what must be public; admin planes behind identity-aware access or a VPN | — | [NIST SP 800-207](https://csrc.nist.gov/pubs/sp/800/207/final), [BeyondCorp](https://research.google/pubs/beyondcorp-a-new-approach-to-enterprise-security/) |
 | Egress control | Allow-lists or proxies for outbound traffic from sensitive workloads; NAT priced | Low-sensitivity workloads where the cost outweighs the risk | [data transfer costs](https://aws.amazon.com/blogs/architecture/overview-of-data-transfer-costs-for-common-architectures/) |
 | Private connectivity | Data stores and admin APIs reachable only privately | Managed services that only offer public endpoints with strong identity; document the exception | (practitioner judgement) |
 | Patch and image lifecycle | Who rebuilds images, how often, and how fast a critical fix ships; immutable images over in-place patching where possible; keep golden images | — | [CISA #StopRansomware guide](https://www.cisa.gov/resources-tools/resources/stopransomware-guide), [SRE toil](https://sre.google/sre-book/eliminating-toil/) |
 | Forensic readiness | Which logs, how long, stored where an attacker with production access can't alter them; clock sync; who leads an incident | — | [NIST SP 800-61r3](https://csrc.nist.gov/pubs/sp/800/61/r3/final) |
 | Shared cache / CDN | Latency and origin load; deliberate `Cache-Control` and `Vary` | Highly personalised responses with no cache-key strategy | [MDN caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) |
 | Same-zone placement for chatty traffic | Same-zone traffic is free; cross-zone and NAT processing are charged per GB | HA needs spreading across zones; price the transfer instead | [data transfer costs](https://aws.amazon.com/blogs/architecture/overview-of-data-transfer-costs-for-common-architectures/) |
-| Edge compute | Adds another runtime and deploy target; use when user latency is a measured problem (unsourced) | Default | (practitioner judgement) |
+| Edge compute | Adds another runtime and deploy target; use when measured user latency from the regions served misses the target and a CDN or region change does not fix it | Latency targets already met from the current region and cache | (practitioner judgement) |
 
 ## 7. Security assurance, chosen by risk
 

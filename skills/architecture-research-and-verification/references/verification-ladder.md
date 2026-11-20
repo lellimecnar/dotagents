@@ -79,5 +79,5 @@ typically handle. Confirm against the actual stack before relying on it. A clust
 ## Reporting what you verified
 
 For each material claim, state which rung it reached: "checked in official docs (date)", "napkin estimate",
-"spike passed: <criterion>", "benchmarked: limiter = disk I/O, reproduced 3×", or "**not verified**: <why>,
-risk if wrong: <impact>".
+"spike passed: <criterion>", "benchmarked: limiter = disk I/O, reproduced 3×", or, for a non-deciding claim
+only, "**not verified**: <what was tried>, <why no means could settle it>, risk if wrong: <impact>".

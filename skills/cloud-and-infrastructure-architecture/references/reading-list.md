@@ -1,6 +1,6 @@
 # Reading list
 
-The list has three tiers: **Tier 1** to read first, **Tier 2** for depth on demand, and **Tier 3** for context and counterpoints. Entries marked "live" are documents that keep changing. Re-check them before citing specifics.
+The list has three tiers: **Tier 1** to read first, **Tier 2** for depth on demand, and **Tier 3** for context and counterpoints. Entries marked "live" are documents that keep changing. Re-check them before citing specifics. URLs checked 2026-11-19 with a scripted browser request: all resolve; years are taken from each page or its publisher.
 
 ## Tier 1: core method
 
@@ -11,13 +11,13 @@ The list has three tiers: **Tier 1** to read first, **Tier 2** for depth on dema
 | The Frugal Architect | Werner Vogels | 2023 | Laws / essays | https://thefrugalarchitect.com/ |
 | FinOps Framework & Principles | FinOps Foundation | live | Framework | https://www.finops.org/framework/ |
 | Don't get locked up into avoiding lock-in | Gregor Hohpe | 2019 | Article | https://martinfowler.com/articles/oss-lockin.html |
-| Multi-cloud decision model | Gregor Hohpe | c. 2020 | Article | https://architectelevator.com/cloud/multi-cloud-decision-model/ |
+| Multi-cloud decision model | Gregor Hohpe | 2022 | Article | https://architectelevator.com/cloud/multi-cloud-decision-model/ |
 | Choose Boring Technology | Dan McKinley | 2015 | Essay / talk | https://mcfunley.com/choose-boring-technology |
 | Site Reliability Engineering & SRE Workbook (free) | Google | 2016 / 2018 | Books | https://sre.google/books/ |
 | Compute decision tree | Microsoft | live | Official guide | https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree |
 | Disaster Recovery of Workloads on AWS | AWS | live | Whitepaper | https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html |
 | AWS Multi-Region Fundamentals | AWS | live | Prescriptive guidance | https://docs.aws.amazon.com/prescriptive-guidance/latest/aws-multi-region-fundamentals/fundamental-1.html |
-| Static stability using Availability Zones | AWS Builders' Library | c. 2020 | Article | https://aws.amazon.com/builders-library/static-stability-using-availability-zones/ |
+| Static stability using Availability Zones | AWS Builders' Library | 2019 | Article | https://aws.amazon.com/builders-library/static-stability-using-availability-zones/ |
 | The 3-2-1 backup strategy (3-2-1 as a starting point; 3-2-1-1-0 and 4-3-2 variants) | Backblaze | live | Vendor guide | https://www.backblaze.com/blog/the-3-2-1-backup-strategy/ |
 | #StopRansomware Guide | CISA | live | Government guide | https://www.cisa.gov/resources-tools/resources/stopransomware-guide |
 | Data integrity: what you read is what you wrote (SRE book ch. 26) | Google | 2016 | Book chapter | https://sre.google/sre-book/data-integrity/ |
@@ -27,10 +27,10 @@ The list has three tiers: **Tier 1** to read first, **Tier 2** for depth on dema
 | SLSA security levels | OpenSSF | 2023 | Spec | https://slsa.dev/spec/v1.0/levels |
 | OWASP Secrets Management Cheat Sheet | OWASP | live | Guide | https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html |
 | CNCF Platforms White Paper | CNCF TAG App Delivery | 2023 | White paper | https://tag-app-delivery.cncf.io/whitepapers/platforms/ |
-| Team Topologies key concepts | Skelton & Pais | 2019+ | Book / site | https://teamtopologies.com/key-concepts |
+| Team Topologies key concepts | Skelton & Pais | 2019 (2nd ed. 2025) | Book / site | https://teamtopologies.com/key-concepts |
 | SCI Specification | Green Software Foundation | 2024 (ISO) | Standard | https://sci.greensoftware.foundation/ |
-| Latency numbers every programmer should know | Jonas Bonér (after Dean/Norvig) | 2012+ | Gist | https://gist.github.com/jboner/2841832 |
-| Overview of data transfer costs for common architectures | AWS | c. 2021 | Blog | https://aws.amazon.com/blogs/architecture/overview-of-data-transfer-costs-for-common-architectures/ |
+| Latency numbers every programmer should know | Jonas Bonér (after Dean/Norvig) | 2012 | Gist | https://gist.github.com/jboner/2841832 |
+| Overview of data transfer costs for common architectures | AWS | 2021 | Blog | https://aws.amazon.com/blogs/architecture/overview-of-data-transfer-costs-for-common-architectures/ |
 
 ## Tier 2: depth when the decision needs it
 
@@ -40,10 +40,10 @@ The list has three tiers: **Tier 1** to read first, **Tier 2** for depth on dema
 | AWS Well-Architected lenses | AWS | live | Official guide | https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses.html |
 | Implementing WAF recommendations (review cadence) | Microsoft | live | Guide | https://learn.microsoft.com/en-us/azure/well-architected/design-guides/implementing-recommendations |
 | AWS compute / container decision guides | AWS | live | Official guides | https://docs.aws.amazon.com/decision-guides/latest/decision-guides/choosing-aws-compute-service.html |
-| Where should I run my stuff? | Google Cloud | c. 2021 | Blog | https://cloud.google.com/blog/topics/developers-practitioners/where-should-i-run-my-stuff-choosing-google-cloud-compute-option |
+| Where should I run my stuff? | Google Cloud | 2021 | Blog | https://cloud.google.com/blog/topics/developers-practitioners/where-should-i-run-my-stuff-choosing-google-cloud-compute-option |
 | FinOps Unit Economics capability | FinOps Foundation | live | Framework | https://www.finops.org/framework/capabilities/unit-economics |
 | Cloud FinOps, 2nd ed. | Storment & Fuller | 2023 | Book | https://www.finops.org/community/finops-book/ |
-| Cloud Strategy | Gregor Hohpe | 2020+ | Book | https://architectelevator.com/book/ |
+| Cloud Strategy | Gregor Hohpe | 2020 | Book | https://architectelevator.com/book/ |
 | Service Levels and Error Budgets | Jones & Murphy | 2016 | SREcon talk | https://www.usenix.org/conference/srecon16/program/presentation/jones |
 | Building Secure and Reliable Systems (free) | Google | 2020 | Book | https://google.github.io/building-secure-and-reliable-systems/ |
 | Cell-based architecture | AWS | 2023 | Whitepaper | https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html |
@@ -62,7 +62,7 @@ The list has three tiers: **Tier 1** to read first, **Tier 2** for depth on dema
 | OpenGitOps principles | CNCF OpenGitOps | 2021 | Spec | https://opengitops.dev/ |
 | DORA metrics | DORA | live | Research guide | https://dora.dev/guides/dora-metrics/ |
 | AWS Sustainability pillar | AWS | live | Framework | https://docs.aws.amazon.com/wellarchitected/latest/framework/sustainability.html |
-| Infrastructure as Code, 3rd ed. | Kief Morris | — | Book (seen in search results only) | https://www.thoughtworks.com/en-us/insights/books/infrastructure-as-code-3rd-ed |
+| Infrastructure as Code, 3rd ed. | Kief Morris | 2025 | Book | https://infrastructure-as-code.com/book/ |
 
 ## Tier 3: case studies, critiques, counterpoints
 
@@ -77,5 +77,5 @@ The list has three tiers: **Tier 1** to read first, **Tier 2** for depth on dema
 | Prime Video moves from serverless to containers | InfoQ | 2023 | News | https://www.infoq.com/news/2023/05/prime-ec2-ecs-saves-costs |
 | You (probably) don't need Kubernetes | Martin Tournoij | 2019 | Blog | https://www.arp242.net/dont-need-k8s.html |
 | Kubernetes failure stories | community | live | Catalogue | https://k8s.af/ |
-| Solo developer infrastructure playbook | Imad Rashid | c. 2026 | Blog | https://imad.website/writing/solo-developer-playbook/ |
+| Solo developer infrastructure playbook | Imad Rashid | 2026 | Blog | https://imad.website/writing/solo-developer-playbook/ |
 | The Frugal Architect keynote (re:Invent 2023) | Werner Vogels | 2023 | Talk | https://www.youtube.com/watch?v=UTRBVPvzt9w |

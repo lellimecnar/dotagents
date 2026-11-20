@@ -31,51 +31,53 @@ Use the groups that fit the rigour tier. A light review might use only A, C and 
 10. Which alternatives were rejected, and why? Were keep-current, extend-existing and buy/managed among them?
     https://ozimmer.ch/practices/2020/04/27/ArchitectureDecisionMaking.html
 11. What is the strongest case for the option we rejected?
-12. For each component beyond the baseline (one deployable, one existing datastore, one box or managed
+12. Was each finalist checked to work in this situation against primary, current sources, and did the search
+    continue until no new serious candidates appeared? Does any deciding claim still rest on "should work"?
+13. For each component beyond the baseline (one deployable, one existing datastore, one box or managed
     platform), which named requirement earns it?
-13. Which new technologies does this introduce, who operates them, and what do they replace?
+14. Which new technologies does this introduce, who operates them, and what do they replace?
     https://mcfunley.com/choose-boring-technology
-14. Is anything here a presumptive capability rather than ease of change? https://martinfowler.com/bliki/Yagni.html
-15. Would we choose this if it didn't look good on a CV or a job ad?
+15. Is anything here a presumptive capability rather than ease of change? https://martinfowler.com/bliki/Yagni.html
+16. Would we choose this if it didn't look good on a CV or a job ad?
     https://portal.fis.tum.de/en/publications/resume-driven-development-a-definition-and-empirical-characteriza/
 
 ## D. Cost, operations and organisation
-16. What are the recurring operator hours (patching, upgrades, backups, restores, on-call)?
+17. What are the recurring operator hours (patching, upgrades, backups, restores, on-call)?
     https://sre.google/sre-book/eliminating-toil/
-17. What is the switching cost (strike price) of each dependency, and what does reducing it cost in
+18. What is the switching cost (strike price) of each dependency, and what does reducing it cost in
     complexity? https://martinfowler.com/articles/oss-lockin.html
-18. Does the team structure support these boundaries? https://www.melconway.com/Home/Committees_Paper.html ;
+19. Does the team structure support these boundaries? https://www.melconway.com/Home/Committees_Paper.html ;
     https://teamtopologies.com/key-concepts
-19. Is there an operational readiness plan with SLOs? https://sre.google/sre-book/evolving-sre-engagement-model
-20. What's the cross-cutting story: security (threat model), privacy, observability, backup and restore?
+20. Is there an operational readiness plan with SLOs? https://sre.google/sre-book/evolving-sre-engagement-model
+21. What's the cross-cutting story: security (threat model), privacy, observability, backup and restore?
     https://github.com/adamshostack/4QuestionFrame ; https://industrialempathy.com/posts/design-docs-at-google
 
 ## E. Evolution and confirmation
-21. What load does the forecast give at the horizon and at peak (bursts, launches, seasonality), and what
+22. What load does the forecast give at the horizon and at peak (bursts, launches, seasonality), and what
     gets rewritten if growth exceeds it?
     https://martinfowler.com/bliki/SacrificialArchitecture.html
-22. What are the triggers for the next step on the evolution path?
-23. Which drivers have fitness functions, and which rely on periodic review?
+23. What are the triggers for the next step on the evolution path?
+24. Which drivers have fitness functions, and which rely on periodic review?
     https://www.infoq.com/articles/fitness-functions-architecture/
-24. What is the riskiest assumption, and how will we learn early that it is wrong (spike, premortem,
+25. What is the riskiest assumption, and how will we learn early that it is wrong (spike, premortem,
     measurement)? https://codingthearchitecture.com/2012/07/11/risk_storming.html
 
 ## F. Reasoning quality (decision fallacies)
 Adapted from Zimmermann's seven decision-making fallacies https://ozimmer.ch/practices/2025/09/01/ADMFallacies.html
 and the Kahneman, Lovallo & Sibony checklist https://hbr.org/2011/06/the-big-idea-before-you-make-that-big-decision
 
-25. **Blind flight:** are the quality requirements measurable, or adjectives?
-26. **Following the crowd:** "big company X does it". Do their requirements match ours?
-27. **Anecdotal evidence:** is one success story the main support?
-28. **Blending whole and part / abstraction aversion:** does one record mix concept, technology and product
+26. **Blind flight:** are the quality requirements measurable, or adjectives?
+27. **Following the crowd:** "big company X does it". Do their requirements match ours?
+28. **Anecdotal evidence:** is one success story the main support?
+29. **Blending whole and part / abstraction aversion:** does one record mix concept, technology and product
     choices that should be separate decisions?
-29. **Golden hammer / silver bullet:** is this the proposer's favourite tool regardless of problem?
-30. **Timelessness:** has the time dimension (phase, horizon, evolution) been ignored?
-31. **AI over-confidence:** were AI-generated claims verified against live sources?
-32. Has the team fallen in love with its proposal? Were there dissenting opinions?
-33. Did anyone actively look for evidence that would disprove the recommendation?
-34. Sunk cost: if we weren't already invested, would we choose this today?
-35. Are the estimates anchored on a reference class of similar efforts, with the bad tail considered?
+30. **Golden hammer / silver bullet:** is this the proposer's favourite tool regardless of problem?
+31. **Timelessness:** has the time dimension (phase, horizon, evolution) been ignored?
+32. **AI over-confidence:** were AI-generated claims verified against live sources?
+33. Has the team fallen in love with its proposal? Were there dissenting opinions?
+34. Did anyone actively look for evidence that would disprove the recommendation?
+35. Sunk cost: if we weren't already invested, would we choose this today?
+36. Are the estimates anchored on a reference class of similar efforts, with the bad tail considered?
     https://arxiv.org/abs/1302.3642 ; https://arxiv.org/abs/1304.0265
 
 ## Lightweight vs full evaluation

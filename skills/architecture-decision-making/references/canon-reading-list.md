@@ -44,7 +44,7 @@ Type key: book · paper (peer-reviewed or technical report) · post (blog or ess
 | ATAM (CMU/SEI-2000-TR-004) | Kazman, Klein, Clements | 2000 | paper | https://www.sei.cmu.edu/documents/629/2000_005_001_13706.pdf | Utility trees, sensitivity and trade-off points |
 | Risk Themes from ATAM Data | Bass, Nord, Wood | 2006 | paper | https://sei.cmu.edu/documents/2902/2006_017_001_22523.pdf | Omission risks dominate |
 | CBAM | Kazman et al. | 2003 | paper | https://sei.cmu.edu/documents/179/2003_019_001_29571.pdf | Economic comparison of options |
-| Lightweight Architecture Evaluation (notes) | Sicoie | ~2023 | post | https://robertsicoie.com/blog/lae | A couple of hours, peer-run |
+| Lightweight Architecture Evaluation (notes) | Sicoie | 2022 | post | https://robertsicoie.com/blog/lae | A couple of hours, peer-run |
 | An Ontology of Architectural Design Decisions | Kruchten | 2004 | paper | https://philippe.kruchten.com/wp-content/uploads/2009/07/kruchten-2004-design-decisions.pdf | Decision kinds, including bans |
 | The Psychology of ADRs | Keeling | 2022 | paper | https://keeling.dev/essays/psychology-of-architecture-decision-records/ | ADRs as commitment devices |
 | Using ADRs in OSS (MSR study) | Buchgeher et al. | 2023 | paper | https://research.jku.at/en/publications/using-architecture-decision-records-in-open-source-projects-an-ms | Adoption is shallow; plan for ownership |
@@ -58,7 +58,7 @@ Type key: book · paper (peer-reviewed or technical report) · post (blog or ess
 | The Frugal Architect | Vogels | 2023 | site | https://thefrugalarchitect.com/ | Cost as a requirement |
 | Why we're leaving the cloud | DHH | 2022 | post | https://world.hey.com/dhh/why-we-re-leaving-the-cloud-654b47e0 | Load shape decides rent vs own |
 | Microservice Trade-Offs | Fowler | 2015 | post | https://martinfowler.com/articles/microservice-trade-offs.html | Ledger of benefits and costs |
-| Fitness function-driven development | ThoughtWorks | ~2019 | post | https://thoughtworks.com/insights/articles/fitness-function-driven-development | Eliciting fitness functions |
+| Fitness function-driven development | ThoughtWorks | 2019 | post | https://thoughtworks.com/insights/articles/fitness-function-driven-development | Eliciting fitness functions |
 | Software Architecture Monday | Richards | ongoing | talk series | https://www.developertoarchitect.com/lessons/ | Short lessons (risk storming, analysis paralysis) |
 | Architectural Katas | Neward | ongoing | site | https://www.architecturalkatas.com/ | Deliberate practice |
 

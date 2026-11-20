@@ -1,10 +1,8 @@
 # Decision guides
 
 One table per decision in the SKILL.md sequence. Columns: options, the forces that favour each, when
-not to choose it, and sources. URLs come from the research dossier (compiled 2026-11-19), except
-those marked ‡, which were fetched and confirmed to resolve on 2026-11-19. Sources marked †
-returned 403 to a scripted client but are the canonical location. Rows are defaults with
-when-not cases, not fixed mappings.
+not to choose it, and sources. URLs checked 2026-11-19 with a scripted browser request (one retry): all resolve. † marks publisher pages that refuse scripted clients (HTTP 403); each was confirmed live by a recent web-archive capture returning 200. Rows are defaults with when-not cases, not fixed
+mappings.
 
 ## 1. Domain model and ownership boundary
 
@@ -81,7 +79,8 @@ All three versioning styles work. Consistency within one organisation matters mo
 | Database per service | Services that must evolve independently | A modular monolith, where schema-per-module with enforced access is enough | https://microservices.io/patterns/data/database-per-service.html |
 
 Method: write down access patterns, consistency needs, volume and growth, latency SLO and ops
-capacity. Then default, measure, and justify each addition. For any distributed database, read its
+capacity. Then confirm the existing database's features cover those needs on the version and
+plan you run, measure, and justify each addition by the measured gap. For any distributed database, read its
 Jepsen report and work out its PACELC behaviour https://jepsen.io/analyses. Polyglot costs (dual
 writes, sync pipelines, more restore targets) are mitigated with an outbox or CDC from one system
 of record https://microservices.io/patterns/data/transactional-outbox.html.
@@ -95,9 +94,9 @@ below are the decisions; a store-level answer is not enough when copies exist el
 |---|---|---|---|
 | Classification and owner | Sensitivity class, legal basis where relevant, accountable owner | One line per class for an internal tool with no personal or regulated data | https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/guide-to-accountability-and-governance/data-protection-by-design-and-by-default/ |
 | Retention, deletion, legal hold | Retention period per class; deletion that reaches replicas, caches, search indexes, event logs, analytics, exports and backups within a stated window; a legal-hold override. Append-only logs need a plan (for example per-subject keys destroyed on deletion, or compaction) | Data with no retention obligation still needs an owner and a deletion path | same |
-| Lineage | Source of record and every derived copy, recorded so deletion, correction and impact analysis can find them | A single store with no derived copies | https://openlineage.io/ ‡ |
+| Lineage | Source of record and every derived copy, recorded so deletion, correction and impact analysis can find them | A single store with no derived copies | https://openlineage.io/ |
 | Schema evolution and migration | Expand/contract migrations, backfills that can resume, a tested rollback path or forward-fix plan | — | https://martinfowler.com/bliki/ParallelChange.html |
-| Encryption and key ownership | Who owns, rotates and can revoke keys per class; separation of key and data administration for the highest classes | — | https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html ‡ |
+| Encryption and key ownership | Who owns, rotates and can revoke keys per class; separation of key and data administration for the highest classes | — | https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html |
 | Data quality | Validation at ingress, reconciliation for derived copies, ownership of fixes | — | — |
 | Residency | Where each class may be stored and processed, including backups and telemetry | No residency obligation | — |
 | Backup and restore | Backup per class with a restore tested against the RPO/RTO; platform backup strategy belongs to `cloud-and-infrastructure-architecture` | — | https://www.backblaze.com/blog/the-3-2-1-backup-strategy/ |
@@ -114,12 +113,12 @@ below are the decisions; a store-level answer is not enough when copies exist el
 | Transactional outbox / CDC | Any DB write plus publish | — | https://microservices.io/patterns/data/transactional-outbox.html |
 | Idempotent consumers, idempotency keys | Always: assume at-least-once | — | https://stripe.com/blog/idempotency ; https://brandur.org/idempotency-keys ; https://www.confluent.io/blog/exactly-once-semantics-are-possible-heres-how-apache-kafka-does-it/ |
 
-| Need | Pick | Notes / sources |
+| Need | Starting candidate (confirm against the existing stack and the versions you run) | Notes / sources |
 |---|---|---|
 | Work distribution, per-message ack, retries, DLQ | Queue | Bound the backlog (TTL, LIFO under overload, separate queues) https://aws.amazon.com/builders-library/avoiding-insurmountable-queue-backlogs/ |
 | Many consumers, replay, per-key ordering | Log | Partition key = ordering scope https://www.rabbitmq.com/docs/streams ; https://kafka.apache.org/documentation/ ; https://web.archive.org/web/20180201201617/https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying |
 | Modest volume, transactional enqueue | Database table + `SKIP LOCKED` | Outbox for free. Watch vacuum and bloat https://www.postgresql.org/docs/current/sql-select.html |
-| Multi-step process, modest history and scale (default) | Database-backed state machine | Idempotent steps, leases, crash-recovery tests. Outbox for side effects https://www.postgresql.org/docs/current/sql-select.html |
+| Multi-step process, modest history and scale, no workflow engine already run | Database-backed state machine | Idempotent steps, leases, crash-recovery tests. Outbox for side effects https://www.postgresql.org/docs/current/sql-select.html |
 | Histories, timers, retries, compensation, visibility or operational scale beyond what the tested state machine handles | Durable-execution / workflow engine | https://docs.temporal.io/temporal ; https://temporal.io/blog/what-is-durable-execution. Model per-transition cost (Prime Video case above) |
 
 ## 8. Resilience (per remote call)
@@ -154,13 +153,13 @@ map the requirements that apply; do not rely on remembered category names or num
 | Decision | Options and forces | When not / caveat | Sources |
 |---|---|---|---|
 | Trust boundaries and threat model | Data-flow diagram with boundaries; ask what can go wrong at each, what you will do about it, and whether you did a good job; revisit at each significant change | Size the model to the risk: a one-page model for a small internal tool | https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html ; https://threatmodelingmanifesto.org ; https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats |
-| End-user identity propagation | A verified, audience-restricted, short-lived token passed or exchanged at each hop; services validate it rather than trusting the caller | A plain header that any internal caller can set | https://www.rfc-editor.org/rfc/rfc9700 ‡ |
-| Service / workload identity | Platform-issued workload identity, mutual TLS or signed short-lived credentials; per-request authentication rather than network location | Shared static keys between services; trust by network segment alone | https://spiffe.io/docs/latest/spiffe-about/overview/ ‡ ; https://csrc.nist.gov/pubs/sp/800/207/final |
+| End-user identity propagation | A verified, audience-restricted, short-lived token passed or exchanged at each hop; services validate it rather than trusting the caller | A plain header that any internal caller can set | https://www.rfc-editor.org/rfc/rfc9700 |
+| Service / workload identity | Platform-issued workload identity, mutual TLS or signed short-lived credentials; per-request authentication rather than network location | Shared static keys between services; trust by network segment alone | https://spiffe.io/docs/latest/spiffe-about/overview/ ; https://csrc.nist.gov/pubs/sp/800/207/final |
 | Authentication | An established identity provider and standard protocol | Custom credential handling | https://owasp.org/www-project-application-security-verification-standard/ |
-| Authorization policy and enforcement point | Policy model (role, attribute or relationship based) chosen by sharing semantics; enforced in the service that owns the data; deny by default; object-level and function-level checks | Gateway-only checks; object IDs accepted from the client without an ownership check | https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html ‡ ; https://owasp.org/API-Security/ ‡ |
-| Secrets and keys | A managed secret store, rotation, short lifetimes; no secrets in code, images or logs; key ownership per data class (step 6) | — | https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html ; https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html ‡ |
-| Abuse controls | Rate limits and quotas per identity and tenant, payload and pagination limits, query-cost limits for graph APIs | — | https://owasp.org/API-Security/editions/2023/en/0x11-t10/ ‡ (check for a newer edition) |
-| Audit events | Who did what to which resource, with outcome and correlation ID; tamper-evident storage; retention per step 6; no secrets or unnecessary personal data | — | https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html ‡ |
+| Authorization policy and enforcement point | Policy model (role, attribute or relationship based) chosen by sharing semantics; enforced in the service that owns the data; deny by default; object-level and function-level checks | Gateway-only checks; object IDs accepted from the client without an ownership check | https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html ; https://owasp.org/API-Security/ |
+| Secrets and keys | A managed secret store, rotation, short lifetimes; no secrets in code, images or logs; key ownership per data class (step 6) | — | https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html ; https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html |
+| Abuse controls | Rate limits and quotas per identity and tenant, payload and pagination limits, query-cost limits for graph APIs | — | https://owasp.org/API-Security/editions/2023/en/0x11-t10/ (check for a newer edition) |
+| Audit events | Who did what to which resource, with outcome and correlation ID; tamper-evident storage; retention per step 6; no secrets or unnecessary personal data | — | https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html |
 | Encryption | In transit (including internal hops where the threat model requires), at rest per data class, field-level for the most sensitive fields | — | https://owasp.org/www-project-application-security-verification-standard/ |
 | Assurance level | Select the ASVS level from application risk, data sensitivity and expected assurance; ASVS 5.0 says most applications should strive for L2 | Selecting by team or company size | https://github.com/OWASP/ASVS/blob/v5.0.0/5.0/en/0x03-What-is-the-ASVS.md |
 
@@ -208,6 +207,6 @@ Sources listed 2026-11-19. Record the date you check each one.
 | Telemetry maturity | https://opentelemetry.io/docs/specs/semconv/ ; https://opentelemetry.io/docs/concepts/signals/ | Stability badges per signal and language |
 | Resilience and tenancy guidance | https://aws.amazon.com/builders-library/ ; https://docs.aws.amazon.com/wellarchitected/latest/framework/reliability.html ; https://learn.microsoft.com/en-us/azure/architecture/patterns/ | "Last modified" dates. Builders' Library URLs now redirect |
 | Serverless and workflow limits and pricing | Vendor quota and pricing pages | Model cost at expected events per second |
-| Application security requirements | https://owasp.org/www-project-application-security-verification-standard/ ; https://owasp.org/API-Security/ ‡ | Current ASVS version and API Security Top 10 edition; map the applicable requirements |
+| Application security requirements | https://owasp.org/www-project-application-security-verification-standard/ ; https://owasp.org/API-Security/ | Current ASVS version and API Security Top 10 edition; map the applicable requirements |
 | Database feature semantics | https://www.postgresql.org/docs/current/ (or your DB's docs) | Docs for the major version you run |
 | New book editions | Publisher or author pages, e.g. https://martin.kleppmann.com/2026/03/24/designing-data-intensive-applications-2e.html | Prefer the latest edition for data systems |

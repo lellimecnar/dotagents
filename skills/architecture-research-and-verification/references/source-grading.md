@@ -28,8 +28,8 @@ set. Count origins, not links: a blog quoting a vendor benchmark is the vendor b
 
 **Stopping by claim class and risk.** One versioned primary source settles existence, syntax and limits for
 the version you'll run. Contentious operational claims need the primary source plus independent
-corroboration. Effect claims need a suitable review or replication; if none exists, say the evidence is thin
-and lower confidence instead of searching forever.
+corroboration. Effect claims need a suitable review or replication; if none exists after searching, say the evidence is thin,
+lower confidence, and do not let that claim carry the recommendation.
 
 ## 2. Grading axes (from Garousi Guideline 11)
 
@@ -101,8 +101,9 @@ The research deliverable is a ledger whose rows carry the provenance fields, key
 
 - **Search log:** query, where searched, date, what was found and rejected (and why). It lets a reviewer see
   whether disconfirming searches were run.
-- **Unresolved evidence:** claim, why unresolved (paywall, no data, conflicting), risk if wrong, what would
-  resolve it.
+- **Unresolved evidence:** claim, what was tried, why no available means can settle it (paywall, no access, no
+  data yet; conflicts only after tracing each side to its origin), risk if wrong, what would resolve it. Nothing
+  on this list carries the recommendation.
 - **Traceability rule:** every sentence of the recommendation cites one or more ledger rows (e.g. "[E1, E4]").
   A sentence with no row is opinion and must be labelled as judgement.
 

@@ -20,7 +20,8 @@ Values: **Fit**, **Simplicity**, **Evolvability**, **Cost**, **Traceability** (s
 
 <a id="h2"></a>
 ### H2 Generate at least three genuinely different options before evaluating
-- **Rule:** include keep-current or extend-existing, and buy/managed. Write the list before favouring any option.
+- **Rule:** include keep-current, extend-existing and buy/managed, then keep searching by the problem until new
+  searches stop turning up serious candidates. Write the list before favouring any option.
 - **Protects:** Fit; counters anchoring and satisficing.
 - **Not when:** constraints leave one option. Say so and show why, rather than inventing straw men.
 - **Sources:** Google design docs ("Alternatives considered" is "one of the most important" sections)
@@ -151,8 +152,9 @@ Values: **Fit**, **Simplicity**, **Evolvability**, **Cost**, **Traceability** (s
 
 <a id="h16"></a>
 ### H16 Choose the decision mode by context
-- **Rule:** compare alternatives analytically when time allows. Recognition-primed (expert pattern-match)
-  decisions are fine when urgent or in familiar, high-feedback territory. Record them and revisit.
+- **Rule:** compare alternatives analytically by default. Recognition-primed (expert pattern-match) decisions
+  may shorten the comparison when urgent or in familiar, high-feedback territory, but the floor holds: name the
+  alternatives weighed and check the chosen option works here. Record them and revisit.
 - **Not when:** urgency is used as an excuse to skip alternatives on a one-way door. Architecture often lacks the
   regular, fast feedback that makes intuition trustworthy.
 - **Sources:** https://wirfs-brock.com/rebecca/papers/ExploratoryStudyOfNDM ; https://psycnet.apa.org/record/2009-13007-001
@@ -166,8 +168,9 @@ Values: **Fit**, **Simplicity**, **Evolvability**, **Cost**, **Traceability** (s
 - **Not when:** high-stakes economic comparisons can justify a structured cost-benefit method (CBAM), with its
   uncertainty made explicit.
 - **Sources:** matrices are dangerous when "treated as machines that automatically produce the right strategic
-  choice" (secondary) https://sustainablecatalyst.com/decision-matrices-and-their-limits/ ; AIAA 2003 pitfalls
-  paper (abstract not fetched) https://doi.org/10.2514/6.2003-466 ; Mediating Assessments Protocol summary
+  choice" (secondary) https://sustainablecatalyst.com/decision-matrices-and-their-limits/ ; Mullur, Mattson &
+  Messac, "Pitfalls of the Typical Construction of Decision Matrices for Concept Selection" (AIAA 2003; full
+  text behind an access wall, background only) https://doi.org/10.2514/6.2003-466 ; Mediating Assessments Protocol summary
   https://theuncertaintyproject.org/tools/the-mediating-assessments-protocol ; CBAM https://sei.cmu.edu/documents/179/2003_019_001_29571.pdf
 
 <a id="h18"></a>
@@ -214,8 +217,13 @@ Values: **Fit**, **Simplicity**, **Evolvability**, **Cost**, **Traceability** (s
 
 <a id="h23"></a>
 ### H23 Adopt heavyweight platforms when their problems are your problems
+- **Rule:** adopt a heavyweight platform only for problems you have now or have forecast, and only after it beats
+  the simpler candidates on this workload, including the operator time it costs.
 - **Example:** an orchestration platform pays off with many services and teams and someone to own it. For a
-  small team with few services, its complexity tax usually exceeds its benefit.
+  small team with few services, its complexity tax often exceeds its benefit.
+- **Not when:** the team already operates it well, a managed offering removes most ownership cost, or a named
+  requirement (multi-tenant isolation, autoscaling, portability) needs it. Compare against simpler candidates
+  on this workload.
 - **Sources:** https://www.arp242.net/dont-need-k8s.html ; https://k8s.af/ ; https://kamal-deploy.org/
 
 <a id="h24"></a>
@@ -260,8 +268,8 @@ Values: **Fit**, **Simplicity**, **Evolvability**, **Cost**, **Traceability** (s
    investigations were the largest risk-theme class). Resolve via
    reversibility and cost of delay: defer what is cheap to defer, decide one-way doors early (H1, H4).
    https://sei.cmu.edu/documents/2902/2006_017_001_22523.pdf
-4. **Analytic rigour vs expert intuition.** Allow recognition-primed decisions for two-way or urgent calls;
-   require alternatives and debiasing for one-way doors (H16).
+4. **Analytic rigour vs expert intuition.** Allow recognition-primed decisions for two-way calls, and for urgent ones
+   only when also two-way, still naming the alternatives weighed and checking the choice works; require alternatives and debiasing for one-way doors (H16).
 5. **Build for longevity vs sacrificial architecture.** Both sides agree on internal modularity; they disagree
    on up-front investment. Let phase (H15) and reversibility (H1) decide.
    https://web.stanford.edu/~ouster/cgi-bin/cs190-winter18/lecture.php?topic=complexity

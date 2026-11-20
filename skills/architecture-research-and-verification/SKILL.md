@@ -22,7 +22,8 @@ live source, and question your own reasoning first. Companions: `architecture-de
   a population estimate. Language models sound equally sure when wrong.
 - A requester has a preferred answer, or someone pushes back on yours.
 
-Scale effort to the decision's tier. A two-way door needs its key facts checked, not a literature review.
+Scale effort to the decision's tier. A two-way door needs a short look, not a literature review, but never less
+than the floor: real alternatives considered and the chosen option's key facts checked.
 
 ## The values this protects
 
@@ -45,7 +46,8 @@ Write five lines first:
    it never ends it with a deciding claim still unchecked:
    - existence, syntax, limits: one versioned primary source for the version you'll use;
    - contentious operational claims: primary source plus independent corroboration;
-   - effect or causal claims: a suitable review or replication, or say the evidence is thin.
+   - effect or causal claims: a suitable review or replication; if none exists after searching, say the evidence
+     is thin and do not let that claim carry the choice (go conditional or choose on facts you could verify).
 
    Sources are independent only if they don't share an origin or data set; ten posts quoting one benchmark
    are one source.
@@ -85,17 +87,21 @@ from memory, yours or a model's. In a large study, language models invented pack
 samples for commercial models and 21.7% for open-source ones. A later replication on frontier models still
 found 3.6–5.0% ([details](references/llm-failure-modes.md)).
 
-Check each in the official docs or registry, note URL and date, and confirm it applies to your version. If
-you couldn't check it, say so; don't present it as fact.
+Check each in the official docs or registry, note URL and date, and confirm it applies to your version. If one
+route fails, try another (source code, registry, changelog, a spike). Only what no available means can settle may
+stay unverified, listed with what you tried; it must not carry the recommendation.
 
 ## 5. Interrogate your own reasoning
 
 Knowing about biases doesn't fix them. Practising specific techniques does ([toolkit](references/debiasing-toolkit.md)).
 Run these as steps, not intentions:
 
-- **Options before preference.** Write the option list before scoring or favouring any option.
+- **Options before preference.** Write the option list before scoring or favouring any option. Include keep-current
+  or configure-what-exists, the built-in or already-owned route, and the main alternatives found by searching on
+  the problem.
 - **Assumption register.** For the leading option: "what would have to be true?" List each assumption, how you'd
-  test it, and its status (verified / plausible / unverified).
+  test it, and its status (verified / plausible / unverified). Test every deciding assumption before you
+  recommend; only non-deciding ones may stay plausible or unverified.
 - **Steelman each rejected option.** Write its strongest case, in its advocates' terms.
 - **Consider the opposite.** Search for evidence that would disprove the leading option.
 - **Premortem.** "It's a year later and this decision failed. Why?" List the reasons before discussing them.
@@ -110,6 +116,7 @@ Run these as steps, not intentions:
 
 | Rung | Retires | Stop when |
 |---|---|---|
+| Primary-source check (always) | "Does it exist and do what we think, for our version?" | Each deciding fact confirmed in a current primary source, with URL and date |
 | Napkin maths | "Is this even plausible at our scale?" | Orders of magnitude are clearly fine or clearly not |
 | Spike | One specific unknown | Its exit criterion (question, threshold, time box) is met; then throw it away |
 | Active benchmark | Performance claims | You can name the limiter, and the result reproduces |
@@ -130,7 +137,8 @@ forecasts and the recommendation separately:
 | **Medium** | Fit-for-claim but single, or applicability partly unverified | Analogous reference class, adjusted with stated assumptions | Holds for the likely case, flips at a named, plausible threshold |
 | **Low** | Indirect, stale, unverified or conflicting | Judgement without a reference class | Flips within the plausible range, or rests on a low-confidence fact |
 
-A Low rating is a finding, not an exit: if a check you can run (docs, source, a spike, a benchmark, asking the
+A Low or Medium rating on a deciding fact (single source, or applicability partly unverified) is a finding, not
+an exit: if a check you can run (docs, source, a spike, a benchmark, asking the
 vendor) would raise a deciding fact, run it before you recommend. Low stays only for what no available means can
 settle (a future load, data you have no access to, a fact only the owner knows), and then the recommendation is
 conditional ("if X, A; if not, B", each branch verified) or the owner is asked for that fact.
@@ -165,7 +173,8 @@ The research output is a ledger, not prose ([template](references/source-grading
 | Decision question | Decision it can change | Claim | Source / grade | Exact passage or measurement | Applicability limits | Checked | Status |
 |---|---|---|---|---|---|---|---|
 
-Add a **search log** (queries, where, date, what was rejected) and the **unresolved-evidence** list. Every
+Add a **search log** (queries, where, date, what was rejected) and the **unresolved-evidence** list (only what no
+available means could settle, with what was tried; nothing on it carries the recommendation). Every
 sentence of the recommendation must map to ledger rows. This skill owns the provenance fields; render
 citations in the output's or repository's convention (`architecture-proposal-writing`).
 
@@ -180,6 +189,8 @@ citations in the output's or repository's convention (`architecture-proposal-wri
 
 ## Done when
 
+- [ ] Option list includes keep-current or configure-what-exists, the built-in or owned route, and the main
+  alternatives; each finalist checked against this situation; chosen option verified to work here (all tiers).
 - [ ] Research plan written; every question tied to a decision it could change; stopping rule by claim class.
 - [ ] Each material claim has a fit-for-claim, graded source with year; volatile facts have URL plus date checked.
 - [ ] Papers pinned to exact version; corrections, retractions and replications checked.

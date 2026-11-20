@@ -66,7 +66,7 @@ Background on the forces:
 | State class | Default home | Forces for something heavier | When not | Sources |
 |---|---|---|---|---|
 | Server state (remote, async, shared, can go stale) | A cache with stale-while-revalidate semantics, or framework loaders / server components | GraphQL normalised caches when many views share a graph | Copying it into a global store (hand-written invalidation) | https://tanstack.com/query/latest/docs/framework/react/guides/does-this-replace-client-state ; https://tkdodo.eu/blog/react-query-as-a-state-manager |
-| URL state (compact, stable, non-sensitive view state: filters, pagination, selection) | The URL, so it is shareable, bookmarkable and survives reload | — | Ephemeral UI details; secrets, tokens, personal data, large payloads, or anything whose disclosure through server logs, referrers, analytics or browser history is unacceptable | Placement: *common practice, no primary source fetched*. Leakage via referrers: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy |
+| URL state (compact, stable, non-sensitive view state: filters, pagination, selection) | The URL, so it is shareable, bookmarkable and survives reload | — | Ephemeral UI details; secrets, tokens, personal data, large payloads, or anything whose disclosure through server logs, referrers, analytics or browser history is unacceptable | Placement: users should be able to "bookmark and share links ... with assurances that they will see exactly the state as when the link was copied" https://tanstack.com/router/latest/docs/framework/react/guide/search-params . Leakage via referrers: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy |
 | UI state | Colocated with the component; lift only when needed | — | Global by default | https://kentcdodds.com/blog/application-state-management-with-react [dated] ; https://react.dev/learn/thinking-in-react |
 | Global client state | A small store for truly cross-cutting data | Complex client domain logic, undo/audit, large-team conventions | Small apps ("You Might Not Need Redux") | https://redux.js.org/faq/general |
 | Local-first / CRDT sync | A sync engine plus local store | Offline work, multi-device use, real-time collaboration, user ownership | Server must be authoritative per write (payments, inventory); huge unpartitionable data. The area is still maturing, so re-verify | https://www.inkandswitch.com/essay/local-first/ [dated] ; https://martin.kleppmann.com/2024/05/30/local-first-conference.html [dated] ; https://localfirstweb.dev/ |
@@ -98,10 +98,10 @@ Background on the forces:
 | Option | Forces for | When not | Sources |
 |---|---|---|---|
 | Modular monolith with enforced boundaries (try first) | One or a few teams; you want the boundaries without the runtime cost | Teams that are genuinely blocked on each other's releases | https://nx.dev/docs/features/enforce-module-boundaries |
-| Route-level split by team, or linked separate MPAs | Clear page ownership; a cheap form of independence | Shared interactive surfaces across teams | *Listed in the dossier as a cheaper alternative, with no specific source* |
+| Route-level split by team, or linked separate MPAs | Clear page ownership; a cheap form of independence | Shared interactive surfaces across teams | Jackson: "generally there is a micro frontend for each page in the application, and there is a single container application" that routes between them https://martinfowler.com/articles/micro-frontends.html [dated] |
 | Build-time package composition | Shared release train is acceptable | You need independent deploys (this gives them up) | https://martinfowler.com/articles/micro-frontends.html [dated] |
 | Server/edge composition | Independent teams with mostly server-rendered pages | Rich cross-fragment client state | https://martinfowler.com/articles/micro-frontends.html [dated] |
-| Runtime composition (e.g. Module Federation) | Autonomous teams owning independently deployable subdomains (primary force); shared and deduplicated dependencies | A single team; a tight JS budget (duplicate runtimes); mixing frameworks on a page ("anarchy") | https://thoughtworks.com/en-us/radar/languages-and-frameworks/module-federation ; https://module-federation.io/guide/start/index.html ; https://www.thoughtworks.com/radar/techniques/micro-frontend-anarchy [dated] ; https://infoq.com/news/2025/04/microfrontend-best-practices |
+| Runtime composition (e.g. Module Federation) | Autonomous teams owning independently deployable subdomains (primary force); shared and deduplicated dependencies | A single team; a tight JS budget (duplicate runtimes); mixing frameworks on a page ("anarchy") | https://thoughtworks.com/en-us/radar/languages-and-frameworks/module-federation (not on the current Radar edition, checked 2026-11-19) ; https://module-federation.io/guide/start/index.html ; https://www.thoughtworks.com/radar/techniques/micro-frontend-anarchy [dated] ; https://infoq.com/news/2025/04/microfrontend-best-practices |
 
 Forces, in order of weight: (1) autonomous teams owning independently deployable business
 boundaries is the primary, durable force; (2) strangling a legacy front end is a temporary force,
@@ -120,7 +120,7 @@ representation of a business subdomain". Sources as above.
 |---|---|---|---|
 | Monorepo + light task runner with content-hash caching | Shared code; the main need is fast pipelines ("never do the same work twice") | Nobody owns CI or remote-cache infrastructure | https://turborepo.com/docs/core-concepts/caching |
 | Monorepo + graph-aware platform (generators, boundary rules) | Shared code, atomic cross-project changes, governance needs | Small repo where the tooling overhead exceeds the benefit | https://nx.dev/concepts/decisions/why-monorepos (vendor) ; https://monorepo.tools/ (vendor-sponsored) |
-| Polyrepo with published packages | Independent teams, different release cadences, little shared code | Frequent cross-repo changes to the same contract | *Dossier judgment; no specific source.* Trade-off overview: https://monorepo.tools/ |
+| Polyrepo with published packages | Independent teams, different release cadences, little shared code | Frequent cross-repo changes to the same contract | Polyrepo trade-offs ("Isolation buys autonomy", at the cost of code sharing and late-arriving breaking changes): https://monorepo.tools/ (vendor-sponsored and argues for monorepos; weigh the bias) |
 
 Without graph-aware tooling, a monorepo "gets slower and messier as it grows": https://nx.dev/concepts/decisions/why-monorepos
 
@@ -139,6 +139,9 @@ enough" for the hardest planned feature. https://martinfowler.com/articles/mobil
 | Fully native | Nothing | Best fidelity; platform-first features; performance ceiling | Small team under two-platform budget pressure | https://martinfowler.com/articles/mobileImplStrategy.html [dated] |
 
 ### Offline / service worker caching (per resource class)
+
+These are typical starting points. Choose each resource's strategy from the full set (cache-first,
+network-first, stale-while-revalidate, network-only, cache-only) on its freshness and offline needs.
 
 | Resource class | Strategy | Sources |
 |---|---|---|

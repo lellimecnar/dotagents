@@ -38,7 +38,7 @@ sources are marked, so weigh their bias.
 | Transitional apps (talk transcript) | Rich Harris, transcribed by Geoff Rich | 2021 [dated] | Talk | https://geoffrich.net/posts/rich-harris-jamstack-conf-2021/ | SPA/MPA middle path |
 | A response to "Have SPAs ruined the web?" | htmx | 2021 [dated] | Essay | https://htmx.org/essays/a-response-to-rich-harris/ | Hypermedia counterpoint |
 | The cost of JavaScript in 2019 | Addy Osmani | 2019 [dated] | Blog | https://v8.dev/blog/cost-of-javascript-2019 | JS cost model |
-| Performance budgets 101 | web.dev | 2018+ [dated] | Docs | https://web.dev/articles/performance-budgets-101 | Setting budgets |
+| Performance budgets 101 | web.dev | 2018 [dated] | Docs | https://web.dev/articles/performance-budgets-101 | Setting budgets |
 | Local-first software | Kleppmann, Wiggins, van Hardenberg, McGranaghan | 2019 [dated] | Peer-reviewed (Onward!) | https://www.inkandswitch.com/essay/local-first/ | Offline or collaboration is core |
 | Local-first: past, present, future | Martin Kleppmann | 2024 [dated] | Talk | https://martin.kleppmann.com/2024/05/30/local-first-conference.html | Local-first maturity |
 | React Query as a State Manager | Dominik Dorfmeister | 2021 [dated] | Blog | https://tkdodo.eu/blog/react-query-as-a-state-manager | Server-state caching |
@@ -51,8 +51,8 @@ sources are marked, so weigh their bias.
 | Micro-frontend best practices (Mezzalira) | InfoQ | 2025 | Talk report | https://infoq.com/news/2025/04/microfrontend-best-practices | Subdomain-aligned MFEs |
 | Why monorepos | Nx | ongoing | Docs (vendor) | https://nx.dev/concepts/decisions/why-monorepos | Monorepo trade-offs |
 | Selecting a Mobile Implementation Strategy | Giles Alexander | 2012 [dated] | Article | https://martinfowler.com/articles/mobileImplStrategy.html | Mobile decision method |
-| Cross-platform mobile development | Expo | ~2025 | Article (vendor) | https://expo.dev/articles/choosing-a-mobile-stack/cross-platform-mobile-development | Options matrix |
-| Offline cookbook | Jake Archibald / web.dev | updated | Docs | https://web.dev/articles/offline-cookbook | Offline strategies |
+| Cross-platform mobile development | Expo | 2026 | Article (vendor) | https://expo.dev/articles/choosing-a-mobile-stack/cross-platform-mobile-development | Options matrix |
+| Offline cookbook | Jake Archibald / web.dev | 2014 [dated] | Docs | https://web.dev/articles/offline-cookbook | Offline strategies |
 | XSS Prevention Cheat Sheet | OWASP | ongoing | Guide | https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html | Output encoding |
 | Trusted Types | web.dev | ongoing | Docs | https://web.dev/articles/trusted-types | DOM-XSS sinks |
 | Session Management Cheat Sheet | OWASP | ongoing | Guide | https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html | Session transport |
@@ -85,7 +85,7 @@ sources are marked, so weigh their bias.
 | Enforce module boundaries | Nx | ongoing | Docs (vendor) | https://nx.dev/docs/features/enforce-module-boundaries |
 | Caching | Turborepo | ongoing | Docs (vendor) | https://turborepo.com/docs/core-concepts/caching |
 | monorepo.tools | Nx-sponsored | ongoing | Comparison (vendor) | https://monorepo.tools/ |
-| Module Federation (Radar) | Thoughtworks | ~2024 | Radar | https://thoughtworks.com/en-us/radar/languages-and-frameworks/module-federation |
+| Module Federation (Radar) | Thoughtworks | 2021, updated 2025; not on the current edition | Radar | https://thoughtworks.com/en-us/radar/languages-and-frameworks/module-federation |
 | What are PWAs? | web.dev | ongoing | Docs | https://web.dev/articles/what-are-pwas |
 | Workbox caching strategies | Chrome team | ongoing | Docs | https://developer.chrome.com/docs/workbox/caching-strategies-overview |
 | Flutter architectural overview | Google | ongoing | Docs | https://docs.flutter.dev/resources/architectural-overview |

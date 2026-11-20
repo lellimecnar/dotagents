@@ -27,7 +27,9 @@ Not for changes inside one existing module and store: that is ordinary engineeri
 
 Work in this order: later decisions depend on earlier ones, and topology is the one most often
 taken too early. Record each significant choice with its rejected options and accepted
-downsides, attach the evidence that settled it, and state confidence as low, medium or high
+downsides. Before committing, confirm the chosen option works on the versions, extensions,
+hosting plan and platform actually in use (version docs, plus a spike or dry run where cheap),
+attach the evidence that settled it, and state confidence as low, medium or high
 using the shared rubric in `architecture-research-and-verification`.
 
 1. **Domain model and ownership boundary.** Before technology, name the domain model, its
@@ -36,7 +38,8 @@ using the shared rubric in `architecture-research-and-verification`.
    integration or team boundaries are contested. *Violation:* boundaries drawn by technical layer
    ("the database service") or by org chart alone. *When not to escalate:* one model and one team,
    such as a small CRUD tool.
-2. **Module boundaries inside a modular monolith (the default).** Each context becomes a module
+2. **Module boundaries inside a modular monolith** (the starting hypothesis; the existing system
+   and the forces in step 3 confirm or overturn it). Each context becomes a module
    with an explicit public interface, owned data and a one-way dependency graph, enforced by a
    build-time check. Score candidate couplings by strength, distance and volatility. Keep strongly
    coupled, frequently changing pairs together. *Violation:* façades over a cyclical dependency
@@ -59,7 +62,9 @@ using the shared rubric in `architecture-research-and-verification`.
 5. **Data ownership and store selection.** Each module or service owns its data. Others reach it
    through an API or events, never through shared tables. Start with the relational database you
    already run and map each need to a built-in feature: documents, full-text search, vectors, a
-   transactional job queue, partitioning. An embedded database fits one writer host with the data
+   transactional job queue, partitioning. Confirm each in the docs for the version, extensions and
+   hosting plan you run, with a quick test where cheap: a feature missing on your plan is a gap.
+   An embedded database fits one writer host with the data
    next to the app. Every additional store must show a measured gap on your workload, and its
    operational cost is charged as an innovation token.
 6. **Data lifecycle and governance.** For each data class (such as personal, financial or derived),
@@ -75,8 +80,9 @@ using the shared rubric in `architecture-research-and-verification`.
    context. Across services, use sagas with compensations, a transactional outbox (or change-data
    capture) instead of dual writes, and idempotent consumers with caller-supplied request IDs.
    Assume at-least-once delivery. Use a queue to distribute work and a log for ordered, replayable
-   history with many readers. For long-running processes, start with a database-backed state
-   machine with idempotent steps, leases and crash-recovery tests. Move to a durable-execution
+   history with many readers. For long-running processes, compare a database-backed state
+   machine (idempotent steps, leases, crash-recovery tests) with any workflow engine you already
+   run; if none, start with the state machine, since it adds no new system to operate. Move to a durable-execution
    engine when histories, timers, retries, compensation, visibility or operational scale exceed
    what that machine handles under test. *Violation:* cron plus status columns with no lease and no
    test of a crash mid-step.
@@ -100,11 +106,15 @@ using the shared rubric in `architecture-research-and-verification`.
     risk. Verify with a threat model revisited at each significant change and tests of denied
     paths. *Violation:* authorization only at the gateway, or object IDs accepted without an
     ownership check.
-11. **Observability.** Instrument with the vendor-neutral standard and its semantic conventions.
+11. **Observability.** Instrument with the vendor-neutral standard and its semantic conventions,
+    after checking its current stability for the signals and languages you use and that your
+    existing telemetry backend ingests it.
     Emit wide, structured, correlated events with high-cardinality fields, within limits: classify
     telemetry like other data, keep secrets and unnecessary personal data out, and set a
     cardinality and cost budget, sampling and retention. Alert on SLOs over the golden signals.
-12. **AI-era data.** Put vectors in the existing database first. Exact k-NN has recall 1.0 relative
+12. **AI-era data.** Start with vectors in the existing database, after confirming the vector
+    extension and the index types you need are available on the version and hosting plan you
+    run. Exact k-NN has recall 1.0 relative
     to exhaustive search under the chosen embedding and distance at the same k; it does not
     guarantee semantic relevance. Approximate indexes trade that recall for speed. Build an
     evaluation set with quality, latency and cost thresholds first. Treat hybrid lexical plus dense
@@ -120,7 +130,7 @@ Consistency, isolation and failure-mode background: [references/distributed-syst
 | Default | Earned by |
 |---|---|
 | One deployable, modular inside | A named force from step 3, with team and ops capacity to pay for it |
-| Existing relational DB for everything | A measured gap on your workload (napkin maths, then a spike) |
+| Existing relational DB, each need mapped to a feature confirmed on the version and plan you run | A measured gap on your workload (napkin maths, then a spike) |
 | Synchronous call inside the process | Fan-out, temporal decoupling, or a cross-context boundary |
 | Database-backed state machine | Histories, timers, compensation or visibility it cannot handle under test |
 | Additive API change | A true semantic break that cannot be expanded and contracted |

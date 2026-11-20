@@ -2,14 +2,13 @@
 
 Tiered by when to read. Tier 1 is the minimum for anyone using this skill. Tier 2 deepens a
 specific decision step. Tier 3 is case studies and reference material to consult when relevant.
-All entries come from the research dossier (compiled 2026-11-19). † marks canonical URLs that
-returned 403 to a scripted client.
+URLs checked 2026-11-19 with a scripted browser request (one retry): all resolve. † marks publisher pages that refuse scripted clients (HTTP 403); each was confirmed live by a recent web-archive capture returning 200.
 
 ## Tier 1: read first
 
 | Title | Author | Year | Type | URL | Why |
 |---|---|---|---|---|---|
-| Designing Data-Intensive Applications (1e; 2e announced 2026) | M. Kleppmann (+ C. Riccomini, 2e) | 2017 / 2026 | Textbook | https://dataintensive.net/ ; https://martin.kleppmann.com/2026/03/24/designing-data-intensive-applications-2e.html | The reference for replication, partitioning, transactions, consistency, streams |
+| Designing Data-Intensive Applications (1e; 2e published March 2026) | M. Kleppmann (2e with C. Riccomini) | 2017 / 2026 | Textbook | https://dataintensive.net/ ; https://martin.kleppmann.com/2026/03/24/designing-data-intensive-applications-2e.html | The reference for replication, partitioning, transactions, consistency, streams |
 | MonolithFirst; Microservice Premium; Microservice Trade-Offs | M. Fowler | 2015 | Blog | https://martinfowler.com/bliki/MonolithFirst.html ; https://martinfowler.com/bliki/MicroservicePremium.html ; https://martinfowler.com/articles/microservice-trade-offs.html | The default and the cost ledger |
 | What do you mean by "Event-Driven"? | M. Fowler | 2017 | Article | https://martinfowler.com/articles/201701-event-driven.html | Four different meanings of one phrase |
 | Choose Boring Technology | D. McKinley | 2015 | Essay | https://mcfunley.com/choose-boring-technology | Innovation tokens for technology choices |
