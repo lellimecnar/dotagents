@@ -88,6 +88,12 @@ per phase, with PR and preview links as soon as they exist.
   rewrite the lockfile during review.
 - Never infer health from an empty base dependency list; install the extras the selected tests need.
 - `/tmp` mounted `noexec` breaks native bindings and stub binaries; work from a real disk path.
+- Before re-filing a blocked task as a new one, check the related tasks' checkouts for committed work: a worker
+  that blocked for lack of a workspace may already have the same fix committed in another task's checkout.
+  Re-filing does the work twice.
+- Trust a checkout outside the tracker's managed worktrees only after `git fsck --connectivity-only`: such trees can
+  lose objects, leaving commits that exist but cannot be pushed. Salvage the content as a patch (`diff -u` against
+  the target branch, then `git apply --check` in a healthy worktree) instead of rebuilding the fix by hand.
 
 ## Verification
 

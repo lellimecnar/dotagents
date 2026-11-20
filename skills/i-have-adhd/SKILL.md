@@ -54,6 +54,15 @@ Good:
 3. Run `npm test -- auth.spec.ts`
 ```
 
+### 2b. Revisions resend the whole part
+
+When instructions change mid-task, resend the complete updated section (every step, in order), never a list of changes to apply to an earlier message. A diff forces the reader to scroll back and merge two messages in working memory, which is exactly what fails.
+
+Bad: "Changes to Part 2: step 2 scope is now X; skip step 5."
+Good: "## Part 2 (full, updated)" followed by every step.
+
+UI instructions name the exact navigation path and the exact option labels to select (menu -> page -> button, field = value). "Create a budget with alerts" is not an instruction; "Budgets -> Create budget -> Customize (advanced) -> Cost budget -> Next" is.
+
 ### 3. End with one concrete next action
 
 If something truly needs the reader (a decision, approval or sign-in only they can give), end with that ONE action, doable in under two minutes. Even "open the file" counts. Work you could do yourself is never the reader's next action: do it before you stop (see `finish-the-whole-request`).
