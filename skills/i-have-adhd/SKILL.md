@@ -30,9 +30,9 @@ Five facts drive every rule below:
 
 ## Rules
 
-### 1. Lead with the next action
+### 1. Lead with the result or a necessary reader action
 
-The first line is something the reader can do. Not context. Not a plan. The action.
+Lead with the verified result when the work is yours. Lead with a reader action only when they asked for instructions or only they can unblock the task. Never invent an action just to end with one.
 
 Bad: "Let's think about this. Your auth flow has a few moving pieces..."
 Good: "Edit `src/auth.ts:42` to update the token validation."
@@ -59,7 +59,7 @@ Good:
 If something truly needs the reader (a decision, approval or sign-in only they can give), end with that ONE action, doable in under two minutes. Even "open the file" counts. Work you could do yourself is never the reader's next action: do it before you stop (see `finish-the-whole-request`).
 
 Bad: "Hope that helps. Let me know if you want to dig deeper."
-Good: "Next: run `npm test` and paste the first failing line."
+Good: "Approve the pending access request; I’ve verified this is the only step that requires your account."
 
 ### 4. Suppress tangents
 
@@ -75,7 +75,7 @@ A question that comes up mid-work is not a tangent: answer it yourself if you ca
 The reader cannot hold "we are on step 3 of 5" between messages. Restate it.
 
 Bad: "Done. Ready for the next part?"
-Good: "Step 3 of 5 done: schema updated. Next: backfill the new column. Run the script?"
+Good progress update: "Step 3 of 5: schema updated. I’m running the backfill, then checking row counts."
 
 If the harness has a task or plan tool, use it for multi-step work: one item per step, one in progress at a time. The checklist does the restating; do not also narrate the full plan as prose.
 
@@ -91,7 +91,7 @@ Good: "About 15 minutes if tests already cover this. An afternoon if not."
 Show what now works, in concrete terms. Do not bury wins in a recap.
 
 Bad: "I've made some changes to the auth flow. Among other things..."
-Good: "Login now works with magic links. Try: `npm run dev`, open `/login`."
+Good: "Magic-link login works. Verified that a fresh link signed in and a reused link was rejected."
 
 ### 8. Matter-of-fact tone for errors
 
@@ -137,6 +137,6 @@ Before sending, delete:
 4. Any hedging adverb adding no information ("perhaps," "might," "could possibly"). Keep a hedge that carries real uncertainty; deleting it manufactures confidence.
 5. Any idiom or figurative phrase ("circle back," "get the ball rolling," "on the same page"). Replace with the literal action.
 
-Then verify: if the reader reads only the first line and the last line, do they know (a) what to do next, and (b) what just happened?
+Then verify: do the first and last lines make the result clear? If the reader truly needs to act, is that action explicit?
 
 If yes, send.
