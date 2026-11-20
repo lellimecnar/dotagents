@@ -64,13 +64,14 @@ Every coding task: features, fixes, redesigns, small content changes in a code r
 6. **PR.** Push the branch and open the PR against the right base; draft when it is not ready for
    review (phased work, open decisions). Body sections: **What and why** (2–4 lines) /
    **Screenshots** / **Checks** (each command and result) / **Decisions to confirm** (lettered, each
-   with your default) / **Not done** (gaps, follow-ups). If the platform builds preview deployments,
+   with your default) / **Blockers** (only what needs the owner or an outside event, each with why; work the
+   task owes is finished before the PR is called ready, per `finish-the-whole-request`). If the platform builds preview deployments,
    wait for success and link it; a failed preview build is a failed task — read its log or reproduce
    the build locally. Never merge, never push to the default branch, never close someone else's PR.
 7. **Report.** Line 1 is the complete short answer, because many wake messages show only line 1:
    `PR #<n> ready for review: <title> - preview <url>` / `Draft PR #<n>: <phase> done, <next> next` /
    `No change needed: <reason>` / `Blocked: <reason> - need <exact thing>`. Then `Changed:` (one
-   line per area), `Verified:` (checks and pages viewed), `Decisions:` (lettered, or none), `Gaps:`.
+   line per area), `Verified:` (checks and pages viewed), `Decisions:` (lettered, or none), `Blockers:` (or none).
    Attach structured metadata (repo, PR number and URL, branch, preview URL) where the tracker
    supports it.
 8. **Learn.** Save durable engineering facts (commands that work, pitfalls, the owner's design

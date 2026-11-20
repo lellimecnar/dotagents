@@ -10,11 +10,12 @@ Layout follows the Agent Skills spec and the Hermes tap format: one flat `skills
 
 Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile installs the groups that match its job.
 
-### Common (every agent) (4)
+### Common (every agent) (5)
 
 | Skill | Use when |
 | --- | --- |
 | `due-diligence-before-deciding` | choosing between two or more options (advising, presenting choices, or deciding mid-task). Do the due diligence first |
+| `finish-the-whole-request` | always. Finish the whole request before you stop; escalate to other agents before asking the owner |
 | `fixing-a-wrong-memory` | you are corrected or find a stored memory is wrong. Delete every copy, save once |
 | `subagent-model-choice` | delegating a subtask. Pick the cheapest model that can do it well |
 | `use-existing-solutions-first` | before building anything. Find the built-in or existing solution first |

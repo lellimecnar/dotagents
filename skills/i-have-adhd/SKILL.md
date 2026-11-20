@@ -56,14 +56,14 @@ Good:
 
 ### 3. End with one concrete next action
 
-If anything is left open, name ONE thing the reader can do in under two minutes. Even "open the file" counts.
+If something truly needs the reader (a decision, approval or sign-in only they can give), end with that ONE action, doable in under two minutes. Even "open the file" counts. Work you could do yourself is never the reader's next action: do it before you stop (see `finish-the-whole-request`).
 
 Bad: "Hope that helps. Let me know if you want to dig deeper."
 Good: "Next: run `npm test` and paste the first failing line."
 
 ### 4. Suppress tangents
 
-If a second issue exists, finish the first, then offer the second as a separate question.
+If a second, unrelated issue exists, finish the first, then offer the second as a separate question. Work that is part of the request is not a tangent: finish it in the same turn instead of offering it.
 
 Bad: "Here's the fix. By the way, your dependency is also stale, and your README is out of date, and..."
 Good: "Here's the fix. Separately: there is also a stale dependency. Want me to handle that next?"
