@@ -20,7 +20,7 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `subagent-model-choice` | delegating a subtask. Pick the cheapest model that can do it well |
 | `use-existing-solutions-first` | before building anything. Find the built-in or existing solution first |
 
-### Engineering (15)
+### Engineering (16)
 
 | Skill | Use when |
 | --- | --- |
@@ -35,12 +35,13 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `merge-queue-stewardship` | admitting approved PRs to a merge queue or checking trains flowed |
 | `pull-request-review` | reviewing another agent's PR. Verify claims, pin head, one verdict |
 | `qa-acceptance-evidence` | QA-accepting a change. Oracle, risk-ranked tests, evidence verdicts |
+| `skill-corpus-audit` | reviewing a linked skill set before publication. Verify, verdict |
 | `tech-debt-ranking` | producing a recurring ranked, deduped tech-debt backlog. No code edits |
 | `test-lanes-and-coverage` | judging a test suite: lanes, branch-coverage ratchet, perf budgets |
 | `web-accessibility-check` | building, reviewing or accepting UI. WCAG 2.2 AA checks and tools |
 | `work-planning` | a plan or spec is requested, or uncertainty must be resolved before work |
 
-### Architecture (6)
+### Architecture (7)
 
 | Skill | Use when |
 | --- | --- |
@@ -50,6 +51,7 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `frontend-architecture` | deciding web or client architecture. Rendering, state, design system, delivery, reach, quality gates |
 | `backend-and-data-architecture` | shaping services, APIs, data stores or integration. Domain-first sequence, boring defaults |
 | `cloud-and-infrastructure-architecture` | choosing hosting, infra, DR, security or cloud cost. Fit options to forces; price lock-in |
+| `llm-benchmark-scraping` | comparing LLMs on public benchmarks. Fetch raw pages, parse |
 
 ### Ops (2)
 

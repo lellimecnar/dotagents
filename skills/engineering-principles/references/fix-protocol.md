@@ -12,6 +12,7 @@ quality.
 
 ## Contents
 
+0. Separate the outcome from the prescribed mechanism
 1. Read and verify the findings
 2. Group findings into classes
 3. State the root cause
@@ -19,12 +20,26 @@ quality.
 5. Widen the search step by step
 6. Judge every hit
 7. Choose the fix level
+7a. Preserve capabilities through a rewrite
 8. Guard the class
 9. Verify
 10. Report
 11. Out-of-scope instances
 12. Anti-patterns
 13. Credits
+
+## 0. Separate the outcome from the prescribed mechanism
+
+Feedback often arrives with a fix attached. Split it into four parts before designing anything:
+
+- **Required outcome:** what the person must be able to see or do afterwards.
+- **Evidence:** errors, screenshots, measurements, examples.
+- **Hypothesis:** someone's explanation of the cause.
+- **Suggested implementation:** the flag, prop, branch, cache or rewrite they asked for.
+
+Honour the outcome, verify the evidence, test the hypothesis, and adopt the suggested mechanism only
+if it fits the existing design. If it conflicts, say why and build the closest compliant design that
+reaches the same outcome. Never turn an unverified explanation into the design.
 
 ## 1. Read and verify the findings
 
@@ -121,6 +136,15 @@ Before changing a shared unit, search its callers for anyone depending on the be
 changing (EP-09). When the fix is a refactor followed by a behaviour change, make them separate
 commits: first the behaviour-preserving extraction, then the change in one place.
 
+## 7a. Preserve capabilities through a rewrite
+
+Before replacing a unit, list what it does today: observable behaviour, public API and data shape,
+error semantics, supported modes and platforms, accessibility, operational and authoring workflows.
+Mark each item preserve, adapt without loss, correct a demonstrated defect, or replace with explicit
+approval. A capability is not removed just because its old implementation broke a rule; design a
+compliant replacement. Scale the record to the risk: a line for a local fix, a PR section for a shared
+or compatibility-sensitive change.
+
 ## 8. Guard the class
 
 Add something that would have caught every instance and will catch the next one:
@@ -192,6 +216,11 @@ leave known instances unmarked.
 - **No guard:** a class fix that nothing stops from regressing.
 - **Agreeing without checking:** implementing a finding you haven't verified against the code.
 - **Quiet deferral:** leaving out-of-scope instances unreported, or reported only in a code comment.
+- **Caller-shaped special case:** a flag, variant or endpoint named after one screen, ticket or caller,
+  or a boolean that exists only to bypass shared behaviour for one consumer.
+- **Parallel machinery:** a second registry, parser, cache or retry loop beside an existing one.
+- **Green but gutted:** keeping a screenshot or test green while discarding the workflow that produced
+  the feature.
 
 ## 13. Credits
 
