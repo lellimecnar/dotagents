@@ -31,6 +31,17 @@
       ]
     },
     {
+      "title": "Architecture",
+      "skills": [
+        "architecture-decision-making",
+        "architecture-research-and-verification",
+        "architecture-proposal-writing",
+        "frontend-architecture",
+        "backend-and-data-architecture",
+        "cloud-and-infrastructure-architecture"
+      ]
+    },
+    {
       "title": "Ops",
       "skills": [
         "alert-triage",
