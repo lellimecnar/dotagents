@@ -4,7 +4,7 @@ description: Use when delegating a subtask. Pick the cheapest model that can do 
 metadata:
   version: "1.0.0"
   status: active
-  owner: Lance
+  owner: maintainer
 ---
 
 # Choosing a model for a subagent
