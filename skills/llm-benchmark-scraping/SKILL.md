@@ -16,12 +16,11 @@ tool is missing, search-only, or returns summaries instead of tables.
 
 ## Fetching
 
-- Most leaderboards are server-rendered: a plain HTTP GET with a browser User-Agent
-  (`curl -sL -A "Mozilla/5.0" <url>`) returns the full data even when a reader or extract tool fails.
+- Prefer the source’s public export, API or documented access method. When permitted, retrieve the public page with available tools and verify that it contains the expected data.
 - Vendor model cards: fetch the raw README from the model hub
   (`huggingface.co/<org>/<model>/raw/main/README.md`) to get the table text, not a rendered summary.
 
-## Parsing (per site; re-check the structure each time, it changes)
+## Optional public-source examples (verify the current access and format)
 
 - **Artificial Analysis** model pages (`artificialanalysis.ai/models/<slug>`): headline numbers
   (intelligence index, time to first answer token, output speed, price) are in the visible text; per-eval
@@ -39,7 +38,7 @@ tool is missing, search-only, or returns summaries instead of tables.
 - **Provider throughput trackers** (per-provider tok/s, 24 h average, time to first token) measure one
   provider; label them as such.
 
-## Practitioner sentiment when forums block scripted fetches
+## Practitioner sentiment from accessible public sources
 
 - Use aggregator pages that summarise recent community opinion by category, and your search tool's
   excerpts for individual posts.
@@ -54,4 +53,4 @@ tool is missing, search-only, or returns summaries instead of tables.
 - Aggregated speed is usually a median across providers (or the first-party API), not the speed your
   provider gives you. Say so.
 - When a vendor claim and an independent measurement disagree, report both, with sources.
-- Record each number with its source URL as you read it; raw fetches are lost when context is compacted.
+- Record each measurement with its source URL, version if available, and retrieval date in the task evidence.
