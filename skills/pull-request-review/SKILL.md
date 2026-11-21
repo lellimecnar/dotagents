@@ -2,7 +2,7 @@
 name: pull-request-review
 description: Use when reviewing another agent's PR. Verify claims, pin head, one verdict.
 metadata:
-  version: "0.1.1"
+  version: "0.2.0"
   status: draft
   owner: maintainer
 ---
@@ -73,7 +73,11 @@ Not for merging. Reviewers never merge; whoever owns the merge queue does.
    prints nothing and exits 0 has proved nothing until its output reports a count. When a full scan
    fails, run the same command on a clean base worktree to decide whether the PR caused it.
    Pre-existing failures are reported at their real severity, labelled *pre-existing*.
-7. **Re-review rounds.** Read `git diff <old>..<new>` in full, confirm each named prior finding
+7. **Re-review rounds.** A request-changes review stays in force until the *same reviewer identity*
+   posts a newer one, and it can start blocking later (for example once that identity's reviews
+   begin to count). So post the fresh verdict at the new head as the identity that holds the old
+   one, and confirm the PR's review decision actually flipped before handing off. Read
+   `git diff <old>..<new>` in full, confirm each named prior finding
    against the new text (headings too, not only the quoted sentence), and re-run every prior
    finding's search across the whole tree. Still re-run every check on the full PR, not just the
    increment.
@@ -107,12 +111,23 @@ review and says the verdict stands, then confirm the original review's state did
 the pinned head. Report both, separately.
 
 - Query the provider's check runs for the head even when told CI is unavailable; never write "no
-  workflow executed" without looking.
+  workflow executed" without looking. If the review identity is refused access to the CI provider's
+  run API or the forge's checks summary, read the per-commit check runs and their annotations
+  instead, and report only the failure detail the annotations support: they are not full job logs.
+- Page through check runs (GitHub: `gh api --paginate`, or `per_page=100` in a loop). One default
+  page holds a bounded number; a large matrix has more, and failures past the cut-off silently
+  vanish from your counts. Report the total you paged to.
 - Give exact counts by conclusion for every head you cite, and group failures by failing *step*
   (checkout variants differ by version or pin; do not write "N failures, same step" without
   grouping).
 - A commit can carry several historical runs; group by run/job identity before totalling.
 - A failure also present on the base tip is *pre-existing / non-blocking*, not passing.
+- **Runner-only failures: compare the same named job at the same SHA across attempts.** A checkout
+  or workspace-cleanup permission error followed by success of that job at the identical SHA is a
+  stronger runner control than green results from different jobs. Confirm the checkout step itself
+  is unchanged and look for the same signature on unrelated work before calling it runner health.
+- Report evidence from earlier SHAs separately from the active rollup. A cancelled predecessor run
+  is not a current failure, and a pending aggregate is not a pass.
 
 ## Review sweeps
 
@@ -128,7 +143,13 @@ requires it) without double work:
   depending on the review so it starts only after.
 - If a separate queue steward exists, use the configured handoff when required gates pass and avoid duplicate admissions.
 - Cap rounds: after the third change request on the same PR, escalate the disagreement to the owner
-  as one decidable sentence rather than starting round four.
+  as one decidable sentence rather than starting round four. A new commit, a new review task or a
+  new sweep does not reset the count; check earlier change requests before opening a review for a
+  revised head.
+- A hold on merge admission is not a hold on review: keep reviewing PRs whose admission is held.
+  If review itself is held pending a decision, create the review task in a blocked state that
+  carries the release condition, linked from the delivery thread, so whoever owns the hold can
+  release it without a duplicate dispatch.
 - End with one line: nothing to review, or the list of queued reviews.
 
 ## Pitfalls
@@ -138,6 +159,10 @@ requires it) without double work:
   status.
 - A small or `noexec` temp dir breaks tests that put stub binaries in `mktemp -d`, and native Node
   bindings (bundlers, test runners) fail to load from it. Check permissions, mount options and available space with the platform’s supported diagnostics; rerun in an authorized temporary location that meets the test’s requirements.
+  More review-environment traps (temp dirs inside a repository, platform lock hashes, CPU quotas,
+  native-addon ABI, offline policy-guard tests) are in
+  [references/environment-traps.md](references/environment-traps.md): rule them out before
+  attributing a red to the PR.
 - If a frozen-lockfile install (`npm ci`, `uv sync --frozen`) fails, record the lockfile drift as a
   reproducibility finding. A non-frozen install in a throwaway worktree may continue the review; never
   commit the rewritten lockfile as part of the review.
@@ -155,6 +180,8 @@ requires it) without double work:
 - Release-train / batch PRs: `merge-queue-stewardship` → "Reviewing a train PR".
 - Dependency / lockfile PRs: `dependency-update-review`.
 - UI changes: `web-accessibility-check`. Behaviour acceptance: `qa-acceptance-evidence`.
+- Any PR whose checks fail only in your review environment:
+  [references/environment-traps.md](references/environment-traps.md).
 
 ## Verification
 

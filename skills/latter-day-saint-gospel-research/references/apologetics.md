@@ -39,3 +39,13 @@ what remains open. Credibility comes from honesty; one overclaim discredits the 
   the strongest argument from the other side, each in its own words, then suggest wording that keeps the point.
 - When statistics come in, check the actual poll and note when the numbers depend on how the question was worded.
   Keep it to one line when the number was only an illustration (see sacrament-talk-prep, "Study depth vs. pulpit").
+
+## Sensitive moral teachings (same-sex attraction, gender, marriage)
+- Lead with the Church's current wording: the General Handbook (ch. 38), the Church's official resources on the
+  subject, and recent conference talks. Label older statements by year, because emphasis and vocabulary have
+  shifted; do not present an older framing as the current one.
+- Keep the distinctions the Church draws: feelings vs. behavior, and attraction is not a sin. Don't reduce a
+  person's experience to a single word; those living it hear that as dismissal, and the Church does not frame it
+  that way.
+- When the asker puts doctrine and love in tension, quote leaders who hold both together: the law kept, the person
+  loved fully. The answer is the order of the two great commandments, not loving the person less.

@@ -2,7 +2,7 @@
 name: skill-corpus-audit
 description: Use when reviewing a linked skill set before publication. Verify, verdict.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   status: draft
   owner: maintainer
 ---
@@ -42,6 +42,7 @@ metadata:
 
 ## Rules
 
+- For publication reviews delivered as exact edits, use [Public-diff audit evidence](references/public-diff-audits.md).
 - Do not infer that two sources are independent merely because two URLs exist; trace their origin or data.
 - Do not rank all source categories globally. Match source design to claim type.
 - Do not silently treat a vendor experiment, case study, or small sample as universal evidence.

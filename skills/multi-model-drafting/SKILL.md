@@ -2,7 +2,7 @@
 name: multi-model-drafting
 description: Use when drafting prose with several models. Fan out, merge.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -17,7 +17,8 @@ different model families), the best merges outscored every solo draft by about a
 ## When to use
 
 - New prose, or a full rewrite, where quality matters more than speed or cost: chapters, scenes, key passages.
-- Not for line edits, quick fixes or factual updates. One careful pass is cheaper and just as good there.
+- Not for line edits, quick fixes or factual updates. One careful pass is cheaper and just as good there. A
+  project may still opt in for review fixes on passages that matter; see "Revising with several models".
 
 ## Choosing the drafters
 
@@ -38,12 +39,18 @@ different model families), the best merges outscored every solo draft by about a
    carries the full text, not a placeholder or a reference to a file the drafter can't read. In the test,
    one drafter got a placeholder and wrote a plausible draft from nothing.
 3. Ask each drafter for finished prose at the target length, saved where you can read it, and nothing else.
+   Have drafters write to files, with a clear marker at the start of each unit (scene, passage, finding),
+   rather than return the text: the drafts then stay out of your context until you open them, and the
+   markers let you line up the same unit across drafts.
 
 ## Merging
 
 1. **Read blind.** Strip anything that says which model wrote which draft before you compare them. A merger
    tends to prefer drafts written by its own model family. In the test, the merger used a draft from its
    own family as the spine six times out of eight, though both judges ranked another model's drafts higher.
+   If your dispatch tool tells you which model wrote each result, you cannot read blind. Then shuffle and
+   relabel the drafts, have judges from other model families rank them from the brief and the drafts alone,
+   and take the spine from their combined ranking.
 2. **Check every draft against canon and the rules before judging style.** A beautiful draft with a canon
    break is not the spine. Note each draft's errors so none of them carry into the merge.
 3. **Pick the spine:** the draft with the best structure and the fewest hard errors. Then bring in specific
@@ -60,6 +67,19 @@ different model families), the best merges outscored every solo draft by about a
 The merged version is a draft, not a final. Run it through the usual accuracy gate and review. In the test,
 the top merges still needed one to three line fixes, and one carried a canon break that no single draft
 had: merging can create errors as well as remove them.
+
+## Revising with several models
+
+Use only where the project opts in for review fixes; otherwise one careful pass is enough (see "When to use").
+
+- Give every model the same narrow task per finding: only the affected range with a little context either
+  side, the issue, the facts it must keep, and the proposed fix as one option among others. Ask for the
+  revised range only, so the picks can be spliced back without touching the rest.
+- Short fixes often come back identical, or nearly, from every model. Report only the contested picks; an
+  uncontested "winner" is just the tiebreak and says nothing about the drafters.
+- When separately judged passages depend on each other (a detail planted in one and paid off in another),
+  fix the shared content in the brief, so picks taken from different drafts still join up.
+- Keep the shuffle key closed until the picks are applied, as when merging.
 
 ## Measuring a drafter set
 

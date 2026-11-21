@@ -2,7 +2,7 @@
 name: family-meal-planning
 description: Use when planning family meals, groceries or food safety.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   status: draft
   owner: maintainer
 ---
@@ -12,7 +12,7 @@ metadata:
 The method for any meal-planning, grocery, recipe or food-safety task for a household (any size, any budget, including members with special feeding needs). Numbers, tables and source URLs live in `references/`; this file is the procedure and the decision rules. Keep household facts out of this skill. Use only planning details the requester supplies or authorizes you to access.
 
 ## When to Use
-Any task that plans meals, writes or changes a grocery list, adapts or scales a recipe, answers a food-safety or storage question, feeds a picky eater or someone on a texture-modified diet, or turns a trainer's Nutrition targets brief into meals.
+Any task that plans meals, writes or changes a grocery list, adapts or scales a recipe, answers a food-safety or storage question, feeds a picky eater or someone on a texture-modified diet, or turns a trainer's Nutrition targets brief into meals, or imports recipes into a recipe manager (`references/recipe-import.md`).
 
 ## 1. Gather inputs before planning (in this order)
 1. **Hard constraints first.** Allergies (the 9 US major allergens and any others), prescribed textures (an IDDSI level set by a speech-language pathologist), medical diets. Confirm them with the person, an authorized caregiver or the documented care plan; never infer them. If one is unclear, ask before planning.
@@ -73,3 +73,4 @@ Any task that plans meals, writes or changes a grocery list, adapts or scales a 
 - `references/feeding-and-textures.md`: Division of Responsibility, exposure, sensory strategies, IDDSI levels and tests, choking hazards, referral red flags.
 - `references/budget-and-planning.md`: USDA Food Plans, unit pricing, planning patterns (theme nights, cook-once-eat-twice, freezer meals), grocery-list method.
 - `references/scaling-and-substitutions.md`: recipe scaling, pan conversion, ingredient substitutions, high-altitude adjustments.
+- `references/recipe-import.md`: importing recipes from PDFs or pages into a recipe manager: reading the real source, previewing the parse, parser checks, batch tags, count cross-checks, confirming before reporting done.

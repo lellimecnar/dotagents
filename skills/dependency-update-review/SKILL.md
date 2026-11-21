@@ -2,7 +2,7 @@
 name: dependency-update-review
 description: Use when triaging bot dependency PRs or lockfile changes. Reconcile, verdict.
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
   status: draft
   owner: maintainer
 ---
@@ -114,11 +114,25 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
   top. Then per-PR detail and a worklist.
 - Closes run after merges land, so a Close citing a merged PR stays accurate. Holds are routed to
   unblock work or handed back as a named list.
+- **A toolchain-floor Hold may already have its unblock.** When a bump is held because it raises the
+  language or toolchain directive above the repository's pin, check the toolchain's official support
+  policy before leaving it held. If the pinned toolchain is end-of-life, the toolchain move is the
+  unblock: open it as its own PR covering every pin (module/workspace directives, images, CI, docs)
+  and stack the held bumps on it. While the pinned toolchain is still supported, the Hold stands as
+  an owner decision.
 - Finish with a phase report: admitted, observed merged, closed, held (one clause each), blocked,
   "no interim labels remain", deploy result, worktrees removed.
 
 ## Consolidated / lockfile-only PRs
 
+- **Consolidate a backlog of sibling floor bumps per directory.** When several bot PRs edit the
+  same manifest and lock (and some already carry a manual push, so the bot no longer rebases them),
+  carrying them one by one makes each merge conflict the rest. Open one consolidated "raise floors
+  and relock" PR per directory from the current base: newest version per package, lock regenerated
+  with the CI-pinned tool, the directory's lint/type/test gates run, and a resolved-version table
+  plus the list of superseded PRs in the body. Then close each superseded PR with a comment linking
+  the consolidation. Keep any owner decision an earlier consolidation recorded (a version ceiling, a
+  pin). Not worth it for one or two independent bumps that still rebase cleanly.
 - **Floors match what they supersede.** For each superseded bot PR, diff its specifier changes
   against the consolidated manifest and record whether it is already closed. Consolidations silently
   drop bumps.
