@@ -14,11 +14,11 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 
 | Skill | Use when |
 | --- | --- |
-| `due-diligence-before-deciding` | choosing between two or more options (advising, presenting choices, or deciding mid-task). Do the due diligence first |
-| `finish-the-whole-request` | always. Finish the whole request before you stop; escalate to other agents before asking the owner |
-| `fixing-a-wrong-memory` | you are corrected or find a stored memory is wrong. Delete every copy, save once |
+| `due-diligence-before-deciding` | always when choosing between options. Do the due diligence first |
+| `finish-the-whole-request` | always. Finish the whole request before you stop |
+| `fixing-a-wrong-memory` | you are corrected or find a stored memory is wrong. Remove or supersede every copy |
 | `subagent-model-choice` | delegating a subtask. Pick the cheapest model that can do it well |
-| `use-existing-solutions-first` | before building anything. Find the built-in or existing solution first |
+| `use-existing-solutions-first` | always, before building anything. Find the built-in or existing solution first |
 
 ### Engineering (15)
 
@@ -72,8 +72,8 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `layered-chapter-drafting` | drafting a chapter from an outline. Brief, layered passes, gates |
 | `manuscript-book-build` | building or verifying DOCX/EPUB from chapters. Inspect real output |
 | `manuscript-readiness-assessment` | judging if a chapter is publish-ready. Full rubric, ranked fixes |
-| `multi-model-drafting` | drafting prose with several models. Fan out, merge blind, notes |
 | `markdown-section-extraction` | pulling sections from big markdown files by heading. Script |
+| `multi-model-drafting` | drafting prose with several models. Fan out, merge |
 | `originality-check` | checking a manuscript for copied text or derivative concepts |
 | `prose-text-analysis` | measuring prose: readability, n-grams, overuse, avoid-list hits |
 | `science-plausibility-review` | reviewing science/tech plausibility in fiction. Smallest fix |
@@ -131,13 +131,13 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | Skill | Use when |
 | --- | --- |
 | `bootstrapped-product-revenue` | advising a solo founder on revenue. First payers |
-| `research-and-fact-checking` | research, fact-checks or news briefs. Expert method |
+| `research-and-fact-checking` | for research, fact-checks or news briefs. Expert method |
 
 ### Communication styles (1)
 
 | Skill | Use when |
 | --- | --- |
-| `i-have-adhd` | 'Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across  |
+| `i-have-adhd` | Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until "stop adhd mode" |
 
 ## Using it
 
