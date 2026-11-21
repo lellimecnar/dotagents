@@ -1,18 +1,18 @@
 # Screening and red flags
 
 ## 1. Emergency: stop and call emergency services
-If any of these appear at rest, during or after exercise, stop the session and tell the person to call 911 (or local emergency number) now. Do not wait to see if it passes.
+If any of these appear at rest, during or after exercise, stop the session and tell the person to call the local emergency number now. Do not wait to see if it passes.
 - Chest discomfort (pressure, squeezing, fullness, pain) lasting more than a few minutes or that goes away and comes back.
 - Discomfort in one or both arms, back, neck, jaw or stomach.
 - Shortness of breath with or without chest discomfort.
 - Cold sweat, nausea, lightheadedness, rapid or irregular heartbeat, unusual tiredness. Women more often have breathlessness, nausea/vomiting, back or jaw pain.
 Source: AHA https://www.heart.org/en/health-topics/heart-attack/warning-signs-of-a-heart-attack
 
-Stroke signs (BE FAST): sudden loss of Balance; Eye/vision change; Face drooping; Arm or leg weakness/numbness (especially one side); Speech slurred or confused; then Time: call 911 immediately, note when symptoms started. Also sudden severe headache, sudden confusion or trouble walking. Do not drive yourself and do not wait to see if it passes.
+Stroke signs (BE FAST): sudden loss of Balance; Eye/vision change; Face drooping; Arm or leg weakness/numbness (especially one side); Speech slurred or confused; then Time: call the local emergency number immediately and note when symptoms started. Also sudden severe headache, sudden confusion or trouble walking. Do not drive yourself and do not wait to see if it passes.
 Source: AHA/ASA https://www.heart.org/en/health-topics/stroke/warning-signs-of-a-stroke
 
-## 2. PAR-Q+ (2025 edition), the self-screen
-The seven general questions (answer yes/no):
+## 2. PAR-Q+: official self-screen
+Ask the person to complete the current official form at https://eparmedx.com/print-versions-of-par-q. The questions below summarize the 2025 edition for reference; do not use this summary as a questionnaire.
 1. Has a doctor ever said you have a heart condition or high blood pressure?
 2. Chest pain at rest, in daily activities, or during physical activity?
 3. Loss of balance from dizziness, or loss of consciousness, in the last 12 months? (Answer no if dizziness was from over-breathing, including during vigorous exercise.)
@@ -21,9 +21,9 @@ The seven general questions (answer yes/no):
 6. A bone, joint or soft-tissue problem in the last 12 months that activity could worsen? (No if it no longer limits you.)
 7. Has a doctor said you should only do medically supervised activity?
 
-Decision rules (from the form):
+Follow the current official form's instructions. For reference, the 2025 edition gives these decision rules:
 - All "no": cleared. Start slowly and build up gradually. Over 45 and not used to vigorous/maximal effort → consult a qualified exercise professional before that intensity.
-- Any "yes": complete the follow-up questions (pages 2–3). If all follow-ups are "no", start with 20–60 min of low-to-moderate exercise 3–5 days/wk including aerobic and strengthening, building towards ≥150 min/wk moderate. Any follow-up "yes" → seek further information (ePARmed-X+ or clinician) before becoming more active.
+- Any "yes": complete the follow-up questions indicated on the form. If all follow-ups are "no", start with 20–60 min of low-to-moderate exercise 3–5 days/wk including aerobic and strengthening, building towards ≥150 min/wk moderate. Any follow-up "yes" → seek further information (ePARmed-X+ or clinician) before becoming more active.
 - Delay starting: temporary illness (cold, fever); pregnancy (talk to clinician or use ePARmed-X+); any change in health.
 - Clearance is valid for a maximum of 12 months and becomes invalid if the condition changes.
 - The PAR-Q+ must not be altered or rebuilt into another survey; point people to the official form.

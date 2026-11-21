@@ -1,6 +1,7 @@
 # Program design
 
-## 1. Weekly targets (adults 18–64)
+## 1. Weekly targets (U.S. public-health example, adults 18–64)
+Use current guidance for the person's location and population. The first four bullets summarize U.S. guidance; the final bullet summarizes ACSM professional guidance.
 - Aerobic: 150–300 min/wk moderate, or 75–150 min/wk vigorous, or an equivalent mix. 1 vigorous minute ≈ 2 moderate minutes. Source: PAG 2nd ed. https://pubmed.ncbi.nlm.nih.gov/30418471 ; CDC https://cdc.gov/physical-activity-basics/adding-adults/what-counts.html
 - Muscle-strengthening for all major muscle groups (legs, hips, back, abdomen, chest, shoulders, arms) on ≥2 days/wk. Source: CDC https://cdc.gov/physical-activity-basics/guidelines/adults.html
 - Bouts of any length count; the old 10-minute minimum was removed. Source: https://health.gov/paguidelines/second-edition/10things
@@ -54,11 +55,11 @@ Strength effort: reps in reserve (RIR). RPE 10 = 0 RIR, 9 = 1 RIR, etc. Novices 
 | Beat Saber, children 8–12 | light by METs/HRR, moderate by RPE | Godfrey 2025 https://pubmed.ncbi.nlm.nih.gov/39093835 |
 | Supernatural (VR fitness) | ~7.9 METs by calorimetry (vigorous) | https://pmc.ncbi.nlm.nih.gov/articles/PMC11185914 |
 
-**Disagreement:** VRHI rates Beat Saber vigorous; controlled lab studies rate it very light to light-moderate. VRHI notes its rater burned more as skill rose and that the rating needs constant movement; its report (as covered by Road to VR https://www.roadtovr.com/playing-beat-saber-burn-number-calories-tennis) suggests turning off the ability to fail songs so each song plays to the end. **My rule:** treat exergames as light until the talk test or 0–10 scale shows otherwise; count only minutes at "can talk, not sing" or harder toward the moderate target. To raise intensity: harder difficulty, full songs back-to-back, exaggerated full-body movement (squat for walls, step not reach), choose boxing/fitness titles for some sessions.
+**Disagreement:** VRHI rates Beat Saber vigorous; controlled lab studies rate it very light to light-moderate. VRHI notes its rater burned more as skill rose and that the rating needs constant movement; its report (as covered by Road to VR https://www.roadtovr.com/playing-beat-saber-burn-number-calories-tennis) suggests turning off the ability to fail songs so each song plays to the end. **My rule:** treat exergames as light until the talk test or 0–10 scale shows otherwise; count only minutes at "can talk, not sing" or harder toward the moderate target. To raise intensity: adjust difficulty, active time or movement range as the game, play space and person's ability allow. For example, a rhythm game may allow longer continuous play, while a fitness game may offer a higher-effort mode.
 - VR safety: clear play space; some players have VR sickness that lasts ≥40 min after 50-min sessions; those who get sick after short sessions will after long ones. Wait after play before driving or detailed screen work. https://pubmed.ncbi.nlm.nih.gov/33095182
 
 ## 9. Home and no-equipment options
-Bodyweight, bands and home programs improve strength and function (ACSM 2026). Load ideas without buying anything: backpack with books, water jugs, tempo (slower lowering), pauses, single-leg versions, more reps, less rest. Any purchase (bands, dumbbells) is a cost decision for the household's decision-maker, with the free option shown first.
+Bodyweight, bands and home programs improve strength and function (ACSM 2026). Load ideas without buying anything: backpack with books, water jugs, tempo (slower lowering), pauses, single-leg versions, more reps, less rest. Present the no-cost option first. If equipment would help, ask about the person's budget and whether they want purchase options; do not assume approval to buy.
 
 ## 10. Session template (20–30 min, beginner)
 1. Warm-up 3–5 min: easy cardio + 1 light set of the first exercise (Iversen).

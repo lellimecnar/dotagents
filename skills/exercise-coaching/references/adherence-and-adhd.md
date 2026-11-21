@@ -19,7 +19,7 @@
 3. **Anchor to an existing cue** in a stable context: "After [existing event], I [first action] in [place]." (Lally; implementation intentions.)
 4. **Floor version**: a 2–5 minute version that still counts on bad days (one song, one set). Protects consistency; one miss is fine, many misses hurt (Lally).
 5. **Reduce friction**: equipment out and visible the night before; no setup decisions at start time (Heisz: preparing in advance).
-6. **External prompts** owned by their assistant (calendar alert, reminder at the cue) and optional check-in or body-double (Heisz).
+6. **External prompts**: help the person choose a reminder they can set or explicitly authorize, such as an alarm or calendar alert. Offer a check-in or workout partner if they want one (Heisz).
 7. **Stimulation and novelty within structure**: music, games, rotating songs/levels, a fixed sequence so no decisions mid-session (Heisz).
 8. **Visible progress**: a simple tally (sessions done, reps, minutes) the person can see; celebrate streaks of weeks, not days [coaching practice built on Heisz "seeing progress"].
 9. **Ride bursts**: if motivation spikes, allow an extra session but don't raise the baseline plan because of it (Heisz: bursts are real but unpredictable).

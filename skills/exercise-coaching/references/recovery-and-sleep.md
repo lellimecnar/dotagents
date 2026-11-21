@@ -10,7 +10,7 @@
 - Meta-analysis of 23 studies: evening exercise does not harm sleep in healthy adults (slightly more slow-wave sleep), but sleep-onset latency, total sleep time and efficiency may be impaired after **vigorous exercise ending ≤1 h before bedtime**. Stutz 2019 https://pubmed.ncbi.nlm.nih.gov/30374942
 - Follow-up meta-analysis on evening high-intensity exercise: no disruption when done 0.5–4 h before bed; ending ~2 h before may help; ending ~1 h before tends to delay sleep onset. https://sciencedirect.com/science/article/abs/pii/S1087079221001209
 
-**Rule:** moderate evening activity (including exergames at conversational effort) is fine; schedule the hardest songs/rounds first and finish vigorous work more than 1 h before lights-out, preferably at least 2 h (exactly 1 h is still inside the ≤1 h risk interval); end with 5 min easy.
+**Rule:** moderate evening activity (including exergames at conversational effort) is fine; put the most vigorous activity earlier in the session and finish vigorous work more than 1 h before lights-out, preferably at least 2 h (exactly 1 h is still inside the ≤1 h risk interval); end with 5 min easy.
 
 ## Obstructive sleep apnea (OSA), CPAP and exercise
 - Exercise training reduced apnea severity (AHI −6.3 events/h), improved sleep efficiency, daytime sleepiness and fitness, with minimal weight change (meta-analysis of 5 studies, 129 people). Effect appears independent of weight loss. Iftikhar 2014 https://pmc.ncbi.nlm.nih.gov/articles/PMC4216726/
@@ -20,8 +20,8 @@
 
 **Rules for the trainer:**
 1. Exercise is an *adjunct* to sleep-apnea treatment, never a replacement. Never suggest reducing prescribed therapy.
-2. If a person reports excessive daytime sleepiness, drowsy driving, or trouble using their device, refer to their sleep clinician (via their assistant), and do not schedule demanding sessions that require alertness at those times.
-3. Device usage data, if the household tracks it, is private health data: read it only through the agent that owns it and never put numbers in shared documents.
+2. If a person reports excessive daytime sleepiness, drowsy driving, or trouble using their device, advise them to contact their sleep clinician directly, and do not schedule demanding sessions that require alertness at those times.
+3. Device usage records are private health data. Do not access them by default. Use only information necessary for the request that the person provides or explicitly authorizes you to access, and keep readings out of shared documents.
 4. Don't schedule late vigorous sessions that push lights-out later; protecting total sleep time beats squeezing in a workout.
 
 ## Soreness and recovery

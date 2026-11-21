@@ -9,7 +9,7 @@ metadata:
 
 # Exercise coaching
 
-Expert method for exercise programming and coaching of an adult beginner-to-intermediate with a busy, irregular schedule. Complements the optional Hermes skill `fitness-nutrition` (exercise/food lookups and calculators), if installed: this skill is the *method and decision rules*; that one is the *data tools*. Every number here is sourced in `references/` (source list: `references/sources.md`).
+Expert method for exercise programming and coaching for adults at beginner to intermediate levels, adapted to their schedules. This skill supplies the method and decision rules. Use reputable reference sources or calculators when useful; no companion skill is required. Every number here is sourced in `references/` (source list: `references/sources.md`).
 
 ## When to use
 Any task that asks for a workout, routine, exercise advice, progress review, recovery/sleep-and-exercise question, or nutrition targets tied to training or body composition.
@@ -18,15 +18,15 @@ Any task that asks for a workout, routine, exercise advice, progress review, rec
 
 ### 1. Screen before you prescribe (`references/screening-and-red-flags.md`)
 - Check for **emergency signs first**: chest pain/pressure, pain spreading to arm/jaw/neck/back, unusual breathlessness, fainting, cold sweat, irregular heartbeat during or after exercise → stop exercise, tell the person to call emergency services now. Do not coach through it.
-- Run the **PAR-Q+** (7 questions). All "no" → may start light-to-moderate and build gradually. Any "yes" → the person completes pages 2–3 or the ePARmed-X+, or asks their clinician/qualified exercise professional. You never interpret a medical condition yourself.
+- Ask the person to complete the current official **PAR-Q+** self-screen at https://eparmedx.com/print-versions-of-par-q. All "no" → may start light-to-moderate and build gradually. Any "yes" → the person follows the current form's instructions, using ePARmed-X+ or consulting a clinician or qualified exercise professional as indicated. You never interpret a medical condition yourself.
 - Apply the **ACSM 2015 logic** for intensity: (a) currently active? (b) known cardiovascular/metabolic/renal disease or symptoms? (c) desired intensity. Inactive + healthy + no symptoms → light-to-moderate without clearance. Inactive with known disease (no symptoms) or any symptoms → medical clearance before starting. Active with any signs/symptoms → stop exercising and get medical clearance before resuming at ANY intensity. Active, no symptoms, known stable disease → may continue light-to-moderate; clearance before vigorous (ACSM/Riebe 2015, https://pubmed.ncbi.nlm.nih.gov/26473759/).
 - Re-screen when health changes, after illness, and yearly (PAR-Q+ clearance lasts 12 months).
 
 ### 2. Find the real gaps
-List the person's fixed anchors, energy dips and existing habits from their calendar/notes (ask the owning assistant; never guess). Build on what they already do (an active game, a walk, a sport) rather than replacing it. A plan that needs a slot that does not exist is a wrong plan.
+Ask the person about their fixed commitments, energy patterns and existing habits. Use calendar or note details only if the person provides them or explicitly authorizes access; do not guess. Build on what they already do (an active game, a walk, a sport) rather than replacing it. A plan that needs a slot that does not exist is a wrong plan.
 
 ### 3. Set the dose with FITT-VP (`references/program-design.md`)
-- **Target** (PAG/ACSM): 150–300 min/wk moderate or 75–150 min/wk vigorous aerobic (1 vigorous min ≈ 2 moderate), plus muscle-strengthening for all major groups on ≥2 days/wk. Any bout length counts.
+- **Target:** Use current activity guidance for the person's location and population. For example, the U.S. Physical Activity Guidelines recommend for adults: 150–300 min/wk moderate or 75–150 min/wk vigorous aerobic (1 vigorous min ≈ 2 moderate), plus muscle-strengthening for all major groups on ≥2 days/wk. Any bout length counts.
 - **Start below target** if inactive. The biggest gain is going from none to some; the ACSM 2026 resistance stand says the best program is the one the person will do.
 - **Minimum effective dose** for time-poor people: 2 short full-body sessions/wk of multi-joint exercises; ≥4 hard sets per muscle group per week works; supersets roughly halve session time; warm up with lighter sets of the exercise itself.
 - **Intensity** without equipment: talk test (moderate = can talk, not sing; vigorous = a few words only) or 0–10 effort (moderate 5–6, vigorous 7–8). For strength: novices perform 8–12 reps per set with a load that leaves about 2–4 reps in reserve (RIR), not taken to failure; novices are poor at judging RIR, so cross-check with "form still clean" and the top of the rep range (ACSM 2009 https://pubmed.ncbi.nlm.nih.gov/19204579/; Helms 2016 https://pmc.ncbi.nlm.nih.gov/articles/PMC4961270/).
@@ -40,13 +40,13 @@ One each of squat, hinge, push, pull, plus a trunk/carry option. Start with the 
 - Watch sleep: adults need ≥7 h; finish *vigorous* sessions more than 1 h before bed, preferably at least 2 h (sleep may be impaired when vigorous exercise ends ≤1 h before bed; Stutz 2019 https://pubmed.ncbi.nlm.nih.gov/30374942/); moderate evening exercise does not harm sleep. Untreated sleep apnea makes drowsiness risky; exercise lowers apnea severity but never replaces prescribed therapy (`references/recovery-and-sleep.md`).
 
 ### 6. Design for adherence, especially ADHD (`references/adherence-and-adhd.md`)
-- Few options, already chosen; name the **first physical action** ("put the headset on", "lay the mat by the bed").
-- If-then plans tied to an existing cue ("after drop-off, before I sit down, I do the 12-minute set"). Planning interventions show small-to-medium effects; reinforcement helps.
+- Few options, already chosen; name the **first physical action** (e.g. "put on walking shoes" or "set out a mat").
+- If-then plans tied to an existing cue (e.g. "after lunch, I put on my walking shoes"; choose a cue from the person's actual routine). Planning interventions show small-to-medium effects; reinforcement helps.
 - A **floor version** for bad days (one song, one set): missing a day does not break habit formation, but repeated misses lower it. Habits take ~2 months on average (range 18–254 days); exercise takes longer than simpler habits.
 - Make it stimulating (music, game, novelty), visible progress, and social (body-doubling) when the person likes company; reduce setup friction (gear out the night before).
 
-### 7. Hand off nutrition as targets only (`references/nutrition-targets-brief.md`)
-Compute an energy range and protein/fiber targets, then send the **Nutrition targets brief** to the household's meal planner. Never write menus or recipes. Health numbers stay out of shared documents.
+### 7. Provide nutrition targets only (`references/nutrition-targets-brief.md`)
+Compute an energy range and protein/fiber targets, then give the **Nutrition targets brief** privately to the person. Share only the necessary targets with a meal planner if the person explicitly authorizes that handoff. Keep health data out of shared documents. This brief contains targets, not menus or recipes.
 
 ### 8. Deliver and follow up
 One page: the week at a glance, first action, the three cues per exercise, the floor version, when to progress, stop signs. Review after 2–4 weeks: did it happen? Fix the schedule fit before changing the training.
@@ -55,7 +55,7 @@ One page: the week at a glance, first action, the three cues per exercise, the f
 | Situation | Action |
 |---|---|
 | Chest pain/pressure, fainting, severe breathlessness, signs of heart attack or stroke (face drooping, arm weakness, speech difficulty, sudden numbness/confusion/vision loss/severe headache) | Stop. Emergency services now (`references/screening-and-red-flags.md` §1). |
-| Any PAR-Q+ initial "yes" | Person completes the follow-up pages 2–3 (or ePARmed-X+). Follow-ups all "no" → start low-to-moderate and build gradually. Any follow-up "yes" → further advice from a clinician/qualified exercise professional before becoming more active. |
+| Any PAR-Q+ initial "yes" | Person completes the follow-up specified by the current official form, using ePARmed-X+ as indicated. Follow-ups all "no" → start low-to-moderate and build gradually. Any follow-up "yes" → further advice from a clinician/qualified exercise professional before becoming more active. |
 | Known heart/metabolic/kidney disease, new or any symptoms, pregnancy | Apply the ACSM branches in Method step 1: symptoms → stop and get clearance before any intensity; known disease without symptoms → clearance before vigorous (before starting if inactive); pregnancy → clinician or ePARmed-X+. |
 | Pain that is sharp, joint-based, worsens through a session or persists for days, numbness/tingling [coaching practice] | Stop that exercise; physical therapist or physician. |
 | Excessive daytime sleepiness, drowsy driving, CPAP intolerance | Sleep clinician; no driving while drowsy. |
@@ -74,6 +74,6 @@ You coach healthy-adult exercise. You do not diagnose, treat injury, change medi
 - Giving menus instead of targets; putting health numbers in shared documents.
 - Citing numbers from memory. Use `references/`; if a figure is not there, research and add it with a URL.
 
-## Related
-- `fitness-nutrition`: wger exercise lookup, USDA food data, Mifflin-St Jeor/TDEE calculator.
-- `grounded-citations`: when producing a cited report.
+## Optional resources
+- Use reputable exercise libraries, food-composition databases and energy calculators as needed.
+- For cited reports, link to the sources that support the recommendations.
