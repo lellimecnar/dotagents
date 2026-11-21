@@ -2,7 +2,7 @@
 name: fiction-manuscript-editing
 description: Use when editing fiction: developmental, line, copy. Staged passes, notes.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -60,6 +60,9 @@ recorded. Then run five tests:
    and later truth.
 4. **Setup/payoff:** is decisive information planted before use without telegraphing?
 5. **Continuity:** time, location, injury, inventory, names, relationships, technology, witnesses [S5, S7].
+   For an object or injury correction, sweep the whole affected range, including chapters the change
+   did not touch, for the bare noun and for recaps of the same event, and trace each match to its
+   actual referent. Searching only for the old qualified phrase misses contradictory shorthand.
 
 ### Pass 3: pacing and balance
 

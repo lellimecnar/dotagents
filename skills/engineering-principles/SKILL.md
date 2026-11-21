@@ -2,7 +2,7 @@
 name: engineering-principles
 description: Use when writing, reviewing or fixing code. Principles plus review and fix-the-class protocols.
 metadata:
-  version: "0.2.1"
+  version: "0.2.2"
   status: draft
   owner: maintainer
 ---

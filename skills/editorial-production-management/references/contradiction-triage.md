@@ -13,6 +13,9 @@ prose) that the owner must rule on.
 3. **Before showing each batch, check every item against the current main branch.** Read the cited lines
    (`git show origin/main:<file> | sed -n Np`) and grep canon for the facts involved. Lists contain false
    positives ("half a decade" vs "five years"; a long war across a region vs a short one on one planet).
+   Checkers read literally and over-flag: two notes that add together ("when damaged" does not mean
+   "only when damaged"), equivalent phrasings of one quantity, and states that change off-page are
+   usually not contradictions.
    If an item is not a real conflict, say so and ask the owner to confirm; never make them rule on a
    non-conflict.
    - Look for the real problem behind the item. The surface item may be "who has the injury" while the
@@ -24,8 +27,9 @@ prose) that the owner must rule on.
 4. **Present a manageable batch in the decision-maker’s preferred format.** For each: the actual prose quoted verbatim with
    chapter:line (never a paraphrase alone; the owner should not have to go searching), a plain
    explanation of what the text says and why it may be wrong, then options A/B(/C) with the edit count
-   each needs and one option marked "(my pick)". When a figurative or derived reading exists, include a
-   "not a contradiction" option. Ask for an unambiguous decision on each numbered item.
+   each needs and one option marked "(my pick)". Whenever a compatible reading exists (figurative,
+   derived, additive, off-page change), include a "not a contradiction" option instead of passing the
+   checker's verdict through as fact. Ask for an unambiguous decision on each numbered item. Offer a consolidated reply template if it suits the decision-maker’s workflow.
 5. **Each time they rule:** log the ruling and any standing rule; fix canon and doc files now (mark the item
    RESOLVED in any dossier, pointing to the log); save standing rules where the team's memory and
    guardrails live; commit and push to the shared branch.
@@ -43,3 +47,26 @@ prose) that the owner must rule on.
   ask a yes/no question on those facts before changing canon.
 - Canon tables cite line numbers that may point at the wrong character's line. Re-read the cited line
   before trusting a canon row as evidence.
+- **Apply the manuscript’s continuity rules.** Determine whether a referenced event must be shown
+  on the page, may be implied, or may occur between scenes. Before accepting "it was done earlier", search the chapter
+  range for the object and quote what is shown. If the text only shows a start, check whether a later completion is supported or
+  allowed off-page before marking a contradiction.
+- **Planning notes need record-only fixes.** When outlines, packets or indexes disagree with clear prose,
+  fix the note. Classify items by manuscript impact and whether they need a decision, and route them
+  according to the project’s approval and reporting rules. Agree on any standing rule before applying it to later batches.
+- **Trace before logging a fix.** A fix that names an object or mechanism can create a new continuity
+  error: verify the relevant state at that point against the available continuity sources, or ask
+  the responsible reviewer. Record a standing rule only when one has been agreed.
+- **Cross-reference related rulings.** If an existing decision settles another item, link them
+  in the decision record, if used, instead of asking for a second ruling.
+- **"Confirm we leave X unexplained" is not an automatic yes.** Classify each
+  topic (consult the relevant reviewer if one is assigned) into needs-explaining, fine-as-is or record-only, with quoted lines and the smallest proposed
+  explanation.
+- **Pause affected work.** If a ruling changes active work, use the agreed hold or notification
+  mechanism. Tell the responsible party what to pause and point to the new decision. Confirm the hold was received.
+  If affected work has already landed, assess what must be corrected or reverted.
+- **Keep status updates brief.** While decisions are pending, report only what has changed rather
+  than restating every open item. If verification is interrupted, preserve completed checks and arrange an authorized
+  handoff or a smaller next batch for the unchecked items.
+- **Late comments.** A comment sent near a task's completion may land after the worker finished: check
+  for unanswered questions and route them through the agreed follow-up channel.

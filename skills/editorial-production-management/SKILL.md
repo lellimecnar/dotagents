@@ -2,7 +2,7 @@
 name: editorial-production-management
 description: Use when planning a book's editing/publishing pipeline. Stages, gates, routes.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -118,6 +118,25 @@ the worker. Effort bands are not durations: never sum S/M/L into a calendar with
 Follow `references/contradiction-triage.md`. Always: 3 items per message; check each against current
 main first and drop false positives; one draft PR and one rulings log for the whole list; update canon,
 docs and memory as each ruling arrives; no prose edits until every item is ruled, then one prose pass.
+
+## 8. Relaying findings and rulings
+
+- **Specialist findings are advisory until the responsible decision-maker resolves them.** Verify the cited text and decision before relaying
+  a required fix. If the decision-maker later overturns a finding you relayed, withdraw it plainly and say why.
+- **Merge duplicate findings across reviewers.** Relay required and optional fixes separately, each with
+  a precise citation and the responsible party, if assigned. Ask for each outstanding ruling
+  in the decision-maker’s preferred format.
+- **Do not re-ask answered questions.** Check the latest authorized discussion or decision record
+  before asking the decision-maker.
+- **Verify review status before reporting it.** Check the available review record or ask the
+  reviewer. Distinguish unfinished review from a review awaiting a decision.
+- **Check the scope of rulings.** Apply a ruling to related cases only when its wording or the
+  agreed project policy covers them; otherwise propose the extension for confirmation.
+- **A principle that changes how the team works gets three steps:** patch the governing skill or guide,
+  sweep every guide and plan line that says the opposite, then
+  review that sweep for wording left behind.
+- **Verify adoption in the authoritative artifact.** Check the accepted version before reporting
+  adoption. A trial that used an idea does not show that the idea was adopted.
 
 ## Project specifics
 

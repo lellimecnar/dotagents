@@ -2,7 +2,7 @@
 
 ## Layout (use the requester's layout if they define one)
 Answer (2 to 4 sentences, recommendation first) -> Options compared (table for 3+) -> Evidence ->
-Risks and tradeoffs -> What I couldn't verify -> Sources. Date saved reports and open with the short answer. Include the requester’s identity only if needed and authorized.
+Risks and tradeoffs -> Limits -> Sources. Date saved reports and open with the short answer. Include the requester’s identity only if needed and authorized.
 
 ## Confidence vs likelihood (ODNI ICD 203)
 ICD 203 separates two things and forbids combining a confidence level and a likelihood term in the same
@@ -39,7 +39,8 @@ product context differs from ours), imprecision, and selective publication. [2]
 
 ## Final checklist before sending
 1. Answer first, with the first physical action.
-2. Every factual claim cited; uncitable claims marked "I couldn't verify this".
+2. Every factual claim cited; uncitable claims marked "I couldn't verify this" and listed under
+   Limits with what was tried, and the recommendation does not rest on any of them.
 3. Every number has its baseline, unit, date and source assumptions.
 4. Strongest counter-evidence included.
 5. Confidence stated, with the reason and what would change it.

@@ -2,7 +2,7 @@
 name: merge-queue-stewardship
 description: Use when admitting approved PRs to a merge queue or checking trains flowed.
 metadata:
-  version: "0.1.0"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -17,6 +17,7 @@ train PR and the CI-gate / queue configuration that decides what may merge.
 
 - A scheduled run admits eligible PRs into a merge queue (a queue label, a bot command) or
   assembles a release train.
+- Where supported, trigger queue admission when the project’s configured review and acceptance gates pass. Otherwise use a scheduled eligibility sweep.
 - A weekly check asks whether the week's approved work actually reached the integration branch.
 - You review a train PR, or a PR that changes required checks or queue rules
   (see [references/queue-config-review.md](references/queue-config-review.md)).
@@ -112,6 +113,11 @@ Never merge or push to the train yourself.
   have both happened; retire it only after telling whoever owns operations.
 - Path-filtered workflows never report when not triggered, so requiring their success can hang a
   queue forever (details in the reference).
+- **Prefer a rerun when the red is runner-only.** Verify that a rerun tests
+  the intended head and that approvals remain valid under the configured policy.
+- **Check what the CI provider reruns.** Some providers replay the original workflow and
+  revision, which may differ from the current integration state. If stale workflow configuration is
+  the cause, use or request the supported rebuild or requeue path rather than repeating the rerun.
 
 ## Verification
 

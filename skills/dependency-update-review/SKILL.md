@@ -2,7 +2,7 @@
 name: dependency-update-review
 description: Use when triaging bot dependency PRs or lockfile changes. Reconcile, verdict.
 metadata:
-  version: "0.1.0"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -38,6 +38,8 @@ the single-PR method, queue audits, recording verdicts durably, and editing the 
   profile names, never under the owner's identity or credentials: work done in the owner's name
   cannot be told apart from the owner's own. If only the owner's credential is available, stop and
   ask.
+- **A verdict in the tracker is not a verdict on the forge.** If the base branch requires an approving
+  review, an internal merge recommendation alone does not meet the gate: the forge must recognize an eligible approving review on the exact head. A Close verdict ends with the PR actually closed. Verify completion on the forge, not only in the local tracker.
 - **Hold means "not yet", Close means "not this".** Never downgrade a Hold to Close because the
   unblock looks like work.
 
@@ -65,6 +67,8 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
    regeneration also changes a manifest, the bump is not self-consistent — record that and leave it.
    If the lock is already current, change nothing. Pushing to a bot's branch ends the bot's
    management of that PR: it stops rebasing it, and the PR is now yours to carry to merge or close.
+   Treat that handoff as conditional. Verify whether a manual commit, including lockfile
+   regeneration, stops the configured bot from rebasing that PR. If it does, record who owns rebases in the PR or task tracker before requesting another rebase.
 3. **Changelog and breaking changes** between old and new, covering every intermediate version on
    minor/major bumps. Look in the repo changelog, forge releases, the registry page, and — before
    declaring "no changelog" — the tag comparison and the release PR bodies (release-automation tools
@@ -86,6 +90,13 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
    what a human should verify that CI cannot: runtime behaviour, deployed-version skew, new
    deprecation warnings in logs. Do not recommend "run the test suite"; CI does that.
 8. **Record it** (label + comment, see [references/verdict-records.md](references/verdict-records.md)).
+9. **Resolve it on the forge.**
+   - Merge: confirm the PR head still equals the head named in the verdict, then make sure an
+     APPROVE review exists for that exact commit (GitHub: `POST /repos/{o}/{r}/pulls/{n}/reviews`
+     with `event=APPROVE` and `commit_id=<head>`). Verify the review decision reads approved
+     (`gh pr view <n> --json reviewDecision`).
+   - Close: post the verdict comment, close the PR (add the bot's ignore command only if the verdict
+     says so), verify the state is closed.
 
 ## Queue audit
 
@@ -127,6 +138,9 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
   (minor+patch vs major) to make order irrelevant. Never promise "one PR per ecosystem"; a release
   train is what gives the owner one merge.
 - Report manifests with no config entry as coverage gaps; do not silently widen scope.
+- Regrouping can leave open PRs tied to removed rules. For example, Dependabot may report that
+  the `dependabot.yml` entry that created a PR was removed. Check the configured bot’s supported recovery
+  options and record how each affected PR will be handled.
 - State in docs and PR text only behaviour you verified in the bot's docs or changelog; reviewers
   diff claims against the docs. When editing a skill or doc that describes the flow, grep it for
   every leftover merge instruction before resubmitting.
@@ -138,6 +152,19 @@ majors, OpenTelemetry release streams, Python lock tooling) are in
 [references/ecosystem-traps.md](references/ecosystem-traps.md).
 
 - Before blaming a red check on the bump, confirm it is not red on the base tip.
+- **Diagnose red CI before touching the branch.** Does the required check exist in the workflow at
+  that head? Inspect the available CI evidence, or ask an authorized operator to confirm the failure mode. Runner or workspace failures (permission errors during
+  checkout, a dirty persistent workspace) are CI health: report the problem to the responsible operator with
+  evidence they may access. Retry isolated runner failures only when authorized; do not rebase
+  unrelated branches to trigger new runs.
+- **Use the ref that governs the claim.** Verify base facts against the current base revision
+  and proposed changes against the pinned head. Do not rely on unverified working-tree state.
+- **A queued verdict's head goes stale when the bot rebases.** Re-read the head before answering;
+  report the drift and whether the files or call sites you audited changed.
+- **The last pusher cannot approve.** With "require approval of the most recent push" (GitHub
+  ruleset `require_last_push_approval`), pushing a lockfile commit makes your own APPROVE count for
+  nothing. Obtain approval on that head from someone eligible under the project’s branch policy.
+  Do not self-approve and call the PR done; check the review decision.
 - Every worktree you create is removed on every exit path; a leaked one is indistinguishable from
   real work. Check for uncommitted unique work before forcing removal.
 - Infrastructure-provider bumps (Terraform etc.) affect live infra: never apply; a plan against live
@@ -149,9 +176,13 @@ Exactly one verdict label per PR, matching the comment, both naming the current 
 interim verdicts left; every Hold has an unblock path; every Close has a posted reason; local
 checks and provider rollup reported as separate claims.
 
+At the end of the run, verify each current-head merge recommendation against any required approval gate.
+Verify that each final close decision shows a closed PR on the forge. Resolve or report exceptions as authorized.
+
 ## Project specifics
 
 The project's dependency skill or `AGENTS.md` supplies the base branch, ecosystems and lock
 commands per directory, label names and colours, the comment marker, known-flaky checks, lockstep
-pins, who adjudicates (some projects require a specific model to issue verdicts), the merge queue,
+pins, who adjudicates (some projects require a specific model to issue verdicts), which identity
+submits the approving review, the merge queue,
 and the weekly schedule.

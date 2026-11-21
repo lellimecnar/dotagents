@@ -2,7 +2,7 @@
 name: capacity-first-scheduling
 description: Use when building or repairing a week or day of time boxes, ADHD-aware.
 metadata:
-  version: "0.1.0"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -86,6 +86,18 @@ conflicts with them, follow the data doc and note the conflict in your output.
 - **Spread neglected tasks:** postponed 2+ gets a guaranteed early slot, at most two per day; at 3+
   schedule only its first 15-25 min step and flag it.
 - **Batch** errands by area and same-tool work (admin, forms) into one box with checkboxes.
+- **Size admin blocks to the work selected.** Use authorized information to check due dates;
+  estimate time for each item and show only the details needed to act. Avoid turning a focused block into a backlog.
+  Use freed time for the person’s priorities or keep it as buffer, as agreed.
+- **A priority the person names for a day gets a real block** before you reply, taken from
+  lower-stakes boxes first.
+- **Avoid unnecessary fragmentation.** Group adjacent work when useful and split it when the
+  task or the person’s preferences call for it. Match the requested scope of each block.
+- **Tasks flow through time.** Order by dependency, daylight (outdoor work), energy and deadlines;
+  group related work; leave real gaps. Before writing a day, state in one line why each box sits
+  where it does; a box you cannot justify is scattered.
+- **Check actual attendance constraints.** Overlap a passive commitment only when its location,
+  attention, and coverage requirements are compatible with the other block.
 - **Cap any single project** at ~40% of the week's focus hours unless it has a deadline; boost
   tasks untouched for 5+ days; track hour targets per category if the person keeps them.
 - **Respect the household's rest-day and money rules** (for example a day with no chores, or bill
@@ -102,9 +114,12 @@ capacity -> pad and split tasks -> place mandatory items first (latest safe day 
 never the deadline day for medium-plus tasks), then neglected tasks, then the rest by priority
 while day load <= capacity -> place boxes by load and energy, one overflow box per day -> anything
 that does not fit goes to Dropped/Deferred with a reason. Weekly boxes are themes ("Deep work:
-proposal", "Errands"), not checklists. Never overbook silently.
+proposal", "Errands"), not checklists. Never overbook silently. Check authorized calendars
+within the agreed horizon. Mirror commitments only when requested and authorized, to the designated calendar, so any proposed day
+(a follow-up appointment, say) can be judged against a real week instead of a blank one.
 
-**Daily (refine tomorrow):** re-read the calendar and today's completion -> update velocity ->
+**Daily (final tomorrow, rough refresh after it):** finalize tomorrow and refresh later drafts
+only as far ahead as the agreed planning cadence calls for. For tomorrow: re-read the calendar and today's completion -> update velocity ->
 carry over unfinished mandatory items only (suggested ones return to the pool) -> exact 15-min
 boundaries, transitions, easy win, low load after lunch, overflow box -> 1-3 suggestions per box
 with mandatory items separated; padded checkbox minutes must fit the box -> if-then lines on the
@@ -143,9 +158,15 @@ lead with yes or no. Do not lecture about ADHD or list principles.
 - Same-kind marathons; hard work in the post-lunch dip; back-to-back high-load boxes.
 - Hiding drops instead of listing them with reasons.
 - Editing events the planner did not create, or that the person edited (treat those as locked).
+- If lock information is missing or inaccessible, treat existing events as potentially locked.
+  Offer a conditional plan without moving them and request a minimal lock list through an approved channel.
+  Use explicit event ownership and lock metadata when available; leave events untouched if provenance is unclear.
 - Defining calendar mechanics (naming, colors, checkbox syntax) in this skill instead of the
   household's conventions doc; if that doc is missing, stop before writing and report it.
 - Over-trusting chronotype or decision-fatigue science; personal history beats both.
+- Paragraph descriptions on boxes; keep them to short glanceable lines.
+- Boxing routine reminders without agreement; include only the reminders and level of detail
+  the person wants on that calendar.
 - Two tools writing boxes for the same range (for example a deterministic planner plugin and this
   method): pick one writer and use the other as a cross-check.
 

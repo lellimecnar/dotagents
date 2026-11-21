@@ -48,6 +48,11 @@ links and supersedes the stale one. Never leave two apparently-current verdicts.
 A verdict record is a *current-state* report: wording like "manifest-only" or "no lockfile" goes
 stale after a lock commit and must be edited, even though it was true when written.
 
+To correct a posted record, rewrite the whole live body, not one line: fetch it, edit, write it
+back, fetch it again. Then search the result for each old wording (zero hits), diff it against what
+you sent, and confirm the verdict and head markers survived. A stale sentence left anywhere costs a
+review round.
+
 ## Check evidence: two clauses, always
 
 Name the local commands that passed, then state the live provider rollup separately. Never write an

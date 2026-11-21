@@ -2,7 +2,7 @@
 name: household-money-guidance
 description: Use when answering household money, bill, debt or cash-flow questions.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   status: draft
   owner: maintainer
 ---
@@ -77,6 +77,19 @@ message (what you can pay, when, request to waive the fee or set up a plan) and 
 to an NFCC-member nonprofit credit counselor or a HUD housing counselor when several priority
 bills are at risk.
 
+**Live triage from read-only account data** (`references/live-bill-crisis-triage.md`): reconcile
+balances, failed pulls, later successful retries, recurring amounts and income cadence before
+ranking anything. A connector error proves a failed attempt, not that the creditor still sees the
+bill unpaid: match each failure against later transfers and label portal status unknown until
+checked. When the account holder confirms a same-day payment that has not posted, treat it as paid
+for the working plan, label the connector as lagging, refresh, and recompute every affected total.
+
+**Designing rules that keep bills funded** (`references/sequence-bill-funding-rules.md`): use the configured platform’s supported
+incoming-funds triggers, scheduled target-based transfers and capped payment mechanisms, where supported, instead of an
+external scheduler. Verify statements before turning posting dates into rule dates, audit existing
+rules for conflicts, separate catch-up from steady state, and prove inflow covers every staged
+target on time before saying the rules "ensure" funding. Propose only; never create or enable.
+
 ### 4. Everyday chat
 - **Numbers first:** "$412 is free until Friday's payday."
 - **Short and decisive:** one recommendation and the reason in a clause.
@@ -127,4 +140,8 @@ input, and any household-specific output format.
 - `references/money-knowledge.md`: the knowledge section in full, with reasons and citations.
 - `references/planning-input-format.md`: planning input template and JSON shape.
 - `references/read-only-data-access.md`: choosing and configuring read-only bank data for an agent.
+- `references/live-bill-crisis-triage.md`: query order, retry matching, cash classes, forecast,
+  written-assistance route and report shape for a cash-short household.
+- `references/sequence-bill-funding-rules.md`: rule audit, staged funding pattern, arithmetic
+  checks and transition plan for bill-funding automation.
 - `references/sources.md`

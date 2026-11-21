@@ -2,7 +2,7 @@
 name: household-paper-flow
 description: Use when setting up a home paper flow, record retention, scanning or shredding.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -44,6 +44,8 @@ Researched 2026-11-09. General information only, not tax or legal advice; for sp
 **Conservative note:** FTC's 2015 shredding post said keep tax returns forever and other tax records 7 years; its 2025 list says at least 3 years. IRS gives the legal windows (3 / 6 / 7 years / indefinitely). Recommended house policy (judgment): keep tax returns permanently (they are small, and scanned), keep supporting records 7 years.
 
 **Three copies of vital documents:** paper original locked and fireproof/waterproof; encrypted scan; and one copy off-site (safe-deposit box, trusted person, or encrypted cloud). [ready.gov]
+
+**Before renovation or construction:** move vital-records storage (document safe, fire box, emergency binder) out of the work area or off-site before work starts; dust, water shut-offs, open walls and contractors coming and going all put it at risk. Update the binder's home inventory when the work is done. (judgment)
 
 ---
 

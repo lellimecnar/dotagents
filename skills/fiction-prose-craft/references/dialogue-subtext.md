@@ -29,6 +29,8 @@ then give the reader the surface that implies it.
 2. For each emotional exchange, ask what the most important unsaid thing is. If someone says it, try
    moving it under the surface.
 3. Could the line come from another character? If yes, revoice it against the voice profile.
+4. Check each line against the speaker's voice profile (register, contractions, verbal tics). Where the
+   profile and the manuscript disagree, flag it as a canon question; do not silently fix either side.
 
 ## Subtext moves
 - Talk about the task, mean the relationship: practical talk (fuel, repairs, a meal) can carry fear or love.
@@ -36,4 +38,5 @@ then give the reader the surface that implies it.
 - A gesture that interrupts a speech works only if left unexplained.
 - Withheld truth: a character visibly swallowing a sentence keeps the reader in on it and the listener out.
 - Humour as deflection belongs right after a disaster or decision.
+- For a restrained character, consider whether gesture, silence or action serves the moment better than explicit dialogue. Follow any established voice rule.
 
