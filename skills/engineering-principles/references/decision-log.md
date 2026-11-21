@@ -10,7 +10,7 @@ are waiting for the owner and may be refined until decided. Format and process:
 ## D-001 Principles over decrees
 - **Status:** accepted
 - **Date / decided by:** 2026-11-14, owner
-- **Context:** Agent instructions across the fleet had grown into lists of if/then rules, often in
+- **Context:** Agent instructions across a set of agents had grown into lists of if/then rules, often in
   capitals, with little explanation. Agents followed their letter, missed their intent, and had no
   way to handle cases the rules didn't anticipate. Contradictions crept in between rule sets.
 - **Decision:** Every coding rule is stated as a principle with the value(s) it protects. Specific
