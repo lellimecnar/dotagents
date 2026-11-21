@@ -2,7 +2,7 @@
 name: evening-check-in
 description: Use when running an evening check-in, a reflection or a goal review.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -40,6 +40,11 @@ not chase; no reply tonight is fine.
      is captured.
 4. Done.
 
+**Verify before sending.** Read tomorrow's actual calendar again just before the message goes out,
+even if an upstream summary exists. Drop anything that is not this person's own obligation (a reminder assigned to someone else), duplicated blocks, and "decisions" that are really
+settled arrangements. Verify prospective decisions against the authorized source for the requester’s current scheduling preferences. A wrong or stale line
+costs more trust than a missing one: list only what is real.
+
 ### 3. Weekly review (replaces step 3 once a week)
 - Hours this week per category vs the person's targets.
 - Ask: keep, raise or lower each target next week? Write the answer where the planner reads targets.
@@ -74,9 +79,12 @@ lighter day).
 - Writing private goal reasons or reflections into shared planning files.
 - Re-planning tomorrow inside the check-in instead of routing it to the planner.
 - Shame wording about missed targets.
+- Sending an upstream summary unchecked: someone else's reminders, duplicate blocks, or a
+  long-settled recurring arrangement presented as an open decision.
 
 ## Verification
-- Tomorrow's first event, leave-by times and mandatory items were stated from real calendar data.
+- Tomorrow's first event, leave-by times and mandatory items were stated from real calendar data,
+  re-read just before sending; every listed item and decision is the person's own and still open.
 - Any parked thought became a task, and the person was told it was captured.
 - The log line was appended; target changes from the weekly review were written where the planner
   reads them.
