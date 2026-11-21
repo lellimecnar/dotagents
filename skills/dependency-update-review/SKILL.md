@@ -35,9 +35,7 @@ the single-PR method, queue audits, recording verdicts durably, and editing the 
 - **A verdict only in the transcript is not a verdict.** Every PR gets a label (the index) and a
   comment (the record), both naming the head they apply to.
 - **A verdict on the board is not a verdict on the forge.** If the base branch requires an approving
-  review, a Merge label alone admits nothing: the PR also needs an APPROVE review bound to the
-  verdict's head. A Close verdict ends with the PR actually closed. Close the loop on the forge, not
-  only on your task card.
+  review, an internal merge recommendation alone does not meet the gate: the forge must recognize an eligible approving review on the exact head. A Close verdict ends with the PR actually closed. Verify completion on the forge, not only in the local tracker.
 - **Hold means "not yet", Close means "not this".** Never downgrade a Hold to Close because the
   unblock looks like work.
 
@@ -147,7 +145,7 @@ majors, OpenTelemetry release streams, Python lock tooling) are in
 - Before blaming a red check on the bump, confirm it is not red on the base tip.
 - **The last pusher cannot approve.** With "require approval of the most recent push" (GitHub
   ruleset `require_last_push_approval`), pushing a lockfile commit makes your own APPROVE count for
-  nothing. A different identity (the project's reviewer agent or a human) must approve that head.
+  nothing. Obtain approval on that head from someone eligible under the project’s branch policy.
   Do not self-approve and call the PR done; check the review decision.
 - Every worktree you create is removed on every exit path; a leaked one is indistinguishable from
   real work. Check for uncommitted unique work before forcing removal.
@@ -160,9 +158,8 @@ Exactly one verdict label per PR, matching the comment, both naming the current 
 interim verdicts left; every Hold has an unblock path; every Close has a posted reason; local
 checks and provider rollup reported as separate claims.
 
-End-of-run forge invariant: no open PR with a Merge verdict still shows review required
-(`gh pr list --state open --label <merge-label> --json number,reviewDecision`), and no open PR
-carries the Close verdict. Fix or report each exception.
+At the end of the run, verify each current-head merge recommendation against any required approval gate.
+Verify that each final close decision shows a closed PR on the forge. Resolve or report exceptions as authorized.
 
 ## Project specifics
 
