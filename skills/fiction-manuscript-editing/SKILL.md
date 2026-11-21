@@ -2,7 +2,7 @@
 name: fiction-manuscript-editing
 description: Use when editing fiction: developmental, line, copy. Staged passes, notes.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -55,9 +55,13 @@ recorded. Then run five tests:
 1. **Causality:** can each turn be "because X, the character chooses Y, therefore Z"? Flag coincidence,
    missing mechanism, effect before cause.
 2. **Agency:** does the POV character's choice alter the result? Young protagonists must not become
-   spectators while adults or machines solve the scene [S10, S11].
+   spectators while adults or machines solve the scene [S10, S11]. For a consequential choice, show what the character knows, what is uncertain, and why they act. If they set a condition, show how it is satisfied or why they knowingly proceed without it. A memory can inform the choice if the text establishes why the character trusts it.
 3. **Knowledge:** could this POV know or infer the claim now? Separate observation, inference, memory
-   and later truth.
+   and later truth. On a restricted-POV action beat, check each precise physical claim against the last
+   stated sightline and what sound, touch or inference could supply. A fact the POV could not perceive
+   after an explicit cutoff is a knowledge break even when automated checks find nothing; an inference
+   the sensory evidence supports is fine. Separate a stated diagnosis from an inferred cause, and test the
+   inference against what the reader has seen before changing it.
 4. **Setup/payoff:** is decisive information planted before use without telegraphing?
 5. **Continuity:** time, location, injury, inventory, names, relationships, technology, witnesses [S5, S7].
    For an object or injury correction, sweep the whole affected range, including chapters the change

@@ -2,7 +2,7 @@
 name: manuscript-readiness-assessment
 description: Use when judging if a chapter is publish-ready. Full rubric, ranked fixes.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -88,6 +88,11 @@ Read closeout records and current plans before older audits.
 - When paths or line anchors drifted, locate the claim by quoted text and cite the current `file:line`.
 - When authority files conflict, look for a later explicit ruling; use it for fix direction but still
   list every contradictory source as synchronization drift.
+- When fresh independent reads are part of the evidence, read each reader's raw findings at the exact
+  revision, not only scores or a coordinator's convergence summary. Adjudicate findings only one reader
+  raised, too: an isolated top-severity finding can expose a separate decision beat, while its proposed
+  remedy may exceed scope or reopen a ruling. Record the remedy you accept. A score from a reader who saw
+  only an excerpt is provisional, never a chapter score.
 
 ### 5. Map scenes and beats before judging
 
@@ -132,6 +137,20 @@ fixes vs suggestions; specialists pulled in only where needed and folded into on
 check** (one canon PR naming the revision PR; contradictions spawn a new revise + check) → **Owner
 review**. Rules that keep it sane: never open a competing PR; the newest stage document of a kind wins;
 reviews come from a different model family than the work; canon mirrors update only after merge.
+
+When independent cold reads are part of approval:
+- Re-score if a revision changes a scored passage or any context that could change its assessment. Reuse earlier scores only after checking both; record the revision and the basis for reuse.
+- Resolve required findings before approval even if all scores meet their thresholds.
+- Keep readers blind (no model names, drafters, history or earlier scores), and spot-check each packet:
+  complete target text, no authorship terms. If a required reader route is unavailable, stop with the
+  exact error; never substitute another.
+- A reader's "the rule causes this" label is not a decision for the owner by itself: if a fix exists
+  inside the rule, it is a required fix. Record deliberate gaps the owner already ruled on as closed, so
+  later readers stop flagging them.
+- If a beat still scores low after the within-rule fix has landed and the remaining levers would change
+  the design, it is the owner's decision: offer the smallest design change. Another wording round on a
+  design problem only burns a review cycle.
+- Hold revisions that depend on an unresolved design decision. Continue independent fixes that will remain valid either way. Batch the dependent fixes after the ruling and recheck the affected passages together.
 
 ## Pitfalls
 

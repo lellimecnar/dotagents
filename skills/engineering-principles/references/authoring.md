@@ -59,7 +59,7 @@ rule. So:
 ## Measuring use and pruning
 
 Reviewers cite `EP-nn` IDs in every finding, which makes the document measurable. Once a quarter,
-count citations per ID across the fleet's PR reviews, for example:
+count citations per ID across your PR reviews, for example:
 
 ```bash
 gh api "repos/$REPO/pulls/comments?per_page=100" --paginate -q '.[].body' \

@@ -4,9 +4,16 @@
 - Topic: <exact wording> · Assigned by: <bishopric / other>
 - Starting talk: <speaker, "title," month year, link> or none
 - Date: <meeting date> · Time: <N> minutes · Speaker: <adult / youth / child>
+- Research bank (if the notes outgrow this file): <path>
 
 ## Core message (current draft)
 <one sentence, connected to Jesus Christ> — status: draft / agreed
+
+## Bookend questions (if used: asked at the start, re-asked at the end)
+1. <question, speaker's wording> — opening answer: <surface> · closing answer: <deep> — status
+
+## Thread (argument chain, current version)
+<numbered steps, each following from the last; speaker's ideas as the spine> — version / status
 
 ## Ideas
 | # | Idea (short) | From | Status |

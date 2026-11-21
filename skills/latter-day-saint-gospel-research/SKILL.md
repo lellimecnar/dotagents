@@ -2,7 +2,7 @@
 name: latter-day-saint-gospel-research
 description: Use for any Latter-day Saint gospel question. Source-first, cited.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -67,6 +67,14 @@ Short factual lookups ("where is this verse", "who gave this talk") need only th
 Follow `references/apologetics.md`. In short: honest, charitable, sourced on all sides, no overclaiming, the
 Church's own Gospel Topics Essays and Church History Topics first, and state plainly where evidence is thin or the
 question is open.
+
+Politically charged questions (what leaders have said about an ideology, a movement or a party): report what
+leaders actually said, with its era (older statements may have no recent counterpart), next to the Church's current
+policy in the current General Handbook section titled “Political and Civic Activity”; link to the
+section and distinguish current policy from earlier statements. If the sources you checked do not use
+the label, say which sources you checked rather than claiming that no leader has used it. If the asker states a partisan claim of their own, take no side and do not volunteer an opinion;
+acknowledge it briefly and return to the gospel principle and what leaders have taught (statistics: see
+`references/apologetics.md`, "Politically charged applications"). If they ask for that analysis outright, give it sourced and labelled.
 
 ## Questions about personal faith
 Some questions are personal (doubt, worthiness, a calling, a family situation). Answer the doctrinal part with

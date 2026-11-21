@@ -2,6 +2,8 @@
 
 Checked 2026-11-14. Re-verify before relying on a number for a live trip.
 
+Identify the jurisdiction and read the current official rule before quoting a right, deadline or maximum. Check who and what it covers, exceptions, and both effective and compliance dates. For example, U.S. air-travel notice limits differ by service under [14 CFR 382.27](https://www.ecfr.gov/current/title-14/section-382.27). Check agency lead times, contacts and program details separately on the administering agency's official page; date the checks.
+
 ## Air travel: Air Carrier Access Act (ACAA), 14 CFR Part 382
 Source: https://www.transportation.gov/airconsumer/passengers-disabilities
 
@@ -24,7 +26,7 @@ Source: https://www.federalregister.gov/documents/2024/12/17/2024-29731/ensuring
 - Gap: phase-in dates for individual provisions were not verified. Check the rule before citing a specific deadline to an airline.
 
 ## Airport security: TSA
-- **TSA Cares / Passenger Support Specialist (PSS):** request at least **72 hours** before departure via the online TSA Cares form (written route): https://www.tsa.gov/contact-center/form/cares. Source: https://www.tsa.gov/travel/passenger-support. PSS does not exempt anyone from screening and is not expedited screening. Qualifying examples: difficulty following instructions due to a disability, traveling with a child with a disability or medical condition, medically necessary liquids over 3.4 oz, service animal.
+- **U.S. example — TSA Cares:** Check [TSA Passenger Support](https://www.tsa.gov/travel/tsa-cares/passenger-support) and the [request form](https://www.tsa.gov/contact-center/form/cares) for the current notice window and submission routes. If the flight falls inside the form's window, use the late-request contact listed on the form. Date the check. A Passenger Support Specialist assists at screening but does not waive or expedite it.
 - **Airport wheelchair service is provided by the airline, not TSA** (same source).
 - **Notification card:** tell officers verbally, with the TSA Notification Card (https://tsa.gov/sites/default/files/disability_notification_card_508.pdf), or with medical documentation. Source: https://www.tsa.gov/travel/tsa-cares/disabilities-and-medical-conditions
 - Body scanner (AIT) requires standing unassisted with arms raised 5-7 seconds; otherwise pat-down by a same-sex officer (same source). TSA PreCheck passengers unable to stand may remain seated in their mobility device.
@@ -70,4 +72,4 @@ Source: https://www.ada.gov/topics/service-animals/
 - Airline first: email or web form to the airline's consumer office; airlines must acknowledge within 30 days and respond in writing within 60 days. Then the DOT online form https://airconsumer.dot.gov/consumer/s/oacp-form (disability complaints are forwarded to the airline, which must respond to you and DOT). Source: https://www.transportation.gov/airconsumer/file-consumer-complaint
 - TSA: web form above.
 - ADA (hotels, venues, state and local government): https://www.ada.gov/file-a-complaint/ routes air travel to DOT, housing to HUD, employment to EEOC, everything else to the DOJ Civil Rights Division online report at https://civilrights.justice.gov/ (mail is the other option). DOJ review can take up to three months.
-- Phone-only note: DOT also runs a disability hotline (800-778-4838 voice, per CDC https://wwwnc.cdc.gov/travel/page/disability). It is an option, never the required action.
+- Phone-only note: DOT also runs a disability hotline; get its current number from DOT's aviation consumer pages (or the CDC disability travel page, https://wwwnc.cdc.gov/travel/page/disability) at task time. It is an option, never the required action.

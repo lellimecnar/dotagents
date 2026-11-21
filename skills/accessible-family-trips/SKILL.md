@@ -2,7 +2,7 @@
 name: accessible-family-trips
 description: Use when planning family outings or trips. Access and budget gates.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -66,7 +66,7 @@ An option missing any required access fact does NOT pass the gate and cannot be 
 - Fares: track with Google Flights price tracking ("Any dates" if flexible) or set a watch with another available fare tracker; quote all-in price for the full party, including bags and seats.
 - Seat the family together: prefer airlines on DOT's fee-free family-seating dashboard; keep everyone on one reservation; choose or skip seats for the whole booking.
 - Book 7+ days out so the DOT 24-hour cancel/hold rule applies; book direct with the airline (the rule does not cover third-party agents).
-- Disability logistics: Access Pass via digital Recreation.gov pass (immediate) or in person; mail takes up to 3 weeks; request airline assistance in writing at booking; TSA Cares form at least 72 hours before; ask the departure airport whether it offers Sunflower lanyards and Wings for All rehearsals.
+- Disability logistics: Choose a verified pass route that will be usable in time (see `references/budget-methods.md`). Request airline assistance in writing at booking. Verify the airport's screening-assistance process, notice window and late-request route (see `references/accessibility-rights.md` for a U.S. example). Ask the airport about accessible orientation and rehearsal options. Date the checks.
 - Lodging: verify the specific accessible room type (roll-in vs. transfer shower vs. tub, communication features) on the property's own site, then ask the property to confirm in writing that the specific room is blocked for you. Book direct.
 - Medical: health-care letter, meds for the trip plus extra in carry-on, destination pharmacy/urgent care/ER located. Clinician review 4-6 weeks out for complex conditions.
 

@@ -2,7 +2,7 @@
 name: editorial-production-management
 description: Use when planning a book's editing/publishing pipeline. Stages, gates, routes.
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
   status: draft
   owner: maintainer
 ---
@@ -123,6 +123,10 @@ docs and memory as each ruling arrives; no prose edits until every item is ruled
 
 - **Specialist findings are advisory until the responsible decision-maker resolves them.** Verify the cited text and decision before relaying
   a required fix. If the decision-maker later overturns a finding you relayed, withdraw it plainly and say why.
+- **Separate a verified ruling from a relayed one.** A decision-maker's words that reach you through another
+  agent's quote, or through a post under an account several people or agents share, prove the relay, not the
+  speaker. Quote them back and ask the decision-maker to confirm before treating them as a ruling; until
+  then, label them unconfirmed in records and handoffs.
 - **Merge duplicate findings across reviewers.** Relay required and optional fixes separately, each with
   a precise citation and the responsible party, if assigned. Ask for each outstanding ruling
   in the decision-maker’s preferred format.

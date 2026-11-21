@@ -2,7 +2,7 @@
 name: relationship-kindness-coaching
 description: Use when coaching kindness, repair or dates. Not therapy.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---

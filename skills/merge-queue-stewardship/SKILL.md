@@ -2,7 +2,7 @@
 name: merge-queue-stewardship
 description: Use when admitting approved PRs to a merge queue or checking trains flowed.
 metadata:
-  version: "0.1.2"
+  version: "0.2.0"
   status: draft
   owner: maintainer
 ---
@@ -21,6 +21,10 @@ train PR and the CI-gate / queue configuration that decides what may merge.
 - A weekly check asks whether the week's approved work actually reached the integration branch.
 - You review a train PR, or a PR that changes required checks or queue rules
   (see [references/queue-config-review.md](references/queue-config-review.md)).
+- A queue app is installed but someone asks how to finish its setup, or its dashboard still shows a
+  setup banner (see [references/queue-app-ruleset-setup.md](references/queue-app-ruleset-setup.md)).
+- The queue looks stalled while checks sit queued rather than failing
+  (see [references/ci-runner-capacity.md](references/ci-runner-capacity.md)).
 
 ## Principles
 
@@ -44,8 +48,21 @@ train PR and the CI-gate / queue configuration that decides what may merge.
    requires it, or (for bot dependency PRs) the dependency steward's final merge verdict. Exclude
    owner holds, changes requested, stale review heads, conflicting PRs.
 2. **Re-read before admitting.** Base still the integration branch, head SHA equals the approved
-   head, review/QA evidence still current. A changed head returns to review.
-3. **Admit and stop.** Apply the admission signal (queue label or command). Add a priority signal
+   head, review/QA evidence still current. A changed head returns to review. Green CI is not enough:
+   re-query the forge's own review decision right before admitting and require it to read approved
+   at the current head. Required approvals still apply when the queue app may bypass the branch
+   rules, a rebase cancels an approval under a require-last-push-approval rule, and an old
+   request-changes review keeps blocking until its author posts a newer one (details in
+   [references/queue-app-ruleset-setup.md](references/queue-app-ruleset-setup.md), step 5).
+3. **Admit and stop.** Apply the admission signal (queue label or command) only once the admitting
+   agent's standing gate passes (for example: an exact-head approval *and* green required CI). That
+   the queue tool would also wait for the check does not license admitting early, and whoever
+   dispatches the admission must not override a refusal or re-send the order; change the rule
+   deliberately if it is wrong. Make the wait cheap instead: one bounded poll on the exact head,
+   admit the moment the required check is green, read the admission signal back, and do not poll
+   for the merge itself. If the wait outlasts the poll, leave the task blocked with a note of which
+   jobs are green and which pending, so the next scheduled run resumes it; if the tracker can no longer
+   resume it, file one fresh task that names the one it replaces. Add a priority signal
    (hotfix) only when the owner or governing policy grants it. Then stop: never build a manual train
    branch alongside a queue, merge a source PR directly, bypass branch protection, or touch the
    production branch.
@@ -118,6 +135,25 @@ Never merge or push to the train yourself.
 - **Check what the CI provider reruns.** Some providers replay the original workflow and
   revision, which may differ from the current integration state. If stale workflow configuration is
   the cause, use or request the supported rebuild or requeue path rather than repeating the rerun.
+- **Stale checks need a fresh merge commit.** When CI changed on the base after a PR's last run, a
+  re-run can reuse the old merge commit and test stale workflow code. On a forge that builds a new
+  merge commit when a PR is reopened (GitHub example: the `reopened` event, if the workflow's
+  `pull_request.types` include it), close and reopen that one PR: nothing is pushed, so an approval
+  under a require-last-push-approval rule stays valid, whereas updating the branch pushes a commit
+  and forces a new review. Do it per PR, never as a mass sweep (that floods the runners; see
+  [references/ci-runner-capacity.md](references/ci-runner-capacity.md)).
+- **Land CI-infrastructure fixes first.** When evidence shows a shared CI fault, avoid refreshing affected PRs until the fix is
+  verified. Admit the fix through the normal gates; if the fault blocks the fix itself, refer it to
+  the authorized recovery process. Then refresh affected PRs as needed.
+- **List existing tasks before filing one.** Before filing a review, reroute or queue task for a PR,
+  list the tasks already open for it: a second pass (another schedule or session) otherwise files
+  duplicates that dispatch redundant reviewers and pollers. Tell a duplicate to stand down in a
+  comment rather than leaving two live.
+- **Check reviewer independence from the records.** Where the project's policy requires a reviewer
+  independent of the author (for example from a different model family), read the author from the
+  commit records or the delivery task, not from the task's default assignee or a forge identity
+  several agents may share, before creating or routing the review task (see `pull-request-review`,
+  "Review sweeps").
 
 ## Verification
 

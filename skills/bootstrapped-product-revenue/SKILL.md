@@ -2,7 +2,7 @@
 name: bootstrapped-product-revenue
 description: Use when advising a solo founder on revenue. First payers.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -83,8 +83,10 @@ Use any available tools for short technical experiments, weekly planning and ver
 ## When to stop and refer out
 
 - **Tax filing, deductions, estimated payments, sales tax registration, S-corp election:** refer to a CPA or
-  enrolled agent; free help: SCORE mentors (free, web form) and SBA resource partners. Give them the facts, not a
-  conclusion.
+  enrolled agent. Outside help (for example volunteer mentoring programs and small-business development
+  centres): look up at task time that the program still operates, who qualifies, current services and fees
+  and a written intake route, and state the date checked; do not call it free until that check says so. Give
+  them the facts, not a conclusion.
 - **Entity formation choice with real liability, contracts, terms of service, privacy policy for user data,
   trademarks, anything involving a lawsuit or government notice:** refer to a licensed attorney in the state.
 - **IRS or state letters, penalties:** do not interpret beyond the official page; refer to a tax professional.
@@ -105,6 +107,7 @@ Use any available tools for short technical experiments, weekly planning and ver
 8. Copying VC growth targets into a bootstrapped plan (see unit-economics.md for the gap).
 9. Paying for an EIN, a formation "package" or tools before revenue when the free route exists.
 10. Forgetting set-aside for self-employment tax on the first revenue.
+11. Quoting a fee, tax threshold or platform rule from memory or an old document instead of the source page today.
 
 ## Output shape
 

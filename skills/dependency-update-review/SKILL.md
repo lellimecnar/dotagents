@@ -2,7 +2,7 @@
 name: dependency-update-review
 description: Use when triaging bot dependency PRs or lockfile changes. Reconcile, verdict.
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
   status: draft
   owner: maintainer
 ---
@@ -114,11 +114,23 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
   top. Then per-PR detail and a worklist.
 - Closes run after merges land, so a Close citing a merged PR stays accurate. Holds are routed to
   unblock work or handed back as a named list.
+- **A toolchain-floor Hold may already have its unblock.** When a bump is held because it raises the
+  language or toolchain directive above the repository's pin, check the toolchain's official support
+  policy before leaving it held. If the pinned toolchain is end-of-life, the toolchain move is the
+  unblock: open it as its own PR covering every pin (module/workspace directives, images, CI, docs)
+  and stack the held bumps on it. While the pinned toolchain is still supported, the Hold stands as
+  an owner decision.
 - Finish with a phase report: admitted, observed merged, closed, held (one clause each), blocked,
   "no interim labels remain", deploy result, worktrees removed.
 
 ## Consolidated / lockfile-only PRs
 
+- **Consider consolidating conflicting floor bumps.** Group by the manifest and lockfile that resolve
+  together, not by directory. Prefer separate PRs if the bot can rebase them cleanly or if combining
+  them makes risk harder to isolate. For an authorized consolidation, start from the current base,
+  preserve recorded pins and ceilings, choose versions covered by the review, and apply the lock and
+  gate checks below. List the resolved versions and the PRs replaced; close only the PRs actually
+  superseded after verifying that the consolidation landed. Link to it in each close comment.
 - **Floors match what they supersede.** For each superseded bot PR, diff its specifier changes
   against the consolidated manifest and record whether it is already closed. Consolidations silently
   drop bumps.

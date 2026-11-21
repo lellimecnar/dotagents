@@ -25,7 +25,7 @@ Follow the current official form's instructions. For reference, the 2025 edition
 - All "no": cleared. Start slowly and build up gradually. Over 45 and not used to vigorous/maximal effort → consult a qualified exercise professional before that intensity.
 - Any "yes": complete the follow-up questions indicated on the form. If all follow-ups are "no", start with 20–60 min of low-to-moderate exercise 3–5 days/wk including aerobic and strengthening, building towards ≥150 min/wk moderate. Any follow-up "yes" → seek further information (ePARmed-X+ or clinician) before becoming more active.
 - Delay starting: temporary illness (cold, fever); pregnancy (talk to clinician or use ePARmed-X+); any change in health.
-- Clearance is valid for a maximum of 12 months and becomes invalid if the condition changes.
+- Clearance is valid for a maximum of 12 months (2025 edition; check the interval on the current form) and becomes invalid if the condition changes.
 - The PAR-Q+ must not be altered or rebuilt into another survey; point people to the official form.
 Sources: https://eparmedx.com/wp-content/uploads/2025/01/PARQPlus2025ImageFile.pdf ; https://eparmedx.com/wp-content/uploads/2025/01/PARQPlus2025Fillable.pdf ; https://eparmedx.com/print-versions-of-par-q
 

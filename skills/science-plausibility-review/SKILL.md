@@ -2,7 +2,7 @@
 name: science-plausibility-review
 description: Use when reviewing science/tech plausibility in fiction. Smallest fix.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -77,6 +77,8 @@ Classes change sentence by sentence. One exceptional device never excuses unrela
 - **Habitability:** a habitable-zone orbit is a first filter; atmosphere, star, water, chemistry, geology
   and time still matter [8].
 - **Biosignature:** one gas is evidence, not proof; ask for abiotic alternatives and context [10].
+- **Resource ledgers:** Record each leg's cost, remaining resources, replenishment and required reserves in one current ledger. Test plausible alternatives under the same rules, including direction and constraints where they matter. Use geometric bounds only for quantities that obey them. Identify affected passages and reconcile stated figures with the ledger; show only the arithmetic readers need to understand the decision.
+- **Safety and redundancy:** Name the hazard, what the decision-maker knows, and which failure the backup or test covers. Check whether the backup shares the failed dependency. If a risk changes the decision, make that risk legible without revealing unrelated information.
 - **Load:** compare carried mass, grip, posture, distance, injury, fatigue and gravity [14]. Flag literal
   tissue damage if later performance ignores it.
 - **Interface:** separate motor command, proprioception, touch, pain and vision. "Neural link" does not
