@@ -2,7 +2,7 @@
 name: capacity-first-scheduling
 description: Use when building or repairing a week or day of time boxes, ADHD-aware.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -143,6 +143,9 @@ lead with yes or no. Do not lecture about ADHD or list principles.
 - Same-kind marathons; hard work in the post-lunch dip; back-to-back high-load boxes.
 - Hiding drops instead of listing them with reasons.
 - Editing events the planner did not create, or that the person edited (treat those as locked).
+- If lock information is missing or inaccessible, treat existing events as potentially locked.
+  Offer a conditional plan without moving them and request a minimal lock list through an approved channel.
+  Use explicit event ownership and lock metadata when available; leave events untouched if provenance is unclear.
 - Defining calendar mechanics (naming, colors, checkbox syntax) in this skill instead of the
   household's conventions doc; if that doc is missing, stop before writing and report it.
 - Over-trusting chronotype or decision-fatigue science; personal history beats both.
