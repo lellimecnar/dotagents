@@ -41,10 +41,8 @@ not chase; no reply tonight is fine.
 4. Done.
 
 **Verify before sending.** Read tomorrow's actual calendar again just before the message goes out,
-even if a planner summary exists. Drop anything that is not this person's own obligation (another
-household member's work reminder or note), duplicated blocks, and "decisions" that are really
-settled recurring facts (who does which drop-off, where an appointment happens). Keep those settled
-facts in the person's local skill and check each decision line against them. A wrong or stale line
+even if an upstream summary exists. Drop anything that is not this person's own obligation (a reminder assigned to someone else), duplicated blocks, and "decisions" that are really
+settled arrangements. Verify prospective decisions against the authorized source for the requester’s current scheduling preferences. A wrong or stale line
 costs more trust than a missing one: list only what is real.
 
 ### 3. Weekly review (replaces step 3 once a week)
@@ -81,7 +79,7 @@ lighter day).
 - Writing private goal reasons or reflections into shared planning files.
 - Re-planning tomorrow inside the check-in instead of routing it to the planner.
 - Shame wording about missed targets.
-- Sending the planner's summary unchecked: someone else's reminders, duplicate blocks, or a
+- Sending an upstream summary unchecked: someone else's reminders, duplicate blocks, or a
   long-settled recurring arrangement presented as an open decision.
 
 ## Verification
