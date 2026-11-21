@@ -2,7 +2,7 @@
 name: merge-queue-stewardship
 description: Use when admitting approved PRs to a merge queue or checking trains flowed.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -113,6 +113,13 @@ Never merge or push to the train yourself.
   have both happened; retire it only after telling whoever owns operations.
 - Path-filtered workflows never report when not triggered, so requiring their success can hang a
   queue forever (details in the reference).
+- **Prefer a rerun when the red is runner-only.** A rerun keeps the head and its approval, so
+  last-push-approval rules stay satisfied; any push voids that approval and makes the pusher the
+  last pusher.
+- **A rerun replays a frozen snapshot**: the workflow file and merge commit pinned to the original
+  run, not the current base. Compare the rerun's job names with the base branch's workflow; a job
+  retired upstream still fails on the old snapshot, so those heads need a rebuild on the base (or
+  closing), not more reruns.
 
 ## Verification
 

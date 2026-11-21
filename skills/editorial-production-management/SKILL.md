@@ -2,7 +2,7 @@
 name: editorial-production-management
 description: Use when planning a book's editing/publishing pipeline. Stages, gates, routes.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -118,6 +118,25 @@ the worker. Effort bands are not durations: never sum S/M/L into a calendar with
 Follow `references/contradiction-triage.md`. Always: 3 items per message; check each against current
 main first and drop false positives; one draft PR and one rulings log for the whole list; update canon,
 docs and memory as each ruling arrives; no prose edits until every item is ruled, then one prose pass.
+
+## 8. Relaying findings and rulings
+
+- **Specialist findings are advisory until the lead editor reconciles them.** Before telling the owner
+  a fix is required, read the quoted lines and the editor's verdict. If you relayed one the editor then
+  overruled, withdraw it plainly and say why.
+- **Merge duplicate findings across reviewers.** Relay required and optional fixes separately, each with
+  a chapter:line quote and who owns the fix; offer the items that need an owner rule as one yes/no decision.
+- **Never re-ask.** Before asking the owner anything, re-read the latest comments on the task and the task
+  tracker; a question already answered there is not asked again.
+- **Check before calling a review outstanding.** List that specialist's tasks first; the review is often
+  done and waiting for the owner's pick.
+- **Rulings extend to plainly adjacent cases by default.** Recommend the extension, say it is the default
+  and invite pushback; do not make it a blocking question.
+- **A principle that changes how the team works gets three steps:** patch the governing skill or guide,
+  sweep every guide and plan line that says the opposite (agents and editors read those files), then
+  review that sweep for wording left behind.
+- **"Landed" means on the main branch.** Before saying a change landed, check the artifact there; a test
+  or trial that used an idea is not the idea adopted.
 
 ## Project specifics
 

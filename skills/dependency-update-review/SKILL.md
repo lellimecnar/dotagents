@@ -2,7 +2,7 @@
 name: dependency-update-review
 description: Use when triaging bot dependency PRs or lockfile changes. Reconcile, verdict.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -67,6 +67,9 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
    regeneration also changes a manifest, the bump is not self-consistent — record that and leave it.
    If the lock is already current, change nothing. Pushing to a bot's branch ends the bot's
    management of that PR: it stops rebasing it, and the PR is now yours to carry to merge or close.
+   Any non-bot commit counts (a lockfile regeneration included), and the bot's rebase command stays
+   refused for that PR for good ("edited by someone other than the bot"): say on the task that you
+   now own its rebases instead of asking the bot twice.
 3. **Changelog and breaking changes** between old and new, covering every intermediate version on
    minor/major bumps. Look in the repo changelog, forge releases, the registry page, and — before
    declaring "no changelog" — the tag comparison and the release PR bodies (release-automation tools
@@ -136,6 +139,9 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
   (minor+patch vs major) to make order irrelevant. Never promise "one PR per ecosystem"; a release
   train is what gives the owner one merge.
 - Report manifests with no config entry as coverage gaps; do not silently widen scope.
+- Regrouping orphans PRs opened under the old entries (Dependabot: "the dependabot.yml entry that
+  created this PR has been deleted"); the bot stops updating them, and only a new head or a
+  close-and-reopen clears them. Account for each one in the next run.
 - State in docs and PR text only behaviour you verified in the bot's docs or changelog; reviewers
   diff claims against the docs. When editing a skill or doc that describes the flow, grep it for
   every leftover merge instruction before resubmitting.
@@ -147,6 +153,15 @@ majors, OpenTelemetry release streams, Python lock tooling) are in
 [references/ecosystem-traps.md](references/ecosystem-traps.md).
 
 - Before blaming a red check on the bump, confirm it is not red on the base tip.
+- **Diagnose red CI before touching the branch.** Does the required check exist in the workflow at
+  that head? Read the failed job's log. Runner or workspace failures (permission errors during
+  checkout, a dirty persistent workspace) are CI health: escalate once with the job URLs, and do not
+  rebase many branches into red runs. Self-hosted runner failures can be per instance: rerun before
+  calling a CI-dependent claim unprovable.
+- **Read repo facts from the remote base ref**, never from a shared checkout's working tree, which
+  may sit at an old commit.
+- **A queued verdict's head goes stale when the bot rebases.** Re-read the head before answering;
+  report the drift and whether the files or call sites you audited changed.
 - **The last pusher cannot approve.** With "require approval of the most recent push" (GitHub
   ruleset `require_last_push_approval`), pushing a lockfile commit makes your own APPROVE count for
   nothing. Obtain approval on that head from someone eligible under the project’s branch policy.

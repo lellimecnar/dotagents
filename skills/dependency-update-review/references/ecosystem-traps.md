@@ -62,6 +62,14 @@ that the ignore selects the image.
   green PR run does not exercise them.
 - Setup actions whose majors change bootstrap behaviour cannot be proven without real runs of each
   distinct setup path: Hold until they run.
+- When PR CI never reaches a bumped action (dispatch- or push-only workflow, disabled or skipped
+  job, failure-only step), prove the bump from the call sites instead:
+  1. Find every occurrence across the whole tree at the head, not only the edited files.
+  2. Diff the action's definition (its metadata file) at the old and new tags; removed inputs and
+     outputs only show in that comparison.
+  3. Read each call site for consumed outputs (a step id used later), not only the inputs it passes.
+  4. Check that defaults the workflow relies on did not change.
+  5. Prove a shared runtime floor once, from an action that did run at that head.
 
 ## OpenTelemetry (Python)
 

@@ -2,7 +2,7 @@
 name: docs-drift-sweep
 description: Use when keeping project docs in step with merged code, or reviewing a docs PR.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -56,6 +56,11 @@ The traps that let wrong docs pass every check are in
 changed-files mode, anchor checkers that ignore plain links, formatters that silently move
 emphasis, documented commands nobody ran, dated status notes that went stale, CI descriptions that
 don't match the job's `if:`.
+
+- **Drift you may not edit is still a finding.** If a write guard refuses a file the sweep needs to
+  correct (protected agent-instruction files, for example), do not route around it with another
+  tool. Ship the editable fixes, name the exact unfixed drift (file, section, correct text) in the
+  PR and the hand-off for someone who may edit it, and do not report it as fixed.
 
 ## Verification
 

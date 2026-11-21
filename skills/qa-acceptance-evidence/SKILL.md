@@ -2,7 +2,7 @@
 name: qa-acceptance-evidence
 description: Use when QA-accepting a change. Oracle, risk-ranked tests, evidence verdicts.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -118,6 +118,7 @@ one exact question for the owner, never a gap filled with your own preference.
 | Axe-only accessibility sign-off | Add manual keyboard, focus, zoom, contrast, screen reader, media |
 | Retry until green | Keep first-failure artifacts; investigate nondeterminism |
 | "Looks good" report | Exact reproduction, observed/expected, evidence per criterion |
+| Animation accepted from start and end frames | Slow it, capture mid-flight frames and sample positions ([references/verifying-animations.md](references/verifying-animations.md)) |
 
 ## Verification
 

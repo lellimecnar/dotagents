@@ -13,6 +13,9 @@ prose) that the owner must rule on.
 3. **Before showing each batch, check every item against the current main branch.** Read the cited lines
    (`git show origin/main:<file> | sed -n Np`) and grep canon for the facts involved. Lists contain false
    positives ("half a decade" vs "five years"; a long war across a region vs a short one on one planet).
+   Checkers read literally and over-flag: two notes that add together ("when damaged" does not mean
+   "only when damaged"), equivalent phrasings of one quantity, and states that change off-page are
+   usually not contradictions.
    If an item is not a real conflict, say so and ask the owner to confirm; never make them rule on a
    non-conflict.
    - Look for the real problem behind the item. The surface item may be "who has the injury" while the
@@ -24,8 +27,11 @@ prose) that the owner must rule on.
 4. **Present a manageable batch in the decision-maker’s preferred format.** For each: the actual prose quoted verbatim with
    chapter:line (never a paraphrase alone; the owner should not have to go searching), a plain
    explanation of what the text says and why it may be wrong, then options A/B(/C) with the edit count
-   each needs and one option marked "(my pick)". When a figurative or derived reading exists, include a
-   "not a contradiction" option. Ask for an unambiguous decision on each numbered item.
+   each needs and one option marked "(my pick)". Whenever a compatible reading exists (figurative,
+   derived, additive, off-page change), include a "not a contradiction" option instead of passing the
+   checker's verdict through as fact. Ask for an unambiguous decision on each numbered item, and end
+   every message that owes the owner answers with one ready-to-send reply line covering all open items,
+   recommended picks filled in.
 5. **Each time they rule:** log the ruling and any standing rule; fix canon and doc files now (mark the item
    RESOLVED in any dossier, pointing to the log); save standing rules where the team's memory and
    guardrails live; commit and push to the shared branch.
@@ -43,3 +49,30 @@ prose) that the owner must rule on.
   ask a yes/no question on those facts before changing canon.
 - Canon tables cite line numbers that may point at the wrong character's line. Re-read the cited line
   before trusting a canon row as evidence.
+- **On-page rule.** Anything a later line refers to (an injury, a finished repair, an object being
+  carried) must have happened on the page. Before accepting "it was done earlier", search the chapter
+  range for the object and quote what is shown. If it was only started, later lines that say it was
+  finished are wrong.
+- **Planning notes need record-only fixes.** When outlines, packets or indexes disagree with clear prose,
+  fix the note. Have checkers mark each item "touches manuscript?" and "needs a story decision?"; show the
+  owner only those items plus structural ones (act boundaries, chapter titles) and batch the rest one
+  line each. The first time this comes up, propose it once as a standing rule so later batches need no reply.
+- **Trace before logging a fix.** A fix that names an object or mechanism can create a new continuity
+  error: have the canon owner trace that object's state at that exact line first, and phrase the ruling
+  as the general rule the owner gives, not a one-line patch.
+- **One ruling often settles another.** Write "also decides #N" in both log rows and tell the owner, so
+  they are not asked twice.
+- **"Confirm we leave X unexplained" is not an automatic yes.** Have the owning specialist sort each
+  topic into needs-explaining, fine-as-is or record-only, with quoted lines and the smallest proposed
+  explanation.
+- **Hold work an overrule affects.** When the owner overrules something a running task is applying,
+  first create the task that settles it, then comment "HOLD item N" on the running task with the ruling
+  and the new task's id. Workers can pick up comments mid-run; a change that is not held has to be
+  reverted.
+- **Keep the owner from waiting.** While answers are pending, answer a task-completion notice in 1-3
+  lines, not by re-presenting every open item. If a verification worker is lost partway, cut its task to
+  what it can finish and open sibling tasks for the rest; keep verified batches queued ahead of the one
+  being ruled.
+- **Late comments.** A comment sent near a task's completion may land after the worker finished: compare
+  the comment time with the completion time, and open a small follow-up task if the question went
+  unanswered.

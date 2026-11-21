@@ -2,7 +2,7 @@
 name: owned-calendar-stewardship
 description: Use when an assistant owns a person's calendar and must plan, mirror or fix it.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -59,6 +59,10 @@ newest dated entry.
 5. **Loop guard:** skip any source event that carries your tag or has your calendar as organizer
    or guest.
 6. When the same event is on two source calendars (an invite), mirror it once.
+7. **Only the person's own obligations.** Another member's work reminders or note-style all-day
+   items are not the person's: never mirror them, and delete one you wrote as soon as you see it.
+   Mirror another member's event only when it changes what the person must do (that member is
+   away, a ride is needed, someone needs covering).
 
 ### 4. Planning as coordinator
 1. Check the real date. Read facts and rules. Run the mirror pass.

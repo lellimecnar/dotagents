@@ -2,7 +2,7 @@
 name: research-and-fact-checking
 description: Use for research, fact-checks or news briefs. Expert method.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -80,7 +80,12 @@ Follow references/news-analysis.md:
 
 ## Step 7: Write it up with calibrated confidence
 Follow references/report-writing-confidence.md and the report layout (Answer, Options compared,
-Evidence, Risks and tradeoffs, What I couldn't verify, Sources):
+Evidence, Risks and tradeoffs, Limits, Sources). The bar behind it is `due-diligence-before-deciding`:
+- Compare the alternatives before calling one best; a ranked pick names what it beat and why.
+- An unverified fact never carries a recommendation: choose among what you could verify, or give a
+  conditional answer whose branches are each verified.
+- Limits holds only what no available source could settle after you tried every authoritative route:
+  say what you tried, and why the recommendation does not depend on it.
 - Confidence (high/medium/low) is about the evidence behind a judgement. Likelihood (likely, unlikely)
   is about the event. Do not mix both in one sentence.
 - High: several independent, good sources agree, few assumptions. Medium: credible but thin or one key
