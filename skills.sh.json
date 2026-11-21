@@ -28,6 +28,7 @@
         "qa-acceptance-evidence",
         "tech-debt-ranking",
         "test-lanes-and-coverage",
+        "skill-corpus-audit",
         "web-accessibility-check",
         "work-planning"
       ]
@@ -40,7 +41,8 @@
         "architecture-proposal-writing",
         "frontend-architecture",
         "backend-and-data-architecture",
-        "cloud-and-infrastructure-architecture"
+        "cloud-and-infrastructure-architecture",
+        "llm-benchmark-scraping"
       ]
     },
     {
