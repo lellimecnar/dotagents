@@ -59,6 +59,8 @@ access, what the signal contained, and whether the recipient treated it as relia
 
 ```markdown
 - Artifact source revision: `<sha>`
+- Artifact checksum: `<sha256>`
+- Build checked: `<YYYY-MM-DD>`
 - Saved position: spine N / book Chapter N (`<returned title>`)
 - Query: `<exact query>`
 - Retrieved: `<quote>` (`<tool chapter title>`)
@@ -66,3 +68,6 @@ access, what the signal contained, and whether the recipient treated it as relia
 - Supports: reader knew | suspected | did not yet have retrievable evidence
 - Limits: retrieval is bounded evidence, not canon and not exhaustive
 ```
+
+Spine positions are build outputs, not durable facts: a rebuild from the same revision can shift
+them. Record the observed mapping, checksum and check date in the task evidence, never in a skill.

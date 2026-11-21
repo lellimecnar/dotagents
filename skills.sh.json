@@ -8,7 +8,8 @@
         "finish-the-whole-request",
         "fixing-a-wrong-memory",
         "subagent-model-choice",
-        "use-existing-solutions-first"
+        "use-existing-solutions-first",
+        "reading-archived-tool-output"
       ]
     },
     {

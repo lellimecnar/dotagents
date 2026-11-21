@@ -2,7 +2,7 @@
 name: room-organizing-playbooks
 description: Use when organizing a specific room or zone, or when storage safety is in play.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -59,6 +59,8 @@ Per-room sequence, zones, rules, time, failure modes, maintenance and safety (se
 - Do the dressers and bookcases in every kids' room first; then the basement and garage shelving.
 - Heavy items low; light items high; known weight limits on every shelf; never exceed the rating. Overhead and wall shelves: stud or joist anchoring only; drywall anchors are not enough for heavy loads (judgment).
 - Rental or hollow-wall home: use manufacturer-approved wall anchors and ask the landlord; confirm stud location with a stud finder.
+- **Fitting storage to a space (judgment):** measure the real usable space: width, depth left after doors, hinges and door-mounted hooks or pegboard, and height between shelves. Before recommending a bin, box or machine, read the manufacturer's exterior dimensions on its spec sheet and allow for lids, handles and moving parts. Equipment with moving parts needs its full range of travel, not just its footprint: move each axis to both ends and measure. Confirm which items will stay, move or be removed before designing storage around them.
+- Overhead racks and heavy shelving: follow that product's manual for joist size, spacing, anchoring and load limit; confirm joist size and direction in the actual ceiling before recommending a rack, and stay well under the rated load.
 
 ## 17. Hazardous and fire-risk storage (cross-room checklist)
 

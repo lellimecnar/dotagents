@@ -2,7 +2,7 @@
 name: merge-queue-stewardship
 description: Use when admitting approved PRs to a merge queue or checking trains flowed.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -17,6 +17,7 @@ train PR and the CI-gate / queue configuration that decides what may merge.
 
 - A scheduled run admits eligible PRs into a merge queue (a queue label, a bot command) or
   assembles a release train.
+- Where supported, trigger queue admission when the project’s configured review and acceptance gates pass. Otherwise use a scheduled eligibility sweep.
 - A weekly check asks whether the week's approved work actually reached the integration branch.
 - You review a train PR, or a PR that changes required checks or queue rules
   (see [references/queue-config-review.md](references/queue-config-review.md)).

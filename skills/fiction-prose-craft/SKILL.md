@@ -2,7 +2,7 @@
 name: fiction-prose-craft
 description: Use when drafting or revising fiction scenes. Outside-in craft tests, fixes.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---

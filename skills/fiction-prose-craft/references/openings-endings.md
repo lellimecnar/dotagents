@@ -28,4 +28,6 @@
 3. Is the last line a disaster or a question, and is it concrete?
 4. Is there a sentence after the peak that explains the peak? Cut it.
 5. Mirror lines deliberately echoed in another chapter keep their wording.
+6. Before cutting or rewriting an opening or ending, check prior assessments of the chapter for passages
+   marked to preserve, and note where your change agrees or differs.
 

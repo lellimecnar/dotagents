@@ -2,7 +2,7 @@
 name: owned-calendar-stewardship
 description: Use when an assistant owns a person's calendar and must plan, mirror or fix it.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -27,8 +27,11 @@ questions it. The person should never get calendar cleanup chores from their ass
 Planning facts (fixed times, rest-day rule, meal rules, hour targets), planning rules (priority,
 bills, velocity, locks, reminders), calendar conventions (naming, colors, outline vs solid, emoji)
 and mirror rules live in short data docs. Read the ones the step names before writing. When the
-person changes a fact in chat, update the doc the same day; shared docs get scheduling facts only,
-nothing private. Old memories of a different convention lose to the current doc.
+person changes a fact or rule in chat, record it the same day. In an editable doc, edit it in place. In an
+append-only store, write a dated entry that names what it replaces ("From <date>, <new rule>; this
+replaces <old rule>"), so later runs can tell which version is current. Shared docs get scheduling
+facts only, nothing private. Old memories of a different convention lose to the current doc or the
+newest dated entry.
 
 ### 2. Recognize your own events
 - **Tag every event you write** with a machine-readable last line in the description: owner,

@@ -2,7 +2,7 @@
 name: science-plausibility-review
 description: Use when reviewing science/tech plausibility in fiction. Smallest fix.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -81,6 +81,10 @@ Classes change sentence by sentence. One exceptional device never excuses unrela
   tissue damage if later performance ignores it.
 - **Interface:** separate motor command, proprioception, touch, pain and vision. "Neural link" does not
   grant every channel by default [11][12][13].
+- **Machines:** robot or AI behaviour (intent, pursuit, retreat, hesitation) follows from orders,
+  programming or control logic unless canon grants another mechanism. Characterful behaviour does not
+  imply a biological drive (fear, instinct, hunger) or biological anatomy; flag lines that explain
+  machine action through one without canon support.
 - **Exception (Sanderson's laws as craft diagnostics):** if magic solves a conflict, readers must already
   understand the capability; limits matter more than powers [18][19].
 

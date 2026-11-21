@@ -10,7 +10,7 @@ Layout follows the Agent Skills spec and the Hermes tap format: one flat `skills
 
 Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile installs the groups that match its job.
 
-### Common (every agent) (5)
+### Common (every agent) (6)
 
 | Skill | Use when |
 | --- | --- |
@@ -19,6 +19,7 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `fixing-a-wrong-memory` | you are corrected or find a stored memory is wrong. Remove or supersede every copy |
 | `subagent-model-choice` | delegating a subtask. Pick the cheapest model that can do it well |
 | `use-existing-solutions-first` | always, before building anything. Find the built-in or existing solution first |
+| `reading-archived-tool-output` | a tool result is archived or cut. Read it safely |
 
 ### Engineering (15)
 

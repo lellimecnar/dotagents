@@ -2,7 +2,7 @@
 name: docs-drift-sweep
 description: Use when keeping project docs in step with merged code, or reviewing a docs PR.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -39,8 +39,11 @@ fixes all of it in one docs PR. The same verification traps apply when *reviewin
 3. **Check readability** against the principles above.
 4. **Nothing found** → one line `No docs drift in <from>..<to>` and stop.
 5. **Fix everything in one PR** from your own worktree off the integration branch. Regenerate any
-   generated index the project keeps. Run the docs checks (see the reference) and record each
-   command and result.
+   generated index the project keeps. Run the docs checks and record each command and result.
+   Take the list of checks from the repo at the commit you branched from: the root and nearest
+   instruction files (`AGENTS.md` or equivalent), the contributing or authoring docs, and the package
+   scripts (for example `package.json`). Do not use a list kept in a skill or in memory: repo checks
+   are added and renamed more often than skills are updated. Record that commit in the PR body.
 6. **Hand off for review** with the commit range checked, the PR link, and an "Owner decisions"
    section for anything you would not decide alone.
 7. End with one line: `Docs PR #<N> for <from>..<to>: <k> pages fixed` (plus owner decisions, if
@@ -56,7 +59,7 @@ don't match the job's `if:`.
 
 ## Verification
 
-The PR body lists the commit range, every page touched, every check run with its result, and the
+The PR body lists the commit range, every page touched, every check run with its result (and the commit the check list was read from), and the
 owner decisions. Each corrected fact cites the code location or probe that proves it.
 
 ## Project specifics
