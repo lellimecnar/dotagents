@@ -59,5 +59,5 @@ All checked 2026-11-14. Tiers: **P** = primary/official (government, regulation,
 46. S - Deep Arrival, family seating rule status: https://deeparrival.com/airlines/family-seating/
 
 ## Conflicts and which source is followed
-- **Family-seating rule:** DOT dashboard (primary) shows voluntary commitments only; final-rule status comes from a secondary source. Follow the dashboard.
+- **Family seating:** use the current DOT dashboard for voluntary commitments and check current primary legal sources for mandatory protections.
 - **CDC Yellow Book scope:** written for international travel; altitude and chronic-illness preparation advice applied domestically as general physiology/preparation.

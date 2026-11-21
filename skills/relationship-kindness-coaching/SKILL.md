@@ -28,11 +28,11 @@ Detailed material, with source URLs, lives in `references/`:
 ## Step by step
 
 ### 1. Safety screen (every task, ten seconds)
-Read the request for any sign in `safety-and-referral.md`: fear of the partner, threats, physical harm, control of money, contacts or movement, coercion, talk of self-harm or suicide. If any appear, **stop the coaching task**. Do not suggest kindness, dates or "communication tips" to repair an unsafe situation; couples work is contraindicated when one partner uses violence or coercive control (`safety-and-referral.md`). Give the written/online routes (text or chat first), say it plainly and kindly, and route the task to the requester. Immediate danger means 911.
+Read the request for any sign in `safety-and-referral.md`: fear of the partner, threats, physical harm, control of money, contacts or movement, coercion, talk of self-harm or suicide. If any appear, **stop the coaching task**. Do not suggest kindness, dates or "communication tips" to repair an unsafe situation; couples work is contraindicated when one partner uses violence or coercive control (`safety-and-referral.md`). Offer a safe, accessible local route. In immediate danger, direct the person to local emergency services.
 
 ### 2. Gather the real constraints before suggesting anything
-- Read both calendars or the facts your instructions give you about each partner's day (work hours, commute, standing commitments, caregiving windows). Suggest only moments that actually exist.
-- Read what the household has recorded (shared notes) before advising.
+- Use only availability and caregiving constraints the participants supply or authorize you to access. Suggest only verified openings.
+- Ask for missing facts needed for this suggestion; do not seek unrelated household records.
 - Name the constraint that matters most (often childcare, fatigue or a caregiving schedule). A suggestion that pretends the constraint isn't there is useless.
 - Note the helper's own working style (for example ADHD: one option, first physical action named, tied to an existing anchor).
 
@@ -55,13 +55,13 @@ Under strain (illness, special-needs caregiving, ADHD friction) the evidence poi
 - **First physical action named** ("open your messages and type…").
 - **Tagged with the principle in one plain line**, so the person learns the why. Never lecture.
 - **Warm, never preachy.** No "you should have", no scoring the relationship, no guilt.
-- Respect household rules (communication channels the person can use, rest days, who writes which calendar).
+- Respect the requester’s availability, contact preferences and applicable calendar permissions.
 
 ### 5. Date nights
-Propose openings that exist on both calendars. For each, name the childcare plan or the gap honestly (who watches the children, what that requires, whether a sitter must be trained for a child's needs). If no real opening exists, say so and offer an **at-home date** after bedtime or a **micro-date** (20–30 minutes) as the honest alternative; research on special-needs parents shows lost time together is the measurable cost (`special-strain.md`). Anything that costs money is a proposal with cost and a free alternative, never a booking.
+Propose times that fit both partners’ confirmed availability. For each, name the childcare plan or the gap honestly (who watches the children, what that requires, whether a sitter must be trained for a child's needs). If no real opening exists, say so and offer an **at-home date** after bedtime or a **micro-date** (20–30 minutes) as the honest alternative; research on special-needs parents shows lost time together is the measurable cost (`special-strain.md`). Anything that costs money is a proposal with cost and a free alternative, never a booking.
 
 ### 6. Report
-Give the one suggestion, the principle tag, and any constraint you could not resolve. Say what you checked (calendars, notes). If you found nothing usable, say so.
+Give the one suggestion, the principle tag, and any constraint you could not resolve. State which constraints you confirmed without exposing private details. If you found nothing usable, say so.
 
 ## Decision rules
 - Abuse, coercion, fear or self-harm signs → stop, safety routes, no coaching (`safety-and-referral.md`).
@@ -89,5 +89,5 @@ Give the one suggestion, the principle tag, and any constraint you could not res
 - [ ] Exactly one suggestion, small and free, anchored to a real moment that exists
 - [ ] First physical action named; channel fits the person's rules
 - [ ] Principle tag included, one line, sourced in `references/`
-- [ ] Constraints (childcare, rest day, cost) named honestly
+- [ ] Applicable scheduling, care and cost constraints stated honestly
 - [ ] Nothing private added to shared documents

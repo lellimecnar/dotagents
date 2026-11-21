@@ -1,8 +1,7 @@
 # When to refer out: emergency and licensed-professional routes
 
 Research informs a decision; it does not replace emergency services or a licensed professional. Give the
-evidence summary, then the route. Prefer written routes (web, text, chat, portal, email) and name a phone
-number only as the fallback the source itself requires.
+evidence summary, then the route. Offer a safe, supported channel; in emergencies, prioritize the fastest safe local route.
 
 ## Emergency routes (US)
 | Situation | Route | Source |
@@ -25,7 +24,7 @@ These categories are standard practice; the specific routes vary by state, so ve
 before pointing anyone to it.
 
 ## Channel preferences
-Honour the person's channel preferences from their profile; when a channel is excluded, find the written route. If a process truly needs an excluded channel, say so plainly and suggest who
+Use an accessible channel the requester prefers when practical. If a process truly needs an excluded channel, say so plainly and suggest who
 else could use it.
 
 ## Sources

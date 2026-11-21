@@ -35,7 +35,7 @@ paywalled or not machine-readable; verify against the primary before relying on 
 - S50 FTC, How To Avoid a Home Improvement Scam (July 2022; replaces dead /articles/0242-hiring-contractor, verified live in a browser 2026-11-14; plain fetchers may get 403/404 from the CDN): https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam
 - S60 EPA, A Citizen's Guide to Radon (EPA 402/K-12/002; nearly 1 in 15 US homes elevated; test procedure; retest every two years; test before and after a basement conversion): https://www.epa.gov/sites/default/files/2016-12/documents/2016_a_citizens_guide_to_radon.pdf
 
-Source numbers are not contiguous; numbers of removed location-specific sources are not reused.
+
 
 ## Where sources disagree, and what this skill follows
 1. **CO alarm location.** The IRC model text places CO alarms outside each separate sleeping area [S15];

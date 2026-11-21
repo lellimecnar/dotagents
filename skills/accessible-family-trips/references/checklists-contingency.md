@@ -41,7 +41,7 @@ Source: National Autism Association, https://nationalautismassociation.org/resou
 - Highest-risk times: transitions, commotion, holidays, vacations, unfamiliar settings, outings, camping/hiking.
 - Before the outing: wearable ID; current photo; identify triggers (noise, lights); bring calming tools; pick routes away from open water where possible.
 - During: **"Tag, you're it"** - name one adult as the sole supervisor for an agreed time block and hand off out loud.
-- If someone is missing: **call 911 immediately and search water first**, then busy roads and parked cars.
+- If someone is missing: contact local emergency services immediately, flag nearby water and roads, and follow responders’ instructions.
 - At hotels/rentals: door chimes or portable alarms; ask for rooms away from pools/exits when possible (practitioner judgment; NAA recommends door/window chimes at home).
 
 ## E. Altitude
@@ -62,7 +62,7 @@ Source: CDC Yellow Book 2026, https://www.cdc.gov/yellow-book/hcp/environmental-
 - Amusement parks: the free IBCCES Accessibility Card is accepted at many parks for accommodation requests (https://nncil.org/accessible-travel, practitioner; verify with the park).
 
 ## G. Emergency and escalation
-- Life-threatening emergency or missing person: 911.
+- Life-threatening emergency or missing person: contact local emergency services immediately (911 in the U.S.).
 - Medical questions: the member's clinician (or nurse line through their insurer); you prepare questions, not answers.
 - Rights violations: written complaint routes in accessibility-rights.md.
 - Venue-specific help: use the venue's accessibility email for accommodation requests and keep the written reply.

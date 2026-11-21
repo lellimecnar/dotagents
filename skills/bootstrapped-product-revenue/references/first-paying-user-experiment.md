@@ -1,6 +1,6 @@
 # Two-week "first paying user" experiment (template)
 
-Use for any solo-built app or SaaS. 10 working days (skip rest days the household observes). Built on: Mom Test conversations and commitment [customer-discovery.md], manual recruiting [PG-DS https://paulgraham.com/ds.html], payment link and fees [launch-channels.md, https://stripe.com/payments/payment-links, https://stripe.com/pricing], pricing rules [positioning-pricing.md], ADHD work methods [adhd-founder-methods.md]. Thresholds below are working decision rules, not sourced benchmarks.
+Use for any solo-built app or SaaS. 10 working days (schedule around the founder’s availability). Built on: Mom Test conversations and commitment [customer-discovery.md], manual recruiting [PG-DS https://paulgraham.com/ds.html], payment link and fees [launch-channels.md, https://stripe.com/payments/payment-links, https://stripe.com/pricing], pricing rules [positioning-pricing.md], ADHD work methods [adhd-founder-methods.md]. Thresholds below are working decision rules, not sourced benchmarks.
 
 ## Before day 1: facts to get (from the project's own status source)
 1. Can a stranger reach and use the product today, at a URL or in a store? If not, what is the smallest fix and how long?
@@ -19,7 +19,7 @@ If the product is not reachable: run the same plan selling a **pre-sale / foundi
 
 ## Day 2: list and link
 - Write 30 named prospects (people or places where the segment gathers), including every existing free user reachable by email.
-- Prepare (do not activate without the owner's go-ahead) a hosted payment link for the plan. Stripe has no setup or monthly fees; per-transaction only.
+- Prepare (do not activate without the owner's go-ahead) a hosted payment link for the plan. Verify the approved processor’s current fees and conditions.
 
 ## Days 3-4: learn (Mom Test)
 - Send 10 written messages a day (outreach skeleton in launch-channels.md). No pitching.

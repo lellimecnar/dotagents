@@ -41,5 +41,5 @@ Source: NIST SP 1181, Unit Pricing Guide (2025 edition), https://nvlpubs.nist.go
 2. Subtract what is on hand.
 3. Merge duplicates, round to package sizes, note substitutes that are acceptable.
 4. Group by store section.
-5. Add only to the household's one shopping list; never re-add checked items unless asked.
+5. If authorized, update the designated shopping list and respect its convention for completed or recurring items.
 6. Estimate the total from current store prices when building a cart; never place the order.

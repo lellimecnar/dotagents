@@ -14,7 +14,7 @@ Sources:
 - Early fragility is normal; don't judge a young product by an established one's standards.
 
 ## Minimum viable monetization (cheapest route to a first payment)
-1. A hosted payment link: Stripe Payment Links create a payment page "in just a few clicks" and are shared as a link, "no code required" [PL]. Stripe charges per successful transaction with no setup or monthly fees [STR] (2.9% + 30¢ US domestic cards).
+1. A hosted payment link: Stripe Payment Links create a payment page "in just a few clicks" and are shared as a link, "no code required" [PL]. Check the processor’s current fees and applicable terms [STR].
 2. Manual delivery is acceptable at first: grant access by hand after payment (doing things that don't scale) [PG-DS].
 3. In-app purchases only when the product lives in an app store and the store fee is acceptable (positioning-pricing.md).
 4. Prefer card-required trials or paid-from-day-one over open free trials; card-required converts at ~40% baseline vs ~1% without [SB].

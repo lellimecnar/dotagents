@@ -23,7 +23,7 @@ Sources: as above, plus https://thehotline.org/resources/healthy-relationships
 - Couples therapy is not recommended when one partner uses violence to intimidate, control and gain power ("intimate terrorism"); clinicians assess each partner separately, including fear of the partner. Sources: https://psycnet.apa.org/record/2022-72665-002 ; https://pubmed.ncbi.nlm.nih.gov/25039387
 - Coaching "be nicer" into a controlling relationship can reinforce the control. So: no kindness tips, no communication fixes, no joint conversations.
 
-### Written/online routes (text and chat first)
+### U.S. support options (choose a safe and accessible channel; elsewhere verify local equivalents)
 | Situation | Route |
 |---|---|
 | Immediate danger | **911** |
@@ -60,4 +60,4 @@ Why refer early: couple therapy has large effects and waitlisted couples don't i
 - Many practices offer online booking or contact forms. If a practice seems phone-only, say so and look for one with a web form or email.
 
 ## 4. Privacy
-Relationship troubles, safety concerns and referrals are private. They go in the task summary to the requesting assistant only, never in shared documents, Kanban bodies or family memory.
+Relationship troubles, safety concerns and referrals are private. Share them only with authorized recipients through a safe, private channel. Do not copy them into shared records, general task trackers or persistent memory.

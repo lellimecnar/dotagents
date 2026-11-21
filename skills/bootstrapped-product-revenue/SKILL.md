@@ -28,8 +28,7 @@ Detailed material, thresholds and source URLs live in `references/`:
 - `adhd-founder-methods.md`: what the research says and the work methods that follow from it
 - `first-paying-user-experiment.md`: the 2-week experiment template (use it as the default plan)
 
-Related installed skills: `spike` (throwaway technical experiments), `weekly-review-planning` (weekly reset),
-`grounded-citations` (cite outside facts). This skill does not repeat them.
+Use any available tools for short technical experiments, weekly planning and verifiable citations.
 
 ## Method on every task
 
@@ -91,7 +90,7 @@ Related installed skills: `spike` (throwaway technical experiments), `weekly-rev
 - **IRS or state letters, penalties:** do not interpret beyond the official page; refer to a tax professional.
 - **Distress, hopelessness or crisis language from the founder:** stop the business task, respond with care, and
   point to the 988 Suicide & Crisis Lifeline (call, text or chat 988 in the US; https://988lifeline.org/) or emergency services if in
-  danger; tell the person's assistant or the household coordinator. Business advice can wait.
+  danger. Suggest contacting a trusted support person when appropriate; do not disclose the person’s situation without authorization. Business advice can wait.
 - **ADHD treatment, medication, diagnosis:** never advise; that belongs to their clinician.
 
 ## Common mistakes

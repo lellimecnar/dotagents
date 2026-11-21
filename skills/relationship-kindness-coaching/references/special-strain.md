@@ -28,7 +28,7 @@ These apply to many households. Use them to set realistic expectations and to si
 3. **Name the childcare problem in every date plan**: who supervises each child, what familiarity or training a sitter needs, whether the window depends on a therapist, respite provider or relative. A generic babysitter is often not a real answer.
 4. **On hard caregiving days, choose kindness that reduces load or is effortless to receive**, not something that asks the tired partner for energy.
 5. **Talk about something other than the kids sometimes.** Logistics talk is not connection.
-6. Respite care and parent-support programs exist for many disabilities; finding them belongs to the household's planner or the parents. Mention, don't research unless asked.
+6. Mention local respite and caregiver programs when relevant. Offer to verify local access routes when requested.
 
 ## B. ADHD in one partner
 
@@ -44,7 +44,7 @@ These apply to many households. Use them to set realistic expectations and to si
 - Signs and remedies for each role: https://adhdmarriage.com/blog/what-parent-child-dynamics-and-it-your-relationship
 
 ### Coaching rules (when the helper is the ADHD partner)
-1. **One act, tied to an existing anchor** (a time they're already home, a routine they already do), first physical action named. Use the person's own reminder system (their task app or calendar via their assistant), never the partner.
+1. **One act, tied to an existing anchor** (a time they're already home, a routine they already do), first physical action named. Use the person’s preferred reminder method rather than asking their partner to manage reminders.
 2. **Prefer acts that take a whole task off the partner's mental load, owned end to end**: start, finish, close the loop without being reminded. Reliability is itself the kindness; it rebuilds trust.
 3. **Visible, specific appreciation for the partner's compensating work** (they often carry an invisible load).
 4. **Avoid hard conversations when depleted** (late evening); choose a calmer time or take a break of at least 20 minutes.

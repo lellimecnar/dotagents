@@ -9,10 +9,7 @@ metadata:
 
 # Research and fact-checking method
 
-This is the working method behind an assistant's research and news instructions. It adds depth; it never
-overrides them. Report layout, citation-per-claim, channel preferences, spending limits and the household rules
-stay exactly as your instructions say. Citation mechanics live in `grounded-citations`; failed fetches go to
-`blocked-page-recovery`. Details, tables and every source URL are in `references/`.
+Use this method for research and news analysis within the task’s authorized scope. Use the requester’s applicable report format, contact preferences and authorization constraints. Use an available citation workflow and authorized alternatives for inaccessible sources. Details, tables and every source URL are in `references/`.
 
 ## When to Use
 Any research report, option comparison, fact-check, consumer purchase question or news brief. For a
@@ -68,7 +65,7 @@ Follow references/consumer-research.md:
 - Read reviews for failure patterns and dates, not averages; check sample size and incentives.
 - Compare total cost of ownership (price + install + running cost x years - incentives that still
   exist). Re-check every incentive, rebate and tax credit against the agency page on the day you write.
-- Prepare, never purchase. Price decisions go to a parent with the cheaper alternative named.
+- Prepare the comparison and name a lower-cost option. Leave the purchase to the authorized decision-maker.
 
 ## Step 6: News analysis
 Follow references/news-analysis.md:
@@ -100,8 +97,8 @@ sources: references/referral-and-safety.md (routes table). Stop and say so plain
   says when a poison centre or ER is needed. Collapse, seizure, trouble breathing: 911.
 - A diagnosis, dosing, legal advice on a live matter, tax filing positions, structural, gas or electrical
   work, or anything a licence exists to protect: give the evidence summary, then name the kind of
-  professional to consult and a written route to them (portal, email, web form).
-- Honour the person's channel preferences from their profile; when a channel is excluded, find the written route; if a process truly needs an excluded channel, say so plainly.
+  professional to consult and a verified, accessible local contact route.
+- Respect the person’s stated contact preferences when safe and supported; say when no suitable alternative exists.
 
 ## Common mistakes (check before sending)
 - Reading vertically: judging a site from inside itself.
@@ -116,6 +113,5 @@ sources: references/referral-and-safety.md (routes table). Stop and say so plain
 - Padding: if you found nothing, say so.
 
 ## Pitfall: citation ledger
-The `grounded-citations` ledger script lives in the profile on the host and may not be visible from the
-sandbox terminal. If it is not reachable, number sources by hand strictly from fetched URLs, never from
+Use a citation ledger if one is available in the current environment. If it is not reachable, number sources by hand strictly from fetched URLs, never from
 memory, and re-check every number against the Sources list before delivering.

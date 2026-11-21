@@ -2,8 +2,7 @@
 
 ## Layout (use the requester's layout if they define one)
 Answer (2 to 4 sentences, recommendation first) -> Options compared (table for 3+) -> Evidence ->
-Risks and tradeoffs -> What I couldn't verify -> Sources. Saved reports open with who asked, the date
-and the short answer.
+Risks and tradeoffs -> What I couldn't verify -> Sources. Date saved reports and open with the short answer. Include the requester’s identity only if needed and authorized.
 
 ## Confidence vs likelihood (ODNI ICD 203)
 ICD 203 separates two things and forbids combining a confidence level and a likelihood term in the same

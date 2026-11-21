@@ -114,8 +114,7 @@ radon retest, warranties, lien waivers and photos together. Retest radon after t
 
 ## Stop and refer (do not advise around these)
 - **Emergency**: gas smell, CO alarm sounding, sparking/burning smell, flooding near electrical:
-  leave, then call 911 or the utility emergency line from outside. Emergencies are the exception to
-  any written-channel-only preference.
+  leave and contact local emergency services or the applicable utility emergency line from a safe location.
 - **Structural**: removing or altering posts, beams, joists, load-bearing walls, or cutting the
   foundation (egress) -> licensed structural engineer, and usually a licensed contractor.
 - **Gas piping and appliances, panel or service changes** -> licensed trade unless the homeowner

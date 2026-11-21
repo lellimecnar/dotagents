@@ -34,7 +34,7 @@ Source: IDDSI, https://iddsi.org/framework ; level handouts at https://iddsi.org
 
 Sources for the level details: St George's University Hospitals NHS, https://stgeorges.nhs.uk/service/therapies/speech-and-language-therapy/our-new-fluid-and-diet-terminology/iddsi-diet-levels-information ; IDDSI Level 6 adult handout (no regular dry bread at level 6; meat that cannot be served soft and tender should be served as Minced & Moist), https://iddsi.org/images/Publications-Resources/PatientHandouts/English/Adults/6_soft_bite_sized_adult_consumer_handout_30jan2019.pdf ; IDDSI food poster, https://iddsi.org/images/Publications-Resources/Poster/OtherPosters/iddsi_framework_poster_a3_a_p_food_only_final_with_bleed_jan2020.pdf
 
-Gap: I could not open the full IDDSI detailed-definitions PDF this run; for level 3 and 7 details and the drink levels, read the current IDDSI documents before cooking to them.
+Verify the current official IDDSI definition and tests for the prescribed level, and follow the person’s clinical instructions.
 
 **Family-meal adaptation for a texture level:** cook the family base meal, then take that person's portion before final crisping or crunchy toppings and modify it (braise until fork-tender, then chop to the size limit, mince or puree with sauce so no thin liquid separates). Test every batch. Moist braises, stews, chili without skins and chunks, egg dishes, and pasta in sauce adapt well; dry bread, crunchy, stringy, fibrous, and mixed thin-liquid-plus-solid foods do not.
 

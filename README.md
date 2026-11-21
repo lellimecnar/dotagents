@@ -118,7 +118,7 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `bootstrapped-product-revenue` | advising a solo founder on revenue. First payers |
 | `research-and-fact-checking` | research, fact-checks or news briefs. Expert method |
 
-### Owner-facing (1)
+### Communication styles (1)
 
 | Skill | Use when |
 | --- | --- |

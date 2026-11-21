@@ -51,7 +51,7 @@ IRS page for the tax year in question and state the year in the answer.
 IRS factors include: businesslike manner with complete books; time and effort showing intent to profit; dependence on the income; changing methods to improve profitability; losses normal for the startup phase. "No one factor is more important than another." The page is marked archival; confirm current rules with a professional. Practical step: keep books from the first dollar.
 
 ## Sales tax [STAX]
-Stripe reports 25 states tax SaaS and 7 more tax it if customers must download software; rules differ by state. Before collecting meaningful revenue across states, ask a tax professional about registration duties.
+Use [STAX] for orientation and verify current SaaS taxability in each jurisdiction at issue. Before collecting meaningful revenue across states, ask a tax professional about registration duties.
 
 ## Free help
 - SCORE mentoring is free for any aspiring or established owner of a U.S.-based business, "for the life of your business"; matching is online by ZIP code and messages can be sent through the site [SCORE].

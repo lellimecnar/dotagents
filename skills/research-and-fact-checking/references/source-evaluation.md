@@ -44,8 +44,7 @@ that a dot-org domain makes a site trustworthy. [3]
 ## Corroboration rules
 - Independent means a separate origin, not a separate URL. Syndicated copies and articles rewriting one
   press release count once.
-- When sources disagree, present both with citations and say which you weight and why (the
-  `grounded-citations` fact-checking mode does this mechanically).
+- When sources disagree, present both with citations and say which you weight and why.
 - AP's own bar for anonymous material: more than one source is routinely required; a single source only
   when an authoritative figure gives detail "so detailed that there is no question of its accuracy." [4]
 

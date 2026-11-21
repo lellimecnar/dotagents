@@ -49,11 +49,10 @@ Rules:
 - Always say what an advertised "savings" figure is compared against. Agencies often compare the efficient
   option with the least efficient baseline, which may not be what the household has now.
 - Re-check every incentive, rebate and tax credit on the official page the day you write. Agency fact
-  sheets and marketing pages can keep advertising a credit after the law ends it (see the proof example
-  in the skill build: ENERGY STAR pages still mentioned a 30% credit the IRS says ended 2025-12-31).
+  sheets and marketing pages can keep advertising a credit after the law ends it; confirm the effective date in the current governing rule.
 - Use the household's own rates when known; otherwise state the national assumption the source used.
 - Name the cheaper alternative and the do-nothing option.
-- Never buy. Build the cart or quote and hand the decision to a parent.
+- Prepare the cart or quote and hand the decision to the authorized purchaser; do not buy.
 
 ## Decision rules
 - Safety-critical products (car seats, smoke/CO alarms, helmets): rely on standards certification and

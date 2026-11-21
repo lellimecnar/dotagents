@@ -9,17 +9,17 @@ metadata:
 
 # Family meal planning and home cooking
 
-The method for any meal-planning, grocery, recipe or food-safety task for a household (any size, any budget, including members with special feeding needs). Numbers, tables and source URLs live in `references/`; this file is the procedure and the decision rules. Household facts (who eats what, schedules, budgets, diagnoses) never go in this skill; read them from memory and the family's records on each task.
+The method for any meal-planning, grocery, recipe or food-safety task for a household (any size, any budget, including members with special feeding needs). Numbers, tables and source URLs live in `references/`; this file is the procedure and the decision rules. Keep household facts out of this skill. Use only planning details the requester supplies or authorizes you to access.
 
 ## When to Use
 Any task that plans meals, writes or changes a grocery list, adapts or scales a recipe, answers a food-safety or storage question, feeds a picky eater or someone on a texture-modified diet, or turns a trainer's Nutrition targets brief into meals.
 
 ## 1. Gather inputs before planning (in this order)
-1. **Hard constraints first.** Allergies (the 9 US major allergens and any others), prescribed textures (an IDDSI level set by a speech-language pathologist), medical diets. Take these only from the person, their assistant or their clinician; never infer them. If one is unclear, ask before planning.
+1. **Hard constraints first.** Allergies (the 9 US major allergens and any others), prescribed textures (an IDDSI level set by a speech-language pathologist), medical diets. Confirm them with the person, an authorized caregiver or the documented care plan; never infer them. If one is unclear, ask before planning.
 2. **Existing systems.** The household's own meal service or plan, recorded preferences and requests, the current shopping list (do not re-add checked items), what is already in the fridge (with cook dates) and freezer. Work with the existing system and fill its gaps; do not replace it.
-3. **The week's shape.** Which nights are late, short or away; who cooks; when someone can start a dish early (slow cooker, prep-ahead); days with rest or family-time rules.
+3. **The week's shape.** Which nights are late, short or away; who cooks; when someone can start a dish early (slow cooker, prep-ahead); any other scheduling or availability constraints.
 4. **Budget.** Benchmark with the USDA Food Plans (Thrifty Food Plan per person by age and sex, with the household-size adjustment). See `references/budget-and-planning.md`.
-5. **Targets.** Any Nutrition targets brief from the household's trainer (section 3).
+5. **Targets.** If provided, use the person’s authorized nutrition goals or care plan (section 3).
 
 ## 2. Build the week (step by step)
 1. **Skeleton.** Mark fixed nights first (meal-service picks, standing traditions), then busy nights (slow cooker, sheet pan, planned-overs, freezer meal), then give the remaining nights a theme (taco night, soup night, pizza night) to cut decisions.
@@ -30,7 +30,7 @@ Any task that plans meals, writes or changes a grocery list, adapts or scales a 
 6. **Fold in any targets brief** (section 3).
 7. **Safety pass.** Thaw plan (fridge thawing takes about a day even for a pound of ground meat), slow-cooker rules (thaw first, never reheat in it), leftover windows, allergen cross-contact, texture levels, under-4 choking modifications, high-altitude timing. See `references/food-safety.md`.
 8. **Grocery list.** Derive from the recipes, subtract pantry and leftovers, group by store section, compare **unit prices** (same unit across sizes; check sale and multi-buy unit prices), prefer store brands, seasonal and frozen produce, and bulk only for items that will be used before they spoil. Prepare carts and totals; never purchase.
-9. **Deliver.** Few options, already prioritised, with the first physical action named ("Move the pork shoulder from the freezer to the fridge tonight"). Record recipes, meal plan and shopping items in the household's systems only where you own them; hand calendar entries to whoever owns the calendar.
+9. **Deliver.** Few options, already prioritised, with the first physical action named ("Move the pork shoulder from the freezer to the fridge tonight"). Record plans only in authorized destinations and use the requester’s chosen process for calendar suggestions.
 
 ## 3. Folding a Nutrition targets brief into the family plan
 **Rule: same base meal; adjust that person's portions and sides.** Cook a separate meal only when a clinician-prescribed diet makes the family meal unsafe for them.

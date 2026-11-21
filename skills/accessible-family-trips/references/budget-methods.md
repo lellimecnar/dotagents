@@ -3,7 +3,7 @@
 Prices, dates and rules change; look them up on the source page at planning time and state the check date in any proposal.
 
 ## Price the whole party
-- Always compute all-in for every member by age tier (adult/youth/child/under-2), plus fees, parking, fuel, food, rentals. The `product-price-monitor` skill's rule applies: never compare a base fare with an all-in budget.
+- Always compute all-in for every member by age tier (adult/youth/child/under-2), plus fees, parking, fuel, food, rentals. Compare all-in fare with the all-in budget.
 - Age tiers differ by venue and by pass. Example: federal passes admit children 15 and under free at per-person sites, while some museums are free for everyone 18 and under.
 
 ## Federal: America the Beautiful passes
@@ -45,7 +45,7 @@ Prices (including which passes are free): look up on the passes page above and q
 
 ## Income-based discounts (only if eligible)
 - **Museums for All:** free or reduced (usually $3 or less) admission at participating museums with a SNAP EBT card (https://museums4all.org). Party limits, time windows and reservation rules vary by venue; some states' human-services agencies also publish an EBT discount list. EBT card is shown, not used to pay; general admission only.
-- Never assume eligibility; ask the parent through their assistant only if relevant, and keep it out of shared documents.
+- Confirm eligibility privately with the requester or an authorized contact only if needed. Keep it out of shared documents.
 
 ## Off-peak timing
 - Cheapest days/times are flexible ones: midweek or Saturday and early-morning flights (DOT Fly-Rights, archived guidance: https://www.transportation.gov/airconsumer/fly-rights); Google cites Monday-Wednesday departures and booking early for international (https://blog.google/products-and-platforms/products/search/how-to-save-money-google-travel-2024/).
@@ -53,12 +53,12 @@ Prices (including which passes are free): look up on the passes page above and q
 
 ## Fare tracking
 - **Google Flights** (https://support.google.com/travel/answer/6235879): turn on "Track prices" for a route (specific dates or "Any dates"), set the passenger count first so prices reflect the whole party; emails on significant changes and "likely to go up" insights. Price graph and date grid show the cheapest dates (https://support.google.com/travel/answer/7664728). "Cheapest" tab may include self-transfer or airport changes; avoid those with mobility devices.
-- Long-running watch with dedupe: use the `product-price-monitor` skill.
+- For long-running alerts, use an available price tracker that suppresses duplicate notifications.
 
 ## Booking protections (DOT)
 - **24-hour rule:** for tickets bought 7+ days before departure, the airline must either let you cancel within 24 hours for a full refund or hold the fare 24 hours without payment (14 CFR 259.5(b)(4), https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-259/section-259.5; https://www.transportation.gov/individuals/aviation-consumer-protection/refunds). Does not apply to online travel agencies or other third parties. Changes (dates, name fixes) are not free under this rule.
 - **Automatic refunds** (DOT final rule announced 2024-04-24, https://www.transportation.gov/briefing-room/biden-harris-administration-announces-final-rule-requiring-automatic-refunds-airline): refund if the airline cancels or significantly changes a flight (3+ hours domestic, 6+ international; different airport; more connections; downgrade; or connections/aircraft **less accessible** to a person with a disability) and you decline alternatives; checked-bag fee refund if bags are 12+ hours late on domestic flights; refund of unprovided paid extras (seat selection, Wi-Fi). Refunds in original form of payment within 7 business days (card) or 20 days (other).
-- **Family seating:** DOT dashboard (https://www.transportation.gov/airconsumer/airline-family-seating-dashboard) lists airlines guaranteeing fee-free adjacent seats for a child 13 or under and an accompanying adult: Alaska, American, Frontier, Hawaiian, JetBlue = yes; Allegiant, Delta, Southwest, United (and Spirit) = no. Conditions: same reservation; adjacent seats available at booking in that cabin; no smaller-aircraft swap; adult selects or skips seats for the whole reservation and does not change them; seat layout permits. Assigned no later than the day before. A nationwide family-seating rule was proposed in 2024; secondary sources say it was still under review in Oct 2026 (https://deeparrival.com/airlines/family-seating/; unverified at primary source).
+- **Family seating:** DOT dashboard (https://www.transportation.gov/airconsumer/airline-family-seating-dashboard) is the starting point. Check current carrier participation, eligible ages, booking conditions and assignment timing. Verify the status of any nationwide requirement against current primary sources.
 
 ## Points and rewards (basics only; money decisions go to whoever handles the household's money decisions)
 Source: CFPB, https://files.consumerfinance.gov/f/documents/cfpb%5Fcredit-card-rewards%5Fissue-spotlight%5F2024-05.pdf and https://www.consumerfinance.gov/compliance/circulars/consumer-financial-protection-circular-2024-07-design-marketing-and-administration-of-credit-card-rewards-programs/

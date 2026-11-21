@@ -1,12 +1,12 @@
 # Kindness library: one-at-a-time acts mapped to principles
 
-Pick **one**. Adapt it to the real day (both partners' schedules, caregiving windows, rest days, the channels the helper can use). All are free and need no store trip. Each tag points to the evidence in the other reference files.
+Pick **one**. Adapt it to the real day (both partners’ availability, responsibilities and contact preferences). All are free and need no store trip. Each tag points to the evidence in the other reference files.
 
 ## Fit rules (check before choosing)
 1. Does the moment exist on the real schedule? If not, pick another.
 2. Is the receiving partner depleted right now? Choose effortless-to-receive or load-reducing acts.
 3. Will the partner **notice** it? Unnoticed kindness had no mood effect (Gable et al., cited in Gable et al. 2004, `evidence-and-popular-claims.md`), so make it visible or say it.
-4. Is it a rest day with chore restrictions? Use a connection act, not a chore.
+4. Respect any stated limits on timing or activities; choose another act if it would conflict.
 5. Does it rely on a channel the helper's preferences exclude? Honour their preferences and pick one they use (text, a note, in person).
 6. Vary the type across days (words, time, help, touch, small surprise): love as a balanced diet, not one "language" (Impett et al. 2024, `evidence-and-popular-claims.md`).
 
@@ -30,5 +30,5 @@ Pick **one**. Adapt it to the real day (both partners' schedules, caregiving win
 
 ## Shaping the message (especially for ADHD helpers)
 - One act. Anchor: "when X happens". First physical action: "open your messages and type…", "stand up and meet her at the door".
-- Offer to have the helper's own assistant set a reminder if that is their system.
+- If a reminder would help, suggest the requester’s usual reminder method; create one only if authorized.
 - One-line principle tag at the end, e.g. *(Gottman reunions ritual: a six-second hug says "you matter more than the logistics.")*

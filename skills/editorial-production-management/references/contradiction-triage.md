@@ -18,33 +18,24 @@ prose) that the owner must rule on.
    - Look for the real problem behind the item. The surface item may be "who has the injury" while the
      real problem is that the injury is never shown happening; "the memory has no setup" may really be
      "the memory refers to a later chapter".
-   - Have the owning specialist verify each item before the owner sees it (the canon owner for facts,
-     the language reviewer for invented-language items); the coordinator holds no canon. Keep verification
-     batches small (about 5 items per task); large batches stall or crash agent workers.
-   - Tell verifiers which readings the owner has already rejected as contradictions (for example a
-     figurative line read literally, a noun read as an adjective, an in-chapter time jump, one character
-     acting twice days apart, a summary qualified by a nearby detailed rule).
-   - Route by type before carding: invented-language items straight to the language reviewer (who also
-     decides sub-cases it left open; do not ask the owner), owner-decision items to the lane specialist
-     for quoted facts first. Items outside the cleanup's scope are logged "set aside", not carded.
-4. **Present exactly 3 items per message.** For each: the actual prose quoted verbatim with
+   - Have the authorized subject reviewer verify each issue before escalation. Keep batches within the reviewer’s demonstrated capacity.
+   - Give verifiers relevant prior rulings. Check apparent contradictions against chronology, wording, context and the governing canon.
+   - Route issues by subject and local decision authority. Verify evidence before escalation. Record out-of-scope items separately.
+4. **Present a manageable batch in the decision-maker’s preferred format.** For each: the actual prose quoted verbatim with
    chapter:line (never a paraphrase alone; the owner should not have to go searching), a plain
    explanation of what the text says and why it may be wrong, then options A/B(/C) with the edit count
    each needs and one option marked "(my pick)". When a figurative or derived reading exists, include a
-   "not a contradiction" option. The owner answers like "1B, 2A".
+   "not a contradiction" option. Ask for an unambiguous decision on each numbered item.
 5. **Each time they rule:** log the ruling and any standing rule; fix canon and doc files now (mark the item
    RESOLVED in any dossier, pointing to the log); save standing rules where the team's memory and
    guardrails live; commit and push to the shared branch.
 6. **Prose stays frozen until every item is ruled.** Later rulings can change earlier ones. Collect prose
    fixes in the log's "deferred prose fix" column and route them to the author as one pass at the end,
    reviewed by the editor.
-7. **Before any prose edit:** the rulings log holds a complete "Prose changes checklist" (quoted old ->
-   new, in chapter order) linked from the PR description, and the owner has given an explicit go-ahead
-   for the prose pass. If the owner stops it, block the task and revert (never force-push) any commit
-   that already landed.
+7. **Before any prose edit:** record the complete before/after text in manuscript order and obtain explicit approval from the designated decision-maker
+   for the prose pass. If approval is withdrawn, stop and use the project’s authorized rollback process for any changes already applied.
 8. **Reviewing canon/doc fixes:** grep by topic and by every rejected value (not only the stale phrase),
-   confirm no manuscript file changed, require each ruled item resolved in every section of every dossier
-   (summaries, key facts and gates included), and find every quote a canon row cites verbatim in the
+   confirm no manuscript file changed, confirm every affected canon record reflects the applicable ruling, and find every quote a canon row cites verbatim in the
    manuscript.
 
 ## Pitfalls

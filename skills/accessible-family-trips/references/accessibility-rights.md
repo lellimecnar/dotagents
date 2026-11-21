@@ -66,7 +66,7 @@ Source: https://www.ada.gov/topics/service-animals/
 - May be excluded if out of control or not housebroken, or where presence fundamentally alters the service (e.g., sterile areas).
 - Venue-specific limits exist: zoos may limit service animals in some animal areas, and some adaptive programs (e.g., guided track-chair outings) may not allow them on the trail. Ask the venue in writing before the visit.
 
-## Written complaint routes (prefer these over phone)
+## Written complaint routes (when suitable or requested)
 - Airline first: email or web form to the airline's consumer office; airlines must acknowledge within 30 days and respond in writing within 60 days. Then the DOT online form https://airconsumer.dot.gov/consumer/s/oacp-form (disability complaints are forwarded to the airline, which must respond to you and DOT). Source: https://www.transportation.gov/airconsumer/file-consumer-complaint
 - TSA: web form above.
 - ADA (hotels, venues, state and local government): https://www.ada.gov/file-a-complaint/ routes air travel to DOT, housing to HUD, employment to EEOC, everything else to the DOJ Civil Rights Division online report at https://civilrights.justice.gov/ (mail is the other option). DOJ review can take up to three months.
