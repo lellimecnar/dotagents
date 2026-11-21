@@ -2,8 +2,7 @@
 
 Content
 - [ ] One clear doctrine, stated early, explicitly connected to Jesus Christ and His Atonement.
-- [ ] The message states the assigned topic as the thesis; other ideas appear in their supporting role, each
-      pointing the way the speaker intends.
+- [ ] The message answers the assignment in the speaker's intended direction; each major idea supports it.
 - [ ] Each section heading shows how that section serves the thesis.
 - [ ] Each scripture teaches the point it is placed under; references checked.
 - [ ] Every quote verified word for word, with speaker, talk and date. Nothing inside quotation marks is
@@ -19,7 +18,9 @@ Fit for sacrament meeting
 - [ ] No visual aids or audiovisual materials (Handbook 38.8.3).
 - [ ] Nothing that embarrasses others, discloses private family matters, or criticizes members or leaders.
 - [ ] Opening goes straight in (no "I didn't want to be up here").
-- [ ] No political parties, candidates, polls or named ideologies (General Handbook 38.8.x on political activity).
+- [ ] The talk focuses on the Savior and His gospel and does not teach or advocate political choices
+      or affiliations (verify the current General Handbook section “Political and Civic Activity”).
+      Keep political illustrations in private study if they would distract or imply endorsement.
 - [ ] Sensitive moral applications taught as a principle; nothing a listener living it would hear as aimed at them.
 - [ ] No coined taglines; every key line is plain reasoning or a source's own words.
 

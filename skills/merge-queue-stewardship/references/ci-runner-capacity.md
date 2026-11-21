@@ -11,27 +11,25 @@ Agents usually have no host access to the runners, and the API answers most ques
    `started_at`), runtime is started → completed, and the runner name and labels say where it ran.
    Compare median and maximum wait: a low median with a huge maximum means stall episodes (bursts,
    a hung job), not steady overload.
-2. **Cost per PR.** Count runner-minutes and jobs per PR run. A path filter that skips the jobs a
-   change cannot affect is usually the biggest lever.
+2. **Cost per PR.** Count runner-minutes and jobs per PR run. Use the measurements to find expensive work that
+   can be skipped safely. Keep required results reportable even when some jobs are inapplicable.
 3. **Jobs that hit the platform default timeout** (hours, on most providers) each held a slot for
    that long. Set an explicit per-job timeout a little above the longest legitimate run.
 4. **Burst fan-out.** Many PRs starting within minutes (dependency-bot rebases, sibling PRs), each
    fanning out many jobs. Fix it with the update bot's own grouping and open-PR limit settings
    rather than a custom throttle.
-5. **Repo-wide re-triggers on unchanged heads.** Runs whose head SHA already ran, all first
-   attempts, from one actor. Read the PR timeline events for that window: a script that closes and
-   reopens many PRs seconds apart fires every reopen-triggered workflow on each. The fix is a rule
-   (refresh only the one PR that needs it, by the path in the main skill's Pitfalls: a re-run when its
-   workflow is current, otherwise a single close-and-reopen), not removing the reopen trigger, which
-   legitimate reopens need. A shared bot login can hide who did it.
+5. **Repo-wide re-triggers on unchanged heads.** Compare workflow, revision, attempt and triggering event.
+   For example, bulk PR reopen events can fan out fresh runs without new PR commits. Verify the
+   source of the burst from the timeline; limit refreshes to PRs needing fresh evidence and use
+   the supported refresh path in the main skill's Pitfalls.
 6. **Queued is not dead.** Before concluding "runner offline", check whether new job starts are
    still happening. Do not restart or cancel on queued jobs alone.
 7. **Live hung jobs.** List the jobs in progress with their age and current step. A job running
    many times its normal duration, in the same step as an earlier hang, is holding a slot. If you are authorized, cancel
    that run (a cancel is reversible by re-running); otherwise hand it to whoever operates CI, name the runs and the reason in your report, and
    open a root-cause task for the step: a timeout bounds the damage but does not remove the hang.
-8. **Permissions.** The runner-administration API often needs admin rights; a 403/404 there is
-   missing permission, not proof the runner is offline. Say which it is.
+8. **Permissions.** The runner-administration API often needs admin rights; a denied or not-found response does not
+   establish runner health. Verify the endpoint and scope or report that administration data is unavailable.
 
 ## Splitting cheap gates from heavy CI
 

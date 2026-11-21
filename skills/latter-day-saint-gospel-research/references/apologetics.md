@@ -44,9 +44,9 @@ what remains open. Credibility comes from honesty; one overclaim discredits the 
 - Lead with the Church's current wording: the General Handbook (ch. 38), the Church's official resources on the
   subject, and recent conference talks. Label older statements by year, because emphasis and vocabulary have
   shifted; do not present an older framing as the current one.
-- Keep the distinctions the Church draws: feelings vs. behavior, and attraction is not a sin. Don't reduce a
-  person's experience to a single word; those living it hear that as dismissal, and the Church does not frame it
-  that way.
+- Preserve the distinctions made in the source you cite. For example, the Handbook distinguishes
+  feeling same-sex attraction from behavior in its section “Same-Sex Attraction and Same-Sex Behavior.”
+  Describe people respectfully without assuming their experience or motives.
 - When the asker puts doctrine and love in tension, quote leaders who hold both together: the law kept, the person
   loved fully. Where leaders frame it through the order of the two great commandments, quote them; label any
   framing of your own as yours.

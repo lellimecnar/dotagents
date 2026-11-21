@@ -17,9 +17,10 @@ are examples of public ecosystems where the trap is common; the pattern carries 
 
 - **The lock lacks hashes for your platform.** Some lockfiles record checksums per OS/architecture
   (Terraform example: `.terraform.lock.hcl` provider hashes). Validation on a reviewer platform the
-  lock does not cover rejects the installed providers. Initialise a disposable copy with the existing
-  lock and no upgrade (Terraform: `terraform init -backend=false`, no `-upgrade`) and validate
-  there. Confirm only platform hashes were added and versions stayed pinned. Never modify the PR's
+  lock does not cover rejects the installed providers. Prefer a platform already covered by the lock for the primary gate.
+  To diagnose an uncovered platform, use a disposable copy and the ecosystem's supported checksum
+  workflow (for example, `terraform providers lock` for the target platform). Verify the package
+  source and unchanged versions; if the platform is required, report the committed lockfile gap. Never modify the PR's
   lock, and never plan or apply against live infrastructure as part of a review.
 
 ## Policy guards in infrastructure code

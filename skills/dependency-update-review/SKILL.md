@@ -125,14 +125,12 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
 
 ## Consolidated / lockfile-only PRs
 
-- **Consolidate a backlog of sibling floor bumps per directory.** When several bot PRs edit the
-  same manifest and lock (and some already carry a manual push, so the bot no longer rebases them),
-  carrying them one by one makes each merge conflict the rest. Open one consolidated "raise floors
-  and relock" PR per directory from the current base: newest version per package, lock regenerated
-  with the CI-pinned tool, the directory's lint/type/test gates run, and a resolved-version table
-  plus the list of superseded PRs in the body. Once the consolidation has merged, close each superseded PR with a comment linking
-  it (closes run after merges land). Keep any owner decision an earlier consolidation recorded (a version ceiling, a
-  pin). Not worth it when the bumps are few, independent and still rebase cleanly.
+- **Consider consolidating conflicting floor bumps.** Group by the manifest and lockfile that resolve
+  together, not by directory. Prefer separate PRs if the bot can rebase them cleanly or if combining
+  them makes risk harder to isolate. For an authorized consolidation, start from the current base,
+  preserve recorded pins and ceilings, choose versions covered by the review, and apply the lock and
+  gate checks below. List the resolved versions and the PRs replaced; close only the PRs actually
+  superseded after verifying that the consolidation landed. Link to it in each close comment.
 - **Floors match what they supersede.** For each superseded bot PR, diff its specifier changes
   against the consolidated manifest and record whether it is already closed. Consolidations silently
   drop bumps.

@@ -11,16 +11,15 @@ For a single recipe someone typed in by hand, steps 1 and 4 shrink to a glance; 
 - Tell recipe pages apart from the other sheets a plan may bundle (for example shopping, prep, cook-day, thaw or label sheets). Label or sticker pages
   repeat ingredients out of alignment: build from the recipe cards only, pairing each title with its own card
   (not with whatever sits next to it in the text).
-- Keep each card's parts apart: yield, prep-day ingredients, serving-day ingredients, containers, freeze steps and
-  serving steps. Serving-day ingredients merged into the prep list end up frozen or double-bought.
-- Links inside a PDF are often supply or shop links, not recipe pages. If the requester says recipe links exist,
-  ask which ones before searching. Paid recipe sites rarely offer an import path; documents a subscriber can
-  download are usually the realistic source.
+- Preserve the yield and any distinctions the source makes, such as ingredients used at different
+  stages. Keep ingredients added at serving out of any make-ahead or freezing instructions.
+- Verify what embedded links actually point to. Use an authorized export, recipe page or supplied
+  document, depending on what the source supports; ask only if the intended source remains unclear.
 
 ## 2. Preview the parse before importing
 - Run the ingredient lines of one recipe through the manager's parser in a mode that saves nothing (a dry run or
   preview), and show the requester a table: quantity, unit, food, note, and anything that would be newly created.
-  Flag every wrong line. Where the manager has no preview, import one recipe, check it, then do the rest.
+  Flag every wrong line. If no preview exists, test in a disposable destination if available; otherwise use a live pilot only with authorization to write and clean up its side effects. Verify the pilot before proceeding with the batch.
 - Check every batch for the usual failures:
   - tablespoon parsed as teaspoon (a threefold error) or other unit conversions gone wrong;
   - compound phrases turned into a bogus unit ("minced garlic cloves" becoming the unit "minced");
@@ -38,15 +37,15 @@ For a single recipe someone typed in by hand, steps 1 and 4 shrink to a glance; 
   say who has to. Put the source link in each recipe description so the original stays one click away.
 
 ## 4. Cross-check counts
-- Compare the number of recipe cards with the plan's own lists (prep-day list, thaw sheet, shopping list).
-  A mismatch means a card was missed or split.
+- Reconcile the unique recipes in scope with the import and, if available, a source list that
+  enumerates recipes. Explain duplicates, excluded items and any unmatched recipe before reporting done.
 - A recipe that appears in two batches is imported once, with both batch tags. Same-named but different recipes
   (two cooking methods for one dish) stay separate.
 
 ## 5. Confirm before reporting done
-- If another agent or person does the writes, hand over the full spec in the task itself (recipes, parser fixes,
-  tags, yield, a short polish checklist), since they may not be able to read your files. Make dependent batches
-  wait for each other so two writers don't create the same recipe twice.
+- If a helper does the writes, share only the import details they are authorized to receive through
+  an approved channel they can access. Coordinate overlapping imports or use the manager's
+  deduplication support so retries and concurrent writers do not create duplicates.
 - Preparing a spec is not an import. Report nothing as imported until the writer confirms, with counts you can
   compare against step 4; if you did the writes yourself, re-read the imported recipes rather than trusting the
   tool's success message.

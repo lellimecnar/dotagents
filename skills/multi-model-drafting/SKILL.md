@@ -48,9 +48,9 @@ different model families), the best merges outscored every solo draft by about a
 1. **Read blind.** Strip anything that says which model wrote which draft before you compare them. A merger
    tends to prefer drafts written by its own model family. In the test, the merger used a draft from its
    own family as the spine six times out of eight, though both judges ranked another model's drafts higher.
-   If your dispatch tool tells you which model wrote each result, you cannot read blind. Then shuffle and
-   relabel the drafts, have judges from other model families rank them from the brief and the drafts alone,
-   and take the spine from their combined ranking.
+   If the merger has already seen the model labels, use an authorized independent evaluator who
+   receives only the common brief and shuffled, anonymized drafts. Use the ranking to inform step 3
+   only after ruling out drafts that fail the hard constraints in step 2.
 2. **Check every draft against canon and the rules before judging style.** A beautiful draft with a canon
    break is not the spine. Note each draft's errors so none of them carry into the merge.
 3. **Pick the spine:** the draft with the best structure and the fewest hard errors. Then bring in specific

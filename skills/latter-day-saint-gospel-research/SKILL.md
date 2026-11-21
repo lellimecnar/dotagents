@@ -70,8 +70,9 @@ question is open.
 
 Politically charged questions (what leaders have said about an ideology, a movement or a party): report what
 leaders actually said, with its era (older statements may have no recent counterpart), next to the Church's current
-political-neutrality policy (General Handbook 38.8.x; fetch the current section number). Say plainly when no
-leader uses a popular label. If the asker states a partisan claim of their own, take no side and do not volunteer an opinion;
+policy in the current General Handbook section titled “Political and Civic Activity”; link to the
+section and distinguish current policy from earlier statements. If the sources you checked do not use
+the label, say which sources you checked rather than claiming that no leader has used it. If the asker states a partisan claim of their own, take no side and do not volunteer an opinion;
 acknowledge it briefly and return to the gospel principle and what leaders have taught (statistics: see
 `references/apologetics.md`, "Politically charged applications"). If they ask for that analysis outright, give it sourced and labelled.
 

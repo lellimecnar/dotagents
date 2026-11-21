@@ -142,11 +142,9 @@ Never merge or push to the train yourself.
   under a require-last-push-approval rule stays valid, whereas updating the branch pushes a commit
   and forces a new review. Do it per PR, never as a mass sweep (that floods the runners; see
   [references/ci-runner-capacity.md](references/ci-runner-capacity.md)).
-- **Land CI-infrastructure fixes first.** While a fix to the CI itself is open, every refreshed PR
-  fails on the same fault; admit the fix, then refresh the rest.
-- **A stalled queue may be a CI-capacity problem.** Queued (not failing) checks across many PRs
-  point at runners, not queue rules. Diagnose from the forge API before restarting or cancelling
-  anything ([references/ci-runner-capacity.md](references/ci-runner-capacity.md)).
+- **Land CI-infrastructure fixes first.** When evidence shows a shared CI fault, avoid refreshing affected PRs until the fix is
+  verified. Admit the fix through the normal gates; if the fault blocks the fix itself, refer it to
+  the authorized recovery process. Then refresh affected PRs as needed.
 - **List existing tasks before filing one.** Before filing a review, reroute or queue task for a PR,
   list the tasks already open for it: a second pass (another schedule or session) otherwise files
   duplicates that dispatch redundant reviewers and pollers. Tell a duplicate to stand down in a
