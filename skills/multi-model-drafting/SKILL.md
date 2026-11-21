@@ -39,8 +39,8 @@ different model families), the best merges outscored every solo draft by about a
    carries the full text, not a placeholder or a reference to a file the drafter can't read. In the test,
    one drafter got a placeholder and wrote a plausible draft from nothing.
 3. Ask each drafter for finished prose at the target length, saved where you can read it, and nothing else.
-   Have drafters write to files, with a clear marker at the start of each unit (scene, passage, finding),
-   rather than return the text: the drafts then stay out of your context until you open them, and the
+   Have them write to files rather than return the text, with a clear marker at the start of each unit
+   (scene, passage): the drafts then stay out of your context until you open them, and the
    markers let you line up the same unit across drafts.
 
 ## Merging
@@ -79,7 +79,8 @@ Use only where the project opts in for review fixes; otherwise one careful pass 
   uncontested "winner" is just the tiebreak and says nothing about the drafters.
 - When separately judged passages depend on each other (a detail planted in one and paid off in another),
   fix the shared content in the brief, so picks taken from different drafts still join up.
-- Keep the shuffle key closed until the picks are applied, as when merging.
+- Keep the shuffle key hidden from the judges until the picks are applied (see "Read blind" and
+  "Measuring a drafter set").
 
 ## Measuring a drafter set
 

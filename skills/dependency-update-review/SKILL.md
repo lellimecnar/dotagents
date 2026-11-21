@@ -130,9 +130,9 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
   carrying them one by one makes each merge conflict the rest. Open one consolidated "raise floors
   and relock" PR per directory from the current base: newest version per package, lock regenerated
   with the CI-pinned tool, the directory's lint/type/test gates run, and a resolved-version table
-  plus the list of superseded PRs in the body. Then close each superseded PR with a comment linking
-  the consolidation. Keep any owner decision an earlier consolidation recorded (a version ceiling, a
-  pin). Not worth it for one or two independent bumps that still rebase cleanly.
+  plus the list of superseded PRs in the body. Once the consolidation has merged, close each superseded PR with a comment linking
+  it (closes run after merges land). Keep any owner decision an earlier consolidation recorded (a version ceiling, a
+  pin). Not worth it when the bumps are few, independent and still rebase cleanly.
 - **Floors match what they supersede.** For each superseded bot PR, diff its specifier changes
   against the consolidated manifest and record whether it is already closed. Consolidations silently
   drop bumps.

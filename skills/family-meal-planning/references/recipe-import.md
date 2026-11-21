@@ -8,13 +8,13 @@ For a single recipe someone typed in by hand, steps 1 and 4 shrink to a glance; 
 ## 1. Read the real source
 - For a PDF, render the pages as images and read recipe names and ingredient lists from them. A text dump loses
   column order, so titles and ingredients get paired wrongly.
-- Tell recipe pages apart from combined shopping, prep, cook-day, thaw and label sheets. Label or sticker pages
+- Tell recipe pages apart from the other sheets a plan may bundle (for example shopping, prep, cook-day, thaw or label sheets). Label or sticker pages
   repeat ingredients out of alignment: build from the recipe cards only, pairing each title with its own card
   (not with whatever sits next to it in the text).
 - Keep each card's parts apart: yield, prep-day ingredients, serving-day ingredients, containers, freeze steps and
   serving steps. Serving-day ingredients merged into the prep list end up frozen or double-bought.
 - Links inside a PDF are often supply or shop links, not recipe pages. If the requester says recipe links exist,
-  ask which ones before searching. Paid recipe sites rarely offer an import path; the documents the member can
+  ask which ones before searching. Paid recipe sites rarely offer an import path; documents a subscriber can
   download are usually the realistic source.
 
 ## 2. Preview the parse before importing

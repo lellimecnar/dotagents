@@ -29,7 +29,7 @@ are examples of public ecosystems where the trap is common; the pattern carries 
   with provider-free fixtures or the tool's native mocked tests. Confirm the guard *fails* when the
   deny is removed or a wildcard covers an action it must exclude. Check the guard's severity too: a
   Terraform `check` block only warns during plan/apply and blocks nothing. This is offline evidence,
-  not a substitute for the authorised plan of the real stage.
+  not a substitute for an authorised plan against the real environment.
 
 ## CPU limits
 

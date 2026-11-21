@@ -61,7 +61,7 @@ train PR and the CI-gate / queue configuration that decides what may merge.
    deliberately if it is wrong. Make the wait cheap instead: one bounded poll on the exact head,
    admit the moment the required check is green, read the admission signal back, and do not poll
    for the merge itself. If the wait outlasts the poll, leave the task blocked with a note of which
-   jobs are green and which pending, so the next wake resumes it; if the tracker can no longer
+   jobs are green and which pending, so the next scheduled run resumes it; if the tracker can no longer
    resume it, file one fresh task that names the one it replaces. Add a priority signal
    (hotfix) only when the owner or governing policy grants it. Then stop: never build a manual train
    branch alongside a queue, merge a source PR directly, bypass branch protection, or touch the
@@ -151,9 +151,11 @@ Never merge or push to the train yourself.
   list the tasks already open for it: a second pass (another schedule or session) otherwise files
   duplicates that dispatch redundant reviewers and pollers. Tell a duplicate to stand down in a
   comment rather than leaving two live.
-- **Route the review to a reviewer from a different model family than the author.** Read the
-  author from the commit records or the delivery task, not from the task's default assignee or the
-  shared forge identity, before creating the review task.
+- **Check reviewer independence from the records.** Where the project's policy requires a reviewer
+  independent of the author (for example from a different model family), read the author from the
+  commit records or the delivery task, not from the task's default assignee or a forge identity
+  several agents may share, before creating or routing the review task (see `pull-request-review`,
+  "Review sweeps").
 
 ## Verification
 

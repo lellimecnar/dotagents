@@ -26,8 +26,8 @@ id), then walk this list.
    pushes; the app still treats the ruleset's required approvals as merge conditions. Read the
    required approval count and whether approval of the most recent push is required. If the count
    is one or more, someone other than the last pusher, with write access, must approve at the
-   current head. When agents share one account and the review identity lacks write permission,
-   those approvals do not count and every PR stalls. Surface that as the real blocker, with options:
+   current head. If the reviewing identity lacks write permission (or is the same identity that
+   pushed), its approvals do not count and every PR stalls. Surface that as the real blocker, with options:
    make the reviewer identity count (test on one PR first), lower the count to zero (the app still
    blocks on "changes requested"; review then lives in your task tracker), or approve by hand.
    - **Prove a review counts from the review itself**, not from a permission endpoint. GitHub

@@ -48,4 +48,5 @@ what remains open. Credibility comes from honesty; one overclaim discredits the 
   person's experience to a single word; those living it hear that as dismissal, and the Church does not frame it
   that way.
 - When the asker puts doctrine and love in tension, quote leaders who hold both together: the law kept, the person
-  loved fully. The answer is the order of the two great commandments, not loving the person less.
+  loved fully. Where leaders frame it through the order of the two great commandments, quote them; label any
+  framing of your own as yours.

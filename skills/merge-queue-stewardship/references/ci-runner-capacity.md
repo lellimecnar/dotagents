@@ -21,13 +21,14 @@ Agents usually have no host access to the runners, and the API answers most ques
 5. **Repo-wide re-triggers on unchanged heads.** Runs whose head SHA already ran, all first
    attempts, from one actor. Read the PR timeline events for that window: a script that closes and
    reopens many PRs seconds apart fires every reopen-triggered workflow on each. The fix is a rule
-   (re-run the one failed run, or push one empty commit to the one PR that needs it), not removing
-   the reopen trigger, which legitimate reopens need. A shared bot login can hide who did it.
+   (refresh only the one PR that needs it, by the path in the main skill's Pitfalls: a re-run when its
+   workflow is current, otherwise a single close-and-reopen), not removing the reopen trigger, which
+   legitimate reopens need. A shared bot login can hide who did it.
 6. **Queued is not dead.** Before concluding "runner offline", check whether new job starts are
    still happening. Do not restart or cancel on queued jobs alone.
 7. **Live hung jobs.** List the jobs in progress with their age and current step. A job running
-   many times its normal duration, in the same step as an earlier hang, is holding a slot. Cancel
-   that run (a cancel is reversible by re-running), name the runs and the reason in your report, and
+   many times its normal duration, in the same step as an earlier hang, is holding a slot. If you are authorized, cancel
+   that run (a cancel is reversible by re-running); otherwise hand it to whoever operates CI, name the runs and the reason in your report, and
    open a root-cause task for the step: a timeout bounds the damage but does not remove the hang.
 8. **Permissions.** The runner-administration API often needs admin rights; a 403/404 there is
    missing permission, not proof the runner is offline. Say which it is.
@@ -40,5 +41,5 @@ Agents usually have no host access to the runners, and the API answers most ques
 - Order matters: label the runners first, merge the selector change second. Merging first leaves
   every job queued with no runner able to take it. Keep the workflow PR unqueued until a runner with
   each label is confirmed online.
-- Verify from the API afterwards: a heavy job lands on a heavy runner, and a light job starts within
-  a minute while heavy runs are queued.
+- Verify from the API afterwards: a heavy job lands on a heavy runner, and a light job starts promptly
+  (no longer than its usual queue wait) while heavy runs are queued.

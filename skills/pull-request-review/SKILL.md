@@ -147,8 +147,8 @@ requires it) without double work:
   new sweep does not reset the count; check earlier change requests before opening a review for a
   revised head.
 - A hold on merge admission is not a hold on review: keep reviewing PRs whose admission is held.
-  If review itself is held pending a decision, create the review task in a blocked state that
-  carries the release condition, linked from the delivery thread, so whoever owns the hold can
+  If review itself is held pending a decision, record the review task with its release condition
+  (in a blocked state, if your tracker has one), linked from where the change is tracked, so whoever owns the hold can
   release it without a duplicate dispatch.
 - End with one line: nothing to review, or the list of queued reviews.
 
@@ -180,8 +180,6 @@ requires it) without double work:
 - Release-train / batch PRs: `merge-queue-stewardship` → "Reviewing a train PR".
 - Dependency / lockfile PRs: `dependency-update-review`.
 - UI changes: `web-accessibility-check`. Behaviour acceptance: `qa-acceptance-evidence`.
-- Any PR whose checks fail only in your review environment:
-  [references/environment-traps.md](references/environment-traps.md).
 
 ## Verification
 

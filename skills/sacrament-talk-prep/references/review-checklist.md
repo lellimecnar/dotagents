@@ -11,7 +11,7 @@ Content
 - [ ] No speculation, folk doctrine or personal interpretation presented as doctrine.
 - [ ] A starting conference talk (if any) supports the topic rather than being summarized ("book report").
 - [ ] Includes the speaker's own experience or witness, not only borrowed stories.
-- [ ] A warning about a counterfeit is paired with a positive story of the real thing.
+- [ ] A warning about a counterfeit has a positive model of the real thing where the talk has room for one.
 - [ ] Ends with testimony of Jesus Christ and a clear, kind invitation.
 
 Fit for sacrament meeting

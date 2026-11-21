@@ -9,7 +9,7 @@
 ## Core message (current draft)
 <one sentence, connected to Jesus Christ> — status: draft / agreed
 
-## Bookend questions (asked at the start, re-asked at the end)
+## Bookend questions (if used: asked at the start, re-asked at the end)
 1. <question, speaker's wording> — opening answer: <surface> · closing answer: <deep> — status
 
 ## Thread (argument chain, current version)

@@ -12,7 +12,7 @@ metadata:
 The method for any meal-planning, grocery, recipe or food-safety task for a household (any size, any budget, including members with special feeding needs). Numbers, tables and source URLs live in `references/`; this file is the procedure and the decision rules. Keep household facts out of this skill. Use only planning details the requester supplies or authorizes you to access.
 
 ## When to Use
-Any task that plans meals, writes or changes a grocery list, adapts or scales a recipe, answers a food-safety or storage question, feeds a picky eater or someone on a texture-modified diet, or turns a trainer's Nutrition targets brief into meals, or imports recipes into a recipe manager (`references/recipe-import.md`).
+Any task that plans meals, writes or changes a grocery list, adapts or scales a recipe, answers a food-safety or storage question, feeds a picky eater or someone on a texture-modified diet, turns a trainer's Nutrition targets brief into meals, or imports recipes into a recipe manager (`references/recipe-import.md`).
 
 ## 1. Gather inputs before planning (in this order)
 1. **Hard constraints first.** Allergies (the 9 US major allergens and any others), prescribed textures (an IDDSI level set by a speech-language pathologist), medical diets. Confirm them with the person, an authorized caregiver or the documented care plan; never infer them. If one is unclear, ask before planning.

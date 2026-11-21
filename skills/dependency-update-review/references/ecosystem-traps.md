@@ -30,8 +30,8 @@ upstream source when in doubt; dates and floors move.
   entries semantically, not by line count.
 - A `go` directive raised by a dependency breaks `go.work` ("requires go >= …"). That is a Hold for a
   toolchain decision, not a lock fix. Build the old floor with `GOTOOLCHAIN=local` so automatic
-  toolchain download cannot hide it. Go supports only its two newest major releases: if the repo's
-  pin is older, the toolchain move is the unblock (see the toolchain-floor rule in the main skill).
+  toolchain download cannot hide it. Check Go's published release policy for which releases are still supported: if the repo's
+  pin is no longer supported, the toolchain move is the unblock (see the toolchain-floor rule in the main skill).
 - Before prescribing pins or ignores, intersect the direct requirements (`go mod edit -json`) with
   `go list -m -json all` `GoVersion` values and name *every* bumped direct module at the new floor.
   Without a toolchain, read a module's floor from `https://proxy.golang.org/<module>/@v/<version>.mod`
