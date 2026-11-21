@@ -59,10 +59,10 @@ newest dated entry.
 5. **Loop guard:** skip any source event that carries your tag or has your calendar as organizer
    or guest.
 6. When the same event is on two source calendars (an invite), mirror it once.
-7. **Only the person's own obligations.** Another member's work reminders or note-style all-day
-   items are not the person's: never mirror them, and delete one you wrote as soon as you see it.
-   Mirror another member's event only when it changes what the person must do (that member is
-   away, a ride is needed, someone needs covering).
+7. **Mirror only events within the agreed scope.** Correct an unwanted mirror only if you created
+   that copy and have permission to remove it; otherwise report it without changing either calendar.
+   Copy other people’s events only when relevant to the agreed scope and permitted. Copy no more
+   detail than the person needs; use a busy block when only availability matters.
 
 ### 4. Planning as coordinator
 1. Check the real date. Read facts and rules. Run the mirror pass.

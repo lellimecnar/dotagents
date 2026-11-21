@@ -86,19 +86,18 @@ conflicts with them, follow the data doc and note the conflict in your output.
 - **Spread neglected tasks:** postponed 2+ gets a guaranteed early slot, at most two per day; at 3+
   schedule only its first 15-25 min step and flag it.
 - **Batch** errands by area and same-tool work (admin, forms) into one box with checkboxes.
-- **Admin and bill boxes hold only what is due that day** per the dated money plan (payee and
-  amount), sized to those items (roughly 10-15 min each). Never list every unpaid item or
-  "read the portal" chores, and never default to a 1-2 h admin box; time this frees goes to the
-  person's stated priority, not to overflow.
+- **Size admin blocks to the work selected.** Use authorized information to check due dates;
+  estimate time for each item and show only the details needed to act. Avoid turning a focused block into a backlog.
+  Use freed time for the person’s priorities or keep it as buffer, as agreed.
 - **A priority the person names for a day gets a real block** before you reply, taken from
   lower-stakes boxes first.
-- **One box per activity per day**, never back-to-back boxes of the same activity. The style of a
-  recurring task follows the person's stated method (outline-only means no "write the draft" box).
+- **Avoid unnecessary fragmentation.** Group adjacent work when useful and split it when the
+  task or the person’s preferences call for it. Match the requested scope of each block.
 - **Tasks flow through time.** Order by dependency, daylight (outdoor work), energy and deadlines;
   group related work; leave real gaps. Before writing a day, state in one line why each box sits
   where it does; a box you cannot justify is scattered.
-- **Background events are not conflicts.** An event that only needs a responsible adult present
-  (a home visit, a contractor) may overlap other boxes; check only that someone is home.
+- **Check actual attendance constraints.** Overlap a passive commitment only when its location,
+  attention, and coverage requirements are compatible with the other block.
 - **Cap any single project** at ~40% of the week's focus hours unless it has a deadline; boost
   tasks untouched for 5+ days; track hour targets per category if the person keeps them.
 - **Respect the household's rest-day and money rules** (for example a day with no chores, or bill
@@ -115,13 +114,12 @@ capacity -> pad and split tasks -> place mandatory items first (latest safe day 
 never the deadline day for medium-plus tasks), then neglected tasks, then the rest by priority
 while day load <= capacity -> place boxes by load and energy, one overflow box per day -> anything
 that does not fit goes to Dropped/Deferred with a reason. Weekly boxes are themes ("Deep work:
-proposal", "Errands"), not checklists. Never overbook silently. Mirror every known future fixed
-event (months out, not just this week) onto the calendar the person checks, so any proposed day
+proposal", "Errands"), not checklists. Never overbook silently. Check authorized calendars
+within the agreed horizon. Mirror commitments only when requested and authorized, to the designated calendar, so any proposed day
 (a follow-up appointment, say) can be judged against a real week instead of a blank one.
 
-**Daily (final tomorrow, rough refresh after it):** tomorrow becomes final and the next 2 days get
-a rough-draft refresh in the same run, so detail rises as a day approaches (weekly = rough, daily =
-final + 2-day refresh). For tomorrow: re-read the calendar and today's completion -> update velocity ->
+**Daily (final tomorrow, rough refresh after it):** finalize tomorrow and refresh later drafts
+only as far ahead as the agreed planning cadence calls for. For tomorrow: re-read the calendar and today's completion -> update velocity ->
 carry over unfinished mandatory items only (suggested ones return to the pool) -> exact 15-min
 boundaries, transitions, easy win, low load after lunch, overflow box -> 1-3 suggestions per box
 with mandatory items separated; padded checkbox minutes must fit the box -> if-then lines on the
@@ -167,8 +165,8 @@ lead with yes or no. Do not lecture about ADHD or list principles.
   household's conventions doc; if that doc is missing, stop before writing and report it.
 - Over-trusting chronotype or decision-fatigue science; personal history beats both.
 - Paragraph descriptions on boxes; keep them to short glanceable lines.
-- Boxing routine reminders the person did not ask to see (nightly check-ins, medication prompts);
-  the household's conventions decide what gets a box.
+- Boxing routine reminders without agreement; include only the reminders and level of detail
+  the person wants on that calendar.
 - Two tools writing boxes for the same range (for example a deterministic planner plugin and this
   method): pick one writer and use the other as a cross-check.
 

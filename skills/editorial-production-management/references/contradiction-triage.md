@@ -29,9 +29,7 @@ prose) that the owner must rule on.
    explanation of what the text says and why it may be wrong, then options A/B(/C) with the edit count
    each needs and one option marked "(my pick)". Whenever a compatible reading exists (figurative,
    derived, additive, off-page change), include a "not a contradiction" option instead of passing the
-   checker's verdict through as fact. Ask for an unambiguous decision on each numbered item, and end
-   every message that owes the owner answers with one ready-to-send reply line covering all open items,
-   recommended picks filled in.
+   checker's verdict through as fact. Ask for an unambiguous decision on each numbered item. Offer a consolidated reply template if it suits the decision-maker’s workflow.
 5. **Each time they rule:** log the ruling and any standing rule; fix canon and doc files now (mark the item
    RESOLVED in any dossier, pointing to the log); save standing rules where the team's memory and
    guardrails live; commit and push to the shared branch.
@@ -49,30 +47,26 @@ prose) that the owner must rule on.
   ask a yes/no question on those facts before changing canon.
 - Canon tables cite line numbers that may point at the wrong character's line. Re-read the cited line
   before trusting a canon row as evidence.
-- **On-page rule.** Anything a later line refers to (an injury, a finished repair, an object being
-  carried) must have happened on the page. Before accepting "it was done earlier", search the chapter
-  range for the object and quote what is shown. If it was only started, later lines that say it was
-  finished are wrong.
+- **Apply the manuscript’s continuity rules.** Determine whether a referenced event must be shown
+  on the page, may be implied, or may occur between scenes. Before accepting "it was done earlier", search the chapter
+  range for the object and quote what is shown. If the text only shows a start, check whether a later completion is supported or
+  allowed off-page before marking a contradiction.
 - **Planning notes need record-only fixes.** When outlines, packets or indexes disagree with clear prose,
-  fix the note. Have checkers mark each item "touches manuscript?" and "needs a story decision?"; show the
-  owner only those items plus structural ones (act boundaries, chapter titles) and batch the rest one
-  line each. The first time this comes up, propose it once as a standing rule so later batches need no reply.
+  fix the note. Classify items by manuscript impact and whether they need a decision, and route them
+  according to the project’s approval and reporting rules. Agree on any standing rule before applying it to later batches.
 - **Trace before logging a fix.** A fix that names an object or mechanism can create a new continuity
-  error: have the canon owner trace that object's state at that exact line first, and phrase the ruling
-  as the general rule the owner gives, not a one-line patch.
-- **One ruling often settles another.** Write "also decides #N" in both log rows and tell the owner, so
-  they are not asked twice.
-- **"Confirm we leave X unexplained" is not an automatic yes.** Have the owning specialist sort each
-  topic into needs-explaining, fine-as-is or record-only, with quoted lines and the smallest proposed
+  error: verify the relevant state at that point against the available continuity sources, or ask
+  the responsible reviewer. Record a standing rule only when one has been agreed.
+- **Cross-reference related rulings.** If an existing decision settles another item, link them
+  in the decision record, if used, instead of asking for a second ruling.
+- **"Confirm we leave X unexplained" is not an automatic yes.** Classify each
+  topic (consult the relevant reviewer if one is assigned) into needs-explaining, fine-as-is or record-only, with quoted lines and the smallest proposed
   explanation.
-- **Hold work an overrule affects.** When the owner overrules something a running task is applying,
-  first create the task that settles it, then comment "HOLD item N" on the running task with the ruling
-  and the new task's id. Workers can pick up comments mid-run; a change that is not held has to be
-  reverted.
-- **Keep the owner from waiting.** While answers are pending, answer a task-completion notice in 1-3
-  lines, not by re-presenting every open item. If a verification worker is lost partway, cut its task to
-  what it can finish and open sibling tasks for the rest; keep verified batches queued ahead of the one
-  being ruled.
-- **Late comments.** A comment sent near a task's completion may land after the worker finished: compare
-  the comment time with the completion time, and open a small follow-up task if the question went
-  unanswered.
+- **Pause affected work.** If a ruling changes active work, use the agreed hold or notification
+  mechanism. Tell the responsible party what to pause and point to the new decision. Confirm the hold was received.
+  If affected work has already landed, assess what must be corrected or reverted.
+- **Keep status updates brief.** While decisions are pending, report only what has changed rather
+  than restating every open item. If verification is interrupted, preserve completed checks and arrange an authorized
+  handoff or a smaller next batch for the unchecked items.
+- **Late comments.** A comment sent near a task's completion may land after the worker finished: check
+  for unanswered questions and route them through the agreed follow-up channel.

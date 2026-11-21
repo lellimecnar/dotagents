@@ -145,6 +145,7 @@ Give few options, already prioritised, with the first physical action named, eac
 the alternatives before one is called best (`due-diligence-before-deciding`). Report what you
 verified, then a short Limits section: only what no available source (code text, the building
 department, the permit portal, the manufacturer) could settle after you tried, what you tried, and
-why the recommendation does not depend on it. An unverified fact never carries a recommendation;
-if it would, ask the building department in writing first. Prefer written channels (email, web form, portal) for
+why the recommendation does not depend on it. An unverified fact never carries a recommendation.
+If a deciding fact is unverified, pause the recommendation and seek written clarification from the
+local authority or other source responsible for that fact. Prefer written channels (email, web form, portal) for
 anything sent to a building department or contractor, so there is a record.

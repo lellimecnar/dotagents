@@ -59,8 +59,8 @@ don't match the job's `if:`.
 
 - **Drift you may not edit is still a finding.** If a write guard refuses a file the sweep needs to
   correct (protected agent-instruction files, for example), do not route around it with another
-  tool. Ship the editable fixes, name the exact unfixed drift (file, section, correct text) in the
-  PR and the hand-off for someone who may edit it, and do not report it as fixed.
+  tool. Ship the editable fixes. Report the location and redacted summary in the PR; send the exact
+  correction only through an authorized channel to someone who may edit it. Do not report it as fixed.
 
 ## Verification
 

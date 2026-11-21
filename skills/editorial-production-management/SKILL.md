@@ -121,22 +121,22 @@ docs and memory as each ruling arrives; no prose edits until every item is ruled
 
 ## 8. Relaying findings and rulings
 
-- **Specialist findings are advisory until the lead editor reconciles them.** Before telling the owner
-  a fix is required, read the quoted lines and the editor's verdict. If you relayed one the editor then
-  overruled, withdraw it plainly and say why.
+- **Specialist findings are advisory until the responsible decision-maker resolves them.** Verify the cited text and decision before relaying
+  a required fix. If the decision-maker later overturns a finding you relayed, withdraw it plainly and say why.
 - **Merge duplicate findings across reviewers.** Relay required and optional fixes separately, each with
-  a chapter:line quote and who owns the fix; offer the items that need an owner rule as one yes/no decision.
-- **Never re-ask.** Before asking the owner anything, re-read the latest comments on the task and the task
-  tracker; a question already answered there is not asked again.
-- **Check before calling a review outstanding.** List that specialist's tasks first; the review is often
-  done and waiting for the owner's pick.
-- **Rulings extend to plainly adjacent cases by default.** Recommend the extension, say it is the default
-  and invite pushback; do not make it a blocking question.
+  a precise citation and the responsible party, if assigned. Ask for each outstanding ruling
+  in the decision-maker’s preferred format.
+- **Do not re-ask answered questions.** Check the latest authorized discussion or decision record
+  before asking the decision-maker.
+- **Verify review status before reporting it.** Check the available review record or ask the
+  reviewer. Distinguish unfinished review from a review awaiting a decision.
+- **Check the scope of rulings.** Apply a ruling to related cases only when its wording or the
+  agreed project policy covers them; otherwise propose the extension for confirmation.
 - **A principle that changes how the team works gets three steps:** patch the governing skill or guide,
-  sweep every guide and plan line that says the opposite (agents and editors read those files), then
+  sweep every guide and plan line that says the opposite, then
   review that sweep for wording left behind.
-- **"Landed" means on the main branch.** Before saying a change landed, check the artifact there; a test
-  or trial that used an idea is not the idea adopted.
+- **Verify adoption in the authoritative artifact.** Check the accepted version before reporting
+  adoption. A trial that used an idea does not show that the idea was adopted.
 
 ## Project specifics
 

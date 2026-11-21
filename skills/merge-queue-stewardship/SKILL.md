@@ -113,13 +113,11 @@ Never merge or push to the train yourself.
   have both happened; retire it only after telling whoever owns operations.
 - Path-filtered workflows never report when not triggered, so requiring their success can hang a
   queue forever (details in the reference).
-- **Prefer a rerun when the red is runner-only.** A rerun keeps the head and its approval, so
-  last-push-approval rules stay satisfied; any push voids that approval and makes the pusher the
-  last pusher.
-- **A rerun replays a frozen snapshot**: the workflow file and merge commit pinned to the original
-  run, not the current base. Compare the rerun's job names with the base branch's workflow; a job
-  retired upstream still fails on the old snapshot, so those heads need a rebuild on the base (or
-  closing), not more reruns.
+- **Prefer a rerun when the red is runner-only.** Verify that a rerun tests
+  the intended head and that approvals remain valid under the configured policy.
+- **Check what the CI provider reruns.** Some providers replay the original workflow and
+  revision, which may differ from the current integration state. If stale workflow configuration is
+  the cause, use or request the supported rebuild or requeue path rather than repeating the rerun.
 
 ## Verification
 
