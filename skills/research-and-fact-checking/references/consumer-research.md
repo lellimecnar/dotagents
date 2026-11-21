@@ -10,7 +10,7 @@
   average rating. [1]
 - Consumers overweight the average rating and ignore sample size ("illusion of validity"). [1]
 - Fake and manipulated reviews are common enough that the FTC banned them by rule (16 CFR Part 465,
-  effective 2024-10-21): fake or AI-generated reviews, reviews bought or conditioned on sentiment,
+  effective 2024-10-21; read the current rule text on eCFR before citing it as current law): fake or AI-generated reviews, reviews bought or conditioned on sentiment,
   undisclosed insider reviews, company-controlled "independent" review sites, suppression of negative
   reviews, and fake social-media influence indicators. [2] A ban is not elimination: treat it as a list
   of tactics to look for.

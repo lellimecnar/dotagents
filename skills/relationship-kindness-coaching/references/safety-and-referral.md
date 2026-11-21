@@ -2,6 +2,11 @@
 
 We are not therapists. This file decides when to stop coaching. When in doubt, refer.
 
+**Lookup rule for every route.** Crisis services change text keywords, chat links, hours, languages and
+partner programs. Before giving any route other than the national emergency number and the national
+crisis-line number, open the service's official site, confirm the current written routes (text, chat, web)
+and give those first, and state the date checked.
+
 ## 1. Stop immediately: abuse or coercive-control signs
 The National Domestic Violence Hotline says that **even one or two** of these behaviors is a red flag that abuse may be present; abuse is a pattern used to gain power and control. Sources: https://thehotline.org/identify-abuse/domestic-abuse-warning-signs ; https://thehotline.org/is-this-abuse/types-of-abuse
 
@@ -27,17 +32,17 @@ Sources: as above, plus https://thehotline.org/resources/healthy-relationships
 | Situation | Route |
 |---|---|
 | Immediate danger | **911** |
-| Abuse, or unsure if it is abuse | National Domestic Violence Hotline: **text START to 88788**; **live chat at https://www.thehotline.org**; phone 1-800-799-7233. Free, confidential, 24/7. The site has a quick exit (Esc twice). |
-| Young people (dating abuse) | love is respect: https://www.loveisrespect.org (linked from thehotline.org) |
-| Native Americans / Alaska Natives | StrongHearts Native Helpline (listed on thehotline.org) |
-| Deaf / hard of hearing | The Deaf Hotline videophone (listed on thehotline.org) |
-| Safety plan | "Plan for Safety" personalized safety-plan tool on thehotline.org |
+| Abuse, or unsure if it is abuse | National Domestic Violence Hotline, https://www.thehotline.org: confirm its current text keyword and number, live chat link, phone number and hours on the site, then give the written routes first. Check that the site still offers a quick-exit control. |
+| Young people (dating abuse) | love is respect: https://www.loveisrespect.org (confirm current routes there) |
+| Native Americans / Alaska Natives | StrongHearts Native Helpline (confirm current routes on its own site) |
+| Deaf / hard of hearing | The Deaf Hotline (confirm the current videophone and chat routes on its own site) |
+| Safety plan | The hotline's online safety-planning tool, if it still offers one (check the site) |
 Source for all Hotline routes: https://www.thehotline.org/
 
-How to say it: plain, kind, no pressure, no judgment. "What you describe matches warning signs experts take seriously. You can text START to 88788 or chat at thehotline.org, free and confidential, any time." Never contact the other partner, and never put this in a shared document.
+How to say it: plain, kind, no pressure, no judgment. "What you describe matches warning signs experts take seriously. You can text or chat with the National Domestic Violence Hotline (<current routes, checked today>), free and confidential." Never contact the other partner, and never put this in a shared document.
 
 ## 2. Stop immediately: suicide, self-harm or mental-health crisis
-- **988 Suicide & Crisis Lifeline**: **text 988**, **chat at https://chat.988lifeline.org**, or call 988. Free, confidential, 24/7; English and Spanish (text AYUDA). You do not have to be suicidal; relationship problems and intimate partner violence are listed reasons to reach out. Veterans: text 838255. Sources: https://988lifeline.org/get-help/what-to-expect ; https://www.samhsa.gov/mental-health/988/faqs
+- **988 Suicide & Crisis Lifeline**: text or call 988, or chat via https://988lifeline.org. Confirm the current chat link, language options and any special-population routes (e.g. Spanish, veterans) on the site before giving them. You do not have to be suicidal; relationship problems and intimate partner violence are listed reasons to reach out. Sources: https://988lifeline.org/get-help/what-to-expect ; https://www.samhsa.gov/mental-health/988/faqs
 - 988 counselors contact 911 only in rare cases of imminent risk to life. Source: SAMHSA FAQ (above).
 - Immediate risk to life → 911.
 
@@ -53,11 +58,21 @@ Refer when you see any of:
 
 Why refer early: couple therapy has large effects and waitlisted couples don't improve on their own (https://pubmed.ncbi.nlm.nih.gov/32551734); fewer than 10% of divorcing couples ever see a professional (https://www.gottman.com/blog/debunking-12-myths-about-relationships/).
 
-### Written routes to find a therapist (searchable online)
-- AAMFT TherapistLocator (licensed marriage and family therapists; over 15,000 listed): https://aamft.org/findatherapist
+### How to find and vet a couples therapist (only when asked; a task-time search)
+Search the licensed-therapist directories and the method-specific directories:
+- AAMFT TherapistLocator (licensed marriage and family therapists): https://aamft.org/findatherapist
 - Psychology Today directory, filter family/marital, look for LMFT: https://therapists.psychologytoday.com/family-marital (linked from the AAMFT page)
 - Gottman-trained (Gottman Referral Network, gottman.com) and EFT-trained (ICEEFT directory, iceeft.com) directories exist; not opened during research (see Gaps).
-- Many practices offer online booking or contact forms. If a practice seems phone-only, say so and look for one with a web form or email.
+Criteria, in order:
+1. Licensed for independent practice in the client's state, verified on the state licensing board's lookup
+   (status, public discipline), not the directory badge.
+2. Couples-specific training confirmed on the method's own directory.
+3. Fit for the household's particular strain.
+4. A written intake route (online booking, form, email), with telehealth licensure in the client's state
+   if remote.
+5. Cost, with the cheaper alternative, to the decision-maker.
+Confirm accepting new clients, fee, insurance and format at task time and date it. If a practice looks
+phone-only, say so and move to one with a written route.
 
 ## 4. Privacy
 Relationship troubles, safety concerns and referrals are private. Share them only with authorized recipients through a safe, private channel. Do not copy them into shared records, general task trackers or persistent memory.

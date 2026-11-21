@@ -65,6 +65,19 @@ Illustration (arithmetic, 5.7 sq ft case): a 24 in clear height needs about 34.2
 | Any area finishing under 7 ft | Ask the building department before designing it as habitable (judgment) | - |
 (2021 text; confirm the 2024 R313 wording with the AHJ.)
 
+## Existing buildings (2024 IRC model text; check the local adoption and amendments)
+- **Ceiling height:** habitable space created in an existing basement needs at least 6 ft 8 in;
+  bathrooms, toilet rooms and laundry rooms at least 6 ft 4 in (R313.1.2).
+- **Egress:** new sleeping rooms created in an existing basement need an emergency escape and rescue
+  opening per R319.1; other basement alterations or repairs do not (R319.7; existing-window exception
+  R319.7.1).
+- **Insulation:** below-grade walls that become conditioned, or that enclose conditioned space and are
+  altered, must be insulated per N1102.1 for the climate zone (N1111.1.1.5).
+- Local handouts often print new-construction or older-edition values: design to the adopted code text,
+  check amendments, and get the building department's written agreement before relying on an
+  existing-building exception.
+Source: ICC public-access 2024 IRC, chapters 3 and 11 (codes.iccsafe.org), checked November 2026.
+
 ## Minimum room size
 Habitable rooms (incl. bedrooms) >= 70 sq ft and no horizontal dimension under 7 ft (2021 R304 /
 2024 R312) [S20].

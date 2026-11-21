@@ -2,7 +2,7 @@
 name: multi-model-drafting
 description: Use when drafting prose with several models. Fan out, merge.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -79,8 +79,25 @@ Use only where the project opts in for review fixes; otherwise one careful pass 
   uncontested "winner" is just the tiebreak and says nothing about the drafters.
 - When separately judged passages depend on each other (a detail planted in one and paid off in another),
   fix the shared content in the brief, so picks taken from different drafts still join up.
+- Copy the reviewer's keep list (lines that must survive) into every unit brief word for word. A keep
+  softened to "may stay" lets the winning draft drop it, and restoring it costs another full round.
 - Keep the shuffle key hidden from the judges until the picks are applied (see "Read blind" and
   "Measuring a drafter set").
+
+## Auditing a multi-model pass
+
+When you review work that claims it went through draft-and-judge:
+
+- Match every changed passage to an actual anonymous draft unit, not to the run's aggregate tally, and check
+  the selected text against the committed change. A fix applied before the blind round (even a number-only
+  correction) has not been through it.
+- Recompute rankings and ties across every candidate before reading the shuffle key: the judges' first
+  choices alone can hide a third tied candidate. Confirm the recorded winner, and judge the winning text
+  yourself.
+- Exact ties in rank sum and score are recorded as ties, with the direction the fixed tiebreak fell,
+  especially when it favours the coordinator's own model family.
+- Identical drafts prove there was no textual choice, not that the judges ran. Check every unit, follow-up
+  rounds included, against the judge records, and report any unit that skipped judging.
 
 ## Measuring a drafter set
 

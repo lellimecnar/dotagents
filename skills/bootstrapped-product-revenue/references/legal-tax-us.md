@@ -47,15 +47,21 @@ IRS page for the tax year in question and state the year in the answer.
 | Form 1099-K | Platforms report payments above a threshold that has changed repeatedly, and may send one for less. All business income must be reported regardless | IRS 1099-K FAQ [1099K] |
 | SE tax filing threshold | Minimum net earnings that require Schedule SE | Schedule SE instructions |
 
+## How to look up any tax figure
+1. Name the tax year.
+2. Open the tax agency page and, for exact figures, that year's form instructions or publication.
+3. Quote the figure with the form or page name and "checked on YYYY-MM-DD".
+4. If that year is not yet published, say so and label the prior-year figure as prior year.
+5. Anything that turns on the owner's own numbers goes to a CPA/EA with the facts.
+
 ## Hobby vs business [HOB]
 IRS factors include: businesslike manner with complete books; time and effort showing intent to profit; dependence on the income; changing methods to improve profitability; losses normal for the startup phase. "No one factor is more important than another." The page is marked archival; confirm current rules with a professional. Practical step: keep books from the first dollar.
 
 ## Sales tax [STAX]
 Use [STAX] for orientation and verify current SaaS taxability in each jurisdiction at issue. Before collecting meaningful revenue across states, ask a tax professional about registration duties.
 
-## Free help
-- SCORE mentoring is free for any aspiring or established owner of a U.S.-based business, "for the life of your business"; matching is online by ZIP code and messages can be sent through the site [SCORE].
-- SBA lists resource partners (SBDCs, Women's Business Centers, VBOCs) with free to low-cost counseling [SBA].
+## Outside help (check at task time)
+- Volunteer mentoring (e.g. SCORE [SCORE]) and SBA resource partners (SBDCs, Women's Business Centers, VBOCs [SBA]): before recommending one, confirm on its own site that it still operates, who qualifies, current services and any fees, and a written intake route; state the date checked. Do not call it free until that check says so.
 
 ## First-revenue checklist (to hand to the owner; each item is theirs to decide)
 1. Keep a simple ledger from the first payment (date, customer, amount, fees, expenses, receipts).

@@ -44,7 +44,18 @@ prose) that the owner must rule on.
 
 ## Pitfalls
 - When the owner gives a principle instead of picking an option, turn it into concrete proposed facts and
-  ask a yes/no question on those facts before changing canon.
+  ask a yes/no question on those facts before changing canon. Log the general rule they gave, not a
+  one-line patch, so later items it covers need no new ruling.
+- **Design ideas need a proposal first.** When the owner floats a scheme instead of ruling, get a proposal
+  from the responsible reviewer: every affected item with quoted lines, the variant that breaks the fewest
+  lines, the lines that would still conflict and their fixes, and the canon corrections needed. Bring it as
+  a yes/no before logging anything.
+- **Conditional rulings.** A ruling that depends on an open check is logged "subject to <task>". Update the
+  row when the check answers, and tell the owner only if the fix changes.
+- **Re-present, don't re-explain.** If the owner says an item does not make sense, resend it as the quoted
+  scene in order (setup, problem line, what follows), then the options.
+- **Mark unchecked claims.** Say which claims (canon notes, counts, glosses) come from the verifier and were
+  not checked by you.
 - Canon tables cite line numbers that may point at the wrong character's line. Re-read the cited line
   before trusting a canon row as evidence.
 - **Apply the manuscript’s continuity rules.** Determine whether a referenced event must be shown
@@ -65,6 +76,9 @@ prose) that the owner must rule on.
 - **Pause affected work.** If a ruling changes active work, use the agreed hold or notification
   mechanism. Tell the responsible party what to pause and point to the new decision. Confirm the hold was received.
   If affected work has already landed, assess what must be corrected or reverted.
+- **Steer running work by comment.** Post each new ruling on any running verification or fix task it
+  narrows. When reviewing one part of a split fix, copy what you learned onto the parts still queued
+  before they start.
 - **Keep status updates brief.** While decisions are pending, report only what has changed rather
   than restating every open item. If verification is interrupted, preserve completed checks and arrange an authorized
   handoff or a smaller next batch for the unchecked items.

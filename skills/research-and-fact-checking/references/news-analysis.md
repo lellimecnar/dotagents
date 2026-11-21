@@ -25,6 +25,8 @@ story:
   time frames.
 
 ## Anonymous sources (AP standard)
+Read the wire service's current news-values page for its attribution and anonymous-source rules before
+applying them; the three tests below are its 2024 wording.
 AP uses anonymous material only if: (1) it is information, not opinion or speculation, and vital to the
 report; (2) it is not available except under anonymity; (3) the source is reliable and in a position to
 have direct knowledge. AP routinely requires more than one source, must say why anonymity was granted, and
@@ -34,6 +36,8 @@ In briefs: say "rests on unnamed sources" whenever a claim does, note whether an
 independently, and never present unnamed-source opinion as fact.
 
 ## Media bias and reliability ratings: uses and limits
+Raters revise their methods: read each rater's current methodology page before describing it; the method
+details below are as published at time of writing.
 - AllSides rates political lean only, in five buckets, using blind bias surveys and multipartisan
   editorial reviews; panels of six to nine reviewers assign -6 to +6. [3][4]
 - Ad Fontes rates both bias and reliability, each article by at least three analysts with balanced

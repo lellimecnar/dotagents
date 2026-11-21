@@ -1,6 +1,7 @@
 # Nutrition targets reference
 
-## Which guidance is current (checked November 2026)
+## Which guidance is current
+**Lookup rule:** before naming a guideline edition, a food icon or any amount below, open the issuing agencies' current dietary-guidelines page and confirm the edition in force; date the check. Everything in this file is a dated illustration (at time of writing, checked November 2026), not a standing fact.
 - The **Dietary Guidelines for Americans, 2025–2030** were released January 7, 2026 by HHS and USDA, with the message "eat real food" (USDA press release, https://www.usda.gov/about-usda/news/press-releases/2026/01/07/kennedy-rollins-unveil-historic-reset-us-nutrition-policy-put-real-food-back-center-health ; document: https://cdn.realfood.gov/DGA.pdf, accessible version https://cdn.realfood.gov/DGA_508.pdf).
 - **MyPlate was retired** as the federal icon in 2026 and replaced by "The New Pyramid"; MyPlate.gov redirects to RealFood.gov and the MyPlate Plan calculator was not rebuilt (Roth & Serrano, J Nutr Educ Behav 2026, https://jneb.org/article/S1499-4046(26)00466-5/fulltext). USDA's Team Nutrition still uses MyPlate materials for school meals (same source).
 - **How I use them:** amounts and limits come from the DGA 2025–2030 only. The DGA 2025–2030 gives food-group serving goals and the New Pyramid; it does not contain a plate-proportion visual, so I do not use or cite a plate split (the old MyPlate half/quarter/quarter picture) as current guidance.
@@ -37,13 +38,13 @@ Source: https://cdn.realfood.gov/DGA.pdf
 - **Decision:** the trainer owns the individual's number. I check that the brief's per-meal amount is achievable with family food and say so if not.
 
 ## Portion arithmetic
-About 7 g protein each (Academy of Nutrition and Dietetics, https://eatright.org/health/essential-nutrients/protein/how-much-protein-should-i-eat): 1 oz cooked meat, poultry or fish; ½ cup cooked beans or lentils; 1 egg; 2 Tbsp nut or seed butter; 1 oz nuts or seeds; ¼ cup (2 oz) tofu. A deck-of-cards-sized piece of meat, a small chicken breast or a drained can of tuna is about 3 oz, about 21 g protein. Use labels or USDA FoodData Central (https://fdc.nal.usda.gov/) for exact figures.
+Rough family estimate only, about 7 g protein each (Academy of Nutrition and Dietetics, https://eatright.org/health/essential-nutrients/protein/how-much-protein-should-i-eat): 1 oz cooked meat, poultry or fish; ½ cup cooked beans or lentils; 1 egg; 2 Tbsp nut or seed butter; 1 oz nuts or seeds; ¼ cup (2 oz) tofu. A deck-of-cards-sized piece of meat, a small chicken breast or a drained can of tuna is about 3 oz, about 21 g protein. This shortcut under-counts lean poultry and fish, so never use it for target work: size portions from the food's label or a food-composition database (e.g. USDA FoodData Central, https://fdc.nal.usda.gov/) for the cooked form actually served, counting cooking fat.
 
 ## Worksheet: folding a Nutrition targets brief into the family plan
 1. Read the brief: daily energy, protein (g), any per-meal split, foods to favour or limit, deadline or review date. Note who wrote it and when.
 2. Check it against hard constraints (allergies, prescribed textures, medical diets). Conflict? Send back; do not plan around it silently.
 3. Per-meal protein = brief's split, or daily target / number of meals.
-4. For each dinner on the plan, write that person's plate: protein portion in oz (target g / 7), sides adjusted (vegetable for starch, or extra starch, dairy or fat), and any table add-on.
+4. For each dinner on the plan, write that person's plate: protein portion in oz (target g ÷ protein per cooked oz from the label or database entry for that food), sides adjusted (vegetable for starch, or extra starch, dairy or fat), and any table add-on.
 5. Add the extra protein to the family batch quantity on the grocery list.
 6. Breakfast and lunch: suggest two or three repeatable options that reach the per-meal number (eggs, Greek yogurt, cottage cheese, leftovers).
 7. Report: what changed for that person, what stayed the same for the family, and anything the trainer should revisit.

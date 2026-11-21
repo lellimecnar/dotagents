@@ -2,7 +2,7 @@
 name: exercise-coaching
 description: Use when coaching exercise or setting nutrition targets.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -10,6 +10,8 @@ metadata:
 # Exercise coaching
 
 Expert method for exercise programming and coaching for adults at beginner to intermediate levels, adapted to their schedules. This skill supplies the method and decision rules. Use reputable reference sources or calculators when useful; no companion skill is required. Every number here is sourced in `references/` (source list: `references/sources.md`).
+
+**Volatile facts are looked up, never recalled:** screening-form editions, activity and dietary guideline editions, crisis-line channels, online tools, game settings and device-accuracy claims. State the edition and the date checked; edition-labelled numbers are illustrations.
 
 ## When to use
 Any task that asks for a workout, routine, exercise advice, progress review, recovery/sleep-and-exercise question, or nutrition targets tied to training or body composition.
@@ -20,7 +22,7 @@ Any task that asks for a workout, routine, exercise advice, progress review, rec
 - Check for **emergency signs first**: chest pain/pressure, pain spreading to arm/jaw/neck/back, unusual breathlessness, fainting, cold sweat, irregular heartbeat during or after exercise → stop exercise, tell the person to call emergency services now. Do not coach through it.
 - Ask the person to complete the current official **PAR-Q+** self-screen at https://eparmedx.com/print-versions-of-par-q. All "no" → may start light-to-moderate and build gradually. Any "yes" → the person follows the current form's instructions, using ePARmed-X+ or consulting a clinician or qualified exercise professional as indicated. You never interpret a medical condition yourself.
 - Apply the **ACSM 2015 logic** for intensity: (a) currently active? (b) known cardiovascular/metabolic/renal disease or symptoms? (c) desired intensity. Inactive + healthy + no symptoms → light-to-moderate without clearance. Inactive with known disease (no symptoms) or any symptoms → medical clearance before starting. Active with any signs/symptoms → stop exercising and get medical clearance before resuming at ANY intensity. Active, no symptoms, known stable disease → may continue light-to-moderate; clearance before vigorous (ACSM/Riebe 2015, https://pubmed.ncbi.nlm.nih.gov/26473759/).
-- Re-screen when health changes, after illness, and yearly (PAR-Q+ clearance lasts 12 months).
+- Re-screen when health changes, after illness, and at the validity or clearance interval the current PAR-Q+ edition states (check it at task time).
 
 ### 2. Find the real gaps
 Ask the person about their fixed commitments, energy patterns and existing habits. Use calendar or note details only if the person provides them or explicitly authorizes access; do not guess. Build on what they already do (an active game, a walk, a sport) rather than replacing it. A plan that needs a slot that does not exist is a wrong plan.
@@ -57,7 +59,7 @@ One page: the week at a glance, first action, the three cues per exercise, the f
 | Chest pain/pressure, fainting, severe breathlessness, signs of heart attack or stroke (face drooping, arm weakness, speech difficulty, sudden numbness/confusion/vision loss/severe headache) | Stop. Emergency services now (`references/screening-and-red-flags.md` §1). |
 | Any PAR-Q+ initial "yes" | Person completes the follow-up specified by the current official form, using ePARmed-X+ as indicated. Follow-ups all "no" → start low-to-moderate and build gradually. Any follow-up "yes" → further advice from a clinician/qualified exercise professional before becoming more active. |
 | Known heart/metabolic/kidney disease, new or any symptoms, pregnancy | Apply the ACSM branches in Method step 1: symptoms → stop and get clearance before any intensity; known disease without symptoms → clearance before vigorous (before starting if inactive); pregnancy → clinician or ePARmed-X+. |
-| Pain that is sharp, joint-based, worsens through a session or persists for days, numbness/tingling [coaching practice] | Stop that exercise; physical therapist or physician. |
+| Pain that is sharp, joint-based, worsens through a session or persists for days, swelling, numbness/tingling [coaching practice] | Stop that exercise; pain-free substitution only; physical therapist or physician. |
 | Excessive daytime sleepiness, drowsy driving, CPAP intolerance | Sleep clinician; no driving while drowsy. |
 | Disordered eating signs, very-low-calorie plans, medications affecting appetite/weight, diabetes | Physician/registered dietitian; you stay at general targets. |
 | Low mood, hopelessness | Encourage contact with their clinician; crisis line if at risk (988 in the US, https://988lifeline.org). |
@@ -71,6 +73,10 @@ You coach healthy-adult exercise. You do not diagnose, treat injury, change medi
 - Progressing on a calendar instead of on performance and form; adding several variables at once.
 - Long lists and choice menus for someone with ADHD; no first action; no floor version.
 - Vigorous training right before bed; ignoring sleepiness.
+- Restarting at full load after a break, or training hard through illness or a run of short nights.
+- Reacting to one day of wearable data, using device calories or readiness scores as inputs, or reading a value medically.
+- Treating a missing wearable data type as a signal; check which types the source returns and its latest data date first.
+- Changing a plan without naming the rule behind the change.
 - Giving menus instead of targets; putting health numbers in shared documents.
 - Citing numbers from memory. Use `references/`; if a figure is not there, research and add it with a URL.
 

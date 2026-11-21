@@ -2,7 +2,7 @@
 name: research-and-fact-checking
 description: Use for research, fact-checks or news briefs. Expert method.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -112,6 +112,7 @@ sources: references/referral-and-safety.md (routes table). Stop and say so plain
 - Reporting a relative risk without the baseline, or a survival rate as proof screening works.
 - Trusting a 4.6-star average from 40 reviews; ignoring review dates and incentives.
 - Quoting an incentive, price or rule from an undated or stale page (agency fact sheets lag the law).
+- Quoting an organisation's policy, methodology or handbook threshold from this skill instead of its current page.
 - Using a bias chart as a fact-check; calling a disputed story "fake news".
 - Stating confidence without saying what drives it or what would change it.
 - Search snippets cited as if the page was read. Fetch the page.

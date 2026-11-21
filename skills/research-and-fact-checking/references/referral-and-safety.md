@@ -10,7 +10,7 @@ evidence summary, then the route. Offer a safe, supported channel; in emergencie
 | Emotional crisis, suicidal thoughts, substance crisis, worry about someone | 988 Suicide & Crisis Lifeline: call, text or chat at 988lifeline.org, 24/7, free, confidential | 988 Lifeline [2] |
 | Possible poisoning, person awake with no life-threatening symptoms | webPOISONCONTROL online triage (web or app); it says when a poison centre or ER is needed | Poison Control [3] |
 | Collapse, seizure, trouble breathing, can't be woken after exposure | 911 immediately | Poison Control [3] |
-| Poisoning in a child under 6 months, adult over 79, pregnancy, self-harm, multiple substances, pets | Poison centre by phone (1-800-222-1222, US) — online tool does not cover these | Poison Control [3] |
+| Poisoning in a child under 6 months, adult over 79, pregnancy, self-harm, multiple substances, pets | Poison centre by phone (1-800-222-1222, US); these were the groups the online tool excluded when checked: confirm the current exclusions on its help page | Poison Control [3] |
 
 ## Licensed-professional triggers
 Stop at the evidence summary and name the professional when the question needs:

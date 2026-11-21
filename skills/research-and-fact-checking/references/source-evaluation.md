@@ -45,7 +45,7 @@ that a dot-org domain makes a site trustworthy. [3]
 - Independent means a separate origin, not a separate URL. Syndicated copies and articles rewriting one
   press release count once.
 - When sources disagree, present both with citations and say which you weight and why.
-- AP's own bar for anonymous material: more than one source is routinely required; a single source only
+- AP's own bar for anonymous material (its 2024 wording; check the current news-values page): more than one source is routinely required; a single source only
   when an authoritative figure gives detail "so detailed that there is no question of its accuracy." [4]
 
 ## What good fact-checkers disclose (IFCN Code of Principles)
@@ -54,7 +54,8 @@ my own reports: [5]
 1. Non-partisanship and fairness: same standard for every claim regardless of who made it; selection not
    concentrated on one side; disclose sources' interests.
 2. Standards and transparency of sources: enough detail that readers can replicate the work.
-3. Transparency of funding and organisation (signatories list funders of 5% or more of revenue). [6]
+3. Transparency of funding and organisation (signatories list major funders; the funding-share threshold
+   was 5% of revenue in the June 2025 code: check the current code before quoting it). [6]
 4. Standards and transparency of methodology: set out evidence that supports the claim and evidence that
    undermines it; apply the same standard to equivalent claims.
 5. Open and honest corrections policy: correct visibly so readers see the corrected version.

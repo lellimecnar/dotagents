@@ -18,6 +18,9 @@ Starting points and moves:
   residual confounding that would oppose the effect. RCTs are typically not upgraded. Evidence already
   rated down is usually not rated back up. [3]
 - Certainty cannot fall below very low however many problems there are. [4]
+- Lookup rule: before quoting the Cochrane Handbook numeric details below (large-effect thresholds, optimal
+  information size, Summary-of-Findings outcome limit), open the current chapter and date the check; the
+  figures here are illustrations from v6.5 (2024).
 - Cochrane's large-effect thresholds: report whether the relative effect is >2 or >5. [1]
 - Imprecision: Cochrane mentions a rule of thumb of about 400 events as an optimal information size, and
   says to check whether the confidence interval includes both little/no effect and important benefit or

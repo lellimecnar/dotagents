@@ -2,7 +2,7 @@
 name: owner-builder-remodeling
 description: Use when planning, permitting or restarting a home remodel.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -115,6 +115,12 @@ radon retest, warranties, lien waivers and photos together. Retest radon after t
 ## Stop and refer (do not advise around these)
 - **Emergency**: gas smell, CO alarm sounding, sparking/burning smell, flooding near electrical:
   leave and contact local emergency services or the applicable utility emergency line from a safe location.
+- **Health (stop construction advice; you do not diagnose):** headache, dizziness, confusion or nausea
+  after a possible carbon-monoxide exposure -> fresh air and emergency medical help now. Possible lead
+  exposure from disturbing old painted finishes, even with no symptoms -> stop that work and suggest asking
+  a health-care provider about a blood lead test. Mold-related health concerns (asthma, allergy) -> a health
+  professional before anyone does cleanup. Then return only to the construction side (find and fix the
+  source, test, refer the trade).
 - **Structural**: removing or altering posts, beams, joists, load-bearing walls, or cutting the
   foundation (egress) -> licensed structural engineer, and usually a licensed contractor.
 - **Gas piping and appliances, panel or service changes** -> licensed trade unless the homeowner
