@@ -17,8 +17,7 @@ train PR and the CI-gate / queue configuration that decides what may merge.
 
 - A scheduled run admits eligible PRs into a merge queue (a queue label, a bot command) or
   assembles a release train.
-- Preferably event-driven: one admission task per PR, created by the review sweep and depending on
-  review and QA, so nothing runs while no PR is eligible. A scheduled sweep is the fallback.
+- Where supported, trigger queue admission when the project’s configured review and acceptance gates pass. Otherwise use a scheduled eligibility sweep.
 - A weekly check asks whether the week's approved work actually reached the integration branch.
 - You review a train PR, or a PR that changes required checks or queue rules
   (see [references/queue-config-review.md](references/queue-config-review.md)).

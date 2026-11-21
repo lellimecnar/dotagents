@@ -38,5 +38,5 @@ then give the reader the surface that implies it.
 - A gesture that interrupts a speech works only if left unexplained.
 - Withheld truth: a character visibly swallowing a sentence keeps the reader in on it and the listener out.
 - Humour as deflection belongs right after a disaster or decision.
-- Restrained characters show feeling through gesture and non-verbal signals, never by naming it.
+- For a restrained character, consider whether gesture, silence or action serves the moment better than explicit dialogue. Follow any established voice rule.
 

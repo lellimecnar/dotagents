@@ -119,15 +119,11 @@ requires it) without double work:
 - Skip PRs another lane owns (bot dependency PRs usually belong to the dependency steward) and PRs
   that already have a review in flight or an agent review at the current head.
 - Assign the reviewer from the *other* model family than the author: cross-model review catches
-  what same-model review misses. Find the author from the delivery task's assignee, else from commit
-  authorship, then read the author's and each candidate reviewer's configured model at task time.
-  Never infer a model from an agent's name or a remembered roster; both drift. Record the agents, their
-  model settings and the date checked in the review task. Never review your own family's work if the
-  profile forbids it.
+  what same-model review misses. Identify authorship from the project’s trusted records. If reviewer independence is required, verify it through authorized configuration or attestation.
+  Never infer a model from an agent's name or a remembered roster; both drift. Record the eligibility result and date in the authorized review record, without unnecessary identifiers. Follow the project’s independence policy.
 - Create review and QA tasks idempotently (a key that includes the date and PR number), with QA
   depending on the review so it starts only after.
-- When merges go through a queue owned by another agent, also create its admission task idempotently,
-  depending on the QA task, so the queue steward wakes only when a PR becomes eligible.
+- If a separate queue steward exists, use the configured handoff when required gates pass and avoid duplicate admissions.
 - Cap rounds: after the third change request on the same PR, escalate the disagreement to the owner
   as one decidable sentence rather than starting round four.
 - End with one line: nothing to review, or the list of queued reviews.
@@ -138,8 +134,7 @@ requires it) without double work:
   checker with its real exit code, and poll a summary file. A pipe through `tail` hides the exit
   status.
 - A small or `noexec` temp dir breaks tests that put stub binaries in `mktemp -d`, and native Node
-  bindings (bundlers, test runners) fail to load from it. Check with `findmnt -no OPTIONS -T <dir>` and
-  re-run from an exec-capable temp dir on a real disk before blaming the PR.
+  bindings (bundlers, test runners) fail to load from it. Check permissions, mount options and available space with the platform’s supported diagnostics; rerun in an authorized temporary location that meets the test’s requirements.
 - If a frozen-lockfile install (`npm ci`, `uv sync --frozen`) fails, record the lockfile drift as a
   reproducibility finding. A non-frozen install in a throwaway worktree may continue the review; never
   commit the rewritten lockfile as part of the review.

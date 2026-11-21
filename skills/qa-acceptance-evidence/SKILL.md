@@ -65,12 +65,12 @@ Gaps found before build are cheap. For each UI story or spec, confirm each item;
 one exact question for the owner, never a gap filled with your own preference.
 - **States:** empty, loading, error, overflow and long text, disabled, every supported theme, reduced motion.
 - **Terms:** each UI concept is used as the project glossary defines it; a retired or undefined term is a gap.
-- **Visual reference:** an approved story or render is named. "Match the old UI" is not a reference.
+- **Visual reference:** name an approved, identifiable design artifact, prototype or running example. An unspecified old UI is not a reference.
 - **Keyboard and screen reader:** keys, focus order, focus return, accessible names and live
   announcements are stated (`web-accessibility-check`).
 - **Reuse:** names the existing component it extends, or justifies a new one; no app-level twin of a
   design-system component. If a component already does this job, the spec says whether its behaviour is kept.
-- **Acceptance criteria:** each can be verified in a browser through a named story or flow.
+- **Acceptance criteria:** each is observable in the target interface through a named scenario or flow.
 - **Scope:** deferred items are named as owed, with an owner, not silently dropped.
 
 ## Test-design rules
