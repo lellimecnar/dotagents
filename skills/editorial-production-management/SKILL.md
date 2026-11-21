@@ -2,7 +2,7 @@
 name: editorial-production-management
 description: Use when planning a book's editing/publishing pipeline. Stages, gates, routes.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---

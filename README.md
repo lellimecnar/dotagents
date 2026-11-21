@@ -116,7 +116,24 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `person-profile-seeding` | building or refreshing a person's notes from their read-only accounts |
 | `smart-home-request-handling` | relaying or doing a request to read or change smart-home devices |
 
-### Lance-facing (1)
+### Household specialists (5)
+
+| Skill | Use when |
+| --- | --- |
+| `accessible-family-trips` | planning family outings or trips. Access and budget gates |
+| `exercise-coaching` | coaching exercise or setting nutrition targets |
+| `family-meal-planning` | planning family meals, groceries or food safety |
+| `owner-builder-remodeling` | planning, permitting or restarting a home remodel |
+| `relationship-kindness-coaching` | coaching kindness, repair or dates. Not therapy |
+
+### Research & business (2)
+
+| Skill | Use when |
+| --- | --- |
+| `bootstrapped-product-revenue` | advising a solo founder on revenue. First payers |
+| `research-and-fact-checking` | research, fact-checks or news briefs. Expert method |
+
+### Communication styles (1)
 
 | Skill | Use when |
 | --- | --- |

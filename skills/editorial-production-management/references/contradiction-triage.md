@@ -18,14 +18,25 @@ prose) that the owner must rule on.
    - Look for the real problem behind the item. The surface item may be "who has the injury" while the
      real problem is that the injury is never shown happening; "the memory has no setup" may really be
      "the memory refers to a later chapter".
-4. **Present exactly 3 items per message.** For each: the cited lines, options A/B(/C) with the edit count
-   each needs, and one option marked "(my pick)". The owner answers like "1B, 2A".
+   - Have the authorized subject reviewer verify each issue before escalation. Keep batches within the reviewer’s demonstrated capacity.
+   - Give verifiers relevant prior rulings. Check apparent contradictions against chronology, wording, context and the governing canon.
+   - Route issues by subject and local decision authority. Verify evidence before escalation. Record out-of-scope items separately.
+4. **Present a manageable batch in the decision-maker’s preferred format.** For each: the actual prose quoted verbatim with
+   chapter:line (never a paraphrase alone; the owner should not have to go searching), a plain
+   explanation of what the text says and why it may be wrong, then options A/B(/C) with the edit count
+   each needs and one option marked "(my pick)". When a figurative or derived reading exists, include a
+   "not a contradiction" option. Ask for an unambiguous decision on each numbered item.
 5. **Each time they rule:** log the ruling and any standing rule; fix canon and doc files now (mark the item
    RESOLVED in any dossier, pointing to the log); save standing rules where the team's memory and
    guardrails live; commit and push to the shared branch.
 6. **Prose stays frozen until every item is ruled.** Later rulings can change earlier ones. Collect prose
    fixes in the log's "deferred prose fix" column and route them to the author as one pass at the end,
    reviewed by the editor.
+7. **Before any prose edit:** record the complete before/after text in manuscript order and obtain explicit approval from the designated decision-maker
+   for the prose pass. If approval is withdrawn, stop and use the project’s authorized rollback process for any changes already applied.
+8. **Reviewing canon/doc fixes:** grep by topic and by every rejected value (not only the stale phrase),
+   confirm no manuscript file changed, confirm every affected canon record reflects the applicable ruling, and find every quote a canon row cites verbatim in the
+   manuscript.
 
 ## Pitfalls
 - When the owner gives a principle instead of picking an option, turn it into concrete proposed facts and

@@ -2,7 +2,7 @@
 name: story-continuity-audit
 description: Use when checking story canon/continuity against prose. Cited ledgers.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -119,6 +119,10 @@ labels usually signal an old split or renumber: report the whole range together.
 - **Intent-blind repair:** a discrepancy may be a deliberate false belief or delayed reveal. Query.
 - **Unbounded prose fix:** state the factual target and hand it to the author.
 - **One clean grep as proof of repair:** stale canon survives as paraphrase in sheets and tables.
+- **Fitting the past to a later mention:** a later line treats an event as done (an injury, a repair)
+  but no scene shows it. Moving the event to another character or deleting it so the later line fits
+  is not a fix; trace every later-mentioned wound or completed act back to the scene where it happens,
+  and if the page shows it only started, later lines must not claim it finished.
 
 ## Implementing requested repairs (only when asked)
 

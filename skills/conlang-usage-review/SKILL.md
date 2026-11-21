@@ -2,7 +2,7 @@
 name: conlang-usage-review
 description: Use when reviewing invented-language use in fiction. Form, meaning, gating.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -55,8 +55,10 @@ the project forbids.
 ### 3. Attestation and meaning
 
 Search the curated vocabulary, nested vocabularies, grammar, examples, culture and character files.
-Verify lemma, sense, semantic role, register, taboo status and who may say it. Unexplained homonyms are
-ambiguity, not permission. **Gate:** every form attested or transparently derivable from attested
+Verify lemma, sense, semantic role, register, taboo status and who may say it. Ordinary homophony and
+synonymy are not contradictions (natural languages have both): report a collision only when the
+forms clash in grammar, meaning, usage or explicit canon; otherwise note an unexplained homonym as a
+`QUERY`, and follow the project's own ruling where it has one. **Gate:** every form attested or transparently derivable from attested
 productive rules; otherwise mark `UNATTESTED` and do not guess its intended meaning.
 
 ### 4. Orthography, phonology, phonotactics
