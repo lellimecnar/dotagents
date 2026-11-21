@@ -143,11 +143,9 @@ lead with yes or no. Do not lecture about ADHD or list principles.
 - Same-kind marathons; hard work in the post-lunch dip; back-to-back high-load boxes.
 - Hiding drops instead of listing them with reasons.
 - Editing events the planner did not create, or that the person edited (treat those as locked).
-- Guessing a lock list sent as a file path in another agent's workspace (the planner usually
-  cannot read it): treat every existing box as possibly locked, draft the default plan plus a
-  fallback for each moved box, tell the requester to apply the variant matching its list, and ask
-  for locks inline next time. A box only on the person's own calendar, with no invite from the
-  planner's calendar, is a likely personal edit.
+- If lock information is missing or inaccessible, treat existing events as potentially locked.
+  Offer a conditional plan without moving them and request a minimal lock list through an approved channel.
+  Use explicit event ownership and lock metadata when available; leave events untouched if provenance is unclear.
 - Defining calendar mechanics (naming, colors, checkbox syntax) in this skill instead of the
   household's conventions doc; if that doc is missing, stop before writing and report it.
 - Over-trusting chronotype or decision-fatigue science; personal history beats both.

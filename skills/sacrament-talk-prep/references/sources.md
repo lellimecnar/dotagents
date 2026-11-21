@@ -30,6 +30,5 @@ AI and talks (why this skill coaches instead of ghostwriting)
 
 Research tools
 - Gospel Library: scriptures, general conference, manuals, Gospel Topics (Church's topic list for speakers).
-- Open Scripture API MCP (`mcp_scriptures_*`): verse text, conference search and talks, footnote cross-references,
-  Topical Guide/Bible Dictionary, Come, Follow Me lessons.
+- Optional: use an available scripture-search integration for discovery; verify verses, cross-references, talks and curriculum against authoritative publications.
 - BYU Scripture Citation Index (scriptures.byu.edu): which conference talks cite a given verse.

@@ -84,9 +84,8 @@ bill unpaid: match each failure against later transfers and label portal status 
 checked. When the account holder confirms a same-day payment that has not posted, treat it as paid
 for the working plan, label the connector as lagging, refresh, and recompute every affected total.
 
-**Designing rules that keep bills funded** (`references/sequence-bill-funding-rules.md`, worked on
-Sequence; the pattern carries to any rules-based money router): use the tool's built-in
-incoming-funds, scheduled, ordered Top Up and capped liability-payment mechanisms instead of an
+**Designing rules that keep bills funded** (`references/sequence-bill-funding-rules.md`): use the configured platform’s supported
+incoming-funds triggers, scheduled target-based transfers and capped payment mechanisms, where supported, instead of an
 external scheduler. Verify statements before turning posting dates into rule dates, audit existing
 rules for conflicts, separate catch-up from steady state, and prove inflow covers every staged
 target on time before saying the rules "ensure" funding. Propose only; never create or enable.

@@ -7,8 +7,7 @@ paragraph. Inline numbers [1] map to a numbered Sources list.
 - Gospel Library pages accept a paragraph anchor: append `&id=p<N>#p<N>` (or `?id=p<N>#p<N>` when there is no query
   string) using the paragraph id seen on the fetched page. Scripture verses use the verse number as `p<N>`.
   Open the anchored link once to confirm it lands on the quoted text.
-- Take `#pN` anchors from the live Gospel Library page, never from `mcp_scriptures_*` paragraph numbers: the
-  API counts paragraphs differently (offsets of 2 seen on conference talks).
+- Use the verified paragraph anchor from the official Gospel Library page. Retrieval tools may count headings and paragraphs differently.
 - Keep `lang=eng` unless the requester reads another language.
 - Reading Gospel Library in the browser: verses are `.body-block p.verse` (id `p<verse>`); talks, manuals and the
   Handbook are `.body-block p` (and `h2` for headings). Talks from about 2025 on use ids like `p_v31Vo`; cite those

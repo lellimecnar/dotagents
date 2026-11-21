@@ -16,28 +16,23 @@ it). This matches apostolic counsel on AI and talks: research and critique yes, 
 (`references/sources.md`).
 
 ## The talk notebook (track the discussion)
-- At the first message about a talk, create `talks/<meeting-date or YYYY-MM-DD>-<topic-slug>.md` in the agent's own workspace from
-  `templates/talk-notebook.md`. If one exists for this talk, read it first and continue it; say so in one line.
+- Start a notebook from `templates/talk-notebook.md` only in an approved private location. If one exists for this talk, read it first and continue it; say so in one line.
 - After every exchange that produces something, update it before you reply: assignment details, the core message
   as it evolves, the speaker's ideas (their words, short), ideas you offered and whether they kept, parked or
   dropped them, sources found (verified, cited), stories and experiences they mentioned (a few words each), open
   questions. Record decisions, not transcripts.
-- The notebook is the memory between sessions. Never put the speaker's personal stories in long-term memory; the
-  notebook stays in your workspace. Retain only reusable research (a verified quote and its link).
+- Keep only notes the speaker authorizes, in approved private storage. Do not put personal stories in shared records or general-purpose memory. Retain reusable research separately (a verified quote and its link).
 
 ## How to discuss
 - **Start** by getting the assignment: topic exactly as given, optional conference talk, minutes, date, and who
-  is speaking. Ask only what is missing, as plain chat text the speaker answers in their own time. Do not use the
-  clarify form for this: it times out before anyone can answer several open-ended questions, which frustrates the
-  speaker. Then ask what is already on their mind.
+  is speaking. Ask only what is missing, using a format that lets the speaker answer open-ended questions at their own pace. Then ask what is already on their mind.
 - **Frame early, loosely.** Offer a candidate one-sentence message that connects the topic explicitly to Jesus
   Christ (General Handbook 29.2.1.1, 29.2.1.4), and say it is a draft to react to.
 - **Ideas**: offer 2-4 at a time, each one line, each with its source (a scripture, a talk, a story) or labelled
   as your own suggestion. Variety: a doctrine angle, a scripture angle, a story, a question to open with.
 - **Feedback on their ideas**: say what is strong and why, what is weak or off-topic, what is doctrinally shaky
   (cite the correction), and what would make it land. Be direct; agreement without substance is useless to them.
-- **Find on request or when it would help**: scriptures (`mcp_scriptures_get_scripture`), conference quotes
-  (`mcp_scriptures_search_conference`), stories from conference talks, Church history or scripture, hymn lines,
+- **Find on request or when it would help**: scripture and conference quotations from sources you can verify, stories from conference talks, Church history or scripture, hymn lines,
   definitions. Every item verified and cited per `latter-day-saint-gospel-research`; stories credited to whoever told them.
 - **Their experiences are theirs.** Ask questions that help them recall one ("When did this become real for
   you?"). Never invent an experience or a testimony.
@@ -60,11 +55,11 @@ opposes the gospel). Go deep with them, but keep the two apart:
 - When the speaker is reaching for something deeper ("there's something profound here"), build a synthesis from
   scripture, label it as your own reading, and end by showing how it could become the talk's backbone (ideally
   tied to the covenant and the sacrament).
-- Painful personal context (friends or family who left) goes in the notebook as a cue only. Answer with compassion,
-  avoid one-cause diagnoses of why people leave, and offer it as a possible experience only if it feels right to them.
+- Handle sensitive personal context with care. If the speaker authorizes a note, record only a non-identifying cue they need for the outline.
+  Leave the decision to share the experience to the speaker.
 
 ## Starting from a conference talk
-Fetch it (Gospel Library page or `mcp_scriptures_get_conference_talk`; take `#pN` anchors from the live page).
+Retrieve the talk from an authoritative publication or an available scripture tool. Check citation anchors against the official page.
 Give its central doctrine in one sentence, its argument in 3-6 bullets with paragraph numbers, its scriptures,
 its two or three best lines and its stories. Then treat it as one witness for the topic, not the subject: Church
 guidance warns against "book report" talks. Offer one or two other witnesses (other talks, scriptures it cites).
@@ -88,14 +83,13 @@ gave. For a child, help the parent help the child.
 Handbook wording, Come, Follow Me readings and recent conference talks change: fetch them each time.
 
 ## Tool pitfalls
-- `mcp_scriptures_get_conference_talk` paragraph numbers do not match the Gospel Library `#pN` anchors (2015 Nelson talk: API ¶3 = site #p5). Get the anchors from the live page (browser: `.body-block p` ids) and cite those.
-- `search_conference` phrase search can return 0 hits for an exact title; filter by speaker and year with a one-word query instead.
-- Gospel Library `web_extract` cuts off long talks; use the browser to read the full text.
+- Retrieval tools may number paragraphs differently from the official publication. Get the anchors from the live page (browser: `.body-block p` ids) and cite those.
+- If a phrase search fails, try a shorter query with available speaker and date filters.
+- If an extractor truncates a talk, read the complete source through an available browser or official download.
 - Scripture verses on Gospel Library: the browser selector `.body-block p.verse` returns ids `p<N>` that equal the verse number, so you can cite `...?lang=eng&id=pN#pN`. Batch several chapters into one browser call.
-- The browser sandbox and `execute_code` don't share `/tmp`. Parse browser data inside the same `browser_exec` call.
-- When the notes grow large (the speaker asks to "fill out the notes so we can sift"), keep a separate research bank `<notebook>-bank.md` sorted by thread (question bank, scriptures, quotes with anchors, illustrations, call-to-action ideas, cautions). Mark the strongest items ★ and flag anything unverified ⚠, then sift it with the speaker one section at a time, starting with the opening questions.
+- Parse the source where it was retrieved, or transfer it through an approved mechanism before parsing in another environment.
+- If the material outgrows the notebook, keep a separate private research index grouped by topic (question bank, scriptures, quotes with anchors, illustrations, call-to-action ideas, cautions). Mark the strongest items ★ and flag anything unverified ⚠, then sift it with the speaker one section at a time, starting with the opening questions.
 - Check popular quotes before offering them. The Lincoln line "My concern is not whether God is on our side…" has no documented source; the attested version is Carpenter, *Six Months at the White House* (1867), p. 282.
 
-## Household specifics
-This skill is the method only. The agent's own local skill supplies its scripture tool names, where the
-notebook lives, memory rules, and who the speakers usually are.
+## Local configuration
+Select research tools and approved private storage locally. Keep speaker identities and circumstances out of the public skill.

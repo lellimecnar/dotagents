@@ -12,28 +12,28 @@ Use this procedure when the household says bills are overdue, cash is short, aut
 
 ## 2. Establish cash that is actually known
 
-1. For a multi-account request, call `getAllBalances` first and follow its live assembly instructions.
-2. Call `listAccounts` with the largest page size and continue until `hasNextPage` is false.
-3. Call `getAccount` concurrently for every included account, skipping a linked half when the first response already contains its live balance.
+1. Read the current scoped balance snapshot, if available; check its scope and timestamp.
+2. Follow the configured connector’s documented pagination to enumerate all in-scope accounts.
+3. Fill gaps from authorized per-account balance data; do not query or count the same economic balance twice.
 4. Classify every result before totaling:
-   - managed pod, income source, or depository balance: asset;
+   - funded reserve, income account or deposit balance: asset;
    - credit card or loan: liability, never cash;
    - investment: outside bill-paying cash unless explicitly included;
-   - linked liability and payment pod: two economic roles, not duplicates.
-5. Use `availableBalanceInCents` rather than `balanceInCents` when holds exist. Keep integer cents through all calculations.
+   - a liability and its funding reserve have distinct economic roles; do not deduplicate them as if they were the same record.
+5. Use available rather than ledger balance when holds exist. Calculate in the relevant currency’s integer minor units.
 6. Report three cash figures separately when present:
    - known available cash;
-   - named or earmarked bill-pod cash;
+   - cash earmarked for bills;
    - balances unavailable because of login, provider, permission, or stale-data errors.
 
 Never present a complete household cash total while an included depository account is unavailable. Name the missing account, not its internal ID, and make reconnection the first physical action when it blocks the decision.
 
 ## 3. Reconcile overdue candidates from transfer history
 
-1. Query `listTransfers` across every included managed account for an exact recent window, normally 90 days, with `executionMode=LIVE` and the largest page size. Continue until `hasNextPage` is false.
-2. Use `listExternalTransactions` as supplemental evidence for activity on included connected accounts; do not substitute it for managed-account transfer history.
+1. Read authorized payment history for every in-scope account across the agreed window; confirm that records reflect real activity. Follow documented pagination until every page is covered.
+2. Use authorized statements or transaction data as supplemental evidence; do not substitute them for missing in-scope payment history.
 3. Extract external bill pulls and payments. Ignore internal routing when identifying whether a creditor was paid.
-4. For each candidate bill pod, run targeted `listAccountTransfers` with `accountRole=source` and `direction=MONEY_OUT`. This compact history is the verification pass after the broad ledger query.
+4. Verify each candidate using the relevant funding account’s outgoing-payment history. This compact history is the verification pass after the broad ledger query.
 5. Normalize each obligation by source account, payee/description, amount, and billing cycle. Treat an initial failure and its near-date retry as one obligation, not two bills.
 6. Mark an obligation **resolved** when a later completed transfer matches the failed attempt or retry. Do not list it as overdue or recommend paying it again.
 7. When the account holder reports that a payment was made after the ledger cutoff or through another account, treat that firsthand confirmation as the current working status even if the connector has not posted it. Refresh same-day managed transfers, external transactions, and the funding balance; then label the payment “confirmed paid by account holder; connector not yet posted” rather than leaving it in the overdue total. This prevents sync lag from overriding newer evidence.
@@ -45,12 +45,12 @@ Never present a complete household cash total while an included depository accou
 1. Infer recurrence only when the history shows a repeatable payee and cadence.
 2. Use the most recent completed or attempted amount for the next-cycle estimate; show a range or “recent amount” when it varies materially.
 3. Treat connector timestamps as posting dates, not contractual due dates. State “around” or “historically posted near” unless a current statement or account field supports an exact due date.
-4. Ignore stale `nextPaymentDueDate`, minimum, statement, or balance fields as current evidence. Include their as-of date when they remain useful historical context.
-5. Do not use `getFinancialProfile` bill fields when the BILLS confidence is `LOW`, and do not let a narrow `accountsCount` stand in for the scoped account set. A profile is a cross-check, not the authoritative live bill ledger.
+4. Ignore stale due-date, minimum, statement, or balance fields as current evidence. Include their as-of date when they remain useful historical context.
+5. Use summaries only as cross-checks. Do not substitute incomplete or low-confidence summaries for scoped records. A profile is a cross-check, not the authoritative live bill ledger.
 
 ## 5. Project income without manufacturing certainty
 
-1. Run targeted `listAccountTransfers` on each included income source with `accountRole=destination` and `direction=MONEY_IN`.
+1. Review incoming deposits for each in-scope source using the connector’s documented transaction filters.
 2. Group deposits by source description before inferring cadence; one income account can receive weekly and monthly payroll streams.
 3. Derive future dates from observed intervals and compute variable-pay estimates with the median in integer cents. Do not use one unusually high or low deposit as the norm.
 4. Project only through the agreed horizon and label every future deposit as expected, not guaranteed.
@@ -58,15 +58,15 @@ Never present a complete household cash total while an included depository accou
 
 ## 6. Calculate the triage gap
 
-1. Map each unresolved bill to its matching pod or funding account.
+1. Map each unresolved bill to its funding reserve or account.
 2. Show `unresolved amount - matching available balance = preliminary gap` for decision support.
-3. If one pod funds several creditors, show the shared balance once and identify the competing claims; do not pretend each creditor independently has the full pod balance.
+3. If several creditors share a funding account, count its balance once and identify the competing claims.
 4. Keep inaccessible depository balances outside the gap calculation and state that the gap is preliminary.
 5. Keep already completed payments in a short “do not pay twice” list.
 
-## 7. Find written assistance before suggesting contact
+## 7. Verify accessible assistance routes
 
-For every at-risk priority bill, check the creditor’s official current site for a portal message, secure chat, direct message, online hardship application, email, or mailed form. When the visible short-term path is phone-only, say so and use the documented written application or message route instead; never turn a phone number into the household’s action item.
+For every at-risk priority bill, check the creditor’s official current site for a portal message, secure chat, direct message, online hardship application, email, or mailed form. Offer a verified route the requester can safely use. If no suitable channel is available, state what the creditor actually offers.
 
 A written request should ask for:
 - the exact amount required to become current;
@@ -86,14 +86,14 @@ Lead with one sentence that distinguishes a timing problem from a total-income p
 4. near-term expected deposits and upcoming recurring bills, clearly labeled as estimates;
 5. one first physical action, normally reconnecting the most important missing depository account or opening the highest-priority creditor portal;
 6. housing, essential utilities, income-preserving secured debt, insurance, and court/tax obligations before unsecured minimums and nonessential items;
-7. exact written portal routes for anything that cannot be paid safely.
+7. verified, accessible support routes for obligations that cannot be paid safely.
 
 Exclude raw transaction histories, account IDs, full account numbers, and irrelevant liability totals. End by stating that no money moved and no rule or autopay changed.
 
 ## Pitfalls
 
 - Reconcile retries before totaling failures — the initial attempt and retry are one obligation, and a successful retry removes it from the overdue list.
-- Finish pagination before declaring totals — busy managed accounts can exceed several hundred transfers in a 90-day window.
+- Finish pagination before declaring totals — the agreed interval may span multiple result pages.
 - Prefer targeted account-transfer histories for the final verification pass — a broad multi-account ledger is complete but hard to audit bill by bill.
 - Separate known cash from inaccessible cash — treating login-required balances as zero fabricates a shortfall.
 - Use available rather than ledger balance when holds exist — held money cannot safely fund a bill.

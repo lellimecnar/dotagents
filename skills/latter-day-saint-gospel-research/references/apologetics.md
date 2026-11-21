@@ -28,16 +28,14 @@ what remains open. Credibility comes from honesty; one overclaim discredits the 
   open question.
 - Recommend the asker read the primary and Church sources themselves, with links.
 
-## Politically charged applications (secret combinations today, communism, ideologies)
-- Label the era of each leader statement. Explicit naming of communism or Marx comes mostly from 1936-1992 (Cold
-  War). Current curriculum defines secret combinations by function and names no group. Present both, and don't
-  stretch an older statement into current teaching.
+## Politically charged applications
+- Date historical statements and distinguish their audience and context from current published teaching. Do not present a historical statement as current teaching without verifying it.
 - Help people recognize these things by scriptural traits (power and gain, flattery and fair promises, grievance
   turned into hatred, freedom for themselves only, sorting people into tribes) rather than by labeling groups.
   BYU scholarship (Religious Educator 25:1, 2024) warns against labeling "without proper authority".
 - Keep claims about effect apart from claims about motive. Many followers of a harmful movement sincerely believe its
   promise (Hel. 6:38, "seduced the more part of the righteous"). Motive claims need their own evidence.
-- Contested terms (e.g. "cultural Marxism") cost credibility. Give the neutral definition, the main criticism, and
+- For contested terms, state how relevant sources define the term. Give the main criticism and
   the strongest argument from the other side, each in its own words, then suggest wording that keeps the point.
 - When statistics come in, check the actual poll and note when the numbers depend on how the question was worded.
   Keep it to one line when the number was only an illustration (see sacrament-talk-prep, "Study depth vs. pulpit").

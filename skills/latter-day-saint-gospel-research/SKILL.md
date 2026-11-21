@@ -24,13 +24,12 @@ training memory is a search hint, never a citation: it is where most false quote
    (a critic's claim), scholarship, or "find me a talk/quote/example". Choose the reading if ambiguous and state it.
 2. **Hunt sources in the order of `references/source-hierarchy.md`.** Scripture and official Church sources first;
    scholarship to explain and contextualize; critics' own words when the question is about a criticism. For a
-   question with several independent parts, run the hunts in parallel with `delegate_task`, then check what comes back.
+   question with several independent parts, research the subquestions independently or in parallel when supported, then verify the results.
    Give each child the exact-quote rule, ask for URL + paragraph anchor + verbatim quote + context per source and a
-   "searched but not found" list (an `output_schema` keeps this tidy). Before answering, re-open the key quotes
+   "searched but not found" list in a consistent format. Before answering, re-open the key quotes
    yourself, and tell the reader which sources you opened and which came only from helpers.
 3. **Fetch and read** the source itself: scripture text, conference talks, footnote cross-references, study helps
-   and Come, Follow Me lessons through the `mcp_scriptures_*` tools (Open Scripture API); other pages with
-   `web_extract` (browser for JS-only pages). Take quotes from the fetched text,
+   and Come, Follow Me lessons from authoritative publications or an available scripture-search integration; use an available page reader or browser for other sources. Take quotes from the fetched text,
    copy them exactly, and record the paragraph anchor. Follow footnotes to the primary source when a claim rests on it.
 4. **Label authority** for every teaching you report (see "Weighing authority" in the hierarchy reference):
    canonized scripture, official doctrine/declaration, current policy, a leader's teaching, a manual's explanation,
@@ -83,6 +82,5 @@ hunting: a verified link saves a search. Never retain a claim without its source
 Current Church leaders, the latest conference, current policies, curriculum schedules and handbook wording change.
 Look them up every time; never answer them from memory or from this skill.
 
-## Household specifics
-This skill is the method only. The agent's own local skill supplies its scripture and research tool names,
-memory store, and who it answers.
+## Local configuration
+Select available research tools and approved storage locally. Do not put requester identities or personal context in the shared skill.
