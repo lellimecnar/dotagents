@@ -18,11 +18,11 @@ Checked 2026-11-14. Medical items here are planning prompts, not medical advice;
 | Before paying anything non-refundable; 4-6 weeks out | Clinician/travel-medicine review for members with chronic conditions; adjust itinerary | CDC Yellow Book, Travelers with Chronic Illnesses: https://cdc.gov/yellow-book/hcp/travelers-with-additional-considerations/travelers-with-chronic-illnesses.html |
 | 4-6 weeks | Tell airline in writing about special assistance (wheelchair, lifting, oxygen); identify destination pharmacy, urgent care, ER | same |
 | 3-4 weeks | Clinician letter on letterhead: conditions, medications (generic names, doses), allergies, required equipment, clinician contact | same |
-| Any time before the trip (same day possible) | Get the Access Pass: digital pass via Recreation.gov is usable immediately; or pick up in person; mail order (physical pass) takes longer: check the current processing time on the pass page (dated) and order only if it arrives before departure | https://www.nps.gov/subjects/accessibility/interagency-access-pass.htm |
+| Early enough to obtain the pass before its first use | Verify available pass routes, documentation and delivery; choose one that will be usable in time. | [Pass lookup method](budget-methods.md) |
 | At booking (7+ days out) | Book direct; one reservation for the family; seat rules for family seating; note the 24-hour cancel window | budget-methods.md |
 | At booking | Accessible room: verify features on property site, request in writing that the specific room be blocked | accessibility-rights.md |
 | 48 hours | Deadline airlines may set for prep-needing accommodations | https://www.transportation.gov/airconsumer/passengers-disabilities |
-| By the screening agency's current advance-notice requirement (look it up on its passenger-support page and date the check) | TSA Cares online form for a Passenger Support Specialist | https://www.tsa.gov/travel/passenger-support |
+| Before travel | Request screening assistance via the verified advance or late-request route. | [Screening assistance](accessibility-rights.md) |
 | 1-2 days | Pack meds for the trip plus several extra days in carry-on, in original containers, with medical info | CDC chronic illness chapter (above) |
 | Day of | Print TSA notification card; pick up Sunflower lanyard at participating airports | accessibility-rights.md |
 

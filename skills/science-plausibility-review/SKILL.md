@@ -77,18 +77,8 @@ Classes change sentence by sentence. One exceptional device never excuses unrela
 - **Habitability:** a habitable-zone orbit is a first filter; atmosphere, star, water, chemistry, geology
   and time still matter [8].
 - **Biosignature:** one gas is evidence, not proof; ask for abiotic alternatives and context [10].
-- **Resource ledgers:** when a change alters a counted resource (fuel, distance, money, travel time), build
-  one ledger from the author's stated rules before any prose number is locked: every leg's cost with its
-  arithmetic, where each threshold falls, and every line whose number changes. Check every stated rule at
-  every waypoint, and the triangle inequality across all waypoints, since a cheaper detour through another
-  stop can quietly reopen a route the author closed. Count reserves the same way in every feasibility
-  check. Leave slack where the rules allow it, and make sure any figure the prose states can be worked out
-  from figures the prose shows. When several ledger versions exist, name the one that governs and list the
-  superseded ones.
-- **Safety and redundancy:** for a safety-critical choice, compare the hazard the text shows, the hazard
-  the characters are told about, and the failure the backup or test actually covers. A check for one
-  failure mode (lost readouts) does not answer a different one (losing the operator's whole picture).
-  Require the characters to disclose the functional risk; that does not require exposing withheld lore.
+- **Resource ledgers:** Record each leg's cost, remaining resources, replenishment and required reserves in one current ledger. Test plausible alternatives under the same rules, including direction and constraints where they matter. Use geometric bounds only for quantities that obey them. Identify affected passages and reconcile stated figures with the ledger; show only the arithmetic readers need to understand the decision.
+- **Safety and redundancy:** Name the hazard, what the decision-maker knows, and which failure the backup or test covers. Check whether the backup shares the failed dependency. If a risk changes the decision, make that risk legible without revealing unrelated information.
 - **Load:** compare carried mass, grip, posture, distance, injury, fatigue and gravity [14]. Flag literal
   tissue damage if later performance ignores it.
 - **Interface:** separate motor command, proprioception, touch, pain and vision. "Neural link" does not

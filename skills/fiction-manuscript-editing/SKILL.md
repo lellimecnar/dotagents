@@ -55,11 +55,7 @@ recorded. Then run five tests:
 1. **Causality:** can each turn be "because X, the character chooses Y, therefore Z"? Flag coincidence,
    missing mechanism, effect before cause.
 2. **Agency:** does the POV character's choice alter the result? Young protagonists must not become
-   spectators while adults or machines solve the scene [S10, S11]. A cautious character who crosses a
-   threshold must own the gamble on the page: what they have, what they lack, and why they choose anyway.
-   A line saying their condition "was met", or a memory offered as evidence, reads as a non-decision.
-   Check that any evidence the character demanded actually arrives before the threshold, since readers
-   flag a stated condition the story never meets.
+   spectators while adults or machines solve the scene [S10, S11]. For a consequential choice, show what the character knows, what is uncertain, and why they act. If they set a condition, show how it is satisfied or why they knowingly proceed without it. A memory can inform the choice if the text establishes why the character trusts it.
 3. **Knowledge:** could this POV know or infer the claim now? Separate observation, inference, memory
    and later truth. On a restricted-POV action beat, check each precise physical claim against the last
    stated sightline and what sound, touch or inference could supply. A fact the POV could not perceive

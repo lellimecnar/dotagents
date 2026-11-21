@@ -2,10 +2,7 @@
 
 We are not therapists. This file decides when to stop coaching. When in doubt, refer.
 
-**Lookup rule for every route.** Crisis services change text keywords, chat links, hours, languages and
-partner programs. Before giving any route other than the national emergency number and the national
-crisis-line number, open the service's official site, confirm the current written routes (text, chat, web)
-and give those first, and state the date checked.
+**Give a safe, local route first.** In immediate danger, direct the person to local emergency services without waiting for a lookup. The numbers and services below are U.S. examples, not worldwide defaults. For other referrals, confirm current channels, hours, language and eligibility on the service's official page and date the check. Prefer the channel the person can use safely and privately; do not default to text, chat or email if their device or account may be monitored. If lookup fails, give the verified local general route rather than delaying help or guessing a specialized one.
 
 ## 1. Stop immediately: abuse or coercive-control signs
 The National Domestic Violence Hotline says that **even one or two** of these behaviors is a red flag that abuse may be present; abuse is a pattern used to gain power and control. Sources: https://thehotline.org/identify-abuse/domestic-abuse-warning-signs ; https://thehotline.org/is-this-abuse/types-of-abuse
@@ -32,14 +29,14 @@ Sources: as above, plus https://thehotline.org/resources/healthy-relationships
 | Situation | Route |
 |---|---|
 | Immediate danger | **911** |
-| Abuse, or unsure if it is abuse | National Domestic Violence Hotline, https://www.thehotline.org: confirm its current text keyword and number, live chat link, phone number and hours on the site, then give the written routes first. Check that the site still offers a quick-exit control. |
+| Abuse, or unsure if it is abuse | U.S. example: [National Domestic Violence Hotline](https://www.thehotline.org/get-help/). Check current live-advocate routes and offer one the person can safely use. Do not treat a chatbot as a live advocate or a quick-exit button as protection from monitoring. |
 | Young people (dating abuse) | love is respect: https://www.loveisrespect.org (confirm current routes there) |
 | Native Americans / Alaska Natives | StrongHearts Native Helpline (confirm current routes on its own site) |
 | Deaf / hard of hearing | The Deaf Hotline (confirm the current videophone and chat routes on its own site) |
 | Safety plan | The hotline's online safety-planning tool, if it still offers one (check the site) |
 Source for all Hotline routes: https://www.thehotline.org/
 
-How to say it: plain, kind, no pressure, no judgment. "What you describe matches warning signs experts take seriously. You can text or chat with the National Domestic Violence Hotline (<current routes, checked today>), free and confidential." Never contact the other partner, and never put this in a shared document.
+How to say it: plain, kind, no pressure, no judgment. "What you describe matches warning signs experts take seriously. If you can contact a service safely, <verified local service and safe contact route> can connect you with an advocate." Never contact the other partner, and never put this in a shared document.
 
 ## 2. Stop immediately: suicide, self-harm or mental-health crisis
 - **988 Suicide & Crisis Lifeline**: text or call 988, or chat via https://988lifeline.org. Confirm the current chat link, language options and any special-population routes (e.g. Spanish, veterans) on the site before giving them. You do not have to be suicidal; relationship problems and intimate partner violence are listed reasons to reach out. Sources: https://988lifeline.org/get-help/what-to-expect ; https://www.samhsa.gov/mental-health/988/faqs
@@ -58,21 +55,16 @@ Refer when you see any of:
 
 Why refer early: couple therapy has large effects and waitlisted couples don't improve on their own (https://pubmed.ncbi.nlm.nih.gov/32551734); fewer than 10% of divorcing couples ever see a professional (https://www.gottman.com/blog/debunking-12-myths-about-relationships/).
 
-### How to find and vet a couples therapist (only when asked; a task-time search)
-Search the licensed-therapist directories and the method-specific directories:
+### How to find and vet a couples therapist (only when asked)
+Apply the abuse and coercive-control stop rule first. If either is suspected, offer confidential specialist support instead of joint counseling. Otherwise search professional registers and relevant training directories for the jurisdiction where each client will receive care. U.S.-oriented directory examples:
 - AAMFT TherapistLocator (licensed marriage and family therapists): https://aamft.org/findatherapist
 - Psychology Today directory, filter family/marital, look for LMFT: https://therapists.psychologytoday.com/family-marital (linked from the AAMFT page)
 - Gottman-trained (Gottman Referral Network, gottman.com) and EFT-trained (ICEEFT directory, iceeft.com) directories exist; not opened during research (see Gaps).
+
 Criteria, in order:
-1. Licensed for independent practice in the client's state, verified on the state licensing board's lookup
-   (status, public discipline), not the directory badge.
-2. Couples-specific training confirmed on the method's own directory.
-3. Fit for the household's particular strain.
-4. A written intake route (online booking, form, email), with telehealth licensure in the client's state
-   if remote.
-5. Cost, with the cheaper alternative, to the decision-maker.
-Confirm accepting new clients, fee, insurance and format at task time and date it. If a practice looks
-phone-only, say so and move to one with a written route.
+1. Verify authority to practise independently against the applicable regulator's register, including status and public restrictions. For remote care confirm eligibility where each client will be located.
+2. Verify relevant couples training or certification with the issuer; check experience with the issue the client wants help with.
+3. Confirm availability, safe and accessible intake, format, fees and coverage directly with the practice. Date the check and show a viable lower-cost option if available. Do not send personal details or contact a practice on the person's behalf without authorization.
 
 ## 4. Privacy
 Relationship troubles, safety concerns and referrals are private. Share them only with authorized recipients through a safe, private channel. Do not copy them into shared records, general task trackers or persistent memory.

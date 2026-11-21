@@ -2,10 +2,7 @@
 
 Checked 2026-11-14. Re-verify before relying on a number for a live trip.
 
-Regulations are stable but amended: read the current eCFR text before quoting one to an airline, hotel or
-agency; for phased rules, read the effective and compliance dates before saying a provision applies.
-Regulatory maxima (e.g. the 48-hour notice airlines may require only for listed services, 14 CFR 382.27)
-stay as facts with their citation; agency lead times, hotlines and program details are looked up and dated.
+Identify the jurisdiction and read the current official rule before quoting a right, deadline or maximum. Check who and what it covers, exceptions, and both effective and compliance dates. For example, U.S. air-travel notice limits differ by service under [14 CFR 382.27](https://www.ecfr.gov/current/title-14/section-382.27). Check agency lead times, contacts and program details separately on the administering agency's official page; date the checks.
 
 ## Air travel: Air Carrier Access Act (ACAA), 14 CFR Part 382
 Source: https://www.transportation.gov/airconsumer/passengers-disabilities
@@ -29,7 +26,7 @@ Source: https://www.federalregister.gov/documents/2024/12/17/2024-29731/ensuring
 - Gap: phase-in dates for individual provisions were not verified. Check the rule before citing a specific deadline to an airline.
 
 ## Airport security: TSA
-- **TSA Cares / Passenger Support Specialist (PSS):** request by the agency's current advance-notice requirement (look it up on its passenger-support page and date the check; at time of writing it was 72 hours) via the online TSA Cares form (written route): https://www.tsa.gov/contact-center/form/cares. Source: https://www.tsa.gov/travel/passenger-support. PSS does not exempt anyone from screening and is not expedited screening. Qualifying examples: difficulty following instructions due to a disability, traveling with a child with a disability or medical condition, medically necessary liquids over 3.4 oz, service animal.
+- **U.S. example — TSA Cares:** Check [TSA Passenger Support](https://www.tsa.gov/travel/tsa-cares/passenger-support) and the [request form](https://www.tsa.gov/contact-center/form/cares) for the current notice window and submission routes. If the flight falls inside the form's window, use the late-request contact listed on the form. Date the check. A Passenger Support Specialist assists at screening but does not waive or expedite it.
 - **Airport wheelchair service is provided by the airline, not TSA** (same source).
 - **Notification card:** tell officers verbally, with the TSA Notification Card (https://tsa.gov/sites/default/files/disability_notification_card_508.pdf), or with medical documentation. Source: https://www.tsa.gov/travel/tsa-cares/disabilities-and-medical-conditions
 - Body scanner (AIT) requires standing unassisted with arms raised 5-7 seconds; otherwise pat-down by a same-sex officer (same source). TSA PreCheck passengers unable to stand may remain seated in their mobility device.

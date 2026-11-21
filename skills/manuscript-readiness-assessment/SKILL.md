@@ -138,11 +138,9 @@ check** (one canon PR naming the revision PR; contradictions spawn a new revise 
 review**. Rules that keep it sane: never open a competing PR; the newest stage document of a kind wins;
 reviews come from a different model family than the work; canon mirrors update only after merge.
 
-When independent cold reads score a chapter:
-- Re-run them on every substantive revision before approval: earlier scores describe retired text. A
-  revision whose diff leaves every scored passage untouched gets no new batch; reuse the last scores and
-  say so.
-- Every lane passing is not approval while a required item from the cold reads is open.
+When independent cold reads are part of approval:
+- Re-score if a revision changes a scored passage or any context that could change its assessment. Reuse earlier scores only after checking both; record the revision and the basis for reuse.
+- Resolve required findings before approval even if all scores meet their thresholds.
 - Keep readers blind (no model names, drafters, history or earlier scores), and spot-check each packet:
   complete target text, no authorship terms. If a required reader route is unavailable, stop with the
   exact error; never substitute another.
@@ -152,9 +150,7 @@ When independent cold reads score a chapter:
 - If a beat still scores low after the within-rule fix has landed and the remaining levers would change
   the design, it is the owner's decision: offer the smallest design change. Another wording round on a
   design problem only burns a review cycle.
-- While such a decision is pending, hold further revision rounds and queue new line fixes for one
-  post-decision round: each push re-runs every lane, and small trim rounds keep surfacing new small
-  findings. Exception: a fix that unblocks other work.
+- Hold revisions that depend on an unresolved design decision. Continue independent fixes that will remain valid either way. Batch the dependent fixes after the ruling and recheck the affected passages together.
 
 ## Pitfalls
 
