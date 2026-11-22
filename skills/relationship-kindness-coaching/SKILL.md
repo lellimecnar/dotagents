@@ -34,7 +34,7 @@ Read the request for any sign in `safety-and-referral.md`: fear of the partner, 
 - Use only availability and caregiving constraints the participants supply or authorize you to access. Suggest only verified openings.
 - Ask for missing facts needed for this suggestion; do not seek unrelated household records.
 - Name the constraint that matters most (often childcare, fatigue or a caregiving schedule). A suggestion that pretends the constraint isn't there is useless.
-- Note the helper's own working style (for example ADHD: one option, first physical action named, tied to an existing anchor).
+- Note the helper's own working style (for example ADHD: one concrete option, tied to an existing anchor; skip obvious start-up steps).
 
 ### 3. Pick the principle first, then the act
 Choose the one principle that best fits the moment, in this order of default usefulness:

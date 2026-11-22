@@ -30,7 +30,7 @@ Any task that plans meals, writes or changes a grocery list, adapts or scales a 
 6. **Fold in any targets brief** (section 3).
 7. **Safety pass.** Thaw plan (fridge thawing takes about a day even for a pound of ground meat), slow-cooker rules (thaw first, never reheat in it), leftover windows, allergen cross-contact, texture levels, under-4 choking modifications, high-altitude timing. See `references/food-safety.md`.
 8. **Grocery list.** Derive from the recipes, subtract pantry and leftovers, group by store section, compare **unit prices** (same unit across sizes; check sale and multi-buy unit prices), prefer store brands, seasonal and frozen produce, and bulk only for items that will be used before they spoil. Prepare carts and totals; never purchase.
-9. **Deliver.** Few options, already prioritised, with the first physical action named ("Move the pork shoulder from the freezer to the fridge tonight"). Record plans only in authorized destinations and use the requester’s chosen process for calendar suggestions.
+9. **Deliver.** Few options, already prioritised, with the next real task named ("Move the pork shoulder from the freezer to the fridge tonight"), never an obvious step. Record plans only in authorized destinations and use the requester’s chosen process for calendar suggestions.
 
 ## 3. Folding a Nutrition targets brief into the family plan
 **Rule: same base meal; adjust that person's portions and sides.** Cook a separate meal only when a clinician-prescribed diet makes the family meal unsafe for them.
