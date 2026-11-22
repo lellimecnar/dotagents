@@ -49,8 +49,10 @@ conflicts with them, follow the data doc and note the conflict in your output.
   days and took 55; ADHD adds measurable timing deficits. No padding factor has an evidence base;
   the personal one is what matters.
 - **Plan on a 15-minute grid.** Fake precision (09:07-09:52) produces "already behind" by 10:00.
-- **Externalize time.** Every box has a visible start, end and category; its description starts
-  with the first physical action ("open doc X"), not the goal.
+- **Externalize time.** Every box has a visible start, end and category; its lines name concrete
+  results the person can check off ("send the permit form"), not topics ("permit"). Add a first step
+  only where starting is genuinely unclear or the item has stalled, and never an obvious one ("open
+  the laptop", "put on shoes"): obvious steps read as condescending and bury the real tasks.
 
 **Transitions and slack**
 - **Transition buffers:** ~10 min between context changes, 15 when place or mode changes; travel
@@ -106,6 +108,14 @@ conflicts with them, follow the data doc and note the conflict in your output.
   version / swap slot>"). Implementation intentions show medium-to-large effects across 94 studies;
   ADHD evidence is mostly in children.
 - **Name the minimum-viable day:** if only the mandatory items happen, the day still counts.
+- **Every box holds real items.** A box exists because the inputs (tasks, specialists' input, a
+  priority the person named) put something real in it. A placeholder ("Focus", "Work block", "your
+  own priorities") tells the person nothing and teaches them to ignore the calendar; leave that time
+  empty as slack.
+- **Use the specialists' input, visibly.** When the brief carries input from people or agents who own
+  parts of the person's life (meals, exercise, money, projects, trips), place each item or list it as
+  deferred with a reason, and credit the source. A plan built only from a generic task list reads as
+  generic.
 - **Fewer boxes when completion drops.** A plan that gets done beats a full plan that doesn't.
 
 ### 3. Algorithms
@@ -157,6 +167,10 @@ lead with yes or no. Do not lecture about ADHD or list principles.
 - Re-issuing the same load after a low-completion week; rolling every unfinished task forward.
 - Same-kind marathons; hard work in the post-lunch dip; back-to-back high-load boxes.
 - Hiding drops instead of listing them with reasons.
+- Placeholder boxes with no real items; copying hedges or start-up micro-steps from the inputs
+  ("this is a start, not completion", "open the app") into box text.
+- Planning from one broad memory query instead of reading the person's current preference documents
+  in full: a single recall returns a mixed sample that includes rules the person has since corrected.
 - Editing events the planner did not create, or that the person edited (treat those as locked).
 - If lock information is missing or inaccessible, treat existing events as potentially locked.
   Offer a conditional plan without moving them and request a minimal lock list through an approved channel.
@@ -172,6 +186,7 @@ lead with yes or no. Do not lecture about ADHD or list principles.
 
 ## Verification
 - Booked load <= capacity for every day; every day has an overflow box and real empty slack.
+- Every box holds real items from the inputs; each specialist input is placed or listed as deferred.
 - Every mandatory item has a box before its latest safe day, or is listed as at risk.
 - Everything that did not fit appears under Dropped/Deferred with a reason.
 - After writing, re-list the calendar and confirm each event landed at the intended local time;

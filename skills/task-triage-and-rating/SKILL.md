@@ -48,8 +48,11 @@ act on email.
 **ADHD-specific**
 6. Externalize time and intention at the point of performance: deadline, duration and first step
    in front of the person (Barkley; evidence for specific tools is mostly clinical/preliminary).
-7. Always name a first physical action: 5 minutes or less, concrete, location known. Starting is
-   the main ADHD bottleneck.
+7. Record a first physical action when starting is unclear or the task has stalled: 5 minutes or
+   less, concrete, location known. Starting is the main ADHD bottleneck, but the first action is a
+   starting aid kept on the task, not the task itself: planning input and schedules show the task's
+   concrete result, and an obvious first step ("open the app", "put on shoes") is left out, because
+   it reads as condescending and crowds out the real work.
 8. Pad estimates x1.5 (x2 for unfamiliar or high-difficulty work) and break medium-plus tasks into
    steps before estimating. Planning fallacy: students predicted 33.9 days and took 55.5. The factor
    is a heuristic; replace it with the person's own once actual times are known.
@@ -79,7 +82,7 @@ act on email.
 Every task gets: **size** (XS <=5 min, S 5-20, M 20-60, L 1-2.5 h, XL >2.5 h and must be split),
 **diff** (low/med/high = skill + uncertainty), **load** (cognitive: low/med/high), **energy**
 (physical), **ctx** (one primary place: home, a specific area, computer, online, errand, outside),
-**first** (first physical action), **due** (hard = real external consequence; soft = chosen; never
+**first** (first physical action, when not obvious), **due** (hard = real external consequence; soft = chosen; never
 invent hard dates), **prio**, **blocked_by**, **postponed** count, **batch**, **deleg**, **src**.
 
 Priority rule (top-down, first match wins):

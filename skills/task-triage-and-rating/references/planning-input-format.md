@@ -28,7 +28,9 @@ online-forms: t12 t31 total:30m | errands-north: t07 t15 total:50m
 ```
 
 Field rules: always include id, prio, size and ctx, plus due when present. Include load,
-energy, first, batch, deleg and postponed when known or non-default. Sizes are already
+energy, batch, deleg and postponed when known or non-default. Include first only when the first
+step is not obvious from the title or the task has been postponed; the scheduler may copy task text
+onto the calendar, so titles name the concrete result and never carry an obvious start-up step. Sizes are already
 padded. Every chore carries `no_restday:true` when the household has a rest-day rule.
 
 Section definitions:
