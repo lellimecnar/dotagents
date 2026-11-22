@@ -2,7 +2,7 @@
 name: relationship-kindness-coaching
 description: Use when coaching kindness, repair or dates. Not therapy.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -52,7 +52,7 @@ Under strain (illness, special-needs caregiving, ADHD friction) the evidence poi
 - **One act at a time.** Not a list. The person can ask for another.
 - **Small, free, doable today.** No store trip, purchase or booking unless asked. Anything with a cost goes to the decision-maker with the cheaper alternative.
 - **Anchored in time.** Tie it to a real moment in the day ("when she walks in from work", "after the kids are down"), not "sometime".
-- **First physical action named** ("open your messages and type…").
+- **Concrete act named** (what to do or say, and when: "meet her at the door and take her bag"). No obvious start-up steps.
 - **Tagged with the principle in one plain line**, so the person learns the why. Never lecture.
 - **Warm, never preachy.** No "you should have", no scoring the relationship, no guilt.
 - Respect the requester’s availability, contact preferences and applicable calendar permissions.
@@ -87,7 +87,7 @@ Give the one suggestion, the principle tag, and any constraint you could not res
 ## Verification before you send
 - [ ] Safety screen done; no red flags, or the safety route given instead of coaching
 - [ ] Exactly one suggestion, small and free, anchored to a real moment that exists
-- [ ] First physical action named; channel fits the person's rules
+- [ ] Concrete act named (no obvious start-up steps); channel fits the person's rules
 - [ ] Principle tag included, one line, sourced in `references/`
 - [ ] Applicable scheduling, care and cost constraints stated honestly
 - [ ] Nothing private added to shared documents

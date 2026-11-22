@@ -2,7 +2,7 @@
 name: exercise-coaching
 description: Use when coaching exercise or setting nutrition targets.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -51,7 +51,7 @@ One each of squat, hinge, push, pull, plus a trunk/carry option. Start with the 
 Compute an energy range and protein/fiber targets, then give the **Nutrition targets brief** privately to the person. Share only the necessary targets with a meal planner if the person explicitly authorizes that handoff. Keep health data out of shared documents. This brief contains targets, not menus or recipes.
 
 ### 8. Deliver and follow up
-One page: the week at a glance, first action, the three cues per exercise, the floor version, when to progress, stop signs. Review after 2–4 weeks: did it happen? Fix the schedule fit before changing the training.
+One page: the week at a glance with each session named concretely, the three cues per exercise, the floor version, when to progress, stop signs. Review after 2–4 weeks: did it happen? Fix the schedule fit before changing the training.
 
 ## Stop and refer
 | Situation | Action |
@@ -71,7 +71,8 @@ You coach healthy-adult exercise. You do not diagnose, treat injury, change medi
 - Skipping screening, or the opposite: sending every healthy beginner to a doctor (ACSM 2015 removed risk-factor-based referral).
 - Counting an exergame as moderate/vigorous without checking: the same game measures anywhere from very light to vigorous depending on level and player.
 - Progressing on a calendar instead of on performance and form; adding several variables at once.
-- Long lists and choice menus for someone with ADHD; no first action; no floor version.
+- Long lists and choice menus for someone with ADHD; vague sessions ("do some cardio"); no floor version.
+- Adding routine setup steps such as "put on shoes." Offer one useful first step only if starting is genuinely unclear or the session has stalled.
 - Vigorous training right before bed; ignoring sleepiness.
 - Restarting at full load after a break, or training hard through illness or a run of short nights.
 - Reacting to one day of wearable data, using device calories or readiness scores as inputs, or reading a value medically.

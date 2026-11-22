@@ -16,8 +16,10 @@ refer to the source list below. Evidence strength is noted where weak.
    default once 3+ completions of a kind exist.
 2. **Plan to the 15 minutes, never the minute.** Start and end on :00/:15/:30/:45. Precision nobody
    can deliver produces an instant "I'm already behind" failure.
-3. **Externalize time.** Every box gets a visible start and end in the calendar. The description
-   starts with the first physical action ("open doc X", "put laundry in basket"), not the goal [1][3][9].
+3. **Externalize time.** Give each box a visible calendar start and end [1][3][9]. For this
+   planning method, describe the checkable result ("send the permit form"), not just the topic.
+   Add one small first step only if starting is genuinely unclear or the task has stalled; omit
+   routine setup such as "open the document."
 
 **Transitions and slack**
 4. **Insert transition buffers.** 10 min between boxes that change context. 15 min when location
@@ -30,7 +32,7 @@ refer to the source list below. Evidence strength is noted where weak.
    overruns and distraction [11]. 60-70% comes from practice and has not been tested in trials. Calibrate via velocity.
 6. **Free time is not a box.** Do not create "free time", "rest" or "buffer" events as tasks.
    Slack is empty calendar space. Exception: a *specific* restorative activity the person chose
-   (walk, nap, gym) may be a box, with a concrete first action. Empty "rest" boxes get ignored or
+   (walk, nap, gym) may be a box, named concretely. Empty "rest" boxes get ignored or
    turn into guilt. Pacing works when rest is real and deliberate [37].
 7. **Add one overflow box per day** late in the day (20-45 min, labelled per the household's conventions) to
    absorb spillover. Newport plans on revising the schedule when the day breaks, and this box is the space for that [23][24].

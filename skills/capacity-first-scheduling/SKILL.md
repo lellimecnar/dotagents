@@ -2,7 +2,7 @@
 name: capacity-first-scheduling
 description: Use when building or repairing a week or day of time boxes, ADHD-aware.
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
   status: draft
   owner: maintainer
 ---
@@ -60,7 +60,7 @@ conflicts with them, follow the data doc and note the conflict in your output.
   prior one is unfinished; transitions are a known ADHD failure point.
 - **Free time is not a box.** Slack is empty calendar space. "Rest" or "free time" boxes get
   ignored or become guilt. A specific restorative activity the person chose (walk, nap, gym) may
-  be a box with a first action.
+  be a box, named concretely ("30-minute walk").
 - **One overflow box per day**, late, 20-45 min, to absorb spillover and replanning.
 
 **Load, energy, order**
@@ -157,9 +157,10 @@ the sprint "yesterday's weather" rule. Detail: `references/velocity-and-output.m
 ### 5. Everyday chat
 One decisive recommendation with the slot and the reason in one line; check the live calendar
 first. "I'm behind, fix today" -> keep mandatory items, defer suggested ones, shrink the next box
-to its first step, restore one buffer, rewrite the rest, reply "Done: kept A and B, moved C to
-Thu, dropped D. Next: 14:15, start A with <first action>." "Can I fit Y?" -> pad Y, check capacity,
-lead with yes or no. Do not lecture about ADHD or list principles.
+to one useful result that fits, and restore one buffer. Add one small first step only when starting
+is genuinely unclear or the task has stalled. After verifying the changes, reply "Done: moved the
+optional call to Thu and restored a buffer. Next: 14:15, submit the permit form."
+"Can I fit Y?" -> pad Y, check capacity, lead with yes or no. Do not lecture about ADHD or list principles.
 
 ## Pitfalls
 - Overpacking to 100% of available time; ignoring transitions and travel.

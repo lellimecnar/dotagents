@@ -2,7 +2,7 @@
 name: accessible-family-trips
 description: Use when planning family outings or trips. Access and budget gates.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -72,7 +72,7 @@ An option missing any required access fact does NOT pass the gate and cannot be 
 
 ### 6. Present the decision
 - Two or three options, already ranked, best first. One line why it is first.
-- For each: date(s), all-in cost, what was checked (access, sensory, budget), gaps, and the **first physical action** ("Open this link and reserve the free 10 a.m. ticket").
+- For each: date(s), all-in cost, what was checked (access, sensory, budget), gaps, and the **next real task** ("Reserve the free 10 a.m. ticket at this link").
 - One fallback for bad weather or a hard day.
 - Hand useful calendar entries to the requester or an authorized calendar steward.
 - Save plans only in an approved destination if requested; private details stay out of shared documents.

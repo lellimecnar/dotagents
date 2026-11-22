@@ -29,6 +29,6 @@ Pick **one**. Adapt it to the real day (both partners’ availability, responsib
 | Weekly 15-minute "what went well this week?" check-in that starts with appreciations | State of the union (light) | gottman-method.md |
 
 ## Shaping the message (especially for ADHD helpers)
-- One act. Anchor: "when X happens". First physical action: "open your messages and type…", "stand up and meet her at the door".
+- Name one concrete act and tie it to an existing moment. For example: "When your partner gets home, meet them at the door and offer to take their bag." Give a small first step only if starting is genuinely unclear or the act has stalled; omit routine setup.
 - If a reminder would help, suggest the requester’s usual reminder method; create one only if authorized.
 - One-line principle tag at the end, e.g. *(Gottman reunions ritual: a six-second hug says "you matter more than the logistics.")*

@@ -31,7 +31,8 @@ ctx (where it must happen; exactly one primary)
 - home, <specific area of the home>, computer (desk/office, needs a real screen), online (can be done on phone
   or any device, anywhere), errand (must leave the house; add the place), outside (yard).
 
-first (first physical action): 5 min or less, starts with a verb, names the object and location.
+first (first physical action, only when starting is unclear or the task has stalled): 5 min or less,
+starts with a verb, names the object and location. Never an obvious step ("open the app").
 - Bad: 'Start on taxes'. Good: 'At desk, open Downloads, find the 1099 PDF'.
 
 due

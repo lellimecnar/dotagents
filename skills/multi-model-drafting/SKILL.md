@@ -2,7 +2,7 @@
 name: multi-model-drafting
 description: Use when drafting prose with several models. Fan out, merge.
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
   status: draft
   owner: maintainer
 ---
@@ -42,6 +42,13 @@ different model families), the best merges outscored every solo draft by about a
    Have them write to files rather than return the text, with a clear marker at the start of each unit
    (scene, passage): the drafts then stay out of your context until you open them, and the
    markers let you line up the same unit across drafts.
+4. For an oversized packet, use one approved read-only artifact per version. Share only the
+   material each drafter or reviewer and its provider are authorized to receive, and restrict access
+   to that packet where supported. Ask it to read the entire packet, paging through truncated output.
+   A last-line quote or end marker checks access to the end, not a complete read. Where tooling
+   records delivered ranges, verify coverage; otherwise do not claim it was verified. If the packet
+   cannot be consumed in full, split it into self-contained units with equivalent context for every
+   participant. Redo an affected task if it used omitted or out-of-scope material.
 
 ## Merging
 
@@ -83,6 +90,32 @@ Use only where the project opts in for review fixes; otherwise one careful pass 
   softened to "may stay" lets the winning draft drop it, and restoring it costs another full round.
 - Keep the shuffle key hidden from the judges until the picks are applied (see "Read blind" and
   "Measuring a drafter set").
+
+## Blind review reads
+
+The same fan-out works for review: readers from families other than the drafter's catch what the
+drafter's own family reads past.
+
+1. **Two lenses, separate tasks.** A developmental read (first-time reader: where attention drops,
+   re-reads, stakes, and a 1-10 score for each key decision point by name) and a line read (sentence
+   craft, repetition, voice, point of view, rule violations, with exact replacements). One lens per
+   task keeps the scores comparable.
+2. **Same packet for every reader, blind.** The full target text with its own line numbers,
+   neighbouring context labelled as context, the binding rules as plain reader-facing statements, and
+   no models, history, earlier versions or scores. Spot-check each packet before trusting its output:
+   complete target text, no authorship terms.
+3. **Re-read every revision.** Scores describe the text they read, so run fresh developmental reads on
+   each revised version before approval and report each decision point as old -> new.
+4. **Use convergence to prioritize verification, not to decide.** Check the cited passage against
+   the brief and the observable reader problem. Fix a confirmed violation of a binding rule even if
+   only one reader found it. The editor weighs corroborated concerns and single-reader observations
+   on their evidence. Try a fix within the brief before asking the author to change a design constraint.
+5. **When readers reject a character's reason,** the fix is usually on the page, not in more evidence:
+   the character names what they know, what they risk, and chooses. Adding facts or numbers rarely
+   moves the score.
+6. **A beat that stalls** (still low after two or three rounds, with every remaining suggestion
+   changing the author's design): stop iterating. Give the author the levers as options, with "no
+   change" as a real choice, and your pick.
 
 ## Auditing a multi-model pass
 

@@ -2,7 +2,7 @@
 name: merge-queue-stewardship
 description: Use when admitting approved PRs to a merge queue or checking trains flowed.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   status: draft
   owner: maintainer
 ---
@@ -48,7 +48,11 @@ train PR and the CI-gate / queue configuration that decides what may merge.
    requires it, or (for bot dependency PRs) the dependency steward's final merge verdict. Exclude
    owner holds, changes requested, stale review heads, conflicting PRs.
 2. **Re-read before admitting.** Base still the integration branch, head SHA equals the approved
-   head, review/QA evidence still current. A changed head returns to review. Green CI is not enough:
+   head, review/QA evidence still current, and zero unresolved review threads where required.
+   A changed head returns to review. Use the configured eligibility mechanism if it covers all
+   admission rules. For batch admission, use one shared check that evaluates every gate separately
+   for each PR at admission time, including required QA evidence for that head and scope. Do not
+   admit a PR when a required gate's evidence is missing or unknown. Green CI is not enough:
    re-query the forge's own review decision right before admitting and require it to read approved
    at the current head. Required approvals still apply when the queue app may bypass the branch
    rules, a rebase cancels an approval under a require-last-push-approval rule, and an old
@@ -154,6 +158,18 @@ Never merge or push to the train yourself.
   commit records or the delivery task, not from the task's default assignee or a forge identity
   several agents may share, before creating or routing the review task (see `pull-request-review`,
   "Review sweeps").
+
+- **Re-enter through the queue's supported retry path.** If an app restores a dequeue marker,
+  removing the marker will not clear the queue's exclusion rule; use the app's retry command or
+  control instead. Read the dequeue report and preserve the first failure. Check the failing step
+  and comparable base or queue runs; a test outside the edited files can still catch a regression.
+  Retry once only when evidence suggests a transient failure and the PR still passes every admission
+  gate at its current head. If the failure repeats, stop and record the evidence for investigation.
+- **Approved, green PRs may still have unresolved threads.** Read each blocking thread against the
+  current head. Ask the reviewer to resolve it unless the stewardship role is authorized to do so
+  and the thread's disposition is explicit or objectively verifiable at that head. Approval alone
+  does not settle a thread. When authorized to resolve it, record the fix or disposition on the
+  thread and recheck the forge's resolution gate before admission.
 
 ## Verification
 
