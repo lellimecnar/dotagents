@@ -138,11 +138,12 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `relationship-kindness-coaching` | coaching kindness, repair or dates. Not therapy |
 | `schedule-planning-input` | a coordinator asks you for input to a person's schedule |
 
-### Research & business (2)
+### Research & business (3)
 
 | Skill | Use when |
 | --- | --- |
 | `bootstrapped-product-revenue` | advising a solo founder on revenue. First payers |
+| `idea-development` | a founder brings a raw idea. Find a way to make it pay |
 | `research-and-fact-checking` | for research, fact-checks or news briefs. Expert method |
 
 ### Communication styles (1)

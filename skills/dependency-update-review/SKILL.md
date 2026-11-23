@@ -2,7 +2,7 @@
 name: dependency-update-review
 description: Use when triaging bot dependency PRs or lockfile changes. Reconcile, verdict.
 metadata:
-  version: "0.1.3"
+  version: "0.1.4"
   status: draft
   owner: maintainer
 ---
@@ -144,9 +144,12 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
 ## Editing the update bot's config
 
 - Read the schema from the bot's raw documentation source; rendered pages can truncate.
-- Grouping facts (Dependabot): `directories:` merges config only; GitHub still opens each group's PR
-  *per directory*. `group-by: dependency-name` is the only cross-directory option and yields one PR
-  per dependency. A dependency joins the *first* group it matches, so use disjoint `update-types`
+- Grouping facts (Dependabot): with `directories:`, a pattern group's updates can arrive as one PR
+  spanning the listed directories (title "... group across N directories"), while ungrouped updates
+  arrive one PR per dependency per directory. `group-by: dependency-name` instead gives one PR per
+  dependency across directories (same ecosystem, version updates only). Before you say how many PRs a
+  config yields, read the repo's recent bot PR titles and changed files. A dependency joins the *first*
+  group it matches, so use disjoint `update-types`
   (minor+patch vs major) to make order irrelevant. Never promise "one PR per ecosystem"; a release
   train is what gives the owner one merge.
 - Report manifests with no config entry as coverage gaps; do not silently widen scope.
