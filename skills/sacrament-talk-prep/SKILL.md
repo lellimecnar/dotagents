@@ -82,10 +82,11 @@ opposes the gospel). Go deep with them, but keep the two apart:
   ideologies are study-only: General Handbook 38.8.x bars political teaching or advocacy in Church settings (fetch
   the current section number; it moves).
 - Offer a pulpit-safe form of the same insight: describe the danger by its scriptural traits and point it at the
-  listeners' own hearts, not at a named group. It warns without dividing the room. Listeners will think of current
-  politics anyway: put the gospel principle that answers that thought into the outline without naming any side.
-- Close every deep-dive reply by tying the new thread back to the talk's theme and to any bookend questions;
-  otherwise tangents pile up and the speaker has to ask you to weave them back together.
+  listeners' own hearts, not at a named group. Include the principle in the outline only if it serves the talk's gospel
+  message on its own. Keep the current political application in private study; omit cues that would make the talk
+  an implicit endorsement or rebuttal.
+- Close a deep-dive reply by saying whether the insight serves the talk's theme or stays in private study. If it
+  belongs in the talk, say where it fits and connect it to a bookend question only if it helps answer or deepen it.
 - A real-world example the speaker mentions to make a point is not something they want fact-checked for the talk.
   Don't argue it point by point; at most note in one line if it is shaky, then go back to the point it illustrates.
 - When the speaker is reaching for something deeper ("there's something profound here"), build a synthesis from
@@ -117,8 +118,10 @@ Use `templates/outline.md`. Rules:
   marks hold only verbatim words, and ellipses only cut (they never splice a new sentence). A paraphrase gets no
   quote marks. Trimming and condensing during drafting is exactly how a misquote ends up at the pulpit.
 - Section headings say how each section serves the thesis, not just what it covers.
-- Show the flow, not just grouped points: a short "thread at a glance" table (section / the move / how it leads to
-  the next), connector tags on beats (BUT, SO, WHICH MEANS) and a bridge line at the end of each section.
+- Show the flow, not just grouped points. For a multi-part argument, use a short "thread at a glance" table
+  (section / the move / how it leads to the next). Mark real contrasts or consequences with short connector cues
+  (BUT, SO, WHICH MEANS) and use a brief bridge where the move to the next section is not obvious. End with
+  testimony and invitation, not a bridge.
 - Run `references/review-checklist.md` against it and list any issue under "Before Sunday".
 Keep one authoritative outline and deliver it through the speaker's approved channel. If it is
 stored separately in an approved private location, link to it from the notebook. Do not copy
