@@ -5,8 +5,8 @@ metadata:
   version: "0.1.0"
   status: draft
   owner: maintainer
-  tags: [ideas, strategy, prior-art, business-model, critique, anti-sycophancy]
-  related_skills: [bootstrapped-product-revenue, research-and-fact-checking, due-diligence-before-deciding]
+  tags: "ideas, strategy, prior-art, business-model, critique, anti-sycophancy"
+  related_skills: "bootstrapped-product-revenue, research-and-fact-checking, due-diligence-before-deciding"
 ---
 
 # Idea development: from "crazy idea" to something that works and pays
@@ -83,17 +83,20 @@ list of things to look up.
    you find: open, proven but beatable, saturated, or dead for a reason. For each dead attempt, name why: no
    need (rarely fixable), bad timing or bad unit economics (fixable with a real "why now"), execution. Existing
    paying customers elsewhere are validation, not a veto. End with one line: why now, and why the founder.
-4. **Crazy-but-right test.** Keep the idea alive on its original course only if (a) a specific group already
-   has this problem badly, shown by what they already do or pay to cope; (b) something concrete changed
-   recently that makes it possible now; (c) others missed it because the work is unpleasant or the insight is
-   hidden, not because nobody needs it. If one fails, that is where the redesign happens (principle 3).
+4. **Check the case for this approach.** Look for a specific group with an observable problem and a credible
+   reason to choose this offer over existing alternatives. For a non-consensus idea, also ask what makes it
+   viable now and why others missed it. For a proven category, an underserved segment, cheaper delivery or
+   better access can be enough. Treat a gap as an assumption to test before forcing a redesign.
 5. **Pre-mortem and critique pass.** "It is 12 months from now and this failed. Why?" State the failure as
    certain, then rank the top causes (at most seven concerns overall, each with consequence and action). For a
    serious idea, run this pass separately with fresh information: a new search, real numbers, and where you
    can, a different model reviewing your draft. Then argue against your own recommendation once.
-6. **Riskiest assumption and the cheapest test.** Turn the top failure causes into testable assumptions. Pick
-   the one that kills the idea if false and is cheapest to test. Design one experiment with the pass/fail line
-   written down before it runs; default budget under $100 and under a week (the founder decides any spend).
+6. **Riskiest assumption and the cheapest test.** Identify the unresolved assumption whose failure would do
+   the most damage and choose the cheapest credible test of it. Draft a pass, fail and inconclusive rule before
+   testing. Aim for under $100 and a week when that can produce useful evidence. Draft only unless the founder
+   authorizes the specific outreach, publication, data collection, payment or spend. For potentially patentable
+   work, keep the test non-disclosing until the founder has checked filing and disclosure consequences in the
+   relevant jurisdictions.
 7. **Money model, after a passed test or when the founder asks.** Price before product: who pays, how much, how often,
    through which channel. Ten-line unit economics (price, cost to deliver, cost to acquire, payback time,
    margin). For a founder with little cash, payback time matters more than lifetime value: start with a simple
@@ -110,10 +113,11 @@ one assumption to check first), **PIVOT** (goal is good, vehicle is not; here is
 **LICENSE / PARTNER** (someone else is better placed to make it; here is who and the deal shape),
 **PARK** (good, but not now; what would reopen it), **KILL** (no surviving variant found; what was checked).
 
-Then, compactly: the real goal; the strongest version of the idea; prior art with links (dated); the top
-risks, ranked; the riskiest assumption; the one next experiment with its pass/fail line; the money sketch if
-reached. Separate sourced facts, your inferences and your opinions visibly. End with the one thing the founder
-should do next, named by its result.
+Then give the real goal, strongest version, dated evidence, top risks and money sketch where relevant.
+Separate sourced facts, inferences and opinions. For TEST, give one experiment and its decision rule; for
+PARK, name the condition for reopening; for KILL, name the failed assumption and variants checked. For
+actionable BUILD, PIVOT or LICENSE / PARTNER verdicts, name the next decision or milestone. Do not invent
+a founder task when no action is needed.
 
 ## Pitfalls
 

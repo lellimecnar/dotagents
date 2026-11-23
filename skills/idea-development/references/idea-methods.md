@@ -34,12 +34,12 @@ Legend: **[S]** means the claim comes from the linked source. **[Syn]** means it
 - **[S]** Espacenet: more than 150 million documents worldwide, updated daily. https://epo.org/en/searching-for-patents/technical/espacenet
 - **[S]** Google Patents: covers 100+ patent offices and also returns Google Scholar, Google Books and Prior Art Archive results. https://guides.library.unt.edu/google/patents
 - **[S]** Lens.org: free, open patent and scholarly data that anyone can export anonymously. https://researchguides.library.syr.edu/lensguide/use
-- **[S]** Legal novelty means the invention is not part of the "state of the art". Any public disclosure counts, not just patents. https://wipo.int/documents/d/scp/docs-en-novelty-comments-epo1.pdf
+- **[S]** For example, [EPC Article 54](https://www.epo.org/en/legal/epc/2020/a54.html) covers public disclosures before filing and certain earlier-filed European applications; [Article 55](https://www.epo.org/en/legal/epc/2020/a55.html) gives narrow exceptions. Scope patent questions by jurisdiction and date. This sweep can surface leads; it does not establish patentability or freedom to operate.
 
 **Products, startups and graveyards:**
 - **[S]** YC company directory (filterable by industry and location): https://ycombinator.com/companies
 - **[S]** Failory Startup Cemetery (120+ post-mortems): https://failory.com/cemetery
-- **[S]** CB Insights failure analysis, latest version: of startups that shut down since 2023, 70% "ran out of capital", but that is usually the final cause rather than the root one. Root causes: poor product-market fit 43%, bad timing 29%, unsustainable unit economics 19%. https://cbinsights.com/research/report/Startup-failure-reasons-top
+- **[S]** CB Insights (March 2026) identified 431 publicly reported VC-backed shutdowns since 2023. Among the 385 with identifiable reasons, 70% ran out of capital, 43% cited poor product-market fit, 29% timing and 19% unsustainable unit economics; reasons can overlap. Use these as prompts for investigation, not population failure rates. https://www.cbinsights.com/research/report/startup-failure-reasons-top/
 - **[S]** The earlier CB Insights study of 101 post-mortems found "no market need" in 42% of cases. https://s3-us-west-2.amazonaws.com/cbi-content/research-reports/The-20-Reasons-Startups-Fail.pdf
 - **[S]** Kickstarter publishes live stats: 42.5% of all projects succeed. Failed campaigns are a free demand signal. https://web.archive.org/web/20251003065624id_/https:/www.kickstarter.com/help/stats
 - **[Syn]** Also check Product Hunt, Indie Hackers, GitHub, app stores and the Crunchbase free tier. Searching "<problem> alternative" and reading reviews is often faster than any database.
@@ -105,7 +105,7 @@ Legend: **[S]** means the claim comes from the linked source. **[Syn]** means it
 **Solo founders (the evidence is mixed):**
 - **[S]** Greenberg & Mollick studied Kickstarter-founded firms and found solo-founded companies survived longer and earned more revenue than team-founded ones. https://stern.nyu.edu/experience-stern/faculty-research/venture-investors-take-note-solo-founders-outperform-teams
 - **[S]** Paul Graham lists "single founder" as startup mistake #1. https://paulgraham.com/startupmistakes.html
-- **[S]** Stripe Atlas: solo founders were 63% of C-corps in Q2 2026. Top-decile solo founders earn about 61× the median in their first six months. https://stripe.com/blog/top-solo-founder-traits
+- **[S]** Stripe reported that solo founders formed 63% of C corporations incorporated through Atlas in Q2 2026 to date as of May 28. For its 2025 comparison, top-decile solo-founded Atlas startups had about 61× median first-six-month revenue. Neither figure describes all startups or founder income. https://stripe.com/blog/top-solo-founder-traits
 - **[Syn]** A solo, low-cash founder should prefer ideas with a short path to first revenue, one channel, few dependencies, and options to license or sell services.
 
 ## E. Why "everyone said it would never work" ideas sometimes win
@@ -128,18 +128,15 @@ Legend: **[S]** means the claim comes from the linked source. **[Syn]** means it
 **Design rules [Syn]:**
 - Process one idea at a time.
 - Every stage produces a single artifact of one page or less.
-- Every session ends with **one verdict** and **one next experiment**.
-- Ideas you aren't working on go to a "parking lot" file so they aren't lost, which reduces the pull to switch.
-- Each stage has a timebox. Stages 0–4 should fit into 1–3 sessions.
-- Verdicts: **KILL / PARK / PIVOT / TEST / BUILD / LICENSE.**
+- Use [the main skill's session and output rules](../SKILL.md) for selection, parking, permissions and verdicts. This worked example supplies optional techniques and timeboxes, not additional requirements.
 
 ### 0. Capture and park (10 min)
 - **Purpose:** get the idea out of your head; choose which idea to work on now.
 - **Questions:**
   - What is the idea in one sentence?
   - What excites you about it?
-  - On a 1–5 scale: energy now, unfair insight, and cash needed. The highest total gets processed.
-- **Tools:** a parking-lot file.
+  - First screen against the founder's cash and time limits. When no active test would be displaced, optionally score energy, distinctive insight and affordability on 1–5 scales, with 5 always favorable. Use the score to discuss a choice, not to override the founder's priorities.
+- **Tools:** current conversation or a founder-approved private parking list.
 - **Artifact:** an idea card.
 - **Exit:** one idea selected; the rest are parked.
 
@@ -177,14 +174,14 @@ Legend: **[S]** means the claim comes from the linked source. **[Syn]** means it
   - Products: YC directory, Product Hunt, Failory, CB Insights, Kickstarter, app stores, GitHub.
   - Research: Semantic Scholar.
 - **Artifact:** a 5–10 row competitor/graveyard table and a one-line why-now.
-- **Exit:** classify the space as **open / validated-but-beatable / saturated / dead-for-a-reason**. Dead-for-a-reason with no why-now → **KILL or PARK**.
+- **Exit:** classify the evidence as **no close analogue found / validated-but-beatable / saturated / prior failures**. For prior failures, distinguish documented causes from hypotheses and check whether they apply to the proposed variant. Pass unresolved risks to the critique stage rather than issuing a verdict from the classification alone.
 
 ### 4. Structured critique (30 min)
 - **Purpose:** find the fatal flaws cheaply, without killing the idea's energy.
 - **Order:**
   1. Steelman the idea (Dreamer).
   2. Pre-mortem with certainty framing (Critic): "It's 12 months on and it failed. Why?"
-  3. Outside view: name a reference class and its base rate, using CB Insights, SBA survival rates, Kickstarter success rates or the graveyard table.
+  3. Outside view: choose a comparable cohort and match its outcome and time horizon to the decision. Report a base rate only if the denominator is appropriate. Use shutdown-only or graveyard data to identify failure modes, not to estimate the probability of failure.
   4. Non-consensus check: what's the secret or the schlep?
 - **Tools:** Klein's pre-mortem, Kahneman/Flyvbjerg reference-class forecasting, Disney roles.
 - **Artifact:** the top 3 failure reasons, each rewritten as an assumption.
@@ -197,10 +194,7 @@ Legend: **[S]** means the claim comes from the linked source. **[Syn]** means it
   - Which single assumption, if false, kills the idea?
 - **Tools:** Strategyzer Assumptions Mapping.
 - **Artifact:** **a verdict plus the single riskiest assumption.**
-- **Exit:**
-  - KILL if a cheap check already falsifies the riskiest assumption.
-  - LICENSE if it's a physical product that can be made on existing lines and you have no wish to run a business (Key's model).
-  - Otherwise TEST.
+- **Exit:** identify the riskiest unresolved assumption and use the main skill's verdict list. If evidence falsifies the current version, check variants before recommending KILL. Treat manufacturability as one licensing screen; if counterparty interest or viable deal terms are unknown, TEST the licensing path rather than recommending a deal.
 
 ### 6. Cheapest next experiment (design 15 min; run over days)
 - **Purpose:** get real evidence for under $100 and within about a week.
@@ -209,10 +203,10 @@ Legend: **[S]** means the claim comes from the linked source. **[Syn]** means it
   - A landing page or pre-order with a price on it.
   - A concierge or manual version of the service.
   - A licensing sell sheet.
-- **Pre-register the pass/fail threshold**, for example "≥3 of 5 people describe paying or hacking a workaround in the last 6 months", or "≥2 pre-orders at $X".
+- **Set thresholds before running:** name the target segment, recruitment channel, minimum qualified exposure, deadline and pass/fail criteria. If reach is too low or the sample is off-target, mark the result inconclusive. A handful of interviews can screen for workarounds; it does not establish willingness to pay.
 - **Tools:** The Mom Test, Testing Business Ideas experiment cards.
-- **Artifact:** a one-line test card (hypothesis, test, metric, threshold, deadline).
-- **Exit:** the experiment has run and the result has been recorded against the threshold.
+- **Artifact:** a test card with hypothesis, audience, metric, thresholds, deadline and owner.
+- **Exit:** deliver the card for a design-only request. If execution was authorized, record the denominator and outcome against the thresholds.
 
 ### 7. Money model (30 min, only after a passed desirability test)
 - **Purpose:** show the idea can be profitable before building more.
@@ -224,7 +218,7 @@ Legend: **[S]** means the claim comes from the linked source. **[Syn]** means it
   - Revenue model: one-time sale → recurring (stair step), license, or services.
 - **Tools:** Lean Canvas, Value Proposition Canvas, Ramanujam, Walling.
 - **Artifact:** a Lean Canvas and a 10-line unit-economics table.
-- **Exit:** positive contribution margin, payback within your cash runway, and a SOM large enough to meet your income goal from stage 1. If not, use the Ries pivot list to choose **one** pivot and return to stage 5.
+- **Exit:** convert the obtainable sales estimate into a cash-flow forecast over the same period as the founder's goal. Subtract fulfillment, acquisition, overhead and other relevant costs without double-counting. Check that cash does not run out before payback and that a plausible scenario supports the required founder income. If the numbers fail, pick one pivot; if key inputs are unknown, test those before recommending BUILD.
 
 ### 8. Build or persevere review (recurring, weekly or each sprint)
 - **Purpose:** make continuing a decision, not a drift.
@@ -234,10 +228,7 @@ Legend: **[S]** means the claim comes from the linked source. **[Syn]** means it
 - **Artifact:** a one-line decision log.
 - **Exit:** a dated decision. Past 3 failed tests on the same assumption, PIVOT or PARK by default.
 
-**Agent output contract [Syn]:** every reply about an idea ends with exactly three lines:
-- `Verdict:` one of KILL / PARK / PIVOT / TEST / BUILD / LICENSE, with a one-sentence reason.
-- `Riskiest assumption:` …
-- `Next experiment (≤1 week, ≤$100):` … with a pass threshold.
+**Agent output:** use the [main skill's output shape](../SKILL.md). The test card above is an optional artifact for a useful, authorized next experiment, not a required closing format.
 
 ---
 

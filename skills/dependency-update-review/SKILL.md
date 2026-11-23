@@ -144,12 +144,13 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
 ## Editing the update bot's config
 
 - Read the schema from the bot's raw documentation source; rendered pages can truncate.
-- Grouping facts (Dependabot): with `directories:`, a pattern group's updates can arrive as one PR
-  spanning the listed directories (title "... group across N directories"), while ungrouped updates
-  arrive one PR per dependency per directory. `group-by: dependency-name` instead gives one PR per
-  dependency across directories (same ecosystem, version updates only). Before you say how many PRs a
-  config yields, read the repo's recent bot PR titles and changed files. A dependency joins the *first*
-  group it matches, so use disjoint `update-types`
+- Grouping facts (Dependabot): `groups` combines matching updates into one PR per group; a pattern
+  group in a `directories:` entry can span directories. Unmatched updates are individual PRs.
+  [`group-by: dependency-name`](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#group-by-groups)
+  groups version updates for each dependency across directories in the same ecosystem. Incompatible
+  version constraints split the updates into separate PRs. Check the proposed rules and manifest
+  constraints first; use recent PRs for equivalent rules to corroborate, not predict, the result.
+  A dependency joins the *first* group it matches, so use disjoint `update-types`
   (minor+patch vs major) to make order irrelevant. Never promise "one PR per ecosystem"; a release
   train is what gives the owner one merge.
 - Report manifests with no config entry as coverage gaps; do not silently widen scope.
