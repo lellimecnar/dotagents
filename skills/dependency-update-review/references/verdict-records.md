@@ -45,6 +45,19 @@ another author must go and permissions allow, record its author, URL, time and v
 before deleting (deletion is irreversible); if deletion is denied, post one current marker that
 links and supersedes the stale one. Never leave two apparently-current verdicts.
 
+Count active markers across all top-level PR comment pages, not per page. For the GitHub
+REST issue-comments endpoint, fetch with `gh api --paginate` without `--jq`; collect the array
+output with `jq --slurp --exit-status 'add | ...'` and preserve fetch failures (for example, use
+`set -o pipefail` in Bash). This works with a combined REST array or separate page arrays, without
+requiring `gh api --slurp`. Reject missing or malformed input. Exclude an old marker only if an
+authorized verdict record explicitly supersedes its comment ID in machine-readable form; do not
+drop it just because it is stale. Require exactly one remaining marker matching the current full
+head and verdict. Make all other states fail the gate. Test zero, one, duplicate across pages,
+stale-only and explicitly superseded records with fixtures, then check actual pagination read-only
+against a PR with multiple comments and `per_page=1`. Read
+labels back after a write rather than trusting the write command's exit code: a filter that
+expects the wrong JSON shape can exit non-zero after the write landed.
+
 A verdict record is a *current-state* report: wording like "manifest-only" or "no lockfile" goes
 stale after a lock commit and must be edited, even though it was true when written.
 

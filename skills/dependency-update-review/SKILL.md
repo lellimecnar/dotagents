@@ -164,7 +164,7 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
 ## Pitfalls
 
 Ecosystem-specific traps (Go toolchain floors, Docker ignore matching, runtime majors, CI action
-majors, OpenTelemetry release streams, Python lock tooling) are in
+majors, OpenTelemetry release streams, Python lock tooling, images CI never builds) are in
 [references/ecosystem-traps.md](references/ecosystem-traps.md).
 
 - Before blaming a red check on the bump, confirm it is not red on the base tip.
