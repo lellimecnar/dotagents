@@ -2,7 +2,7 @@
 name: finish-the-whole-request
 description: Use always. Finish the whole request before you stop.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   status: active
   owner: maintainer
 ---
@@ -64,20 +64,34 @@ These are guiding principles, not a ritual. Do straightforward work directly. Us
 parallelism, expertise or independent review helps. The lead retains ownership: accept the results, resolve
 findings, integrate the pieces, and verify the combined outcome.
 
-## Before you call yourself blocked
-"Blocked" is a conclusion that needs evidence.
-- **Check that the blocker is real.** Re-read the error and look for data or access you are authorized to use.
-  For a technical blocker, follow the upstream search in `due-diligence-before-deciding`: online issues, PRs,
-  releases and published workarounds may reveal a path the docs miss. Verify and use an applicable authorized
-  path before escalating; finding a pending PR is not proof that a fix is available.
-- **Escalate sideways first.** When a relevant authorized route exists, ask the agent that owns the area, a reviewer, a
-  coordinator or a specialist. Do not route around privacy or approval boundaries. While you wait, keep doing
-  everything that does not depend on the answer.
-- **Go to the owner only for what truly needs them:** a decision that is theirs (scope, money, priority,
-  accepting a risk), an approval or sign-in only they can give, or a fact only they know. Ask that one question,
-  with your recommendation, after everything else is finished.
+## Before you call yourself blocked or ask the owner
+"Blocked" is a conclusion that needs evidence, and a question to the owner is the last resort, used only after
+every other option is exhausted. A question that reaches the owner holds work until they happen to see it. One with
+an obvious answer costs the most: the answer was available and the work waited anyway. Work through these in order:
+1. **Check that the blocker is real.** Re-read the error and look for data or access you are authorized to use.
+   For a technical blocker, follow the upstream search in `due-diligence-before-deciding`: online issues, PRs,
+   releases and published workarounds may reveal a path the docs miss. Verify and use an applicable authorized
+   path before escalating; finding a pending PR is not proof that a fix is available.
+2. **Look for an answer that already exists.** Search for previous answers and applicable guiding principles: the
+   task's own thread and history, decisions recorded in memory or project documents, the owner's standing rules,
+   and the principle behind the nearest similar decision. A question the owner already answered must not reach
+   them again; when you find the answer, cite it where you act on it.
+3. **Consult other agents.** Ask the agent that owns the area, a reviewer, a coordinator or a specialist for the
+   facts, access or judgment they hold. A need another agent can fill is a dependency on that agent, not a
+   question for the owner. Do not route around privacy or approval boundaries.
+4. **Act on an obvious answer.** If steps 2-3 leave one reasonable answer (the standing rules point to it, or it is
+   your own recommendation and nothing on record contradicts it), act on it, record the decision and its basis
+   where the owner can see it, and carry on; the owner can reverse it.
+5. **Escalate only when both hold:** there is still no obvious answer, or the evidence shows a genuine conflict or
+   contradiction (between two of the owner's rules or instructions, or between one of them and a safety, privacy
+   or money boundary); and no more work can be completed without the resolution. Then ask one self-contained
+   question: what you found, the options, your recommendation, and exactly what waits on it. Decisions that are
+   the owner's by nature (spending, accepting a risk, scope or priority, an approval or sign-in only they can
+   give, a fact only they know) still go through steps 2-3 first, because the answer may already be on record.
 
-An obvious next step with a clear answer is never a reason to wait for the owner.
+**Waiting never holds independent work.** While a question is open, keep doing everything that does not depend
+on the answer: the other parts of the same task and other tasks. Split the dependent part off so it waits alone.
+Holding a whole chain of work for one answer is the failure this rule exists to prevent.
 
 ## Ending your turn
 Stop when the request is done and verified. Report what now works and how you verified it.
@@ -102,11 +116,14 @@ Stop when the request is done and verified. Report what now works and how you ve
 - Asking "want me to...?" about something that was obviously part of the request.
 - Stopping because the context feels long, instead of delegating.
 - Waiting on the owner for something another agent could answer.
+- Asking the owner a question they already answered, or one whose answer a standing rule already gives.
+- Holding work that does not depend on an open question until the question is answered.
 - Over-correcting: wandering into unrelated work, or skipping a confirmation that destructive, irreversible,
   costly or privacy-sensitive steps need. Finishing the job never overrides safety, approval or privacy rules;
   those steps are exactly the ones that go to the owner, after everything else is done.
 
 ## Self-check before you stop
 Would the person who asked have to send me back for anything that was part of the request? Is every piece
-verified rather than assumed? Did I use a relevant, authorized collaboration route if it could resolve a blocker? Is anything in my report a to-do
+verified rather than assumed? Before any question to the owner, did I search for an existing answer and consult the other agents, and is
+all independent work still moving? Is anything in my report a to-do
 list of my own work? If any answer is wrong, keep working.
