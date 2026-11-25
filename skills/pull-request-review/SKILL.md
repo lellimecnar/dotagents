@@ -2,7 +2,7 @@
 name: pull-request-review
 description: Use when reviewing another agent's PR. Verify claims, pin head, one verdict.
 metadata:
-  version: "0.2.1"
+  version: "0.2.2"
   status: draft
   owner: maintainer
 ---
@@ -44,6 +44,17 @@ Not for merging. Reviewers never merge; whoever owns the merge queue does.
 - **Report completeness is part of correctness.** "N files fail X" without the file:line list is
   an incomplete finding, and a check listed as "pass" that you did not run in this session is a
   fabricated fact.
+- **Review the change, not unrelated process.** Judge the pinned change in repository context against
+  the governing request and rules. A change request names a concrete defect or unmet requirement and
+  what must change, even if the problem is an omission with no changed line to annotate. Report
+  unrelated handoff or delivery issues where the work is tracked, not as PR blockers. "Not enough
+  evidence" with no named defect or unmet requirement is not a change request.
+- **Proof you cannot produce is not a blocker by itself.** When a check needs something your
+  environment lacks (a container runtime, a deployed environment, a live account), first look for
+  equivalent evidence at the pinned head (provider CI, a check another authorized reviewer ran). If
+  the diff then has no blocker, approve and state exactly what was not verified and how and when it
+  can be. Hold the PR for a decision only when the unverified part could cause harm a revert cannot
+  undo (data loss, security, money, production).
 
 ## Procedure
 
@@ -143,8 +154,11 @@ requires it) without double work:
 - Create review and QA tasks idempotently (a key that includes the date and PR number), with QA
   depending on the review so it starts only after.
 - If a separate queue steward exists, use the configured handoff when required gates pass and avoid duplicate admissions.
-- Cap rounds: after the third change request on the same PR, escalate the disagreement to the owner
-  as one decidable sentence rather than starting round four. A new commit, a new review task or a
+- Cap rounds: after the third change request on the same PR, do not start another round on your own.
+  State the disagreement as one decidable sentence and take it to whoever coordinates the work, if anyone.
+  Escalate to the owner only as a last resort under `finish-the-whole-request`. A coordinator may authorize
+  one bounded final revision with an exact list of items to fix. On the revised head, follow the re-review
+  procedure and withhold approval if a blocker remains or the revision introduces one. A new commit, a new review task or a
   new sweep does not reset the count; check earlier change requests before opening a review for a
   revised head.
 - A hold on merge admission is not a hold on review: keep reviewing PRs whose admission is held.
