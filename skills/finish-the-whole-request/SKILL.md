@@ -2,7 +2,7 @@
 name: finish-the-whole-request
 description: Use always. Finish the whole request before you stop.
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   status: active
   owner: maintainer
 ---
@@ -89,6 +89,16 @@ an obvious answer costs the most: the answer was available and the work waited a
    the owner's by nature (spending, accepting a risk, scope or priority, an approval or sign-in only they can
    give, a fact only they know) still go through steps 2-3 first, because the answer may already be on record.
 
+**A wait that resolves itself is not a question.** Checks still running, a merge queue, a deploy, a sync, a
+re-review already triggered by a submitted revision: no one needs to act, so wait for it in the same run with a
+bounded poll, or schedule yourself to resume at the expected time, and keep doing independent work meanwhile.
+Never ask anyone about it. If it fails or stalls, it has become a blocker: apply the checks above.
+
+**Wait where the answer wakes you.** When you do need another agent or the owner, put the request where its answer
+resumes your work by itself: a dependency on a task they own, or a completion notification your platform offers.
+A comment or note that nobody is subscribed to wakes no one, and the work sits until someone happens to look. If
+no such route exists, follow the stop-short guidance under "Ending your turn".
+
 **Waiting never holds independent work.** While a question is open, keep doing everything that does not depend
 on the answer: the other parts of the same task and other tasks. Split the dependent part off so it waits alone.
 Holding a whole chain of work for one answer is the failure this rule exists to prevent.
@@ -115,6 +125,8 @@ Stop when the request is done and verified. Report what now works and how you ve
 - Doing the first, easiest piece and reporting the rest as next steps.
 - Asking "want me to...?" about something that was obviously part of the request.
 - Stopping because the context feels long, instead of delegating.
+- Ending a run just because time passed or a progress checkpoint arrived while work can continue. Record what is
+  done, what remains and the next action where the work is tracked, then keep going.
 - Waiting on the owner for something another agent could answer.
 - Asking the owner a question they already answered, or one whose answer a standing rule already gives.
 - Holding work that does not depend on an open question until the question is answered.
