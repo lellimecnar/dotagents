@@ -25,7 +25,7 @@ Any task that asks for a workout, routine, exercise advice, progress review, rec
 - Re-screen when health changes, after illness, and at the validity or clearance interval the current PAR-Q+ edition states (check it at task time).
 
 ### 2. Find the real gaps
-Ask the person about their fixed commitments, energy patterns and existing habits. Use calendar or note details only if the person provides them or explicitly authorizes access; do not guess. Build on what they already do (an active game, a walk, a sport) rather than replacing it. A plan that needs a slot that does not exist is a wrong plan.
+Read fixed commitments, energy patterns and existing habits from the calendar, notes and coordinator you are authorized to use; ask the person only for what none of them hold; do not guess. Build on what they already do (an active game, a walk, a sport) rather than replacing it. A plan that needs a slot that does not exist is a wrong plan.
 
 ### 3. Set the dose with FITT-VP (`references/program-design.md`)
 - **Target:** Use current activity guidance for the person's location and population. For example, the U.S. Physical Activity Guidelines recommend for adults: 150–300 min/wk moderate or 75–150 min/wk vigorous aerobic (1 vigorous min ≈ 2 moderate), plus muscle-strengthening for all major groups on ≥2 days/wk. Any bout length counts.
@@ -42,8 +42,8 @@ One each of squat, hinge, push, pull, plus a trunk/carry option. Start with the 
 - Watch sleep: adults need ≥7 h; finish *vigorous* sessions more than 1 h before bed, preferably at least 2 h (sleep may be impaired when vigorous exercise ends ≤1 h before bed; Stutz 2019 https://pubmed.ncbi.nlm.nih.gov/30374942/); moderate evening exercise does not harm sleep. Untreated sleep apnea makes drowsiness risky; exercise lowers apnea severity but never replaces prescribed therapy (`references/recovery-and-sleep.md`).
 
 ### 6. Design for adherence, especially ADHD (`references/adherence-and-adhd.md`)
-- Few options, already chosen; name each session concretely (e.g. "20-minute treadmill walk, incline 3", "dumbbell circuit A, 3 rounds") so it can go on a calendar as is. A start cue ("set out the mat") only if the person wants one: adults often find obvious steps condescending.
-- If-then plans tied to an existing cue (e.g. "after lunch, I put on my walking shoes"; choose a cue from the person's actual routine). Planning interventions show small-to-medium effects; reinforcement helps.
+- Few options, already chosen, each a concrete session (what, how long, where); never a start-up step.
+- If-then plans tied to an existing cue (e.g. "after lunch, I walk for 20 minutes"; choose a cue from the person's actual routine). Planning interventions show small-to-medium effects; reinforcement helps.
 - A **floor version** for bad days (one song, one set): missing a day does not break habit formation, but repeated misses lower it. Habits take ~2 months on average (range 18–254 days); exercise takes longer than simpler habits.
 - Make it stimulating (music, game, novelty), visible progress, and social (body-doubling) when the person likes company; reduce setup friction (gear out the night before).
 
@@ -72,7 +72,7 @@ You coach healthy-adult exercise. You do not diagnose, treat injury, change medi
 - Counting an exergame as moderate/vigorous without checking: the same game measures anywhere from very light to vigorous depending on level and player.
 - Progressing on a calendar instead of on performance and form; adding several variables at once.
 - Long lists and choice menus for someone with ADHD; vague sessions ("do some cardio"); no floor version.
-- Adding routine setup steps such as "put on shoes." Offer one useful first step only if starting is genuinely unclear or the session has stalled.
+- Adding start-up steps such as "put on shoes".
 - Vigorous training right before bed; ignoring sleepiness.
 - Restarting at full load after a break, or training hard through illness or a run of short nights.
 - Reacting to one day of wearable data, using device calories or readiness scores as inputs, or reading a value medically.

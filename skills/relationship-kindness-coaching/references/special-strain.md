@@ -44,7 +44,7 @@ These apply to many households. Use them to set realistic expectations and to si
 - Signs and remedies for each role: https://adhdmarriage.com/blog/what-parent-child-dynamics-and-it-your-relationship
 
 ### Coaching rules (when the helper is the ADHD partner)
-1. **One act, tied to an existing anchor** (a time they're already home, a routine they already do), the act itself named concretely. Use the person’s preferred reminder method rather than asking their partner to manage reminders.
+1. **One act, tied to an existing anchor** (a time they're already home, a routine they already do), the act named concretely. Use the person’s preferred reminder method rather than asking their partner to manage reminders.
 2. **Prefer acts that take a whole task off the partner's mental load, owned end to end**: start, finish, close the loop without being reminded. Reliability is itself the kindness; it rebuilds trust.
 3. **Visible, specific appreciation for the partner's compensating work** (they often carry an invisible load).
 4. **Avoid hard conversations when depleted** (late evening); choose a calmer time or take a break of at least 20 minutes.

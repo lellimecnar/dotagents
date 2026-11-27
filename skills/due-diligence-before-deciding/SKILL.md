@@ -78,8 +78,9 @@ routine work that has no relevant external dependency.
   "assuming it supports...", "untested", "should work") means the work is unfinished. Check it, then decide.
 - An honest unknown is allowed only for what no available means can settle (a future event, information behind
   access you lack, a fact only the owner knows), and only after you tried. Say what you tried and what would
-  settle it. An unverified fact never carries the choice: choose among options you could verify, or give a
-  conditional answer whose branches are each verified ("if X, A; if not, B").
+  settle it. An unverified fact never carries the choice: settle it first if any source or agent can, and
+  choose among options you could verify. A conditional answer ("if X, A; if not, B") fits only when X
+  is a future event, and never goes into a schedule or a plan line.
 - When a deciding fact can come only from the owner, an approval or a login, finish everything else first, then
   ask that one question with your work so far. Do not dress it up as a finished decision with a footnote.
 - Options you present for someone else to choose from must each be researched and viable, with your pick and

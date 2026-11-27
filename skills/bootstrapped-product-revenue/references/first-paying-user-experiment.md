@@ -15,7 +15,7 @@ If the product is not reachable: run the same plan selling a **pre-sale / foundi
 - Price: a clean number below the cost of their alternative; one plan, monthly + annual; founding price optional.
 - Kill/continue rule written down (see below).
 - Accountability: name the check-in partner and the two check-in days (day 5 and day 10).
-- First physical action for day 2 written as an if-then plan.
+- Day 2's first task written as an if-then plan (cue, then the concrete result).
 
 ## Day 2: list and link
 - Write 30 named prospects (people or places where the segment gathers), including every existing free user reachable by email.

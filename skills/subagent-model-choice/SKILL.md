@@ -29,5 +29,6 @@ limits, not the most powerful model available.
 ## Rules
 - Volume, length or importance to the user alone do not justify deep. Split long work into fast or standard pieces.
 - Never use deep for routine or recurring work (scheduled jobs, triage, status checks, summaries).
-- If unsure between two options, choose the cheaper one and escalate only if the result falls short.
+- If unsure between two options, check the option descriptions against the subtask's consequence,
+  pick by fit, and verify the result before using it.
 - If no model options are offered, the subagent runs on your model; do not work around that.

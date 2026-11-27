@@ -49,10 +49,10 @@ Use any available tools for short technical experiments, weekly planning and ver
    only then new code. Doing things that don't scale is the normal way products start (Paul Graham).
 5. **Decide the price before the conversation,** using positioning-pricing.md. Default: charge from day one,
    a simple plan, priced against the value or the customer's current alternative, never against your costs.
-6. **Break it into actions under about 90 minutes each, the first one physical and named** ("open the prospect
-   sheet and write 10 names"), with a due day and a person who will check (adhd-founder-methods.md).
+6. **Break it into actions under about 90 minutes each, each named by its concrete result** ("10 prospect
+   names written in the sheet"), never a start-up step, with a due day and a person who will check (adhd-founder-methods.md).
 7. **Review on a fixed weekly day** against the number. Keep, change one thing, or kill. Never "keep building".
-8. **Report** what was done, the numbers, the decision and the next physical action. Cite outside facts.
+8. **Report** what was done, the numbers, the decision and the next action. Cite outside facts.
 
 ## Decision rules
 
@@ -111,5 +111,5 @@ Use any available tools for short technical experiments, weekly planning and ver
 
 ## Output shape
 
-For the founder: the decision, one to three prioritised actions, the first physical step, the check-in day.
+For the founder: the decision, one to three prioritised actions named by result, the check-in day.
 For the record: hypothesis, numbers so far, kill/continue rule, sources for any outside fact.

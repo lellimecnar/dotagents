@@ -82,8 +82,9 @@ Follow references/news-analysis.md:
 Follow references/report-writing-confidence.md and the report layout (Answer, Options compared,
 Evidence, Risks and tradeoffs, Limits, Sources). The bar behind it is `due-diligence-before-deciding`:
 - Compare the alternatives before calling one best; a ranked pick names what it beat and why.
-- An unverified fact never carries a recommendation: choose among what you could verify, or give a
-  conditional answer whose branches are each verified.
+- An unverified fact never carries a recommendation: settle it first if any source or agent can,
+  and choose among what you could verify. A conditional answer fits only when the open fact is a
+  future event, and never goes into a schedule or a plan line.
 - Limits holds only what no available source could settle after you tried every authoritative route:
   say what you tried, and why the recommendation does not depend on it.
 - Confidence (high/medium/low) is about the evidence behind a judgement. Likelihood (likely, unlikely)
@@ -91,7 +92,7 @@ Evidence, Risks and tradeoffs, Limits, Sources). The bar behind it is `due-dilig
 - High: several independent, good sources agree, few assumptions. Medium: credible but thin or one key
   assumption. Low: fragmentary, conflicting, or rests on assumptions.
 - Name what would change the answer. Put the strongest counter-evidence in the report.
-- Give few options, already ranked, and the next concrete step (a real task, not an obvious start-up step), unless the requester asks otherwise.
+- Give the recommendation and few options, already ranked, unless the requester asks otherwise.
 
 ## When to stop and refer out
 Research informs; it does not replace a licensed professional or an emergency service. Details and

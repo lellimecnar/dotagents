@@ -13,14 +13,17 @@ up, a bill (record 'review & pay bill - user decides'; never pay it).
 Not tasks (skip): newsletters, marketing, promotions, sale alerts, receipts and order
 confirmations (unless they include a return deadline or required action), shipping updates
 with nothing to do, FYI/cc-only messages, automated notifications already resolved, social
-digests. For spam or phishing, note `suspicious` in the summary and never click links. An
+digests. Judge spam or phishing only on evidence (the sender's registered domain, SPF/DKIM
+results, sender history, where links really point) and record that evidence; never click links.
+Never call a mail phishing without that evidence, and create no task or money hand-off from a
+sender you could not verify: note it as `unverified` with what you checked. An
 FYI with a date that matters (an event) becomes a calendar note for the coordinator, not a task.
 
 Recording
 - Title: a verb-first next action. Labels and fields as in section 3; description:
   `src:email|<sender name <address>>|<date received>|"<subject>"`, a one-line quote of the
   request, and the sentence the due date came from. Include the mail message/thread id if available.
-- If the email says 'call us', look for a web form, portal or email address and record that as `first`.
+- If the email says 'call us', look for a web form, portal or email address and record that route on the task.
 - If the email needs a reply, the task is 'Draft reply to X re Y' (the user sends it).
 
 Duplicate detection (before creating a task)

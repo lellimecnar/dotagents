@@ -12,8 +12,9 @@ US household context. Vendor terms change; verify them at decision time.
 - **Secrets:** setup tokens and access URLs that embed credentials are bearer secrets; store them in
   the vault, never in config files or chat.
 - **Data gaps to expect:** linked external accounts lag the bank sync; history windows can be
-  ~90 days; most providers have no native "bill" object, so infer due dates from recurring
-  transactions or keep a bill list.
+  ~90 days; most providers have no native "bill" object, so take due dates from statements,
+  creditor portals or bill notices, or keep a bill list from them. Posting history shows only
+  when a payment historically posted, never a due date.
 - **Avoid** unofficial, credential-based APIs (email + password + MFA secret through a
   reverse-engineered API) and stale forks superseded by an official server.
 

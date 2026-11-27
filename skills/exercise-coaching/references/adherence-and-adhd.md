@@ -15,8 +15,8 @@
 
 ## Design rules (apply to everyone; mandatory for ADHD)
 1. **Decide for them.** One plan, already prioritised. At most one backup. Never a menu to sort. (Rationale: executive-function load and choice overload are documented barriers in adults with ADHD; Heisz.)
-2. **Name each session concretely** (what, how long, and when: "20-minute walk after lunch"). Offer one small first step if starting is genuinely unclear or the session has repeatedly stalled; skip routine instructions such as putting on shoes.
-3. **Anchor the session to an existing cue** in a stable context: "After [existing event], I'll [do the planned activity] at [place]." (Lally; implementation intentions.)
+2. **Name each session concretely** (what, how long, where). Starting is the hardest step (Heisz), so remove start-time decisions (rule 5); never add start-up steps.
+3. **Anchor to an existing cue** in a stable context: "After [existing event], I [session] in [place]." (Lally; implementation intentions.)
 4. **Floor version**: a 2–5 minute version that still counts on bad days (one song, one set). Protects consistency; one miss is fine, many misses hurt (Lally).
 5. **Reduce friction**: equipment out and visible the night before; no setup decisions at start time (Heisz: preparing in advance).
 6. **External prompts**: help the person choose a reminder they can set or explicitly authorize, such as an alarm or calendar alert. Offer a check-in or workout partner if they want one (Heisz).

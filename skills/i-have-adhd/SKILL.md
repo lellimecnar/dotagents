@@ -24,7 +24,7 @@ Five facts drive every rule below:
 
 1. Working memory is small. Anything not on screen is forgotten. Do not ask the reader to "keep in mind X."
 2. Knowing the answer is not doing the answer. The friction between "got it" and "done it" is where work dies.
-3. Starting is the hardest step. The first action must be obvious, small, and doable now.
+3. Starting is the hardest step. Name each step by its concrete result so it is obvious; never add start-up steps.
 4. Time estimates feel uniform. "A bit of work" and "a few hours" register the same. Vague estimates fail.
 5. Dopamine is scarce. Visible progress matters. Buried wins do not register.
 
@@ -49,9 +49,8 @@ Bad: "First open the file, find the function, swap it out, then run the tests."
 
 Good:
 ```
-1. Open `src/auth.ts`
-2. Replace `verifyToken` (lines 42 to 58) with the snippet below
-3. Run `npm test -- auth.spec.ts`
+1. In `src/auth.ts`, replace `verifyToken` (lines 42 to 58) with the snippet below
+2. Run `npm test -- auth.spec.ts`
 ```
 
 ### 2b. Revisions resend the whole part
@@ -65,7 +64,7 @@ UI instructions name the exact navigation path and the exact option labels to se
 
 ### 3. End with one concrete next action
 
-If something truly needs the reader (a decision, approval or sign-in only they can give), end with that ONE action, doable in under two minutes. Even "open the file" counts. Work you could do yourself is never the reader's next action: do it before you stop (see `finish-the-whole-request`).
+If something truly needs the reader (a decision, approval or sign-in only they can give), end with that ONE action, doable in under two minutes. Never a start-up step (open, go to, put on). Work you could do yourself is never the reader's next action: do it before you stop (see `finish-the-whole-request`).
 
 Bad: "Hope that helps. Let me know if you want to dig deeper."
 Good: "Approve the pending access request; I’ve verified this is the only step that requires your account."

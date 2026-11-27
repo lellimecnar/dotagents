@@ -16,8 +16,8 @@ prose) that the owner must rule on.
    Checkers read literally and over-flag: two notes that add together ("when damaged" does not mean
    "only when damaged"), equivalent phrasings of one quantity, and states that change off-page are
    usually not contradictions.
-   If an item is not a real conflict, say so and ask the owner to confirm; never make them rule on a
-   non-conflict.
+   If an item is not a real conflict, close it with the evidence in the rulings log; the owner rules
+   only on real conflicts.
    - Look for the real problem behind the item. The surface item may be "who has the injury" while the
      real problem is that the injury is never shown happening; "the memory has no setup" may really be
      "the memory refers to a later chapter".
@@ -36,8 +36,8 @@ prose) that the owner must rule on.
 6. **Prose stays frozen until every item is ruled.** Later rulings can change earlier ones. Collect prose
    fixes in the log's "deferred prose fix" column and route them to the author as one pass at the end,
    reviewed by the editor.
-7. **Before any prose edit:** record the complete before/after text in manuscript order and obtain explicit approval from the designated decision-maker
-   for the prose pass. If approval is withdrawn, stop and use the project’s authorized rollback process for any changes already applied.
+7. **Prose edits** go in one PR with the complete before/after text in manuscript order; PR review is
+   the approval. If review rejects it, revert by the project's normal process.
 8. **Reviewing canon/doc fixes:** grep by topic and by every rejected value (not only the stale phrase),
    confirm no manuscript file changed, confirm every affected canon record reflects the applicable ruling, and find every quote a canon row cites verbatim in the
    manuscript.

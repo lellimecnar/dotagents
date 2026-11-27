@@ -6,7 +6,7 @@ Use this procedure when the household says bills are overdue, cash is short, aut
 
 ## 1. Freeze and enforce scope
 
-1. Obtain written agreement on the included people/entities, account classes, data window, report contents, and actions that remain forbidden.
+1. Use the household's recorded scope (included people/entities, account classes, data window, report contents, and actions that remain forbidden) from its local skill or data docs, and state it in the report. Ask only if no scope is recorded at all.
 2. Build explicit included and excluded account sets from the live account list. Exclude business, trust, child, and investment accounts unless the agreed scope names them; an account being visible does not put it in scope.
 3. Record an exact cutoff timestamp and household timezone. Use the same cutoff and window on every ledger query.
 
@@ -26,7 +26,7 @@ Use this procedure when the household says bills are overdue, cash is short, aut
    - cash earmarked for bills;
    - balances unavailable because of login, provider, permission, or stale-data errors.
 
-Never present a complete household cash total while an included depository account is unavailable. Name the missing account, not its internal ID, and make reconnection the first physical action when it blocks the decision.
+Never present a complete household cash total while an included depository account is unavailable. Name the missing account, not its internal ID, and make reconnecting it the first task when it blocks the decision.
 
 ## 3. Reconcile overdue candidates from transfer history
 
@@ -84,7 +84,7 @@ Lead with one sentence that distinguishes a timing problem from a total-income p
 2. total unresolved failed pulls and a prioritized table: obligation, amount, last failed date, matching available balance, status confidence;
 3. payments already completed, to prevent duplicates;
 4. near-term expected deposits and upcoming recurring bills, clearly labeled as estimates;
-5. one first physical action, normally reconnecting the most important missing depository account or opening the highest-priority creditor portal;
+5. one next task, named by its result: normally the most important missing depository account reconnected, or the highest-priority creditor's balance checked in its portal;
 6. housing, essential utilities, income-preserving secured debt, insurance, and court/tax obligations before unsecured minimums and nonessential items;
 7. verified, accessible support routes for obligations that cannot be paid safely.
 

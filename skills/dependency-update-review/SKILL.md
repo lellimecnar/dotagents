@@ -169,9 +169,9 @@ majors, OpenTelemetry release streams, Python lock tooling, images CI never buil
 
 - Before blaming a red check on the bump, confirm it is not red on the base tip.
 - **Diagnose red CI before touching the branch.** Does the required check exist in the workflow at
-  that head? Inspect the available CI evidence, or ask an authorized operator to confirm the failure mode. Runner or workspace failures (permission errors during
-  checkout, a dirty persistent workspace) are CI health: report the problem to the responsible operator with
-  evidence they may access. Retry isolated runner failures only when authorized; do not rebase
+  that head? Inspect the available CI evidence: the runner's logs and status. Runner or workspace failures (permission errors during
+  checkout, a dirty persistent workspace) are CI health: hand them to the agent that owns CI health as a
+  dependency, with the evidence. Retry isolated runner failures only when authorized; do not rebase
   unrelated branches to trigger new runs.
 - **Use the ref that governs the claim.** Verify base facts against the current base revision
   and proposed changes against the pinned head. Do not rely on unverified working-tree state.

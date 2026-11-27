@@ -32,7 +32,7 @@ then confirm the most useful observations through a short interview. Observed is
    - bills: `newer_than:60d ("payment due" OR "bill is ready" OR statement) -category:promotions`
    - work: `(<work keywords>) -from:<noisy notifier>`; sent mail: `from:me`
    - older than the noise: `older_than:10d newer_than:90d ...`
-   Read snippets only; open a message only for school, work, travel or deadlines.
+   Open each message you take a fact from; a snippet only decides whether to open it.
 5. **Calendar:** primary next ~6 weeks plus the past ~3 weeks (a repeating title = recurring
    event). If there are too many calendars, say which you didn't check and add "which calendars
    should I read?" to the interview.

@@ -3,7 +3,7 @@
 Map these onto the task tool's native fields (labels, priority, due date, relations) as the household's
 local skill describes, and filter with fields rather than by reading descriptions. A typical label
 encoding: `size:M`, `diff:med`, `load:high`, `energy:low`, `ctx:computer`, `due:hard`, `batch:online-forms`,
-`deleg:y`; description first lines `first: ...` / `postponed: 2` / `src: ...`.
+`deleg:y`; description first lines `postponed: 2` / `src: ...`.
 
 size (padded per rule 8; time for the real work, excluding travel unless it's an errand)
 - XS: 5 min or less ('Draft a yes to the RSVP', 'Put the form in the car')
@@ -13,7 +13,9 @@ size (padded per rule 8; time for the real work, excluding travel unless it's an
 - XL: over 2.5 h or multi-session. MUST be split into pieces of L or smaller before
   scheduling. Until it's split, list it only under Top priorities with `note:split needed`
   and a proposed split.
-- Unknown? Give a best guess, write `size:M?`, and set diff:high (uncertainty).
+- Unknown? Size it from similar completed tasks, the source, or the person's own estimate on
+  record. If none exists, write `size:unknown` and `note:needs sizing`, so it is not scheduled
+  until sized.
 
 diff (difficulty = skill + uncertainty: does the person know how, and how much is unknown?)
 - low: done it before, steps known. med: some unknowns, or a skill they rarely use.
@@ -30,10 +32,6 @@ energy (physical)
 ctx (where it must happen; exactly one primary)
 - home, <specific area of the home>, computer (desk/office, needs a real screen), online (can be done on phone
   or any device, anywhere), errand (must leave the house; add the place), outside (yard).
-
-first (first physical action, only when starting is unclear or the task has stalled): 5 min or less,
-starts with a verb, names the object and location. Never an obvious step ("open the app").
-- Bad: 'Start on taxes'. Good: 'At desk, open Downloads, find the 1099 PDF'.
 
 due
 - hard YYYY-MM-DD: a real external consequence (fee, legal, lost slot, someone else's date).

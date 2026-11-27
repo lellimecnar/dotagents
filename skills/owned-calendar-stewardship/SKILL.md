@@ -68,7 +68,7 @@ newest dated entry.
 1. Check the real date. Read facts and rules. Run the mirror pass.
 2. Gather what only you can see (facts only, never raw email text): bill notices, the person's
    open tasks, fixed events and locked boxes, velocity and last period's hours vs targets.
-3. Consult specialists in parallel (task manager for ranked tasks with estimates and first actions;
+3. Consult specialists in parallel (task manager for ranked tasks with sizes and deadlines;
    finance agent for bill status, amount, latest safe day, minutes; any other owner). Keep shared
    task bodies to what each specialist needs.
 4. Ask the planner to draft from those answers (every open bill gets its own box).
@@ -79,7 +79,9 @@ newest dated entry.
    re-list the day and fix mismatches. Add event details (address, leave-by, what to bring, links).
 7. Write a short "tomorrow" summary for the evening check-in; complete with a one-line summary;
    message the person only if a decision is needed. Never plan without the specialists; if a card
-   blocks, answer it if you can, otherwise tell the person in one line what is waiting on whom.
+   blocks, answer it if you can; otherwise make it a dependency on the agent that holds the answer
+   (the board's dependency mechanism) and keep planning the rest; tell the person only about a
+   decision only they can make.
 
 ### 5. Ad-hoc requests ("schedule a time to...")
 - Check the real date; read the target day fresh.
