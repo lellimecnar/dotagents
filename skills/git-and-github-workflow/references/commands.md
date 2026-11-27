@@ -186,7 +186,7 @@ query($o:String!,$r:String!,$n:Int!){repository(owner:$o,name:$r){pullRequest(nu
     comments(first:1){nodes{databaseId author{login} body}}}}}}}' \
   -f o=<owner> -f r=<repo> -F n=<n>
 
-# Reply inside a thread: comment_id is the thread's FIRST comment (replies to replies are not supported).
+# Reply inside a thread: comment_id is the thread's first comment (replies to replies are not supported).
 gh api --method POST repos/<owner>/<repo>/pulls/<n>/comments/<comment_id>/replies -f body="Fixed in <sha>: <what changed>."
 
 # Resolve a thread (only your own, or where the repository's convention gives it to you).
