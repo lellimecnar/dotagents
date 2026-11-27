@@ -2,7 +2,7 @@
 name: work-planning
 description: Use when a plan or spec is requested, or uncertainty must be resolved before work.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -51,6 +51,45 @@ When several workers share a tracker and tasks are already running:
   <time>"). Otherwise the worker follows both.
 - When a task waits on another, link the other as its dependency in the tracker before you mark it blocked.
   A blocked task with no linked blocker reads as a question for a person and pings them for nothing.
+
+## Building on earlier work
+Before planning, find any merged or in-flight plan, study or decision that covers the same ground, and judge the
+new input against it. The result is usually an amendment to that plan or a small spike that reuses its setup, not
+a fresh plan. Treat recorded decisions as constraints. Reopen one only when asked or when new evidence
+invalidates it; name the evidence and seek approval before changing the decision.
+
+## Experiment and spike plans
+The requester should be able to hand an experiment, spike or proof-of-concept plan to a capable newcomer who
+follows it without error. A long research spec of hypotheses does not meet that bar; a runbook does:
+- For each step, name its goal, prerequisites, exact commands or manual actions, inputs, expected outputs,
+  how to check them, what to do if the check fails, and the estimated time. Pin file and code inputs (for
+  example, by checksum or commit SHA) and state expected data size. Give paths for saved outputs, schemas
+  and an example row for tabular outputs, and the expected result for each check.
+- Fix confirmatory rules and decision thresholds before inspecting the evidence used to decide the result.
+  Keep exploratory runs separate and give worked examples for ambiguous rules. Report accuracy against
+  validated ground truth. Report matches to unvalidated labels as agreement, not accuracy. State unknown
+  provenance and do not claim independence unless it is established.
+- Prove it can be followed: the author runs the setup and data-acquisition steps verbatim from an empty directory
+  before asking for review and fixes every step that failed or needed a guess; the reviewer repeats that walk in
+  its own checkout. For an input that cannot be byte-pinned (a page that changes on every fetch), archive the
+  fetched snapshot with its checksum (or the parsed output, if that is enough to replay), and the plan says so.
+- Before a proposed external dataset or tool goes into the plan, check it live: licence, last activity, and
+  whether it installs and runs where the work will run.
+- State a scope cap: the smallest measurement that answers the question and an effort target. Reuse data
+  already held if it can answer the question; otherwise say what minimum new data is needed and why.
+
+## Review rounds add rigour, not scope
+Each review round of a plan tends to make it bigger. Hold the scope cap:
+- When a fix would push the total past the effort target, rule it down to the conservative bound (an upper bound,
+  a hard stop, "measure later") instead of accepting the growth. Missing beats wrong: withhold or label a
+  measurement rather than add machinery to rescue it.
+- When the same mechanism is refined round after round (accounting, sampling, caps), stop the loop: prescribe the
+  simplest conservative version and hold one final bounded round. List exactly what to fix and re-check those
+  items and the claims or checks they affect. Recommend approval only after the required fixes are verified
+  and no blocking finding remains or is newly discovered. Record non-blocking findings as known limits.
+- A requester asking "how much of this is worth doing now?" is the signal the cap was missed.
+For a plan that must survive hard scrutiny ("challenge every claim"), run a parallel panel with one lens per
+reviewer: [references/adversarial-plan-review.md](references/adversarial-plan-review.md).
 
 ## Approval
 - Respect explicit planning mode and approval gates: present the latest revision and wait for the decision.

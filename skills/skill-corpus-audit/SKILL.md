@@ -2,7 +2,7 @@
 name: skill-corpus-audit
 description: Use when reviewing a linked skill set before publication. Verify, verdict.
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
   status: draft
   owner: maintainer
 ---

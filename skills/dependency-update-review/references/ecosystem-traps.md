@@ -14,6 +14,17 @@ upstream source when in doubt; dates and floors move.
   pin, plus `uv lock --check`. Never infer incompatibility from the `revision` header alone. For a
   floor change, classify "expanded resolution" from a programmatic version-only lock diff; a format
   or root-specifier edit with no package-version change is not expansion.
+- **A manifest-only uv bump can leave frozen consumers on the old version.** For example, a
+  Dependabot `pip` entry can update `pyproject.toml` without refreshing `uv.lock`; Dependabot has a
+  separate `uv` ecosystem. Plain `uv sync` can update a stale lock and test a different resolution
+  from a build using `uv sync --frozen`, which uses the existing lock without a freshness check
+  ([uv locking and syncing](https://docs.astral.sh/uv/concepts/projects/sync/)). Check the untouched
+  head with `uv lock --check` or the applicable command with `--locked`, and inspect resolved
+  versions even if the check passes: a constraint change can leave the old pin valid. Regenerate a
+  stale lock with `uv lock`; if a specific upgrade is intended and the old pin is retained, use
+  `uv lock --upgrade-package 'name==version'` with the intended, allowed version. Check the direct
+  and transitive version diff, then use the main skill's lockfile reconciliation and approval steps
+  for any authorized push and re-verdict.
 - **pytest warning counts:** the final "N warnings" summary can omit warnings emitted before
   collection; inventory every warning line before claiming a count or sole source.
 - **CLI-only packages:** smoke the packaged non-mutating entry point (`--help`) instead of inventing
@@ -46,6 +57,34 @@ upstream source when in doubt; dates and floors move.
   directive while the repo pins (`.nvmrc`, CI versions, sibling Dockerfiles) stay put.
 - Check LTS status against the live release schedule (Node's `schedule.json`) before citing
   "non-LTS": an even Node major becomes LTS in late October.
+- **New Python interpreter:** check the lock for the target, then check the pins selected for each
+  target platform for compatible wheels on the configured index. Match interpreter, ABI (including
+  compatible `abi3` wheels), OS, libc and architecture; a matching `cpXY` prefix alone is not enough.
+  To verify a published wheel can actually be installed, use a fresh disposable environment on the
+  target and run `uv pip install --python <venv-python> --no-cache --only-binary :all: --no-deps 'name==version'`
+  for the exact pin. A dry run is only a resolution check; a warm cache can hide a prior source build.
+  If no compatible wheel is available, check whether an sdist exists and whether the actual build
+  stage has the toolchain and libraries to build it.
+- **Build proof is not run proof.** A successful `docker buildx build --load` proves that the
+  tested target builds and loads. Dockerfile `RUN` steps may exercise parts of the image, but
+  `--load` does not execute the resulting image's entrypoint. Even for a static binary on a minimal
+  base, run the resulting image for claims about startup on the target architecture or TLS trust, and
+  report the build and runtime checks separately.
+- **Images no CI job builds** (for example, a dev container omitted from the build matrix):
+  check the jobs and their conclusions at the reviewed head. A green or skipped rollup does not
+  establish image coverage; a workflow excluded by path filters can also leave a required check
+  pending. Build the affected target with the project's real context, arguments and platforms when
+  possible. When you cannot, inspect the registry manifest or index for the required OS,
+  architectures and variants, and check each relevant platform's image config (`User`, `Env`/`PATH`,
+  `WorkingDir`) against what the Dockerfile assumes. Check OS packages in the target distro suite,
+  add-on installer support and sibling pins. Report that inspection separately; the build is
+  unverified, and any verdict that requires build evidence must wait for it.
+- **An unpinned Python dependency floor does not describe the resolved change.** If CI installs
+  without an enforced lock or equivalent pins, it may select a newer compatible release or change
+  transitive versions; it may also select the same versions on base and head. Recreate the CI
+  install in separate clean environments at the base and reviewed head, with the same interpreter,
+  platform, index and resolver settings. Record both resolved sets and compare the affected
+  project's type checks and tests before attributing a failure to the bump.
 
 ## Docker ignore rules
 
@@ -53,6 +92,12 @@ Dependabot strips the registry host from image references, so `registry.example.
 matches as `team/image`. Validate every `dependency-name` against the bot's parsed name (its
 updated-dependency metadata), not the literal `FROM`. A green config check proves schema only, not
 that the ignore selects the image.
+
+For Dependabot Docker version updates, match `ignore.update-types` against the version parsed
+from the tag. For example, `python:3.12` -> `3.15` and `alpine:3.20` -> `3.24` change the second
+component without changing the first, so `version-update:semver-minor` matches them;
+`version-update:semver-major` does not. Check how the bot parses nonstandard tags before choosing
+an update type. These update-type ignores do not apply to security-only updates.
 
 ## CI action majors
 

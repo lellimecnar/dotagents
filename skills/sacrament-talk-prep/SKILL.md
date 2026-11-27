@@ -2,7 +2,7 @@
 name: sacrament-talk-prep
 description: Use when someone is preparing a sacrament meeting talk. Discuss, track, outline.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -56,6 +56,13 @@ it). This matches apostolic counsel on AI and talks: research and critique yes, 
 - **Pair a warning with a positive model.** When the talk warns about a counterfeit, look for a story of the real
   thing that holds the same tension (from scripture, conference talks or Church history, sourced), so the warning
   has something to turn toward. Skip it when the talk's time or focus leaves no room.
+- **Check that a story's own lesson is the point.** A surface match is not enough: a story about two leaders
+  misjudging each other's motives does not illustrate unity amid disagreement just because both involve
+  conflict. Read what the story teaches in its source before offering it, and weigh how long it takes to set up
+  against the talk's time.
+- **Find the leader who already said it.** When the speaker states an insight, search for an apostle or prophet
+  who said it in nearly the same words, verify it, and quote that. It checks the idea and gives the speaker
+  authority at the pulpit that their own phrasing lacks.
 - **Bookend questions** (if the speaker opens with a question and re-asks it at the end) work best when they sound
   almost too simple at first: build each around one ordinary word whose meaning deepens by the end, and make it
   serve the theme. Agree on the point a question makes before proposing wording, and expect the speaker to reword
@@ -75,7 +82,11 @@ opposes the gospel). Go deep with them, but keep the two apart:
   ideologies are study-only: General Handbook 38.8.x bars political teaching or advocacy in Church settings (fetch
   the current section number; it moves).
 - Offer a pulpit-safe form of the same insight: describe the danger by its scriptural traits and point it at the
-  listeners' own hearts, not at a named group. It warns without dividing the room.
+  listeners' own hearts, not at a named group. Include the principle in the outline only if it serves the talk's gospel
+  message on its own. Keep the current political application in private study; omit cues that would make the talk
+  an implicit endorsement or rebuttal.
+- Close a deep-dive reply by saying whether the insight serves the talk's theme or stays in private study. If it
+  belongs in the talk, say where it fits and connect it to a bookend question only if it helps answer or deepen it.
 - A real-world example the speaker mentions to make a point is not something they want fact-checked for the talk.
   Don't argue it point by point; at most note in one line if it is shaky, then go back to the point it illustrates.
 - When the speaker is reaching for something deeper ("there's something profound here"), build a synthesis from
@@ -107,6 +118,10 @@ Use `templates/outline.md`. Rules:
   marks hold only verbatim words, and ellipses only cut (they never splice a new sentence). A paraphrase gets no
   quote marks. Trimming and condensing during drafting is exactly how a misquote ends up at the pulpit.
 - Section headings say how each section serves the thesis, not just what it covers.
+- Show the flow, not just grouped points. For a multi-part argument, use a short "thread at a glance" table
+  (section / the move / how it leads to the next). Mark real contrasts or consequences with short connector cues
+  (BUT, SO, WHICH MEANS) and use a brief bridge where the move to the next section is not obvious. End with
+  testimony and invitation, not a bridge.
 - Run `references/review-checklist.md` against it and list any issue under "Before Sunday".
 Keep one authoritative outline and deliver it through the speaker's approved channel. If it is
 stored separately in an approved private location, link to it from the notebook. Do not copy

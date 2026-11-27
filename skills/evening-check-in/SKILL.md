@@ -32,6 +32,8 @@ not chase; no reply tonight is fine.
 1. **Tomorrow** (3-5 lines), from the planner's "tomorrow" summary or the calendar: first event,
    leave-by times, mandatory items, anything to bring or prepare tonight.
 2. **Decisions:** anything planning could not decide, one line each, with your recommendation.
+   Only what is the person's to decide: settled facts and routines are not decisions, and logistics
+   another household member's assistant or the household coordinator can answer go to them first.
 3. **One reflection question**, rotated; never more than one unless they want to keep going:
    - "What went well today, and what made it work?"
    - "What got in the way? Anything to change tomorrow?"
@@ -48,6 +50,9 @@ costs more trust than a missing one: list only what is real.
 ### 3. Weekly review (replaces step 3 once a week)
 - Hours this week per category vs the person's targets.
 - Ask: keep, raise or lower each target next week? Write the answer where the planner reads targets.
+- No agreed targets yet: do not ask an open question with nothing to compare. Show the planner's
+  proposed targets from this week's plan in one line and ask for changes; record the answer (or the
+  proposal, if the person lets it stand) where the planner reads targets.
 - Goal check: one line per active goal: progress, keep / adjust / drop.
 
 ### 4. Setting and reviewing goals
@@ -68,9 +73,12 @@ costs more trust than a missing one: list only what is real.
   data doc, as a short name and target only. Keep the goal's reasons and private detail in the
   assistant's private notes, never in shared files.
 
-### 5. Logging
+### 5. Logging and replies
 After each check-in append one line to a private log: date, energy (if given), win, obstacle,
-parked items. Daily planning reads the last ~7 lines to adjust load (a low-energy streak means a
+parked items. A reply that arrives later (that night or next morning) is still a check-in answer:
+log it, and route what it contains (done or dropped tasks to the task list, a corrected fact or rule
+to the planner's preference documents, a priority for a day to where planning reads it), then
+acknowledge in one line. Daily planning reads the last ~7 lines to adjust load (a low-energy streak means a
 lighter day).
 
 ## Pitfalls

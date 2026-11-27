@@ -2,7 +2,7 @@
 name: research-and-fact-checking
 description: Use for research, fact-checks or news briefs. Expert method.
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
   status: draft
   owner: maintainer
 ---
@@ -91,7 +91,7 @@ Evidence, Risks and tradeoffs, Limits, Sources). The bar behind it is `due-dilig
 - High: several independent, good sources agree, few assumptions. Medium: credible but thin or one key
   assumption. Low: fragmentary, conflicting, or rests on assumptions.
 - Name what would change the answer. Put the strongest counter-evidence in the report.
-- Give the first physical action and few options, already ranked, unless the requester asks otherwise.
+- Give few options, already ranked, and the next concrete step (a real task, not an obvious start-up step), unless the requester asks otherwise.
 
 ## When to stop and refer out
 Research informs; it does not replace a licensed professional or an emergency service. Details and

@@ -2,7 +2,7 @@
 name: owner-builder-remodeling
 description: Use when planning, permitting or restarting a home remodel.
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
   status: draft
   owner: maintainer
 ---
@@ -142,7 +142,7 @@ radon retest, warranties, lien waivers and photos together. Retest radon after t
 - Buying all materials up front for a job that will stall; they get damaged, lost or obsolete.
 
 ## Output rules
-Give few options, already prioritised, with the first physical action named, each compared against
+Give few options, already prioritised, with the next real task named, each compared against
 the alternatives before one is called best (`due-diligence-before-deciding`). Report what you
 verified, then a short Limits section: only what no available source (code text, the building
 department, the permit portal, the manufacturer) could settle after you tried, what you tried, and

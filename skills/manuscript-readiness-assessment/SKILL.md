@@ -2,7 +2,7 @@
 name: manuscript-readiness-assessment
 description: Use when judging if a chapter is publish-ready. Full rubric, ranked fixes.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -144,6 +144,11 @@ When independent cold reads are part of approval:
 - Keep readers blind (no model names, drafters, history or earlier scores), and spot-check each packet:
   complete target text, no authorship terms. If a required reader route is unavailable, stop with the
   exact error; never substitute another.
+- A blind read counts only if the reader saw nothing but its packet. Rebuild each packet from the pinned
+  revisions, start each reader in a fresh context, and check its end-of-report marker and its actual tool trace.
+  If the trace shows access outside the packet, void that read and rerun it on the same route with the same
+  packet in a fresh context (never count the exposed report or switch routes); a read whose trace cannot be
+  checked does not count. A coordinator's summary is not proof of coverage or blindness.
 - A reader's "the rule causes this" label is not a decision for the owner by itself: if a fix exists
   inside the rule, it is a required fix. Record deliberate gaps the owner already ruled on as closed, so
   later readers stop flagging them.

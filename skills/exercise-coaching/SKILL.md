@@ -2,7 +2,7 @@
 name: exercise-coaching
 description: Use when coaching exercise or setting nutrition targets.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -42,7 +42,7 @@ One each of squat, hinge, push, pull, plus a trunk/carry option. Start with the 
 - Watch sleep: adults need ≥7 h; finish *vigorous* sessions more than 1 h before bed, preferably at least 2 h (sleep may be impaired when vigorous exercise ends ≤1 h before bed; Stutz 2019 https://pubmed.ncbi.nlm.nih.gov/30374942/); moderate evening exercise does not harm sleep. Untreated sleep apnea makes drowsiness risky; exercise lowers apnea severity but never replaces prescribed therapy (`references/recovery-and-sleep.md`).
 
 ### 6. Design for adherence, especially ADHD (`references/adherence-and-adhd.md`)
-- Few options, already chosen; name the **first physical action** (e.g. "put on walking shoes" or "set out a mat").
+- Few options, already chosen; name each session concretely (e.g. "20-minute treadmill walk, incline 3", "dumbbell circuit A, 3 rounds") so it can go on a calendar as is. A start cue ("set out the mat") only if the person wants one: adults often find obvious steps condescending.
 - If-then plans tied to an existing cue (e.g. "after lunch, I put on my walking shoes"; choose a cue from the person's actual routine). Planning interventions show small-to-medium effects; reinforcement helps.
 - A **floor version** for bad days (one song, one set): missing a day does not break habit formation, but repeated misses lower it. Habits take ~2 months on average (range 18–254 days); exercise takes longer than simpler habits.
 - Make it stimulating (music, game, novelty), visible progress, and social (body-doubling) when the person likes company; reduce setup friction (gear out the night before).
@@ -51,7 +51,7 @@ One each of squat, hinge, push, pull, plus a trunk/carry option. Start with the 
 Compute an energy range and protein/fiber targets, then give the **Nutrition targets brief** privately to the person. Share only the necessary targets with a meal planner if the person explicitly authorizes that handoff. Keep health data out of shared documents. This brief contains targets, not menus or recipes.
 
 ### 8. Deliver and follow up
-One page: the week at a glance, first action, the three cues per exercise, the floor version, when to progress, stop signs. Review after 2–4 weeks: did it happen? Fix the schedule fit before changing the training.
+One page: the week at a glance with each session named concretely, the three cues per exercise, the floor version, when to progress, stop signs. Review after 2–4 weeks: did it happen? Fix the schedule fit before changing the training.
 
 ## Stop and refer
 | Situation | Action |
@@ -71,7 +71,8 @@ You coach healthy-adult exercise. You do not diagnose, treat injury, change medi
 - Skipping screening, or the opposite: sending every healthy beginner to a doctor (ACSM 2015 removed risk-factor-based referral).
 - Counting an exergame as moderate/vigorous without checking: the same game measures anywhere from very light to vigorous depending on level and player.
 - Progressing on a calendar instead of on performance and form; adding several variables at once.
-- Long lists and choice menus for someone with ADHD; no first action; no floor version.
+- Long lists and choice menus for someone with ADHD; vague sessions ("do some cardio"); no floor version.
+- Adding routine setup steps such as "put on shoes." Offer one useful first step only if starting is genuinely unclear or the session has stalled.
 - Vigorous training right before bed; ignoring sleepiness.
 - Restarting at full load after a break, or training hard through illness or a run of short nights.
 - Reacting to one day of wearable data, using device calories or readiness scores as inputs, or reading a value medically.

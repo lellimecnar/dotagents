@@ -2,7 +2,7 @@
 name: dependency-update-review
 description: Use when triaging bot dependency PRs or lockfile changes. Reconcile, verdict.
 metadata:
-  version: "0.1.3"
+  version: "0.1.4"
   status: draft
   owner: maintainer
 ---
@@ -144,9 +144,13 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
 ## Editing the update bot's config
 
 - Read the schema from the bot's raw documentation source; rendered pages can truncate.
-- Grouping facts (Dependabot): `directories:` merges config only; GitHub still opens each group's PR
-  *per directory*. `group-by: dependency-name` is the only cross-directory option and yields one PR
-  per dependency. A dependency joins the *first* group it matches, so use disjoint `update-types`
+- Grouping facts (Dependabot): `groups` combines matching updates into one PR per group; a pattern
+  group in a `directories:` entry can span directories. Unmatched updates are individual PRs.
+  [`group-by: dependency-name`](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#group-by-groups)
+  groups version updates for each dependency across directories in the same ecosystem. Incompatible
+  version constraints split the updates into separate PRs. Check the proposed rules and manifest
+  constraints first; use recent PRs for equivalent rules to corroborate, not predict, the result.
+  A dependency joins the *first* group it matches, so use disjoint `update-types`
   (minor+patch vs major) to make order irrelevant. Never promise "one PR per ecosystem"; a release
   train is what gives the owner one merge.
 - Report manifests with no config entry as coverage gaps; do not silently widen scope.
@@ -160,7 +164,7 @@ at the source (an `ignore` entry, or a recorded pin rationale) in its own PR.
 ## Pitfalls
 
 Ecosystem-specific traps (Go toolchain floors, Docker ignore matching, runtime majors, CI action
-majors, OpenTelemetry release streams, Python lock tooling) are in
+majors, OpenTelemetry release streams, Python lock tooling, images CI never builds) are in
 [references/ecosystem-traps.md](references/ecosystem-traps.md).
 
 - Before blaming a red check on the bump, confirm it is not red on the base tip.

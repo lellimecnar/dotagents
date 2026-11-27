@@ -94,12 +94,13 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `room-organizing-playbooks` | organizing a specific room or zone, or when storage safety is in play |
 | `unwanted-item-routing` | deciding if an unwanted item is sold, donated, recycled or trashed |
 
-### Planning (2)
+### Planning (3)
 
 | Skill | Use when |
 | --- | --- |
 | `capacity-first-scheduling` | building or repairing a week or day of time boxes, ADHD-aware |
 | `task-triage-and-rating` | capturing, rating, ranking or breaking down tasks, incl. from email |
+| `schedule-planning-input` | a coordinator asks for schedule input or a draft review |
 
 ### Finance (2)
 
@@ -126,7 +127,7 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `person-profile-seeding` | building or refreshing a person's notes from their read-only accounts |
 | `smart-home-request-handling` | relaying or doing a request to read or change smart-home devices |
 
-### Household specialists (5)
+### Household specialists (6)
 
 | Skill | Use when |
 | --- | --- |
@@ -135,12 +136,14 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `family-meal-planning` | planning family meals, groceries or food safety |
 | `owner-builder-remodeling` | planning, permitting or restarting a home remodel |
 | `relationship-kindness-coaching` | coaching kindness, repair or dates. Not therapy |
+| `schedule-planning-input` | a coordinator asks for schedule input or a draft review |
 
-### Research & business (2)
+### Research & business (3)
 
 | Skill | Use when |
 | --- | --- |
 | `bootstrapped-product-revenue` | advising a solo founder on revenue. First payers |
+| `idea-development` | a founder brings a raw idea. Find a way to make it pay |
 | `research-and-fact-checking` | for research, fact-checks or news briefs. Expert method |
 
 ### Communication styles (1)

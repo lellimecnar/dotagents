@@ -2,7 +2,7 @@
 name: pull-request-review
 description: Use when reviewing another agent's PR. Verify claims, pin head, one verdict.
 metadata:
-  version: "0.2.0"
+  version: "0.2.2"
   status: draft
   owner: maintainer
 ---
@@ -44,6 +44,17 @@ Not for merging. Reviewers never merge; whoever owns the merge queue does.
 - **Report completeness is part of correctness.** "N files fail X" without the file:line list is
   an incomplete finding, and a check listed as "pass" that you did not run in this session is a
   fabricated fact.
+- **Review the change, not unrelated process.** Judge the pinned change in repository context against
+  the governing request and rules. A change request names a concrete defect or unmet requirement and
+  what must change, even if the problem is an omission with no changed line to annotate. Report
+  unrelated handoff or delivery issues where the work is tracked, not as PR blockers. "Not enough
+  evidence" with no named defect or unmet requirement is not a change request.
+- **Proof you cannot produce is not a blocker by itself.** When a check needs something your
+  environment lacks (a container runtime, a deployed environment, a live account), first look for
+  equivalent evidence at the pinned head (provider CI, a check another authorized reviewer ran). If
+  the diff then has no blocker, approve and state exactly what was not verified and how and when it
+  can be. Hold the PR for a decision only when the unverified part could cause harm a revert cannot
+  undo (data loss, security, money, production).
 
 ## Procedure
 
@@ -114,13 +125,14 @@ the pinned head. Report both, separately.
   workflow executed" without looking. If the review identity is refused access to the CI provider's
   run API or the forge's checks summary, read the per-commit check runs and their annotations
   instead, and report only the failure detail the annotations support: they are not full job logs.
-- Page through check runs (GitHub: `gh api --paginate`, or `per_page=100` in a loop). One default
-  page holds a bounded number; a large matrix has more, and failures past the cut-off silently
-  vanish from your counts. Report the total you paged to.
-- Give exact counts by conclusion for every head you cite, and group failures by failing *step*
-  (checkout variants differ by version or pin; do not write "N failures, same step" without
-  grouping).
-- A commit can carry several historical runs; group by run/job identity before totalling.
+- Page through check runs for each cited SHA and state what the query covers. For a historical
+  attempt census, request all attempts where supported (GitHub example: the check-runs endpoint
+  with `filter=all` and pagination). Report retrieval limits and the number actually examined.
+- For each SHA, report the current provider rollup separately from historical attempts. Use the
+  provider's active run or required-check identity for the current counts; never count a superseded
+  attempt as active. Keep raw conclusions distinct (`neutral` is not `skipped`) and report pending
+  states separately. Group failures by the actual failing step, distinguishing versions or pins
+  when they differ.
 - A failure also present on the base tip is *pre-existing / non-blocking*, not passing.
 - **Runner-only failures: compare the same named job at the same SHA across attempts.** A checkout
   or workspace-cleanup permission error followed by success of that job at the identical SHA is a
@@ -142,8 +154,11 @@ requires it) without double work:
 - Create review and QA tasks idempotently (a key that includes the date and PR number), with QA
   depending on the review so it starts only after.
 - If a separate queue steward exists, use the configured handoff when required gates pass and avoid duplicate admissions.
-- Cap rounds: after the third change request on the same PR, escalate the disagreement to the owner
-  as one decidable sentence rather than starting round four. A new commit, a new review task or a
+- Cap rounds: after the third change request on the same PR, do not start another round on your own.
+  State the disagreement as one decidable sentence and take it to whoever coordinates the work, if anyone.
+  Escalate to the owner only as a last resort under `finish-the-whole-request`. A coordinator may authorize
+  one bounded final revision with an exact list of items to fix. On the revised head, follow the re-review
+  procedure and withhold approval if a blocker remains or the revision introduces one. A new commit, a new review task or a
   new sweep does not reset the count; check earlier change requests before opening a review for a
   revised head.
 - A hold on merge admission is not a hold on review: keep reviewing PRs whose admission is held.
@@ -169,6 +184,30 @@ requires it) without double work:
 - A committed `.patch` file always fails `git diff --check <base>...HEAD`. Authors who report
   "`git diff --check` passed" with no range on a clean tree checked nothing.
 - If a second review task exists for the same head, say so; do not review twice.
+- Performance scores: inspect the raw result (for Lighthouse, its JSON, including JSON extracted
+  as data from an HTML report). Verify that base and head rendered the same representative fixture
+  and reached the intended state; a successful response or early paint does not prove it. Match the
+  repo's test config, browser and tool versions, CPU/network settings and cache state. If they
+  differ materially, report the measurements as local characterization, not a verified delta.
+  Preserve the assertions and reports in an approved location and redact sensitive data from shared
+  copies. Check content visibility through a server-to-client swap separately from score or layout shift.
+- When a server-rendered shell is replaced by an interactive view, verify accessibility in both
+  states on the same representative fixture. Use test controls that delay the actual transition
+  (for example, hold a client data request if it controls the swap). Assert that the shell is visible
+  before the first scan; then release the transition, assert the loaded content and controls are
+  present, and scan again. Apply the manual checks in `web-accessibility-check` where relevant.
+  Use equivalent working-data states on the base before calling a failure a regression.
+- For changes to protected instruction files, do not work around the write restriction. If the
+  implementer cannot apply the edit, have them hand off an unapplied diff through an authorized
+  channel. Only authorized roles may apply and publish it. Review the published head and verify
+  that the application record identifies the authorized applier and matches the protected changes
+  at that head. An earlier attestation or a signed or pushed commit alone is not proof of application.
+- Review infrastructure write privileges and sensitive read access separately. Verify who can read
+  current and retained state and plan artifacts without downloading or logging them by default.
+  For example, Terraform's `sensitive` marker redacts display, not stored values. If inspection is
+  necessary, have an authorized operator check in a restricted environment and report only redacted
+  results. Mocks do not prove provider authentication. Check the real plan-time identity separately
+  in an approved environment with least privilege, test state, and no apply or other unintended side effects.
 - If the tracker has an execution policy, "done" may come back as "in review" with the next
   participant assigned. That is the handoff, not a failed write. Do not retry.
 
