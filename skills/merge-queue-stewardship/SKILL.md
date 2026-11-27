@@ -2,7 +2,7 @@
 name: merge-queue-stewardship
 description: Use when admitting approved PRs to a merge queue or checking trains flowed.
 metadata:
-  version: "0.2.1"
+  version: "0.3.0"
   status: draft
   owner: maintainer
 ---
@@ -75,8 +75,10 @@ train PR and the CI-gate / queue configuration that decides what may merge.
    proves a systemic blocker (config not on the forge's default branch, conditions that cannot be
    met, app inactive). Hand the exact provider check to an administrator rather than merging around
    it.
-5. **Verify what landed.** For each observed merge, fetch the integration branch and prove the
-   frozen source head is an ancestor of it. Then confirm the deploy pipeline and health checks for
+5. **Verify what landed.** For each observed merge, fetch the integration branch and prove it
+   by merge method: for merge-commit landings and trains, the frozen source head is an ancestor of
+   it; for squash or rebase landings (new SHAs), the commit or range from the merge record is on it
+   and carries the change (`git-and-github-workflow` section 9). Then confirm the deploy pipeline and health checks for
    that environment. Attribute a failure to a PR only after confirming the base tip is not also red.
 6. **Eject a culprit narrowly.** If post-merge QA identifies a culprit, open a revert PR for *only*
    that PR's merge commit, put it at the front of the next batch, and give the author the evidence.
@@ -129,7 +131,8 @@ Never merge or push to the train yourself.
 ## Pitfalls
 
 - Release routines that close source PRs *unmerged* (the train merged their commits) make "closed"
-  ambiguous. Prove landing with an ancestor check, not PR state.
+  ambiguous. Prove landing from git (ancestor check for merge-commit trains, the landed commit for
+  squash), not from PR state.
 - Keep a new admission routine active until the first verified batch *and* one failing-PR ejection
   have both happened; retire it only after telling whoever owns operations.
 - Path-filtered workflows never report when not triggered, so requiring their success can hang a

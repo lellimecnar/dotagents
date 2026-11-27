@@ -68,8 +68,9 @@ Not for merging. Reviewers never merge; whoever owns the merge queue does.
 2. **Isolated checkout.** Fetch the PR head into its own worktree, never the shared checkout. If a
    local branch for that PR is already checked out in another worktree (a concurrent review), do
    not touch it: fetch and add a *detached* worktree at the pinned SHA instead. That also guarantees
-   you review exactly the pinned tree. Confirm the branch contains the current base
-   (`git merge-base --is-ancestor <base> <head>`). Save the full diff to scratch and read all of it.
+   you review exactly the pinned tree. Record whether the branch contains the current base
+   (`git merge-base --is-ancestor <base> <head>`); require it only where the project's rules do
+   (a strict up-to-date rule, or a base change that affects this PR). Save the full diff to scratch and read all of it.
 3. **Read the governing source.** Open the decision, spec, issue or owner request the PR claims to
    implement. Grep headings first and read the cited sections. Map each requirement to a line in
    the change.

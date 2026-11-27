@@ -60,14 +60,12 @@ Every coding task: features, fixes, redesigns, small content changes in a code r
    - Run the app and look at every changed page in a real browser, at a desktop and a phone width,
      and in light and dark themes if supported. Save the important screenshots for the PR. If the
      browser cannot reach local addresses, push and check the preview deployment instead.
-   - Secret scan of the staged diff; it must print nothing. A starting pattern:
-     `git diff --cached | grep -nE 'gh[pousr]_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|BEGIN [A-Z ]*PRIVATE KEY|xox[baprs]-'`.
-     Also scan for personal data.
+   - Secret and personal-data scan of every outgoing commit, reporting locations only, per
+     `git-and-github-workflow` section 3.
 6. **PR.** Push the branch and open the PR against the right base; draft when it is not ready for
    review (phased work, open decisions). A draft is a progress update, not a stopping point unless a draft
    was requested or a verified blocker prevents continuation. Title, description sections, issue
-   links and answering review follow `git-and-github-workflow` sections 6-8 (the description's
-   verification section carries the screenshots and each check with its result). Finish the work the task owes before calling the PR ready, per
+   links and answering review follow `git-and-github-workflow` sections 6-8. Finish the work the task owes before calling the PR ready, per
    `finish-the-whole-request`. If the platform builds preview deployments,
    wait for success and link it; a failed preview build is a failed task — read its log or reproduce
    the build locally. Never merge, never push to the default branch, never close someone else's PR.

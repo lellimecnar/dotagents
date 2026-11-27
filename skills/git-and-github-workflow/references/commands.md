@@ -1,15 +1,17 @@
 # Commands for the git and GitHub workflow
 
-Exact commands for each step of the standard in `SKILL.md`. Replace `<owner>/<repo>`, `<base>`
-(the integration branch) and numbers. `gh` is the GitHub CLI; every `gh api` call also works as a
-plain REST call with a token. Build any JSON or markdown body with a file (`--input file.json`,
-`--body-file body.md`), never with inline-quoted strings.
+Exact commands for each step of the standard in `SKILL.md`. Shell variables stand for values you
+fill in: `$repo` (owner/name), `$remote` (usually `origin`), `$base` (the integration branch),
+`$branch` (your head branch, without `refs/heads/`), `$pr` (PR number). `gh api` calls use GitHub's
+REST API unless the call says `graphql`. Build every JSON or markdown body in a file (`--input`,
+`--body-file`, `-F body=@file`), never as an inline-quoted string. The examples assume the PR's head
+branch lives in the same repository as its base.
 
 ## Contents
 
 1. Read the repository's settings
-2. Start a branch
-3. Commit
+2. Start or continue a branch
+3. Commit and scan
 4. Shape history
 5. Update from the base and push a rewrite
 6. Open and maintain the PR
@@ -20,183 +22,198 @@ plain REST call with a token. Build any JSON or markdown body with a file (`--in
 ## 1. Read the repository's settings
 
 ```bash
-# Default branch and allowed merge methods (merge-method fields need write access to show).
-gh api repos/<owner>/<repo> --jq '{default_branch, allow_merge_commit, allow_squash_merge, allow_rebase_merge, delete_branch_on_merge}'
+# Default branch and merge settings (merge-method fields only appear with write access; missing = unknown).
+gh api "repos/$repo" --jq '{default_branch, allow_merge_commit, allow_squash_merge, allow_rebase_merge, delete_branch_on_merge, squash_merge_commit_title, squash_merge_commit_message}'
 
-# Every rule that applies to the target branch (rulesets): reviews, last-push approval,
-# thread resolution, allowed merge methods, required checks, linear history.
-gh api repos/<owner>/<repo>/rules/branches/<base> --jq '.[] | {type, parameters}'
+# Every ruleset rule on a branch. Encode the branch name as one path segment (slashes too), and page.
+enc=$(python3 -c 'import sys,urllib.parse;print(urllib.parse.quote(sys.argv[1],safe=""))' "$base")
+gh api --paginate "repos/$repo/rules/branches/$enc" --jq '.[] | {type, parameters}'
+# Same for your head branch before any rewrite or deletion:
+enc=$(python3 -c 'import sys,urllib.parse;print(urllib.parse.quote(sys.argv[1],safe=""))' "$branch")
+gh api --paginate "repos/$repo/rules/branches/$enc" --jq '.[] | {type, parameters}'
 
-# Classic branch protection, if the repository still uses it (404 when none or no access).
-gh api repos/<owner>/<repo>/branches/<base>/protection
+# Classic branch protection. 404 = none OR no access; treat a 404/403 you cannot explain as unknown.
+gh api "repos/$repo/branches/$enc/protection"
 
-# Project conventions on disk.
-ls AGENTS.md CLAUDE.md CONTRIBUTING.md .github/pull_request_template.md .github/PULL_REQUEST_TEMPLATE* \
-   commitlint.config.* .commitlintrc* .husky lefthook.yml .pre-commit-config.yaml .mergify.yml 2>/dev/null
+# Who you are acting as.
+gh api user --jq .login; git config user.name; git config user.email
+
+# Project conventions on disk (instructions, template, commit checks, hooks, queue config).
+ls AGENTS.md CLAUDE.md CONTRIBUTING.md .github/pull_request_template.md .github/PULL_REQUEST_TEMPLATE* 2>/dev/null
+git ls-files | grep -iE 'commitlint|lefthook|pre-commit|husky|mergify|merge.?queue' | head
 ```
 
-If you cannot read the settings, read how recent PRs were merged instead: merge commits on the base
-(`git log --merges --oneline -10 origin/<base>`) mean commits land as they are; one commit per PR
-titled `... (#123)` with no merge commits usually means squash.
+A hint, not proof, of the merge method: merge commits on the base
+(`git log --merges --oneline -10 "$remote/$base"`) suggest commits land as they are; single commits
+titled `... (#123)` with no merges suggest squash. Use it only to decide how to shape commits.
 
-## 2. Start a branch
+## 2. Start or continue a branch
 
 ```bash
-git fetch --prune origin
-# Is there already a PR or branch for this goal?
-gh pr list --repo <owner>/<repo> --state open --search "<keywords>"
-git branch -r --list 'origin/*<keyword>*'
+git fetch --prune "$remote"
+gh pr list --repo "$repo" --state open --search "<keywords>"          # same goal already open?
 
-# New branch from the fresh integration branch, in its own worktree.
-git worktree add -b fix/search-empty-query-crash ../wt-search-fix origin/<base>
+# New branch: the exact remote ref must not exist, and the name must not be a tag.
+git ls-remote --exit-code --heads "$remote" "refs/heads/$branch" && echo "branch exists: stop"
+git show-ref --verify --quiet "refs/tags/$branch" && echo "tag has this name: pick another"
+git check-ref-format --branch "$branch" >/dev/null || echo "invalid name"
+git worktree add -b "$branch" "../wt-$(echo "$branch" | tr / -)" "$remote/$base"
 
-# Continue an existing PR instead.
-gh pr checkout <n>        # or: git fetch origin pull/<n>/head && git switch -c <its-branch> FETCH_HEAD
-
-# Make sure the name is not already a tag.
-git show-ref --tags --verify --quiet refs/tags/<name> && echo "taken by a tag"
+# Continue an existing PR branch: is it checked out anywhere else?
+git worktree list --porcelain | grep -B2 "branch refs/heads/$branch"   # output = someone owns it
+git fetch "$remote" "refs/heads/$branch:refs/remotes/$remote/$branch"
+git worktree add -b "$branch" "../wt-$(echo "$branch" | tr / -)" "$remote/$branch"
+# Read-only look at a PR without taking its branch:
+git fetch "$remote" "pull/$pr/head" && git worktree add --detach ../wt-pr-$pr FETCH_HEAD
 ```
 
-## 3. Commit
+If a tool already gave you a worktree on a generated local branch, keep that local name; for an
+existing PR, point the still-clean worktree at the PR's tip with `git reset --hard "$remote/$branch"`
+(only while `git status --porcelain` prints nothing) and push with `HEAD:refs/heads/$branch`.
+
+## 3. Commit and scan
 
 ```bash
 git status --short
-git add -p <path>...                 # stage deliberately, hunk by hunk where useful
-git diff --cached                    # read what you are about to commit
-git diff --cached | grep -nE 'gh[pousr]_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|BEGIN [A-Z ]*PRIVATE KEY|xox[baprs]-'   # must print nothing
-git commit -F msg.txt                # message from a file: subject, blank line, body, footers
+git add -- path/one path/two          # reviewed whole paths; `git add -p` only in an interactive session
+git diff --cached --stat && git diff --cached
+git commit -F msg.txt                 # subject, blank line, body, footers
+
+# Secret scan of every outgoing commit, printing only commit:path locations, never matched text.
+PAT='gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|BEGIN [A-Z ]*PRIVATE KEY|xox[baprs]-'
+git grep -lE "$PAT" $(git rev-list "$remote/$base..HEAD") -- .
+# Exit 1 with no output = no match in any outgoing commit's tree; exit 2+ = the scan itself failed.
+# Prefer the project's own redacting scanner when it has one.
 ```
 
-Split a commit that grew two concerns:
+Split the newest commit when it grew two concerns (only an unpushed, non-merge commit):
 
 ```bash
-git reset --soft HEAD~1              # undo the commit, keep the changes staged
-git restore --staged .               # unstage everything
-git add -p <paths for concern 1> && git commit -F msg1.txt
-git add -p <paths for concern 2> && git commit -F msg2.txt
+git status --porcelain                # must be empty
+OLD=$(git rev-parse HEAD)             # recovery point
+git reset --soft HEAD~1 && git restore --staged .
+git add -- <paths for concern 1> && git commit -F msg1.txt
+git add -- <paths for concern 2> && git commit -F msg2.txt
+git diff --quiet "$OLD" HEAD && echo "same tree as before the split"
 ```
 
 ## 4. Shape history
 
 ```bash
-# Record a correction to an earlier commit.
-git commit --fixup=<sha-of-commit-being-fixed>
+git commit --fixup=<sha-of-commit-being-fixed>        # while working
 
-# Fold all fixups into their targets before review (non-interactive: the todo list is accepted as generated).
+git status --porcelain                                # must be empty before a rewrite
 OLD=$(git rev-parse HEAD)
-GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash origin/<base>
+GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash --no-update-refs "$remote/$base"
+git range-diff "$remote/$base" "$OLD" HEAD            # orient: which commits changed
+git diff --quiet "$OLD" HEAD && echo "trees identical: history-only rewrite"
 
-# Prove the rewrite changed only what you meant.
-git range-diff origin/<base> $OLD HEAD
-
-# Reword, reorder or drop commits: edit the todo list with a script rather than an editor, e.g.
-GIT_SEQUENCE_EDITOR="sed -i -e 's/^pick 1a2b3c4/reword 1a2b3c4/'" git rebase -i origin/<base>
+# Reword or drop by editing the todo list with a script, never an interactive editor:
+GIT_SEQUENCE_EDITOR="sed -i -e 's/^pick 1a2b3c4/drop 1a2b3c4/'" git rebase -i --no-update-refs "$remote/$base"
 ```
 
-`git rebase -i` needs a sequence editor; set `GIT_SEQUENCE_EDITOR` (and `GIT_EDITOR` for rewords)
-so it never waits for an interactive editor that is not there.
+`--no-update-refs` stops the rebase from moving other local branches that point into the series.
+A rebase that stops on a conflict: resolve, `git add -- <file>`, then
+`GIT_EDITOR=: git rebase --continue` (keeps the existing message). Unsure about a resolution:
+`git rebase --abort`.
 
 ## 5. Update from the base and push a rewrite
 
 ```bash
-OLD=$(git rev-parse HEAD); OLD_BASE=$(git merge-base HEAD origin/<base>)   # before fetching
-git fetch origin
-git rebase origin/<base>             # your own branch only
-# conflicts: edit each file hunk by hunk, then
-git add <file> && git rebase --continue
-# (abort the whole attempt with: git rebase --abort)
-
-git range-diff $OLD_BASE..$OLD origin/<base>..HEAD   # your commits before vs after; base changes excluded
+git status --porcelain                                # must be empty
+EXPECT=$(git rev-parse HEAD)          # the head you last pushed and verified; must equal the PR head you reviewed
+gh pr view "$pr" --repo "$repo" --json headRefName,headRepository,headRefOid   # destination check; compare, never copy
+OLD_BASE=$(git merge-base HEAD "$remote/$base")
+git fetch "$remote"
+git rebase --no-update-refs "$remote/$base"           # your own branch only
+git range-diff "$OLD_BASE..$EXPECT" "$remote/$base..HEAD"
 <run the repository's checks again>
 
-# Lease on the exact head you expect to replace (the PR's current head), works whatever the local name is:
-EXPECT=$(gh pr view <n> --repo <owner>/<repo> --json headRefOid -q .headRefOid)   # or the SHA you last pushed
-git push --force-with-lease=<remote-branch>:$EXPECT origin HEAD:<remote-branch>
-# Shortcut only when the local branch has the same name as the remote one:
-git push --force-with-lease --force-if-includes origin HEAD
+git push --force-with-lease="refs/heads/$branch:$EXPECT" "$remote" "HEAD:refs/heads/$branch"
+git ls-remote "$remote" "refs/heads/$branch"          # must print the new HEAD SHA
 ```
 
-Tested behaviour (git 2.47): the named-SHA lease refuses when another author's commit reached the
-branch, even after a background fetch; a bare `--force-with-lease` after a background fetch
-overwrites it; `--force-if-includes` refuses a legitimate rewrite pushed as `HEAD:<other-name>`.
+If the lease is refused, someone else's commit reached the branch: fetch it, read it, and integrate
+or coordinate. Do not re-read the remote SHA into `EXPECT` and retry.
 
-Merging the base instead (branch shared with others, or the repository asks for it):
+First push of a new branch (refuses if the ref already exists, so you cannot update someone else's):
 
 ```bash
-git fetch origin && git merge --no-edit origin/<base> && git push
+git push --force-with-lease="refs/heads/$branch:" "$remote" "HEAD:refs/heads/$branch"
 ```
 
-Rewrite notice for a PR that already has review activity (`notice.md`):
+Later ordinary pushes: `git push "$remote" "HEAD:refs/heads/$branch"`.
+
+Merging the base instead (shared branch, or the repository asks for it):
+
+```bash
+git fetch "$remote" && git merge --no-edit "$remote/$base" && git push "$remote" "HEAD:refs/heads/$branch"
+```
+
+Rewrite notice for a PR with review activity (`notice.md`), posted with
+`gh pr comment "$pr" --repo "$repo" --body-file notice.md`:
 
 ```text
-Rewrote the branch: <one line on why, e.g. "rebased onto <base> to resolve a conflict in api/search.py; no other changes">.
-Old head <old-sha>, new head <new-sha>. Compare: git range-diff <old-base-sha>..<old-sha> <new-base-sha>..<new-sha>
-```
-
-```bash
-gh pr comment <n> --repo <owner>/<repo> --body-file notice.md
+Rewrote the branch: <why, e.g. "rebased onto <base> to resolve a conflict in api/search.py; no other changes">.
+Old head <old-sha> (base <old-base-sha>), new head <new-sha> (base <new-base-sha>).
+Orientation: git range-diff <old-base-sha>..<old-sha> <new-base-sha>..<new-sha>
 ```
 
 ## 6. Open and maintain the PR
 
 ```bash
-git push -u origin HEAD                                   # or HEAD:<type>/<desc> to rename at push time
-gh pr create --repo <owner>/<repo> --base <base> --head <branch> \
-  --title "fix(search): reject empty queries before hitting the index" --body-file pr.md [--draft]
-gh pr view <n> --repo <owner>/<repo> --json baseRefName,headRefName,headRefOid,isDraft,url
+gh pr create --repo "$repo" --base "$base" --head "$branch" --title "<commit-style subject>" --body-file pr.md [--draft]
+gh pr view "$pr" --repo "$repo" --json baseRefName,headRefName,headRefOid,isDraft,url
+gh pr edit "$pr" --repo "$repo" --body-file pr.md     # keep the description current
+gh pr ready "$pr" --repo "$repo"                      # draft -> ready
+gh pr edit "$pr" --repo "$repo" --add-reviewer "<login>"
 
-gh pr edit <n> --repo <owner>/<repo> --body-file pr.md    # keep the description current
-gh pr ready <n> --repo <owner>/<repo>                     # draft -> ready for review
-gh pr edit <n> --repo <owner>/<repo> --add-reviewer <login>
-gh pr checks <n> --repo <owner>/<repo> --watch            # bounded wait on CI
+# CI with a deadline (exit 124 = still pending; report it as pending, not passed).
+timeout 2700 gh pr checks "$pr" --repo "$repo" --watch; echo "exit $?"
 ```
 
-Description skeleton (`pr.md`) when the repository has no template:
+Example description (`pr.md`) when the repository has no template. Example only: SKILL.md section 7
+owns the contract.
 
 ```markdown
 ## Why
-<problem or request, 2-4 lines, with link; quote the requester where their words define done>
+<problem or request, linked>
 
 ## What changed
 - <area>: <change>
 
 ## How it was verified
 - `<command>`: <result>
-- <pages or behaviour looked at; screenshots>
 
 ## Risk and rollback
 <what could break; how to back it out>
 
-## Decisions to confirm
-A. <decision> (default: <your default>)
-
-## Blockers
-<only genuine ones, with evidence; delete the section when none>
-
-Refs #<issue>   <!-- "Closes #<issue>" only when the base is the default branch -->
+Refs #<issue>
 ```
 
 ## 7. Answer a review
 
 ```bash
-# List review threads with ids, state and first comment (GraphQL is the only API that shows resolution).
-gh api graphql -f query='
-query($o:String!,$r:String!,$n:Int!){repository(owner:$o,name:$r){pullRequest(number:$n){
-  reviewThreads(first:100){nodes{id isResolved isOutdated path line
-    comments(first:1){nodes{databaseId author{login} body}}}}}}}' \
-  -f o=<owner> -f r=<repo> -F n=<n>
+# Every review thread with state, paged (GraphQL is the only API that exposes resolution).
+gh api graphql --paginate -F owner="${repo%/*}" -F name="${repo#*/}" -F pr="$pr" -f query='
+query($owner:String!,$name:String!,$pr:Int!,$endCursor:String){repository(owner:$owner,name:$name){pullRequest(number:$pr){
+  reviewThreads(first:100,after:$endCursor){pageInfo{hasNextPage endCursor}
+    nodes{id isResolved isOutdated path line
+      comments(first:50){nodes{databaseId author{login} body}}}}}}}' \
+  --jq '.data.repository.pullRequest.reviewThreads.nodes[]'
 
-# Reply inside a thread: comment_id is the thread's first comment (replies to replies are not supported).
-gh api --method POST repos/<owner>/<repo>/pulls/<n>/comments/<comment_id>/replies -f body="Fixed in <sha>: <what changed>."
+# Reply in a thread: the REST id of the thread's first comment (replies to replies are rejected).
+gh api --method POST "repos/$repo/pulls/$pr/comments/<first-comment-databaseId>/replies" -F body=@reply.md
 
-# Resolve a thread (only your own, or where the repository's convention gives it to you).
-gh api graphql -f query='mutation($id:ID!){resolveReviewThread(input:{threadId:$id}){thread{isResolved}}}' -f id=<thread-node-id>
+# Resolve a thread: the GraphQL thread node id (only your own, or where project policy says so).
+gh api graphql -f id=<thread-node-id> -f query='mutation($id:ID!){resolveReviewThread(input:{threadId:$id}){thread{isResolved}}}'
 
-# Re-request review from the same reviewer after pushing the round.
-gh api --method POST repos/<owner>/<repo>/pulls/<n>/requested_reviewers -f 'reviewers[]=<login>'
+# Re-request review after the round, then confirm it registered.
+gh pr edit "$pr" --repo "$repo" --add-reviewer "<login>"
+gh pr view "$pr" --repo "$repo" --json reviewRequests,reviewDecision,latestReviews
 ```
 
-A reviewer's suggested change, written in a review comment so the author can apply it in one click:
+A reviewer's suggested change, inside an inline review comment:
 
 ````markdown
 ```suggestion
@@ -205,39 +222,62 @@ if not query.strip():
 ```
 ````
 
-Applying several suggestions locally in one commit (when the web "batch" is not available): make
-the edits, then `git commit -m "fix(search): apply review suggestions" --trailer "Co-authored-by: <Name> <email>"`
-for each suggester whose text you took.
+Applying several suggestions locally in one commit: make the edits, then
+`git commit -F msg.txt --trailer "Co-authored-by: <Name> <email>"` for each suggester whose text you
+took.
 
 ## 8. Stacked PRs
 
 ```bash
-# Child branch on top of the parent branch; the child PR targets the parent branch.
-git worktree add -b feat/export-csv-ui ../wt-export-ui origin/feat/export-csv-api
-gh pr create --base feat/export-csv-api --head feat/export-csv-ui --title "..." --body-file pr.md
+# Build the child on the parent and record the cut point.
+git worktree add -b "$child" "../wt-$(echo "$child" | tr / -)" "$remote/$parent"
+CUT=$(git rev-parse "$remote/$parent")                # the parent state the child is built on; keep it
+<commit>
+git push --force-with-lease="refs/heads/$child:" "$remote" "HEAD:refs/heads/$child"
+gh pr create --repo "$repo" --base "$parent" --head "$child" --title "..." --body-file pr.md
 
-# After the parent merges: move the child onto the integration branch and retarget its PR.
-git fetch origin
-EXPECT=$(git rev-parse origin/feat/export-csv-ui)
-git rebase --onto origin/<base> <last-parent-commit-sha> feat/export-csv-ui
-git push --force-with-lease=feat/export-csv-ui:$EXPECT origin feat/export-csv-ui
-gh pr edit <child-n> --base <base>
+# After the parent lands: what is the child's base now, and does it show foreign commits?
+gh pr view "$child_pr" --repo "$repo" --json baseRefName
+git fetch "$remote"
+git merge-base --is-ancestor "$CUT" "$remote/$base" && echo "parent state landed as-is (merge commit)"
+# If it landed as-is and nothing else requires an update: only retarget, no rewrite.
+gh pr edit "$child_pr" --repo "$repo" --base "$base"
+
+# If the parent was squashed or rebased (CUT is not on the base), move only the child's own commits:
+EXPECT=$(git rev-parse HEAD)                          # the child head you last pushed
+git merge-base --is-ancestor "$CUT" "$EXPECT" && git log --oneline "$CUT..$EXPECT"   # must list only child work
+git rebase --no-update-refs --onto "$remote/$base" "$CUT"
+git range-diff "$CUT..$EXPECT" "$remote/$base..HEAD"
+<run the checks>
+git push --force-with-lease="refs/heads/$child:$EXPECT" "$remote" "HEAD:refs/heads/$child"
+gh pr edit "$child_pr" --repo "$repo" --base "$base"
+gh pr view "$child_pr" --repo "$repo" --json baseRefName,commits --jq '{baseRefName, n: (.commits|length)}'
 ```
-
-`<last-parent-commit-sha>` is the parent branch's head as the child knew it (for a merge-commit
-merge, the parent PR's head SHA). Check the child PR now lists only its own commits.
 
 ## 9. After the merge
 
 ```bash
-gh pr view <n> --repo <owner>/<repo> --json state,mergedAt,mergeCommit,headRefOid
-git fetch origin && git merge-base --is-ancestor <reviewed-head-sha> origin/<base> && echo landed
+gh pr view "$pr" --repo "$repo" --json state,mergedAt,mergeCommit,headRefOid
+git fetch "$remote"
+# Merge-commit landing: the reviewed head is on the base.
+git merge-base --is-ancestor <reviewed-head-sha> "$remote/$base" && echo landed
+# Squash or rebase landing: the merge record's commit is on the base and carries the change.
+M=$(gh pr view "$pr" --repo "$repo" --json mergeCommit --jq .mergeCommit.oid)
+git merge-base --is-ancestor "$M" "$remote/$base" && git show --stat "$M"
 
-git worktree remove ../wt-search-fix
-git branch -d fix/search-empty-query-crash                 # local; -d refuses if unmerged
-git push origin --delete fix/search-empty-query-crash      # only your own branch, only if not auto-deleted
+# Cleanup, only after landing (or an authorized discard), with nothing else based on the branch.
+gh pr list --repo "$repo" --state open --base "$branch"      # must be empty
+gh pr list --repo "$repo" --state open --head "$branch"      # must be empty
+TIP=$(git ls-remote "$remote" "refs/heads/$branch" | cut -f1)   # empty = already deleted
+[ "$TIP" = "<sha you cleared>" ] && git push --force-with-lease="refs/heads/$branch:$TIP" "$remote" ":refs/heads/$branch"
+git ls-remote --exit-code --heads "$remote" "refs/heads/$branch" || echo "remote branch gone"
+git worktree remove "../wt-..."                       # your own clean worktree only
+git branch -d "$branch"                               # refuses if unmerged: keep it and investigate
 
-# Undo a merged PR through a new PR.
-git switch -c revert/search-empty-query origin/<base>
-git revert -m 1 <merge-commit-sha>                         # plain `git revert <sha>` for a squash commit
+# Undo a landed change through a new PR.
+git worktree add -b "revert/<slug>" ../wt-revert "$remote/$base" && cd ../wt-revert
+git log -1 --format='%P' <merge-commit-sha>           # parent 1 must be the base's previous tip
+git revert --no-edit -m 1 <merge-commit-sha>          # merge commit
+git revert --no-edit <squash-commit-sha>              # squash commit
+git revert --no-edit <oldest-sha>^..<newest-sha>      # a rebase-merged range
 ```
