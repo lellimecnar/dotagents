@@ -2,7 +2,7 @@
 name: idea-development
 description: Use when a founder brings a raw idea. Find a way to make it pay.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
   tags: "ideas, strategy, prior-art, business-model, critique, anti-sycophancy"
@@ -46,8 +46,10 @@ drift into flattery and the instruction rules that counter it).
    pilot > priced letter of intent > unpriced interest > compliments. Your own opinion, a simulated customer
    panel or a friend's enthusiasm are hypotheses, not evidence.
 7. **Look it up or label it.** Market sizes, competitors, prices, fees, laws and patents are looked up at task
-   time and cited with a link and the date checked. Anything you did not look up is labelled an assumption with
-   a confidence level.
+   time and cited with a link and the date checked. Anything that can be looked up is looked up before you
+   answer; anything another agent holds is asked of it; a fact only an outside person holds goes to
+   the founder as a question (contacting that person is outreach and needs their yes). Only forecasts and your own judgments are
+   labelled as such, with what would settle them.
 8. **Ownership and cash flow are design questions, not afterthoughts.** Walt lost Oswald because someone else
    owned the character. Ask early: who owns the IP, the customer relationship and the distribution? Where is the
    first money coming from, and how soon? Prefer structures that pay early (pre-sales, licensing, services,
@@ -66,7 +68,8 @@ drift into flattery and the instruction rules that counter it).
 
 ## The session
 
-Scale it to the idea: a passing thought gets stages 1, 3 (quick) and 5 in one reply; a serious idea gets the
+Scale it to the idea: a passing thought gets stages 1, 3 (enough searching to say whether it already
+exists and who pays for it now, naming where you looked) and 5 in one reply; a serious idea gets the
 whole method, with the research done before you answer. Do the research yourself; never hand the founder a
 list of things to look up.
 
@@ -93,7 +96,8 @@ list of things to look up.
    can, a different model reviewing your draft. Then argue against your own recommendation once.
 6. **Riskiest assumption and the cheapest test.** Identify the unresolved assumption whose failure would do
    the most damage and choose the cheapest credible test of it. Draft a pass, fail and inconclusive rule before
-   testing. Aim for under $100 and a week when that can produce useful evidence. Draft only unless the founder
+   testing. Default to a test that costs nothing and runs within a week; propose a
+   paid test only when no free one can check the assumption, with its cost. Draft only unless the founder
    authorizes the specific outreach, publication, data collection, payment or spend. For potentially patentable
    work, keep the test non-disclosing until the founder has checked filing and disclosure consequences in the
    relevant jurisdictions.

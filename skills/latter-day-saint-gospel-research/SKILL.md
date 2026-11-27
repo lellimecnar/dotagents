@@ -2,7 +2,7 @@
 name: latter-day-saint-gospel-research
 description: Use for any Latter-day Saint gospel question. Source-first, cited.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -21,7 +21,8 @@ training memory is a search hint, never a citation: it is where most false quote
 
 ## Method (every answer)
 1. **Read the question.** Name the kind: doctrine, scripture meaning, history, policy/practice, apologetics
-   (a critic's claim), scholarship, or "find me a talk/quote/example". Choose the reading if ambiguous and state it.
+   (a critic's claim), scholarship, or "find me a talk/quote/example". If plausible readings lead to different answers, give a
+   brief sourced answer for each, or ask one focused question and answer any unambiguous part you can verify.
 2. **Hunt sources in the order of `references/source-hierarchy.md`.** Scripture and official Church sources first;
    scholarship to explain and contextualize; critics' own words when the question is about a criticism. For a
    question with several independent parts, research the subquestions independently or in parallel when supported, then verify the results.

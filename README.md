@@ -100,7 +100,7 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | --- | --- |
 | `capacity-first-scheduling` | building or repairing a week or day of time boxes, ADHD-aware |
 | `task-triage-and-rating` | capturing, rating, ranking or breaking down tasks, incl. from email |
-| `schedule-planning-input` | a coordinator asks you for input to a person's schedule |
+| `schedule-planning-input` | a coordinator asks for schedule input or a draft review |
 
 ### Finance (2)
 
@@ -136,7 +136,7 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `family-meal-planning` | planning family meals, groceries or food safety |
 | `owner-builder-remodeling` | planning, permitting or restarting a home remodel |
 | `relationship-kindness-coaching` | coaching kindness, repair or dates. Not therapy |
-| `schedule-planning-input` | a coordinator asks you for input to a person's schedule |
+| `schedule-planning-input` | a coordinator asks for schedule input or a draft review |
 
 ### Research & business (3)
 

@@ -72,6 +72,10 @@ an obvious answer costs the most: the answer was available and the work waited a
    For a technical blocker, follow the upstream search in `due-diligence-before-deciding`: online issues, PRs,
    releases and published workarounds may reveal a path the docs miss. Verify and use an applicable authorized
    path before escalating; finding a pending PR is not proof that a fix is available.
+   If the step you would ask the owner for exists only because of the design you chose (a new account, app,
+   credential, permission, purchase or manual setting), it is a design choice, not yet a blocker: look for a path
+   that needs none (reuse what exists, a standard pattern that avoids it, a different approach) and take it
+   when it still meets the requirements within your authority; if none does, record what you checked.
 2. **Look for an answer that already exists.** Search for previous answers and applicable guiding principles: the
    task's own thread and history, decisions recorded in memory or project documents, the owner's standing rules,
    and the principle behind the nearest similar decision. A question the owner already answered must not reach
@@ -88,6 +92,11 @@ an obvious answer costs the most: the answer was available and the work waited a
    question: what you found, the options, your recommendation, and exactly what waits on it. Decisions that are
    the owner's by nature (spending, accepting a risk, scope or priority, an approval or sign-in only they can
    give, a fact only they know) still go through steps 2-3 first, because the answer may already be on record.
+   Unless the ask is purely the owner's preference or a fact only they know, first have an independent check
+   from someone who did not choose the design (the agent that owns the area, or a reviewer on another model;
+   step 3 counts if it already did this) answer "is there any path that does not need the owner?"; if no
+   reviewer is available, say so. Ask only when no such path is found, and say in the ask what was checked and
+   why each alternative fails.
 
 **A wait that resolves itself is not a question.** Checks still running, a merge queue, a deploy, a sync, a
 re-review already triggered by a submitted revision: no one needs to act, so wait for it in the same run with a
