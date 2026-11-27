@@ -2,7 +2,7 @@
 name: coding-task-intake
 description: Use when taking a coding task end to end: intake, build, verify, PR, report.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   status: draft
   owner: maintainer
 ---
@@ -12,8 +12,9 @@ metadata:
 The working loop for an agent that receives a coding task (from a card, a ticket, or chat) and must
 hand back a reviewable PR with evidence. Coding principles themselves are in
 `engineering-principles`; tests-first is `test-driven-development`; failures are
-`systematic-debugging`; your own pre-push review is `requesting-code-review`; GitHub mechanics are
-`github`.
+`systematic-debugging`; your own pre-push review is `requesting-code-review`; branches, commits,
+history, PR descriptions and answering review follow `git-and-github-workflow`; GitHub command
+mechanics are `github`.
 
 ## When to use
 
@@ -42,11 +43,12 @@ Every coding task: features, fixes, redesigns, small content changes in a code r
    your open PRs and branches for the same goal; extend an open PR instead of starting a parallel
    one.
 2. **Workspace.** Clone once and fetch with prune. One worktree per task from the up-to-date default
-   (or integration) branch, on a branch named for your role and the task; to continue a PR, add a
+   (or integration) branch, on a branch named per `git-and-github-workflow`; to continue a PR, add a
    worktree on its branch. Install with the lockfile (frozen). Run long installs, builds and suites
    in the background with a log, and read the log rather than waiting on a foreground timeout.
 3. **Build.** Read the repo's `AGENTS.md`/`CLAUDE.md` (root and nearest package) and any repo skill
-   first. Small, reviewable commits with conventional messages. Tests for logic you add or change;
+   first. Small, reviewable commits with messages in the repo's convention (`git-and-github-workflow`
+   section 3), shaped before review to suit the repo's merge method. Tests for logic you add or change;
    one regression test before a non-trivial fix, shown to fail for the right reason. For UI work,
    check accessibility (`web-accessibility-check`) and performance (image sizes, fonts, client JS).
 4. **Large work** (a redesign, a new app): phases that each end in a working, pushed state, so
@@ -63,10 +65,9 @@ Every coding task: features, fixes, redesigns, small content changes in a code r
      Also scan for personal data.
 6. **PR.** Push the branch and open the PR against the right base; draft when it is not ready for
    review (phased work, open decisions). A draft is a progress update, not a stopping point unless a draft
-   was requested or a verified blocker prevents continuation. Body sections: **What and why** (2–4 lines) /
-   **Screenshots** / **Checks** (each command and result) / **Decisions to confirm** (lettered, each
-   with your default) / **Blockers** (genuine blockers only, with evidence: owner-only actions, outside
-   dependencies or hard limits). Finish the work the task owes before calling the PR ready, per
+   was requested or a verified blocker prevents continuation. Title, description sections, issue
+   links and answering review follow `git-and-github-workflow` sections 6-8 (the description's
+   verification section carries the screenshots and each check with its result). Finish the work the task owes before calling the PR ready, per
    `finish-the-whole-request`. If the platform builds preview deployments,
    wait for success and link it; a failed preview build is a failed task — read its log or reproduce
    the build locally. Never merge, never push to the default branch, never close someone else's PR.

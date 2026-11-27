@@ -2,7 +2,7 @@
 name: pull-request-review
 description: Use when reviewing another agent's PR. Verify claims, pin head, one verdict.
 metadata:
-  version: "0.2.2"
+  version: "0.3.0"
   status: draft
   owner: maintainer
 ---
@@ -17,7 +17,9 @@ verification mechanics, the head-pinning discipline and the reporting traps that
 bounced.
 
 The GitHub mechanics (`gh pr view`, `gh pr review`, `gh api .../reviews`) are covered by the bundled
-`github` skill; pre-commit self-review of your *own* change is `requesting-code-review`.
+`github` skill; pre-commit self-review of your *own* change is `requesting-code-review`. Comment
+kinds, suggested changes, thread replies and who resolves a thread are in `git-and-github-workflow`
+section 8.
 
 ## When to use
 

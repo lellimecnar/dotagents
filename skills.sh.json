@@ -21,6 +21,7 @@
         "dependency-update-review",
         "docs-drift-sweep",
         "engineering-principles",
+        "git-and-github-workflow",
         "initiative-inventory-mapping",
         "local-web-app-hardening",
         "merge-queue-stewardship",
