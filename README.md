@@ -21,7 +21,7 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `use-existing-solutions-first` | always, before building anything. Find the built-in or existing solution first |
 | `reading-archived-tool-output` | a tool result is archived or cut. Read it safely |
 
-### Engineering (16)
+### Engineering (17)
 
 | Skill | Use when |
 | --- | --- |
@@ -31,6 +31,7 @@ Grouped in `skills.sh.json` (Hermes shows these as hub categories). Each profile
 | `dependency-update-review` | triaging bot dependency PRs or lockfile changes. Reconcile, verdict |
 | `docs-drift-sweep` | keeping project docs in step with merged code, or reviewing a docs PR |
 | `engineering-principles` | writing, reviewing or fixing code. Principles plus review and fix-the-class protocols |
+| `git-and-github-workflow` | writing to git/GitHub. Branch, commit, PR, review |
 | `initiative-inventory-mapping` | mapping an in-flight initiative into proposed tracker tasks |
 | `local-web-app-hardening` | building or reviewing a loopback/local web app. Boundaries, limits |
 | `merge-queue-stewardship` | admitting approved PRs to a merge queue or checking trains flowed |
