@@ -58,7 +58,7 @@ donations go to die. (judgment)
   changed repeatedly; check the IRS 1099-K FAQ for the current one (a state may be lower); payments are taxable unless the law says otherwise; subtract
   fees and shipping; selling a personal item for less than you paid is not taxable income (IRS
   search summary). Keep purchase records for anything sold at a gain.
-- Consignment/buy-sell stores pay cash or credit, reject much, and want seasonal timing; call ahead.
+- Consignment/buy-sell stores pay cash or credit, reject much, and want seasonal timing; check their website or ask by email or online form first.
 
 ### 3. Donating: what charities typically take
 - **Large thrift charities usually accept:** books and media, clothing, shoes and linens,
@@ -110,7 +110,7 @@ coffee grounds or cat litter, seal, trash, scratch out personal info; flush only
 flush list.
 
 ### 8. Trash and transfer stations
-Call or check status before a haul: sites close for wind and holidays, and uncovered or unsecured
+Check the site's status page or official listing the day of a haul: sites close for wind and holidays, and uncovered or unsecured
 loads are often charged double. Curbside recycling is usually loose, not bagged; plastic bags,
 shredded paper and metal hangers usually go to drop-off.
 
@@ -137,8 +137,8 @@ fees, the source URL, and the date checked. Mark anything not confirmed on an of
 ## Verification
 - Every outbound item has a destination and a date it leaves the house.
 - Hazardous items went only to a hazardous-waste route.
-- Directory entries used today were checked recently or marked UNCONFIRMED and confirmed by phone
-  or official page.
+- Directory entries used today were checked recently or marked UNCONFIRMED and confirmed on the
+  official page, by email or by online form.
 
 ## Household specifics
 This skill is the method only. The agent's own local skill holds the household's local directory:

@@ -168,9 +168,9 @@ real, not a moving target.
   the checks you reran pass at the head you reviewed. List any open non-blocking findings.
 - **Request changes** when any blocking finding is open. Include every finding, not just the first
   few; the author should be able to fix all classes in one round.
-- **Escalate** instead of starting a fourth round when the round cap is reached, or earlier if the
-  disagreement is about intent rather than code. Name the disagreement in a sentence the owner can
-  decide on.
+- **At the round cap**, do not start a fourth round: approve with the non-critical findings listed
+  as Known limits, or ask the lead about a critical disagreement. Only an intent question that no
+  recorded rule settles goes to the owner, in one decidable sentence.
 
 ## 9. Posting one GitHub review
 
@@ -212,7 +212,7 @@ gh api --method POST "repos/$REPO/pulls/$PR/reviews" --input review.json
 
 If your harness tracks work outside the PR (a board, tickets, a queue), mirror the PR verdict there
 with the same finding blocks and IDs: changes needed, approved at a specific commit, or stuck after
-the round cap with the disagreement named for the owner. How to do that is harness-specific and
+the round cap with Known limits or the disagreement named for the lead. How to do that is harness-specific and
 lives in your own agent instructions, not in this shared doc.
 
 Reviewers do not merge. Your agent instructions name who does.

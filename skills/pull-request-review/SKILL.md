@@ -154,11 +154,9 @@ requires it) without double work:
 - Create review and QA tasks idempotently (a key that includes the date and PR number), with QA
   depending on the review so it starts only after.
 - If a separate queue steward exists, use the configured handoff when required gates pass and avoid duplicate admissions.
-- Cap rounds: after the third change request on the same PR, do not start another round on your own.
-  State the disagreement as one decidable sentence and take it to whoever coordinates the work, if anyone.
-  Escalate to the owner only as a last resort under `finish-the-whole-request`. A coordinator may authorize
-  one bounded final revision with an exact list of items to fix. On the revised head, follow the re-review
-  procedure and withhold approval if a blocker remains or the revision introduces one. A new commit, a new review task or a
+- Cap rounds: after the third change request on the same PR, approve with the remaining
+  non-critical findings listed as Known limits, or ask the lead or coordinator about a remaining
+  critical disagreement; never start round four and never send it to the owner. A new commit, a new review task or a
   new sweep does not reset the count; check earlier change requests before opening a review for a
   revised head.
 - A hold on merge admission is not a hold on review: keep reviewing PRs whose admission is held.

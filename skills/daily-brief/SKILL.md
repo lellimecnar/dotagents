@@ -27,9 +27,7 @@ at the right time and never double up.
 3. **Build or refresh today's blocks** on the calendar the assistant owns (see
    `owned-calendar-stewardship`): list today's events first and update your own blocks in place
    instead of adding new ones; never stack overlapping duplicates.
-4. **Pick-one menus:** where a block holds options, put them in the event description, each a real
-   task named by its result; add a first step only when it is not obvious (obvious steps read as
-   condescending).
+4. **Pick-one menus:** where a block holds options, list them in the event description by outcome.
 5. **Start prompts** (push notifications or reminders): first list what is already scheduled and
    delete stale prompts so nothing fires twice; then schedule the new ones.
 6. **Write the brief:**

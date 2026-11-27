@@ -38,7 +38,7 @@ product context differs from ours), imprecision, and selective publication. [2]
   correction note rather than writing a near-copy. [3]
 
 ## Final checklist before sending
-1. Answer first, with the next concrete step (a real task, not an obvious start-up step).
+1. Answer first, with the recommendation.
 2. Every factual claim cited; uncitable claims marked "I couldn't verify this" and listed under
    Limits with what was tried, and the recommendation does not rest on any of them.
 3. Every number has its baseline, unit, date and source assumptions.

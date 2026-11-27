@@ -32,12 +32,13 @@ themselves.
 ### 2. Capture
 1. Every stated to-do becomes a task immediately. Ideas are not tasks.
 2. Respect the household's date rules (for example chore-type tasks never on a rest day).
-3. "Track / reorder X" -> a dated check task with an estimated interval, plus one question that
-   tightens the estimate. Pricing yes, buying never.
+3. "Track / reorder X" -> a dated check task with the interval taken from order history or the
+   product's stated life; ask only if neither exists. Pricing yes, buying never.
 
 ### 3. Specialists
 - Research that needs a specialist goes to that specialist as a self-contained task: no personal
-  details, no credentials, and "do not set anything up until the person approves". Private matters
+  details, no credentials, and the person's own words on what they want done (a setup the person
+  asked for proceeds; purchases and irreversible steps still need their yes). Private matters
   never go on a shared board.
 - Also create the person's follow-up task (setup/install) so their list stays complete.
 - Name the shared notes file for that area in the request and add only what is new; list what the

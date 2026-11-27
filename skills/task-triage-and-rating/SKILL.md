@@ -32,27 +32,25 @@ act on email.
 - Honor the household's standing rules about which actions to avoid offering (for example phone
   calls) and which days chore-type tasks may not land on; carry them as flags in planning output.
   When a source says "call us", look for the written route (web form, portal, chat, email,
-  online booking) and record that as the first action.
+  online booking) and record that route on the task.
 
 ### 2. Core rules (with why)
 **Capture and clarify (GTD)**
 1. Get everything into one trusted list. ADHD working memory is unreliable, and open loops held in
    mind crowd out action.
-2. Phrase every task as a visible, physical next action starting with a verb ("Open the HOA portal
-   and download the form"), never a topic ("HOA"). A vague item is re-decided every time it is seen.
+2. Name each task by its concrete result, starting with a verb ("Download the HOA form from the
+   portal"), never a topic ("HOA"); never add start-up steps. A vague item is re-decided every time it is seen.
 3. Anything with 2+ steps is a project: the outcome is the parent; only the current next action is
    actionable.
 4. Two-minute rule: if it takes under 2 minutes and can be done now, tell the person to do it.
 5. Delegated items become "waiting for" with who and a follow-up date.
 
 **ADHD-specific**
-6. Externalize time and intention at the point of performance: deadline, duration and first step
-   in front of the person (Barkley; evidence for specific tools is mostly clinical/preliminary).
-7. Record a first physical action when starting is unclear or the task has stalled: 5 minutes or
-   less, concrete, location known. Starting is the main ADHD bottleneck, but the first action is a
-   starting aid kept on the task, not the task itself: planning input and schedules show the task's
-   concrete result, and an obvious first step ("open the app", "put on shoes") is left out, because
-   it reads as condescending and crowds out the real work.
+6. Externalize time and intention at the point of performance: deadline, duration and concrete
+   result in front of the person (Barkley; evidence for specific tools is mostly clinical/preliminary).
+7. Name each task by its concrete result, with the place or tool it needs; never add start-up
+   steps (open, go to, put on, sit at). Breaking a stuck task into steps happens only when the
+   person asks (section 5, "Break this down").
 8. Pad estimates x1.5 (x2 for unfamiliar or high-difficulty work) and break medium-plus tasks into
    steps before estimating. Planning fallacy: students predicted 33.9 days and took 55.5. The factor
    is a heuristic; replace it with the person's own once actual times are known.
@@ -60,7 +58,7 @@ act on email.
    a clinical lens, not tested neuroscience).
 10. Schedule dreaded tasks explicitly, early, with a small reward; don't wait to "feel like it".
 11. Turn a chronically postponed task into an if-then plan ("If it's Tuesday after breakfast, then
-    I open the form at the desk"); implementation intentions are well supported.
+    I fill in the form at the desk"); implementation intentions are well supported.
 12. Keep the daily list to 1-3 priorities; too many options freezes choice.
 
 **Load, energy, batching**
@@ -82,7 +80,7 @@ act on email.
 Every task gets: **size** (XS <=5 min, S 5-20, M 20-60, L 1-2.5 h, XL >2.5 h and must be split),
 **diff** (low/med/high = skill + uncertainty), **load** (cognitive: low/med/high), **energy**
 (physical), **ctx** (one primary place: home, a specific area, computer, online, errand, outside),
-**first** (first physical action, when not obvious), **due** (hard = real external consequence; soft = chosen; never
+**due** (hard = real external consequence; soft = chosen; never
 invent hard dates), **prio**, **blocked_by**, **postponed** count, **batch**, **deleg**, **src**.
 
 Priority rule (top-down, first match wins):
@@ -104,21 +102,20 @@ padded available time. Full definitions with examples: `references/attribute-sch
 Record a task only if someone expects a specific act by the person, it is not already done (check
 the thread), and skipping it has a consequence or the person clearly cares. Skip newsletters,
 marketing, receipts without required action, shipping updates, FYI/cc mail, resolved notices; flag
-phishing and never click links. An FYI with a date that matters becomes a calendar note, not a
+phishing only on evidence and never click links. An FYI with a date that matters becomes a calendar note, not a
 task. Deduplicate by thread, by sender + object + dates, and by similar titles; reminders raise
 priority instead of duplicating. Money emails (bills, autopay results, late notices, price changes,
 income, tax documents) are also handed to the household's finance agent with minimal fields and an
 idempotency key per message. Full rules and the hand-off card: `references/email-triage.md`.
 
 ### 5. Everyday chat
-Short and already prioritized: one recommendation, at most 3 options, each named by a concrete
-result and size. Give a first step only when starting is genuinely unclear or the task has stalled.
-Ask at most one question and only if it changes the pick.
+Short and already prioritized: one recommendation, at most 3 options, each named by its concrete
+result with its size; ask at most one question and only if it changes the pick.
 - "What should I do now?" -> top unblocked P1/P2 that fits time and ctx, else a quick win:
-  `Do: Renew the permit online (S, 15m).` Add 1–2 alternates if useful.
+  `Do: Renew the permit online (S, 15m).` plus 1-2 alternates.
 - "20 minutes, low energy" -> size <= S, energy low, load <= med; prefer a batch of 2-3 small
   tasks in one ctx; state total time.
-- "Break this down" -> one outcome line, 3-7 steps each M or smaller, first step <= 5 min and
+- "Break this down" (only when the person asks) -> one outcome line, 3-7 steps each M or smaller, first step <= 5 min and
   physical; flag steps needing info, a purchase decision or another person; re-size the parent
   from the sum; offer to save as subtasks.
 - "Why do I keep avoiding X?" -> name the likely blocker in one line without judgment (unclear next
@@ -140,9 +137,8 @@ if the coordinator wants it. Format and field rules: `references/planning-input-
 - Planning input with prose, missing sections, or text and JSON that disagree.
 
 ## Verification
-- Every open task has its required attributes and a verb-first title naming its result. Check for
-  a useful `first` action of at most five minutes only when starting is genuinely unclear or the
-  task has stalled (step 7). Do not add a `first` action to other tasks.
+- Every open task has all attributes and a verb-first title naming its concrete result; no task
+  carries a start-up step.
 - No XL task is scheduled unsplit; blocked tasks have a follow-up date.
 - Each email-derived task cites its source sentence; no duplicate exists for the same thread.
 - Planning input has every section, and text and JSON agree.

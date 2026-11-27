@@ -35,7 +35,7 @@ Source IDs refer to `sources.md`. "HOLD" = do not proceed until it passes/clears
   absorbing moisture or getting lost. (Judgment.)
 
 ## Cutting phases into startable blocks
-A block: one session, one first physical action, staged kit, safe stopping state, ends with a reset.
+A block: one session, one concrete result, staged kit, safe stopping state, ends with a reset.
 Example breakdown of phase 8 (illustration):
 1. Snap chalk lines for all perimeter walls (kit: chalk line, tape, pencil, plan sheet).
 2. Cut and glue/seal foam board on one wall (kit: foam, adhesive, sealant, knife, straightedge).

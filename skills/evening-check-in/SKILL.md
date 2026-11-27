@@ -25,7 +25,7 @@ psychology-based methods and feed the planner as targets, not as private detail.
 
 ### 1. Tone and shape
 The person is winding down, often in bed with the phone about to go on the charger. Short, calm,
-no lecture. On chat apps use short separate messages (at most about 4). If they do not answer, do
+no lecture. One message on chat apps. If they do not answer, do
 not chase; no reply tonight is fine.
 
 ### 2. Order

@@ -16,10 +16,8 @@ refer to the source list below. Evidence strength is noted where weak.
    default once 3+ completions of a kind exist.
 2. **Plan to the 15 minutes, never the minute.** Start and end on :00/:15/:30/:45. Precision nobody
    can deliver produces an instant "I'm already behind" failure.
-3. **Externalize time.** Give each box a visible calendar start and end [1][3][9]. For this
-   planning method, describe the checkable result ("send the permit form"), not just the topic.
-   Add one small first step only if starting is genuinely unclear or the task has stalled; omit
-   routine setup such as "open the document."
+3. **Externalize time.** Every box gets a visible start and end in the calendar. The description
+   lists the concrete tasks by result, never start-up steps [1][3][9].
 
 **Transitions and slack**
 4. **Insert transition buffers.** 10 min between boxes that change context. 15 min when location
@@ -34,12 +32,12 @@ refer to the source list below. Evidence strength is noted where weak.
    Slack is empty calendar space. Exception: a *specific* restorative activity the person chose
    (walk, nap, gym) may be a box, named concretely. Empty "rest" boxes get ignored or
    turn into guilt. Pacing works when rest is real and deliberate [37].
-7. **Add one overflow box per day** late in the day (20-45 min, labelled per the household's conventions) to
-   absorb spillover. Newport plans on revising the schedule when the day breaks, and this box is the space for that [23][24].
+7. **Leave spillover room as empty slack** late in the day (20-45 min), never an Overflow box.
+   Newport plans on revising the schedule when the day breaks, and this slack is the space for that [23][24].
 
 **Load, energy, order**
 8. **Put the hardest high-cognitive-load task in the person's focus window** (from data docs).
-   If none is defined, default to the first 2-3 hours after the morning start-up routine. Tuckman:
+   If none is recorded, ask the coordinator for it; do not assume one. Tuckman:
    things planned earlier in the day are more likely to happen [5]. Chronotype/synchrony effects
    are real but modest and inconsistent in large tests [18][19]. Prefer the person's stated window
    and completion history over theory.
@@ -79,9 +77,9 @@ refer to the source list below. Evidence strength is noted where weak.
 19. **Respect the household's rest-day rule** (from its data docs): move chore-type work earlier, never later.
 20. **Money constraints.** Place bill-related tasks before due dates and after any stated pay date.
     Never schedule a purchase or errand the brief marks unaffordable or blocked.
-21. **Write if-then fallbacks into the plan.** For each day's riskiest box, add one line to its
-    description: "If <obstacle>, then <smaller version / swap slot>". Implementation intentions have
-    a medium-to-large effect on goal attainment across 94 studies [21] and help children with ADHD with
+21. **Plan the riskiest box with margin.** Leave empty slack after each day's riskiest box and
+    choose its smaller version in advance; never write conditional "if ... then" text in a box.
+    Planning the obstacle ahead (implementation intentions) has a medium-to-large effect on goal attainment across 94 studies [21] and help children with ADHD with
     shifting and distraction [22] (adult ADHD evidence is thinner).
 22. **Fewer boxes when completion drops.** Velocity sets the total load (section 4). An under-filled
     plan that gets done beats a full plan that doesn't, and overplanning is the classic ADHD failure [10][11].

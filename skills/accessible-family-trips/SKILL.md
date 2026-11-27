@@ -35,7 +35,7 @@ From authorized, task-relevant inputs, record only what this trip requires:
 - Verify fixed commitments and any dates or time windows the party wants to avoid.
 - Budget ceiling and who approves spending.
 - Channel rules: Use a supported channel the requester can use and prefers; if a process truly needs an excluded channel, say so plainly.
-If a needs fact is missing, design for the most demanding plausible case and list the assumption in your output. Never guess a diagnosis.
+If a needs fact is missing, get it from the household's records or the agent that holds them; ask the person only if no record exists. Never plan on an assumption or guess a diagnosis.
 
 ### 2. Generate candidates cheapest-first
 Work down this ladder and stop when you have 4-6 candidates:
@@ -72,7 +72,7 @@ An option missing any required access fact does NOT pass the gate and cannot be 
 
 ### 6. Present the decision
 - Two or three options, already ranked, best first. One line why it is first.
-- For each: date(s), all-in cost, what was checked (access, sensory, budget), gaps, and the **next real task** ("Reserve the free 10 a.m. ticket at this link").
+- For each: date(s), all-in cost, what was checked (access, sensory, budget), gaps, and the booking step named by its result ("free 10 a.m. ticket reserved at <link>").
 - One fallback for bad weather or a hard day.
 - Hand useful calendar entries to the requester or an authorized calendar steward.
 - Save plans only in an approved destination if requested; private details stay out of shared documents.

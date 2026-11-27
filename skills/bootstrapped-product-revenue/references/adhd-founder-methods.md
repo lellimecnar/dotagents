@@ -35,8 +35,8 @@ Sources:
 | Capture list | Brain-dump list, transferred to the short action list every day or two | [CH-TD] |
 
 ## How this skill applies them (working rules)
-- Hand over 1-3 actions, already ordered, first one physical and named, each under about 90 minutes.
-- Every action has a cue and a day: "Monday after the first coffee, open the prospect sheet and write 10 names."
+- Hand over 1-3 actions, already ordered, each named by its concrete result, each under about 90 minutes; never a start-up step.
+- Every action has a cue and a day: "Monday after the first coffee, write 10 prospect names in the sheet."
 - Name the accountability partner and the check-in channel (written check-ins are fine).
 - Ship in increments that a customer can see within a week; end every work block with something sent, published or asked, not only "progress".
 - Batch the boring follow-through (books, invoices, follow-up messages) into one short, fixed weekly slot with a checklist; automate where a built-in tool exists.

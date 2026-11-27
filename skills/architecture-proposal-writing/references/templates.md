@@ -167,7 +167,7 @@ transactional enqueue with no new infrastructure, accepting that we'll need to m
 volume grows roughly 50×.
 
 **What I need from you** (2 min):
-- **A.** Approve the database job queue (recommended). Without an answer I'll hold the work.
+- **A.** Approve the database job queue (recommended). Until you answer, only the queue build waits; everything else continues.
 - **B.** Job history retention: 7 days (recommended) or 30 days. You delegated retention settings and this is
   reversible, so if no answer by Friday I'll use 7 days.
 

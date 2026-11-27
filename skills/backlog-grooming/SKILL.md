@@ -32,8 +32,9 @@ list of things only the owner can unblock.
   verify it in the affected execution context using an approved read-only check and equivalent authorized permissions, or request evidence from its operator. If
   it works, send the item back to the agent with the evidence instead of listing it for the owner. If
   you cannot reach that runtime, say your test was not equivalent. Recheck unresolved blockers against current evidence before escalating or relaying them.
-- **Never close, cancel or merge anything.** List it for the owner with evidence. Grooming changes
-  priority, edges and definition; it does not end work.
+- **Close only with evidence** (a landed commit proven by the ancestor check, or a live
+  superseding item), and never merge. List for the owner only scope decisions (overruled,
+  consolidate, drop).
 - **The owner's attention is the scarce resource.** Put the owner unblock list first, short (about
   ten), each item answerable in one sentence, with a link.
 - **Count mechanically.** Hand counts drift on the first run.
@@ -58,9 +59,9 @@ list of things only the owner can unblock.
    priority-only changes on superseded items), and list skipped actions for the next run.
 5. **Publish** the day's result in one place, first line `Backlog <date>`:
    owner unblock list → ready to work by priority with suggested owner → needs
-   definition/research/spike/design with the question each must answer → for owner sign-off (done,
-   superseded, overruled, redundant, consolidate) with evidence → what changed since yesterday.
-6. End with one summary line (ready count, owner unblocks, sign-off count) and the owner list.
+   definition/research/spike/design with the question each must answer → closed with evidence (done,
+   superseded) → for an owner scope decision (overruled, consolidate, drop) → what changed since yesterday.
+6. End with one summary line (ready count, owner unblocks, closed count) and the owner list.
 
 ## Stuck patterns worth checking every run
 
@@ -68,12 +69,12 @@ list of things only the owner can unblock.
   change-request count equals the cap. The owner must decide (approve or another round).
 - **Approval of review tasks**: approving a review task accepts the review work, not the PR. Group
   them into one owner line.
-- **Blocked with no blocker** and an exhausted repair loop: an owner item. Do not re-toggle the
-  status; it loops.
+- **Blocked with no blocker** and an exhausted repair loop: repair it by the board's own route
+  (add the missing dependency edge, or unblock with evidence). Do not re-toggle the status; it loops.
 - **Blocked with no edge, no pending interaction, no recovery action**, where the owner step is
   verifiably done: move it back to ready and post the evidence.
-- **Agents in an error state** leave their routine items blocked with no edge. The reset is an owner
-  item.
+- **Agents in an error state** leave their routine items blocked with no edge. Reset them by the
+  board's own recovery action and post the evidence.
 - **A reviewer that never commented for days** on an item in review was probably never woken: a
   standup item, not a frozen item.
 - **Duplicate routine items**: routines that "skip if active" may still spawn a new item while the

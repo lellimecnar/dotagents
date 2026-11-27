@@ -98,7 +98,7 @@ mechanical, electrical, low-voltage -> rough inspections -> insulation + air sea
 inspection -> drywall -> finishes -> trim/devices/alarms -> final. Never cover work before its inspection
 passes. Then cut each phase into blocks that:
 - fit one work session,
-- start with a named first physical action ("snap the chalk line for the north wall"),
+- are each named by their concrete result ("chalk lines snapped for the north wall"), never a start-up step,
 - end at a state that is safe to leave for weeks,
 - have every tool and material staged before the block starts.
 Aim for the next inspection as the milestone that matters; schedule it the moment a phase is ready.
@@ -142,7 +142,7 @@ radon retest, warranties, lien waivers and photos together. Retest radon after t
 - Buying all materials up front for a job that will stall; they get damaged, lost or obsolete.
 
 ## Output rules
-Give few options, already prioritised, with the next real task named, each compared against
+Give few options, already prioritised, each named by its concrete result and compared against
 the alternatives before one is called best (`due-diligence-before-deciding`). Report what you
 verified, then a short Limits section: only what no available source (code text, the building
 department, the permit portal, the manufacturer) could settle after you tried, what you tried, and

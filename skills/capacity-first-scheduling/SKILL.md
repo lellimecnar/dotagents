@@ -49,10 +49,8 @@ conflicts with them, follow the data doc and note the conflict in your output.
   days and took 55; ADHD adds measurable timing deficits. No padding factor has an evidence base;
   the personal one is what matters.
 - **Plan on a 15-minute grid.** Fake precision (09:07-09:52) produces "already behind" by 10:00.
-- **Externalize time.** Every box has a visible start, end and category; its lines name concrete
-  results the person can check off ("send the permit form"), not topics ("permit"). Add a first step
-  only where starting is genuinely unclear or the item has stalled, and never an obvious one ("open
-  the laptop", "put on shoes"): obvious steps read as condescending and bury the real tasks.
+- **Externalize time.** Every box has a visible start, end and category; its description lists
+  the concrete tasks by result, never start-up steps.
 
 **Transitions and slack**
 - **Transition buffers:** ~10 min between context changes, 15 when place or mode changes; travel
@@ -61,11 +59,11 @@ conflicts with them, follow the data doc and note the conflict in your output.
 - **Free time is not a box.** Slack is empty calendar space. "Rest" or "free time" boxes get
   ignored or become guilt. A specific restorative activity the person chose (walk, nap, gym) may
   be a box, named concretely ("30-minute walk").
-- **One overflow box per day**, late, 20-45 min, to absorb spillover and replanning.
+- **Leave spillover room as empty slack** late in the day (20-45 min), never an Overflow box.
 
 **Load, energy, order**
-- **Hardest high-load task in the focus window** (the person's stated window; default the first
-  2-3 hours after the morning routine). Chronotype effects are real but modest; personal history
+- **Hardest high-load task in the focus window** (the person's recorded window; if none is
+  recorded, ask the coordinator for it; do not assume one). Chronotype effects are real but modest; personal history
   beats theory.
 - **Low-load work in the post-lunch dip** (~1-3 h after the midday meal).
 - **Never stack two high-load boxes**; put a low-load, physical or break box between. Do not
@@ -104,9 +102,8 @@ conflicts with them, follow the data doc and note the conflict in your output.
   tasks untouched for 5+ days; track hour targets per category if the person keeps them.
 - **Respect the household's rest-day and money rules** (for example a day with no chores, or bill
   tasks only after payday). Move work earlier, never later, around them.
-- **Write if-then fallbacks** into the riskiest box each day ("If <obstacle>, then <smaller
-  version / swap slot>"). Implementation intentions show medium-to-large effects across 94 studies;
-  ADHD evidence is mostly in children.
+- **Plan the riskiest box each day with margin:** empty slack after it and the smaller version
+  already chosen. Never write conditional "if ... then" text in a box.
 - **Name the minimum-viable day:** if only the mandatory items happen, the day still counts.
 - **Every box holds real items.** A box exists because the inputs (tasks, specialists' input, a
   priority the person named) put something real in it. A placeholder ("Focus", "Work block", "your
@@ -122,7 +119,7 @@ conflicts with them, follow the data doc and note the conflict in your output.
 **Weekly (rough boxes):** read data docs, calendar and velocity -> compute daily available and
 capacity -> pad and split tasks -> place mandatory items first (latest safe day minus margin,
 never the deadline day for medium-plus tasks), then neglected tasks, then the rest by priority
-while day load <= capacity -> place boxes by load and energy, one overflow box per day -> anything
+while day load <= capacity -> place boxes by load and energy, leaving empty slack each day -> anything
 that does not fit goes to Dropped/Deferred with a reason. Weekly boxes are themes ("Deep work:
 proposal", "Errands"), not checklists. Never overbook silently. Check authorized calendars
 within the agreed horizon. Mirror commitments only when requested and authorized, to the designated calendar, so any proposed day
@@ -131,8 +128,8 @@ within the agreed horizon. Mirror commitments only when requested and authorized
 **Daily (final tomorrow, rough refresh after it):** finalize tomorrow and refresh later drafts
 only as far ahead as the agreed planning cadence calls for. For tomorrow: re-read the calendar and today's completion -> update velocity ->
 carry over unfinished mandatory items only (suggested ones return to the pool) -> exact 15-min
-boundaries, transitions, easy win, low load after lunch, overflow box -> 1-3 suggestions per box
-with mandatory items separated; padded checkbox minutes must fit the box -> if-then lines on the
+boundaries, transitions, easy win, low load after lunch, empty slack late in the day -> 1-3 suggestions per box
+with mandatory items separated; padded checkbox minutes must fit the box -> empty slack after the
 1-2 riskiest boxes, leave-by times and event details (address, what to bring).
 
 **Midweek replan:** smallest change that works. Freed time goes to slack first. Insert the new
@@ -157,8 +154,7 @@ the sprint "yesterday's weather" rule. Detail: `references/velocity-and-output.m
 ### 5. Everyday chat
 One decisive recommendation with the slot and the reason in one line; check the live calendar
 first. "I'm behind, fix today" -> keep mandatory items, defer suggested ones, shrink the next box
-to one useful result that fits, and restore one buffer. Add one small first step only when starting
-is genuinely unclear or the task has stalled. After verifying the changes, reply "Done: moved the
+to one useful result that fits, and restore one buffer. After verifying the changes, reply "Done: moved the
 optional call to Thu and restored a buffer. Next: 14:15, submit the permit form."
 "Can I fit Y?" -> pad Y, check capacity, lead with yes or no. Do not lecture about ADHD or list principles.
 
@@ -186,7 +182,7 @@ optional call to Thu and restored a buffer. Next: 14:15, submit the permit form.
   method): pick one writer and use the other as a cross-check.
 
 ## Verification
-- Booked load <= capacity for every day; every day has an overflow box and real empty slack.
+- Booked load <= capacity for every day; every day has real empty slack and no Overflow box.
 - Every box holds real items from the inputs; each specialist input is placed or listed as deferred.
 - Every mandatory item has a box before its latest safe day, or is listed as at risk.
 - Everything that did not fit appears under Dropped/Deferred with a reason.

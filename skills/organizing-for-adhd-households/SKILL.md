@@ -41,8 +41,8 @@ home. Ask "what happens at that moment?" not "what is wrong?".
    one or two. Replace lids, drawers and folders with hooks, baskets and trays.
 5. **Reduce stuff before buying containers.** Less stuff means less to find and less to decide.
    [professional practice]
-6. **Start small, start easy.** Begin with a two-minute or five-minute first step; action tends to
-   create motivation, not the other way round. [professional practice]
+6. **Start small, start easy.** Begin with a small piece of real work (one drawer, one shelf); action
+   tends to create motivation, not the other way round. [professional practice]
 7. **"Good enough" is the standard.** Perfectionism stalls starting. Organizers use the motto
    "Done is better than perfect" (ICD fact sheet). [professional practice]
 8. **Work alongside someone.** Body doubling: another person present while you work. Evidence is

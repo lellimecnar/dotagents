@@ -52,8 +52,8 @@ around it.
      state before claiming a shared root cause, and never edit their items.
    - Loop breaker: the same fingerprint reopened three times in a day → stop fixing and escalate to
      whoever owns operations with the history.
-   - At most ~5 new items per run. More distinct alerts than that → one critical incident item with
-     the list and a question for the owner.
+   - More distinct alerts than one run can investigate → one incident item listing all of them,
+     investigated by shared cause first; escalate to the owner only a decision only the owner can make.
    - Alerts caused by your own or a deploy's in-flight change get a grace window (about 30 minutes)
      unless they are user-facing errors; say so.
 3. **Make one tracker.** When none exists, title it with the fingerprint tag, alert name and a
