@@ -42,8 +42,8 @@ Every coding task: features, fixes, redesigns, small content changes in a code r
 1. **Intake (first minutes).** Goal, repo, what done looks like, what needs the owner. Check overlap:
    your open PRs and branches for the same goal; extend an open PR instead of starting a parallel
    one.
-2. **Workspace.** Clone once and fetch with prune. One worktree per task from the up-to-date default
-   (or integration) branch, on a branch named per `git-and-github-workflow`; to continue a PR, add a
+2. **Workspace.** Clone once and fetch with prune. One worktree per task from the up-to-date designated
+   integration branch, on a branch named per `git-and-github-workflow` sections 1-2; to continue a PR, add a
    worktree on its branch. Install with the lockfile (frozen). Run long installs, builds and suites
    in the background with a log, and read the log rather than waiting on a foreground timeout.
 3. **Build.** Read the repo's `AGENTS.md`/`CLAUDE.md` (root and nearest package) and any repo skill

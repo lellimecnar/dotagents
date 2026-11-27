@@ -384,7 +384,8 @@ other people's builds and caches already point at it.
   reflog reachability, not the specific head you verified, and refuses legitimate pushes made under
   another remote name.
 - A closing keyword in a PR into a non-default branch does nothing, so the issue silently stays open
-  or is believed closed. A closing keyword in a commit message fires later, wherever that commit goes.
+  or is believed closed. A closing keyword in a commit message can take effect later, when that commit
+  reaches the repository's default branch.
 - After a squash or rebase merge, "is my head an ancestor of the base" is false even though the work
   landed. Check the landed commit instead.
 - `git checkout --theirs <file>` (or `--ours`) during a conflict takes the whole file, not the hunk.

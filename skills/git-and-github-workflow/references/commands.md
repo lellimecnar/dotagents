@@ -25,15 +25,15 @@ branch lives in the same repository as its base.
 # Default branch and merge settings (merge-method fields only appear with write access; missing = unknown).
 gh api "repos/$repo" --jq '{default_branch, allow_merge_commit, allow_squash_merge, allow_rebase_merge, delete_branch_on_merge, squash_merge_commit_title, squash_merge_commit_message}'
 
-# Every ruleset rule on a branch. Encode the branch name as one path segment (slashes too), and page.
-enc=$(python3 -c 'import sys,urllib.parse;print(urllib.parse.quote(sys.argv[1],safe=""))' "$base")
-gh api --paginate "repos/$repo/rules/branches/$enc" --jq '.[] | {type, parameters}'
-# Same for your head branch before any rewrite or deletion:
-enc=$(python3 -c 'import sys,urllib.parse;print(urllib.parse.quote(sys.argv[1],safe=""))' "$branch")
-gh api --paginate "repos/$repo/rules/branches/$enc" --jq '.[] | {type, parameters}'
-
-# Classic branch protection. 404 = none OR no access; treat a 404/403 you cannot explain as unknown.
-gh api "repos/$repo/branches/$enc/protection"
+# Rulesets and classic protection, for the target branch and (before a rewrite or deletion) your head
+# branch. Encode each name as one path segment (slashes too) and page. A 403/404 you cannot explain
+# means unknown, not "no rule".
+for b in "$base" "$branch"; do
+  enc=$(python3 -c 'import sys,urllib.parse;print(urllib.parse.quote(sys.argv[1],safe=""))' "$b")
+  echo "== $b"
+  gh api --paginate "repos/$repo/rules/branches/$enc" --jq '.[] | {type, parameters}'
+  gh api "repos/$repo/branches/$enc/protection"
+done
 
 # Who you are acting as.
 gh api user --jq .login; git config user.name; git config user.email
@@ -60,16 +60,28 @@ git check-ref-format --branch "$branch" >/dev/null || echo "invalid name"
 git worktree add -b "$branch" "../wt-$(echo "$branch" | tr / -)" "$remote/$base"
 
 # Continue an existing PR branch: is it checked out anywhere else?
-git worktree list --porcelain | grep -B2 "branch refs/heads/$branch"   # output = someone owns it
+git worktree list --porcelain | grep -B2 "branch refs/heads/$branch"   # output = someone owns it: coordinate
 git fetch "$remote" "refs/heads/$branch:refs/remotes/$remote/$branch"
-git worktree add -b "$branch" "../wt-$(echo "$branch" | tr / -)" "$remote/$branch"
+if git show-ref --verify --quiet "refs/heads/$branch"; then
+  git worktree add "../wt-$(echo "$branch" | tr / -)" "$branch"        # attach the existing local branch
+  git -C "../wt-$(echo "$branch" | tr / -)" log --oneline --left-right "$branch...$remote/$branch"   # divergence? stop and reconcile
+else
+  git worktree add -b "$branch" "../wt-$(echo "$branch" | tr / -)" "$remote/$branch"
+fi
 # Read-only look at a PR without taking its branch:
 git fetch "$remote" "pull/$pr/head" && git worktree add --detach ../wt-pr-$pr FETCH_HEAD
 ```
 
-If a tool already gave you a worktree on a generated local branch, keep that local name; for an
-existing PR, point the still-clean worktree at the PR's tip with `git reset --hard "$remote/$branch"`
-(only while `git status --porcelain` prints nothing) and push with `HEAD:refs/heads/$branch`.
+If a tool already gave you a worktree on a generated local branch, keep that local name. To continue
+an existing PR there, move it to the PR's tip only when that loses nothing: the worktree is clean and
+its `HEAD` is an ancestor of the verified PR tip.
+
+```bash
+[ -z "$(git status --porcelain)" ] && git merge-base --is-ancestor HEAD "$remote/$branch" \
+  && git reset --hard "$remote/$branch" || echo "local work would be lost: stop"
+```
+
+Then push with `HEAD:refs/heads/$branch`.
 
 ## 3. Commit and scan
 
@@ -81,9 +93,12 @@ git commit -F msg.txt                 # subject, blank line, body, footers
 
 # Secret scan of every outgoing commit, printing only commit:path locations, never matched text.
 PAT='gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|BEGIN [A-Z ]*PRIVATE KEY|xox[baprs]-'
-git grep -lE "$PAT" $(git rev-list "$remote/$base..HEAD") -- .
-# Exit 1 with no output = no match in any outgoing commit's tree; exit 2+ = the scan itself failed.
-# Prefer the project's own redacting scanner when it has one.
+cd "$(git rev-parse --show-toplevel)"
+REVS=$(git rev-list "$remote/$base..HEAD") || { echo "cannot list outgoing commits: do not push"; exit 1; }
+if [ -z "$REVS" ]; then echo "no outgoing commits"
+else git grep -lE "$PAT" $REVS -- . ; rc=$?
+  [ $rc -eq 1 ] && echo "clean for these patterns"; [ $rc -ge 2 ] && echo "scan failed: do not push"; fi
+# rc 0 = matches, listed as commit:path only. Prefer the project's own redacting scanner when it has one.
 ```
 
 Split the newest commit when it grew two concerns (only an unpushed, non-merge commit):
@@ -121,8 +136,11 @@ A rebase that stops on a conflict: resolve, `git add -- <file>`, then
 
 ```bash
 git status --porcelain                                # must be empty
-EXPECT=$(git rev-parse HEAD)          # the head you last pushed and verified; must equal the PR head you reviewed
-gh pr view "$pr" --repo "$repo" --json headRefName,headRepository,headRefOid   # destination check; compare, never copy
+EXPECT=$(git rev-parse HEAD)          # the head you last pushed and verified
+# Destination check: one push URL, pointing at the PR's head repository; the PR's head ref and SHA
+# equal your branch and EXPECT. Compare, never copy the live SHA into EXPECT. Stop on any mismatch.
+git remote get-url --push --all "$remote"
+gh pr view "$pr" --repo "$repo" --json headRefName,headRepositoryOwner,headRepository,headRefOid
 OLD_BASE=$(git merge-base HEAD "$remote/$base")
 git fetch "$remote"
 git rebase --no-update-refs "$remote/$base"           # your own branch only
@@ -130,7 +148,8 @@ git range-diff "$OLD_BASE..$EXPECT" "$remote/$base..HEAD"
 <run the repository's checks again>
 
 git push --force-with-lease="refs/heads/$branch:$EXPECT" "$remote" "HEAD:refs/heads/$branch"
-git ls-remote "$remote" "refs/heads/$branch"          # must print the new HEAD SHA
+[ "$(git ls-remote "$remote" "refs/heads/$branch" | cut -f1)" = "$(git rev-parse HEAD)" ] \
+  && echo "remote head is the new SHA" || echo "remote head differs: investigate"
 ```
 
 If the lease is refused, someone else's commit reached the branch: fetch it, read it, and integrate
@@ -169,7 +188,7 @@ gh pr ready "$pr" --repo "$repo"                      # draft -> ready
 gh pr edit "$pr" --repo "$repo" --add-reviewer "<login>"
 
 # CI with a deadline (exit 124 = still pending; report it as pending, not passed).
-timeout 2700 gh pr checks "$pr" --repo "$repo" --watch; echo "exit $?"
+timeout 2700 gh pr checks "$pr" --repo "$repo" --watch
 ```
 
 Example description (`pr.md`) when the repository has no template. Example only: SKILL.md section 7
@@ -195,12 +214,16 @@ Refs #<issue>
 
 ```bash
 # Every review thread with state, paged (GraphQL is the only API that exposes resolution).
-gh api graphql --paginate -F owner="${repo%/*}" -F name="${repo#*/}" -F pr="$pr" -f query='
+gh api graphql --paginate -f owner="${repo%/*}" -f name="${repo#*/}" -F pr="$pr" -f query='
 query($owner:String!,$name:String!,$pr:Int!,$endCursor:String){repository(owner:$owner,name:$name){pullRequest(number:$pr){
   reviewThreads(first:100,after:$endCursor){pageInfo{hasNextPage endCursor}
     nodes{id isResolved isOutdated path line
       comments(first:50){nodes{databaseId author{login} body}}}}}}}' \
   --jq '.data.repository.pullRequest.reviewThreads.nodes[]'
+
+# Before replying, check for an existing reply of yours (all review comments, paged to the end).
+gh api --paginate "repos/$repo/pulls/$pr/comments" \
+  --jq '.[] | select(.in_reply_to_id == <first-comment-databaseId>) | {id, user: .user.login, body}'
 
 # Reply in a thread: the REST id of the thread's first comment (replies to replies are rejected).
 gh api --method POST "repos/$repo/pulls/$pr/comments/<first-comment-databaseId>/replies" -F body=@reply.md
@@ -229,29 +252,35 @@ took.
 ## 8. Stacked PRs
 
 ```bash
-# Build the child on the parent and record the cut point.
-git worktree add -b "$child" "../wt-$(echo "$child" | tr / -)" "$remote/$parent"
+# Record the cut point first, build the child at exactly that commit, and work inside its worktree.
+git fetch "$remote"
 CUT=$(git rev-parse "$remote/$parent")                # the parent state the child is built on; keep it
+git worktree add -b "$child" "../wt-$(echo "$child" | tr / -)" "$CUT"
+cd "../wt-$(echo "$child" | tr / -)"
 <commit>
 git push --force-with-lease="refs/heads/$child:" "$remote" "HEAD:refs/heads/$child"
 gh pr create --repo "$repo" --base "$parent" --head "$child" --title "..." --body-file pr.md
 
-# After the parent lands: what is the child's base now, and does it show foreign commits?
-gh pr view "$child_pr" --repo "$repo" --json baseRefName
+# After the parent lands (run in the child's worktree): would the child show foreign commits on the base?
+gh pr view "$child_pr" --repo "$repo" --json baseRefName,headRefOid
 git fetch "$remote"
-git merge-base --is-ancestor "$CUT" "$remote/$base" && echo "parent state landed as-is (merge commit)"
-# If it landed as-is and nothing else requires an update: only retarget, no rewrite.
+EXPECT=$(git rev-parse HEAD)                          # the child head you last pushed; must equal headRefOid
+git log --oneline "$remote/$base..$EXPECT"            # only child commits listed = no rewrite needed
+# No foreign commits (the parent landed as a merge commit): only retarget.
 gh pr edit "$child_pr" --repo "$repo" --base "$base"
 
-# If the parent was squashed or rebased (CUT is not on the base), move only the child's own commits:
-EXPECT=$(git rev-parse HEAD)                          # the child head you last pushed
+# Foreign commits listed (the parent was squashed or rebased): move only the child's own commits.
 git merge-base --is-ancestor "$CUT" "$EXPECT" && git log --oneline "$CUT..$EXPECT"   # must list only child work
 git rebase --no-update-refs --onto "$remote/$base" "$CUT"
 git range-diff "$CUT..$EXPECT" "$remote/$base..HEAD"
 <run the checks>
 git push --force-with-lease="refs/heads/$child:$EXPECT" "$remote" "HEAD:refs/heads/$child"
 gh pr edit "$child_pr" --repo "$repo" --base "$base"
-gh pr view "$child_pr" --repo "$repo" --json baseRefName,commits --jq '{baseRefName, n: (.commits|length)}'
+
+# After either path: base, exact head and child-only commits.
+gh pr view "$child_pr" --repo "$repo" --json baseRefName,headRefOid,commits \
+  --jq '{baseRefName, headRefOid, commits: [.commits[].messageHeadline]}'
+git diff --stat "$remote/$base...HEAD"                # only the child's files
 ```
 
 ## 9. After the merge
@@ -261,16 +290,24 @@ gh pr view "$pr" --repo "$repo" --json state,mergedAt,mergeCommit,headRefOid
 git fetch "$remote"
 # Merge-commit landing: the reviewed head is on the base.
 git merge-base --is-ancestor <reviewed-head-sha> "$remote/$base" && echo landed
-# Squash or rebase landing: the merge record's commit is on the base and carries the change.
+# Squash or rebase landing: the recorded landed tip is on the base, and the landed range carries the
+# reviewed change. N = 1 for squash; for rebase merging, N = the number of PR commits.
 M=$(gh pr view "$pr" --repo "$repo" --json mergeCommit --jq .mergeCommit.oid)
-git merge-base --is-ancestor "$M" "$remote/$base" && git show --stat "$M"
+git merge-base --is-ancestor "$M" "$remote/$base" || echo "landed tip not on base: do not claim landing"
+H=<reviewed-head-sha>; N=1
+A=$(git diff "$M~$N" "$M" | git patch-id --stable | cut -d' ' -f1)
+B=$(git diff "$(git merge-base "$H" "$M~$N")" "$H" | git patch-id --stable | cut -d' ' -f1)
+[ "$A" = "$B" ] && echo "landed change equals reviewed change" || git diff --stat "$M~$N" "$M"   # differs: read the full diff
+# If the landed range cannot be established, do not claim landing and do not revert.
 
 # Cleanup, only after landing (or an authorized discard), with nothing else based on the branch.
-gh pr list --repo "$repo" --state open --base "$branch"      # must be empty
-gh pr list --repo "$repo" --state open --head "$branch"      # must be empty
+# Both queries must succeed and print nothing; a failed query stops the cleanup.
+gh pr list --repo "$repo" --state open --base "$branch" --json number --jq '.[].number' || exit 1
+gh pr list --repo "$repo" --state open --head "$branch" --json number --jq '.[].number' || exit 1
 TIP=$(git ls-remote "$remote" "refs/heads/$branch" | cut -f1)   # empty = already deleted
 [ "$TIP" = "<sha you cleared>" ] && git push --force-with-lease="refs/heads/$branch:$TIP" "$remote" ":refs/heads/$branch"
-git ls-remote --exit-code --heads "$remote" "refs/heads/$branch" || echo "remote branch gone"
+git ls-remote --exit-code --heads "$remote" "refs/heads/$branch"; rc=$?
+# rc 2 = gone; rc 0 = still there; anything else = the check failed (do not continue)
 git worktree remove "../wt-..."                       # your own clean worktree only
 git branch -d "$branch"                               # refuses if unmerged: keep it and investigate
 
