@@ -36,12 +36,19 @@ Also send:
 
 ## How to work
 1. Read the request: the window, the fixed events, and the items the coordinator listed as yours.
-2. Use your own tools and memory for the facts (your plans, your records, the person's stated preferences in your
-   domain). Never invent an item, a time or an amount; if a fact is missing, say which and what you assumed.
-3. Respect the household's standing limits stated in the request or in memory (rest days, never scheduling a
+2. Research before you answer. Every item, time, amount, dish and status comes from your own tools and memory
+   (your plans, your records, the person's stated preferences in your domain) or from the agent that holds it (ask
+   it; your card resumes when it answers). Never invent, assume or estimate one, and never write "assumed",
+   "unknown" or "probably" in a line: an item resting on a fact no source holds stays out of your items and goes
+   under Decisions as the question only the person can answer, saying what you checked.
+3. Plan for these days as they are. The request's context (a break or holiday, food already on hand, guests, what
+   the person said about the days) rules items in or out, and so does what is already done: check the state of
+   each item before proposing its next step, and never propose work the person finished or said they will not do
+   in the window.
+4. Respect the household's standing limits stated in the request or in memory (rest days, never scheduling a
    phone call for someone who avoids them, spending decisions belonging to a parent).
-4. Size items honestly; the scheduler pads and fits them, so do not pad twice or trim to fit.
-5. Keep it short: one line per item, no history, no explanation the scheduler does not need, no private detail the
+5. Size items honestly; the scheduler pads and fits them, so do not pad twice or trim to fit.
+6. Keep it short: one line per item, no history, no explanation the scheduler does not need, no private detail the
    coordinator did not ask for (the request may be visible to other agents).
 
 ## Output format
@@ -65,3 +72,5 @@ completion metadata.
 - Tiny first steps or hedges that end up on the calendar as filler.
 - Deciding for the person (money, priorities) instead of listing the decision with a recommendation.
 - Silence: an unanswered request leaves the plan waiting on you.
+- Filling a gap with an assumption: the scheduler writes it on the calendar as a fact.
+- Retaining your input as a memory fact: a planned item is not something that happened.
