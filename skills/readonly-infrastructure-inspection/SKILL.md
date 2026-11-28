@@ -62,11 +62,12 @@ researching options.
   route.
 - "Near full" depends on the pool type: thin-provisioned storage can report usage that differs from
   what guests see. Say which number you report.
-- With root SSH (not an auditor key), harmless reversible probes that help the owner act are fine
-  — a bay locate LED, a SCSI rescan, an expander phy reset — but state each one and revert any
-  setting you changed. Package installs still need the owner's explicit yes.
-- Side findings (e.g. a flapping NIC noticed while debugging disks) get reported once with a fix.
-  When the owner parks one to focus, drop it from every later reply until they reopen it.
+- SSH privileges do not expand the audit's authority. Keep the session read-only: propose a
+  locate LED change to identify a bay, but let the operator perform it. Treat a SCSI rescan, an
+  expander PHY reset, or a package install as a separate, explicitly authorized operation; a
+  reset can interrupt live storage I/O.
+- Report an incidental finding once with a proposed fix. If it is deferred, do not repeat it
+  unless new evidence changes its severity or it affects the current diagnosis or next action.
 
 ## Verification
 

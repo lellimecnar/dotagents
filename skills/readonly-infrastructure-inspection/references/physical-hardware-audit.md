@@ -5,79 +5,106 @@ NVMe, GPUs or RAM. Inventory live first, research second, then explain.
 
 ## Inventory commands (batch into 3-4 SSH calls)
 
-1. Board/CPU/RAM: `dmidecode -t system -t baseboard -t bios`; `lscpu` (sockets, NUMA);
-   per-DIMM map: `dmidecode -t 17 | awk '/^\tSize/{s=$2$3} /^\tLocator/{print $2, s}'`
-   (shows empty slots, mixed sizes, DIMMs-per-channel). `dmidecode -t 39` = PSU model/watts.
-2. Slots: `dmidecode -t slot` (designation names which CPU feeds each slot, width, bus address,
-   In Use/Available). Cross-check `/sys/bus/pci/slots/*/address`.
-3. Devices + links: `lspci -nn` filtered of chipset noise, `lspci -tv` (root port per device;
-   x4x4x4x4 bifurcation shows as 00:02.0/.1/.2/.3 root ports), and per device
-   `lspci -s <bdf> -vv | grep -E 'LnkCap|LnkSta'` — `(downgraded)` width = seating/riser/bifurcation.
-   A device with `[disabled]` regions and no driver in lsmod is present but unused.
+1. Board/CPU/RAM: `dmidecode -t system -t baseboard -t bios`; `lscpu` (sockets, NUMA).
+   Use `dmidecode -t 17` for each DIMM's full locator, bank locator, size, and configured speed;
+   use the board's population table to map locators to channels. `dmidecode -t 39` can supply PSU
+   model and rated capacity when populated; verify against the management controller or PSU label
+   if the firmware data is absent or unclear. Redact serials and UUIDs in shared output.
+2. Slots: `dmidecode -t slot` for firmware-reported designation, width, usage, and bus address.
+   Cross-check `/sys/bus/pci/slots/*/address` where available and consult the board/riser manual
+   for CPU ownership and slot wiring.
+3. Devices + links: use `lspci -nn` for inventory and `lspci -tv` to trace endpoints through bridges
+   to their root ports. Compare `LnkCap` and `LnkSta` at both ends using `lspci -s <bdf> -vv`;
+   compare negotiated width against both ends' capabilities and the electrically wired lanes. If
+   it is unexpectedly narrow, check lane sharing, bifurcation, seating, and the riser. Use
+   `lspci -s <bdf> -k` and its `Kernel driver in use` field to check binding; disabled BARs and
+   `lsmod` alone do not establish whether a device is in use.
 4. Disks: `lsscsi -g`, `lsblk -d -o NAME,SIZE,MODEL,TRAN,ROTA`, `zpool status`, `zpool list -v`.
-5. Enclosure bays (key for "drive not detected"): for each `/sys/class/enclosure/*/Slot NN`, read
-   `status` and resolve `readlink -f Slot/device` -> `block`. **SES status `OK` with no block device
-   = drive physically present and powered but never linked** — the exact bays to investigate.
-   The expander model (`device/model`) identifies the backplane; `expander_add
-   ... parent(...)` in the kernel log shows cascading.
-6. Kernel evidence: `journalctl -k -b -g '<pattern>'` (always use `-g`/`-b`; an unfiltered grep over
-   `-b -1` on a long-uptime host can exceed 90 s). `/proc/cmdline` for IOMMU.
+5. Enclosure bays: under `/sys/class/enclosure/`, enumerate reported bay components (names vary).
+   Read each component's `slot` and `status` where exposed; follow its `device` symlink if present
+   and check `device/block/`. `OK` without a block mapping is a lead, not proof of drive presence,
+   power, or link state. Correlate SES data with the controller's device and link inventory. Record
+   the SES device model as an identification clue; verify the backplane part and expander topology
+   separately from the hardware inventory and controller or kernel topology data.
+6. Kernel evidence: on systemd hosts, use `journalctl -k -b -g '<pattern>'` for the current boot;
+   select the relevant boot and narrow with `--since` or `--until` around the event. Otherwise use
+   the host's kernel log source. `/proc/cmdline` shows requested IOMMU options; check initialization
+   messages and the applicable devices' `iommu_group` links for runtime evidence.
 
 ## Interpretation rules
 
-- Do the lane math per CPU from the board manual/QRG slot table before accepting "not enough
-  lanes". On dual-socket boards RAM never consumes PCIe lanes; slots die when the CPU feeding them
-  is absent, or devices drop with "PCI out of resources" when Above 4G Decoding is off (large-BAR
-  cards such as Tesla). Filling the 3rd DIMM per channel lowers memory speed, not PCIe.
-- NVMe on a multi-M.2 carrier needs slot bifurcation set in BIOS (x16 -> x4x4x4x4; x8 -> x4x4);
-  only x16 slots take a 4-drive card.
-- Present-but-unlinked SATA drives in hot-swap backplanes: follow "Drive present but not detected"
-  below. PWDIS (3.3 V pin; Kapton over the first 3 power pins) is only a suspect when no drive of the
-  same model works on that backplane — the same model running fine in another bay rules it out.
-- An onboard hardware RAID controller hides disks unless configured as JBOD; for ZFS use an HBA in IT mode.
+- Calculate lanes from the board and riser slot tables for the installed CPUs. An absent CPU can
+  leave its wired slots unavailable. Conventional DIMMs occupy memory channels, not PCIe lanes;
+  check allowed DIMM counts and speed by CPU and population in the memory table. For BAR allocation
+  failures, check firmware MMIO resources and Above 4G Decoding support before blaming lane count.
+- A passive multi-M.2 NVMe carrier needs host bifurcation matching the card wiring for all drives
+  to enumerate (e.g. x4/x4/x4/x4 for four x4 drives, x4/x4 for two). A switch-based carrier does not
+  need host bifurcation; check its supported upstream width and physical fit, and account for the
+  drives sharing that upstream bandwidth.
+- For SATA drives that do not spin up, check whether the exact drive part number implements
+  Power Disable (PWDIS) on SATA power pin P3 and whether the suspect bay drives P3 high. A drive
+  with the same model label working in another bay does not exclude either difference. Use a
+  vendor-supported compatible power path for any operator-run test; do not modify drive contacts.
+- For ZFS, verify that the host sees individual disks, stable identifiers, and device health
+  information. Prefer direct attachment or an HBA; use supported passthrough/JBOD on a RAID-capable
+  controller if it exposes the real disks. IT firmware is an option on controllers that support it,
+  not a requirement for all HBAs.
 - Check the chassis' expansion-slot form factor before recommending any card: dense storage
   chassis are often low-profile only, and storage PDBs often
   lack PCIe GPU power leads. Say what you could not verify.
-- GPU driver eras: older GPU generations drop out of current driver branches, and current inference
-  runtimes may no longer support them. Check the vendor's driver support matrix for each card at task
-  time; mixing generations on one host forces the oldest driver.
-- ZFS layout review: a dedup vdev with `no DDT entries` (`zpool status -D`) and dedup off is wasted
-  disks; L2ARC adds little with very large RAM; special vdevs on consumer NVMe are pool-critical.
-  Removal of special/dedup vdevs is possible only with all-mirror top-level vdevs — propose, never run.
+- GPU compatibility: check the vendor's current supported-products lists and the workload's runtime
+  requirements for each card. If the cards share one driver stack, find a supported driver branch
+  that covers every card and the required runtime; if none matches, report the incompatibility.
+- ZFS layout review: compare `zpool status -D`, `zpool list -v`, and effective dataset dedup
+  settings before judging a dedicated dedup vdev. Use `arcstat` during representative workloads to
+  check whether L2ARC serves reads that miss ARC. A special vdev holds pool-critical allocations
+  regardless of drive model; assess its redundancy. Before proposing top-level special/dedup vdev
+  removal, check the installed OpenZFS `zpool-remove(8)` rules, including device-removal support,
+  primary topology (RAIDZ/dRAID exclusion), matching `ashift`, loaded encryption keys, and room to
+  evacuate. Do not run the removal during an audit.
 
 ## Drive present but not detected (SAS expander backplane)
 
-Order matters; each step is cheap and eliminates a whole class.
+Gather read-only evidence before proposing a physical test. Treat each result as a clue until
+independent checks agree.
 
-1. **Compare against the working drives first.** `lsscsi` shows model + firmware of every working
-   disk. Drives the owner thinks are "all the same" are often two models or batches (different part
-   numbers or firmware); if the failures all come from one batch, it is drive-side, not a controller "limit".
-2. **Help the owner find the bay:** `echo 1 > "/sys/class/enclosure/<encl>/Slot NN/locate"` blinks
-   the bay LED (harmless; turn off with 0 afterwards). SES `Slot NN` is 1-based, the mpt3sas log's
-   `slot(N)` is 0-based, and printed tray labels may follow neither — trust the LED.
-3. **Move the drive to a far, empty bay.** Failure that follows the drive = drive; failure that
-   stays with the bay = bay/backplane. Do this before any software probing.
-4. **Ask the expander, not sysfs.** With `smp-utils` + `sg3-utils` (the distribution's official packages;
-   the owner approves the install): `smp_discover_list --brief /dev/bsg/expander-H:N` lists attached phys
-   (uplinks show initiator addresses, drives `t(SATA)`); `sg_ses -p aes /dev/sgX` maps device slot
-   -> expander SAS address (phy id = address offset; the slot-to-phy offset differs per backplane, so read it, never assume it).
-   Then `smp_discover -p <phy>` (link rate, `sata_device=1`) and `smp_rep_phy_sata -p <phy>`:
-   a healthy drive returns a register D2H FIS and an affiliated initiator; **link up +
-   `sata_device=1` + "Phy does not support SATA" / no FIS = the drive spins and does OOB but never
-   finishes SATA init** — a drive fault, not cabling. `smp_rep_phy_err_log -p` gives error counters.
-   Linux `/sys/class/sas_phy/*/negotiated_linkrate` is a cached snapshot and goes stale after
-   hot-plug; never conclude from it alone.
-5. **Physical check in a powered bay:** ask the owner to feel/listen 20 s after insertion. Smooth
-   whine = spins; beeping/clicking = stuck motor/heads. A 3.5" drive needs a dock with its own 12 V
-   brick — 2.5"/optical enclosures and bus-powered adapters make healthy drives beep or show `0B`.
-6. **Direct test only if still ambiguous:** plain motherboard SATA port in a desktop or the server.
-   Some VM or container USB passthrough layers reject ATA passthrough (smartctl "Operation not
-   permitted"): read SMART on a host with direct access.
-7. Conclude with warranty route by serial (the vendor's written or web route) and confirm the
-   remaining bays are usable.
+1. **Compare with working drives first.** Start with the model and revision reported by `lsscsi`
+   for visible SCSI devices, then verify exact part numbers and firmware via labels or direct device
+   identification. If failures cluster by batch, prioritize drive and compatibility checks, but
+   first rule out the batches being grouped by enclosure, power path, or controller.
+2. **Identify the physical bay.** Match the enclosure and its reported slot to the chassis bay
+   label; do not assume a fixed offset between SES, driver logs, and tray numbering. If needed, ask
+   the operator to use the enclosure's locate LED, confirm it at the chassis, and restore its prior
+   state. A locate indication identifies a bay; it is not clearance to remove a disk.
+3. **Plan a controlled bay swap only if needed.** After the read-only checks in step 4, the
+   operator verifies the drive identity and that removal is safe for the pool, then tests in a
+   known-good empty bay of the same interface. Follow the hardware's hot-swap procedure or power
+   down. If the symptom follows the drive, investigate the drive or carrier; if it stays with
+   the original bay, investigate that bay's power, link, and upstream path.
+4. **Correlate live enclosure and expander data.** If `smp_utils` and `sg3_utils` are available,
+   identify the SES generic device and the expander's SMP target. Run `sg_ses --readonly --join /dev/sgX`
+   for enclosure slot descriptors and SAS data, and `smp_discover_list --summary --dsn /dev/bsg/expander-H:N`
+   for the expander's PHY inventory and any reported slot numbers, if supported. Match that slot
+   number or cross-check the attached address and topology against the enclosure map; do not
+   compute a PHY ID from an address or assume a constant slot offset. On the mapped PHY, use
+   `smp_discover -p <phy> /dev/bsg/expander-H:N` for current link and protocol data and
+   `smp_rep_phy_err_log -p <phy> /dev/bsg/expander-H:N` for error counters. For an attached SATA
+   device, `smp_rep_phy_sata -p <phy> /dev/bsg/expander-H:N` reports the available SATA FIS and
+   affiliation information. Missing affiliation, a missing FIS, or a rejected request alone does
+   not distinguish a drive fault from a mapping, link, power, or controller problem. Cross-check
+   the driver's cached `negotiated_linkrate` against live data; after hot-plug it can lag.
+5. **Observe spin-up for rotating drives.** A steady whir or vibration suggests rotation; repeated
+   clicking or beeping is a symptom, not a mechanical diagnosis. Verify the manufacturer's power
+   and spin-up requirements. A 3.5-inch SATA HDD generally needs a supply that provides both 5 V
+   and 12 V with adequate spin-up current; a bus-powered adapter may not provide it.
+6. **Propose a direct test only if still ambiguous.** Use a known-good motherboard SATA port and
+   power supply for a SATA drive, or a compatible SAS HBA and power path for a SAS drive. If a USB
+   bridge or virtualization layer blocks SMART passthrough, read SMART from a host with direct access.
+7. If the evidence points to a failed drive, give the vendor's warranty lookup route; keep serial
+   numbers out of shared reports. Say which bays were verified and which were not tested.
 
 ## Report shape
 
-Verified inventory table -> each owner hypothesis confirmed or refuted with the evidence -> concrete
-findings (bay numbers, slot names) -> options (A/B/C, recommended first) -> numbered next steps with
-time estimates, the first needing the owner's physical input. State plainly that nothing was changed.
+Give the verified inventory, then label each hypothesis supported, ruled out, or unresolved and cite
+its evidence. Name the affected bays or slots, rank viable options, and distinguish read-only checks
+from operator actions. Report any actions taken and their effects; say nothing changed only if true.

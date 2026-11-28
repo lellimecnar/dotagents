@@ -55,9 +55,8 @@ Also send:
    person's stated preferences in your domain) or from the agent that holds it (ask it with a dependency task; your
    task resumes when it answers). Never invent, assume or estimate one (durations are sized as in step 5), and never write "assumed", "unknown" or
    "probably" in a line: an item resting on a fact no source holds stays out of your items and goes under Decisions
-   as the question only the person can answer, saying what you checked. Never ask another agent to put the
-   question to the person for you: an agent answers only from what it already holds, and a fact only the person
-   holds goes straight under Decisions.
+   as the question only the person can answer, saying what you checked. Do not ask another agent
+   to relay that question to the person.
 3. Plan for these days as they are. The context (a break or holiday, food already on hand, guests, what the person
    said about the days) rules items in or out, and so does what is already done: check the state of each item before
    proposing its next step, and never propose work the person finished or said they will not do in the window.
