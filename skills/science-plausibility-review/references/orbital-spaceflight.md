@@ -44,6 +44,16 @@ Review sequence:
 ## Loads, gravity, and bodies
 
 - Mass remains relevant in microgravity: it resists acceleration and carries momentum.
+- In shared free fall, do not assume a gravity-defined bottom: loose objects do not fall toward
+  the deck, and fluids do not settle or stratify by buoyancy as on Earth. Sweep for words such as
+  *sank*, *settled*, *pooled*, *poured*, *layered*, and *the low end*. Check what drives the effect:
+  wetting and capillarity can collect liquid or separate phases, and thrust or spin can supply an
+  effective down direction. Vacuum alone says nothing about weightlessness. If nothing in the scene
+  supports the effect, revise the unsupported image before adding machinery or a procedure.
+- For each maneuver, estimate propellant from required delta-v, starting mass, and engine specific
+  impulse. A longer coast does not by itself spend main-engine propellant. Different burn rates on
+  different legs are not necessarily an error: check thrust, burn duration, and any material gravity,
+  drag, or steering losses.
 - Weight changes with local gravity; structural and muscular forces also depend on posture, acceleration, and leverage.
 - NASA/NIOSH's lifting equation is a risk assessment using mass, hand position, travel, asymmetry, frequency, duration, and grip—not a universal maximum [14].
 - Deep-space radiation can cause cancer, tissue, CNS, and acute-syndrome risks; exposure depends on duration, shielding, solar events, and mission environment [15].

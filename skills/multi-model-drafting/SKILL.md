@@ -2,7 +2,7 @@
 name: multi-model-drafting
 description: Use when drafting prose with several models. Fan out, merge.
 metadata:
-  version: "0.1.3"
+  version: "0.1.4"
   status: draft
   owner: maintainer
 ---
@@ -35,6 +35,8 @@ different model families), the best merges outscored every solo draft by about a
 1. Write one brief first, complete enough that a writer with no other context could draft from it (see
    `layered-chapter-drafting`, Phase 0). The drafters cannot look anything up, so whatever they need must be
    in what you send them: the brief, the voice and prose rules, and any canon the scene depends on.
+   A wrong fact in the shared brief can propagate across drafts. Before dispatch, trace the scene
+   beat by beat against the source: verify injuries, positions, and who holds what.
 2. Send every drafter the same goal and the same context. Before you dispatch, check that each task really
    carries the full text, not a placeholder or a reference to a file the drafter can't read. In the test,
    one drafter got a placeholder and wrote a plausible draft from nothing.

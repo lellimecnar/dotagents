@@ -2,7 +2,7 @@
 name: story-continuity-audit
 description: Use when checking story canon/continuity against prose. Cited ledgers.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
   status: draft
   owner: maintainer
 ---
@@ -123,6 +123,11 @@ labels usually signal an old split or renumber: report the whole range together.
   but no scene shows it. Moving the event to another character or deleting it so the later line fits
   is not a fix; trace every later-mentioned wound or completed act back to the scene where it happens,
   and if the page shows it only started, later lines must not claim it finished.
+- **Cascade relabel:** fixing a day or date error by shifting every later label by the same offset
+  carries any phantom day at an earlier seam along with it. Re-solve each chapter seam from the prose
+  (light, sleep, meals, "next noon") first, then relabel. A line the record marks as an owner ruling or a
+  resolved query is a constraint: cite it and raise a query or a superseding note; never rewrite it to fit
+  new arithmetic.
 
 ## Implementing requested repairs (only when asked)
 

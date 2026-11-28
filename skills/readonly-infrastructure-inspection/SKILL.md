@@ -2,7 +2,7 @@
 name: readonly-infrastructure-inspection
 description: Use when inspecting servers, storage, backups or networks with read-only keys.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
   status: draft
   owner: maintainer
 ---
@@ -48,6 +48,12 @@ relevant controller.
 Endpoint maps for two common systems (Proxmox VE and the UniFi Site Manager cloud API) are in
 [references/api-maps.md](references/api-maps.md).
 
+For physical hardware questions over SSH (PCIe lanes, slots, bifurcation, drive bays not
+detecting, NVMe, GPUs, DIMM population, ZFS vdev layout), follow
+[references/physical-hardware-audit.md](references/physical-hardware-audit.md): inventory live,
+map enclosure bays to block devices, test each of the owner's hypotheses against evidence before
+researching options.
+
 ## Pitfalls
 
 - Self-signed certificates on homelab hypervisors often need `curl -k`; that weakens transport
@@ -56,6 +62,12 @@ Endpoint maps for two common systems (Proxmox VE and the UniFi Site Manager clou
   route.
 - "Near full" depends on the pool type: thin-provisioned storage can report usage that differs from
   what guests see. Say which number you report.
+- SSH privileges do not expand the audit's authority. Keep the session read-only: propose a
+  locate LED change to identify a bay, but let the operator perform it. Treat a SCSI rescan, an
+  expander PHY reset, or a package install as a separate, explicitly authorized operation; a
+  reset can interrupt live storage I/O.
+- Report an incidental finding once with a proposed fix. If it is deferred, do not repeat it
+  unless new evidence changes its severity or it affects the current diagnosis or next action.
 
 ## Verification
 

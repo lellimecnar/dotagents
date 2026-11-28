@@ -2,7 +2,7 @@
 name: prose-text-analysis
 description: Use when measuring prose: readability, n-grams, overuse, avoid-list hits.
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
   status: draft
   owner: maintainer
 ---
@@ -60,6 +60,11 @@ beats, dialogue-tag issues, opening clichés. The project owns the list and its 
   60–69 standard (8th–9th); 50–59 fairly difficult (10th–12th); 30–49 difficult (college); 0–29 very
   difficult. A common YA target is FRE 60–80, FK 5–9, Fog 8–12, but formulas measure word and sentence
   length, not comprehension; use them to find dense outliers, never as pass/fail.
+- **What moves the score:** Flesch Reading Ease and Flesch–Kincaid Grade Level use average words
+  per sentence and syllables per word. Compare how much each input actually changes; their coefficients
+  are in different units. If sentence lengths already suit the scene, inspect diction for dense
+  outliers. Keep words the character would use, skip decorative thesaurus swaps, and tune density
+  while drafting each unit rather than micro-editing an assembled chapter to hit a score.
 - **Overuse thresholds (script defaults):** a word above 1% of total words; 2-grams above 5 per 1,000
   words; 3-grams above 3 per 1,000; 4-grams above 2 per 1,000.
 - **Vocabulary:** unique words, type-token ratio, lexical density. Compare chapters of similar length only;
