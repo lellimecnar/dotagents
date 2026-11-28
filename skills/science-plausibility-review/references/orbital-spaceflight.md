@@ -44,6 +44,13 @@ Review sequence:
 ## Loads, gravity, and bodies
 
 - Mass remains relevant in microgravity: it resists acceleration and carries momentum.
+- Fluids and loose objects in free fall do not sink, settle, pool at the bottom or separate into layers. In
+  every free-fall or vacuum scene, sweep for Earth-gravity verbs (sank, settled, pooled, poured, layered, "the
+  low end") and check each against nearby surface-tension images; the usual tell is correct microgravity
+  behaviour in one paragraph and gravity-driven separation in the next. Fix by removing the separation claim,
+  not by adding spin or a procedure.
+- Propellant cost is a delta-v budget, not a function of elapsed time: different burn rates on different legs
+  are not by themselves an error.
 - Weight changes with local gravity; structural and muscular forces also depend on posture, acceleration, and leverage.
 - NASA/NIOSH's lifting equation is a risk assessment using mass, hand position, travel, asymmetry, frequency, duration, and grip—not a universal maximum [14].
 - Deep-space radiation can cause cancer, tissue, CNS, and acute-syndrome risks; exposure depends on duration, shielding, solar events, and mission environment [15].
